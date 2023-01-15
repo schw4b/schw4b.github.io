@@ -4,7 +4,7 @@ about:
   template: trestles
   image: profile_gymbiel.jpg
   image-shape: round
-  image-width: 15em
+  image-width: 10em
   links:
     - icon: envelope
       text: Email

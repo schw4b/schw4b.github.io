@@ -21,7 +21,7 @@ website:
   page-footer:
     right: "Made with RStudio/Quarto."
     left: 'Update: 15. January 2023'
-  google-analytics: "UA-72106507-1"
+  google-analytics: "G-GPR2YZSX56"
       
 format:
   html:
