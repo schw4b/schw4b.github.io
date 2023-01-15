@@ -25,14 +25,14 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Kidney prediction model (KIDMO)—Clinical prediction model for prognosis in kidney-transplanted patients.\n\n\n\n\nSchematic overview of the multivariable prediction models and the data sources involved.\n\n\n\nEx vivo allograft monitoring (EXAM)—Data analysis and quality control during ex vivo perfusion."
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\nKIDMO OSF repository\nKIDMO study registration\n\n\n\n\nSchematic overview of the multivariable prediction models and the data sources involved."
   },
   {
     "objectID": "projects.html#collaborations",
     "href": "projects.html#collaborations",
     "title": "Projects",
     "section": "Collaborations",
-    "text": "Collaborations"
+    "text": "Collaborations\n\nUniversitäts-Kinderspital Zürich\nPrediction of renal graft function after transplantation. An approach to integrate donor and recipient information to assess posttransplant kidney function in children."
   },
   {
     "objectID": "about.html",
@@ -74,6 +74,20 @@
     "href": "output.html#presentations",
     "title": "Output",
     "section": "Presentations",
-    "text": "Presentations\nA complete list with slides from my presentations are available at OSF.\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology\n04/02/22\nAn Introduction to R with the Stanford Heart Transplant data\nBernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (YouTube)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging–—University Hospital of Zurich\n15/04/21"
+    "text": "Presentations\nA complete list with slides from my presentations are available at OSF.\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology\n04/02/22\nAn Introduction to R with the Stanford Heart Transplant data\nTalk at BernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (see also video recording)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/21"
+  },
+  {
+    "objectID": "projects.html#ex-vivo-allograft-monitoring-exam",
+    "href": "projects.html#ex-vivo-allograft-monitoring-exam",
+    "title": "Projects",
+    "section": "Ex vivo allograft monitoring (EXAM)",
+    "text": "Ex vivo allograft monitoring (EXAM)\nEXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.\n\n\n\nEXAM analytics dashboard based on flexdashboard an plotly."
+  },
+  {
+    "objectID": "projects.html#projects-as-statistical-consultant",
+    "href": "projects.html#projects-as-statistical-consultant",
+    "title": "Projects",
+    "section": "Projects as statistical consultant",
+    "text": "Projects as statistical consultant\n\nUniversitäts-Kinderspital Zürich\nPrediction of renal graft function after transplantation. An approach to integrate donor and recipient information to assess posttransplant kidney function in children."
   }
 ]

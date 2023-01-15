@@ -25,15 +25,15 @@ Gysin-Maillart, A., **Schwab, S.**, Soravia, L., Megert, M., & Michel, K. (2016)
 
 A complete list with slides from [my presentations](https://osf.io/a3g5c/) are available at OSF.
 
-[Understanding and managing bias in medical research](https://osf.io/agpv8/)\
+[Understanding and managing bias in medical research](https://osf.io/yh76a/)\
 Talk for the Swiss Society for Pneumology\
 *04/02/22*
 
-[An Introduction to R with the Stanford Heart Transplant data](https://osf.io/ex6v7/)\
-BernR---Bern R user group\
+[An Introduction to R with the Stanford Heart Transplant data](https://osf.io/6mcah/)\
+Talk at BernR---Bern R user group\
 *09/12/21*
 
-[From Regression to Machine Learning in R](https://www.youtube.com/watch?v=h5A1v678Djk) (YouTube)\
-Talk in the seminar *Applied Machine Learning in Diagnostic Imaging*--—University Hospital of Zurich\
+[From Regression to Machine Learning in R](https://osf.io/rua6x/) (see also [video recording](https://www.youtube.com/watch?v=h5A1v678Djk))\
+Talk in the seminar *Applied Machine Learning in Diagnostic Imaging*---University Hospital of Zurich\
 *15/04/21*
 
