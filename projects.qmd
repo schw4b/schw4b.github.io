@@ -1,0 +1,9 @@
+---
+title: "Projects"
+---
+
+## Main research projects
+* [Kidney prediction model (KIDMO)](https://osf.io/35apn/)---Clinical prediction model for prognosis in kidney-transplanted patients.
+* Ex vivo allograft monitoring (EXAM)---Data analysis and quality control during ex vivo perfusion.
+
+## Collaborations

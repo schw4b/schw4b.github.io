@@ -1,0 +1,18 @@
+/* css styles */
+
+h1, h2, h3 {
+    color: #003764;
+}
+
+a {
+    color: #e5005c;
+}
+
+/* mouse over link */
+a:hover {
+  color: #EB3F84;
+}
+
+img {
+  border-radius: 50%;
+}

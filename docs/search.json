@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Simon Schwab",
+    "section": "",
+    "text": "I am a senior researcher and statistician in organ transplantation at Swisstransplant—the national organisation for organ donation and transplantation in Switzerland."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Simon Schwab",
+    "section": "Education",
+    "text": "Education\nCAS—Advanced Statistical Data Science\nUniversity of Bern, 2022\nPhD—Health Science\nUniversity of Bern, 2013\nMSc—Psychology & Computer Science\nUniversity of Bern, 2008"
+  },
+  {
+    "objectID": "index.html#experiences",
+    "href": "index.html#experiences",
+    "title": "Simon Schwab",
+    "section": "Experiences",
+    "text": "Experiences\nSenior Researcher / Statistician\nSwisstransplant, Bern\n11/2021—Present\nPostdoctoral Researcher\nDepartment of Biostatistics | University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute | University of Oxford\n07/2017—06/2018\nVisiting Academic\nDepartment of Statistics | University of Warwick\n01/2016—06/2017"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Kidney prediction model (KIDMO)—Clinical prediction model for prognosis in kidney-transplanted patients.\nEx vivo allograft monitoring (EXAM)—Data analysis and quality control during ex vivo perfusion."
+  },
+  {
+    "objectID": "projects.html#collaborations",
+    "href": "projects.html#collaborations",
+    "title": "Projects",
+    "section": "Collaborations",
+    "text": "Collaborations"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "My main responsibilities at Swisstransplant are risk prediction in organ transplantation, developing novel tools to assist quality control, and statistical reporting of the transplantation activity in Switzerland.\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS) and a founding member of the interest group Statistics in Organ Transplantation (SOT)."
+  },
+  {
+    "objectID": "about.html#interests",
+    "href": "about.html#interests",
+    "title": "About me",
+    "section": "Interests",
+    "text": "Interests\n\nClinical prediction models\nStatistical methods for quality control\nStatistical reporting in organ transplantation\nStatistical programming (R)\nData visualization and analytics dashboards\nGood research practice\nReproducible data analysis and reporting"
+  },
+  {
+    "objectID": "about.html#private",
+    "href": "about.html#private",
+    "title": "About me",
+    "section": "Private",
+    "text": "Private\nI am married and a father of a son (born 2021)."
+  },
+  {
+    "objectID": "output.html",
+    "href": "output.html",
+    "title": "Output",
+    "section": "",
+    "text": "See also Google Scholar / Pubmed\nSchwab, S., Janiaud, P., Dayan, M., Amrhein, V., Panczak, R., Palagi, P. M., Hemkens, L. G., Ramon, M., Rothen, N., Senn, S., Furrer, E., & Held, L. (2022). Ten simple rules for good research practice. PLoS Computational Biology, 18(6), e1010139. doi:10.1371/journal.pcbi.1010139\nSchwab, S., Kreiliger, G., & Held, L. (2021). Assessing treatment effects and publication bias across different specialties in medicine: a meta-epidemiological study. BMJ Open, 11(9), e045942. doi:10.1136/bmjopen-2020-045942\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x\nGysin-Maillart, A., Schwab, S., Soravia, L., Megert, M., & Michel, K. (2016). A Novel Brief Therapy for Patients Who Attempt Suicide: A 24-months Follow-Up Randomized Controlled Study of the Attempted Suicide Short Intervention Program (ASSIP). PLoS Medicine, 13(3), e1001968. doi:10.1371/journal.pmed.1001968"
+  },
+  {
+    "objectID": "output.html#r-packages",
+    "href": "output.html#r-packages",
+    "title": "Output",
+    "section": "R Packages",
+    "text": "R Packages\nswt—Swisstransplant R package.\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR)."
+  },
+  {
+    "objectID": "output.html#presentations",
+    "href": "output.html#presentations",
+    "title": "Output",
+    "section": "Presentations",
+    "text": "Presentations\nA complete list with slides from my presentations are available at OSF.\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology\n04/02/22\nAn Introduction to R with the Stanford Heart Transplant data\nBernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (YouTube)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging–—University Hospital of Zurich\n15/04/21"
+  }
+]

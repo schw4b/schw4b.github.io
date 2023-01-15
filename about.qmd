@@ -1,0 +1,20 @@
+---
+title: "About me"
+---
+
+My main responsibilities at [Swisstransplant](https://www.swisstransplant.org/) are risk prediction in organ transplantation, developing novel tools to assist quality control, and statistical reporting of the transplantation activity in Switzerland.
+
+I am also a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/) and a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite).
+
+## Interests
+
+* Clinical prediction models
+* Statistical methods for quality control
+* Statistical reporting in organ transplantation
+* Statistical programming (R)
+* Data visualization and analytics dashboards
+* Good research practice
+* Reproducible data analysis and reporting
+
+## Private
+I am married and a father of a son (born 2021).

@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "Simon Schwab"
+  search: false
+  navbar:
+    background: "#003764"
+    foreground: "white"
+    left:
+      - href: index.qmd
+        text: Bio
+      - href: projects.qmd
+        text: Projects
+      - href: output.qmd
+        text: Output
+    right:
+      - href: about.qmd
+        text: About me
+
+  page-footer:
+    right: "Made with RStudio/Quarto."
+    left: 'Update: 15. January 2023'
+  google-analytics: "UA-72106507-1"
+      
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
