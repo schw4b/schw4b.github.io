@@ -24,7 +24,7 @@ about:
 ---
 I am a *senior researcher* and *statistician* in organ transplantation at [Swisstransplant](https://www.swisstransplant.org/)---the national organisation for organ donation and transplantation in Switzerland.
 
-## Education
+## Qualifications
 
 CAS---Advanced Statistical Data Science\
 *University of Bern, 2022*
@@ -52,3 +52,6 @@ Visiting Academic \
 [Department of Statistics](https://warwick.ac.uk/fac/sci/statistics/) | University of Warwick\
 *01/2016---06/2017*
 
+Postdoctoral Researcher / Statistical Consultant\
+[University Hospital of Psychiatry](https://www.upd.ch/de/), Bern\
+*12/2013---12/2015*

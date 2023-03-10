@@ -3,20 +3,27 @@ title: "Projects"
 ---
 
 ## Kidney prediction model (KIDMO)
+
 KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2'000 kidney transplant recipients.
 
-* [KIDMO OSF repository](https://osf.io/35apn/)
-* [KIDMO study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ)
+-   [KIDMO OSF repository](https://osf.io/35apn/)
+-   [KIDMO study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ)
+-   [KIDMO study protocol](https://doi.org/10.1186/s41512-022-00139-5)
 
-![Schematic overview of the multivariable prediction models and the data sources involved.](images/Figure-Multivariable prediction model.png){width=6.7in alt="Schematic overview of the multivariable prediction models and the data sources involved."}
+![Schematic overview of the multivariable prediction models and the data sources involved.](images/Figure-Multivariable%20prediction%20model.png){width="6.7in" alt="Schematic overview of the multivariable prediction models and the data sources involved."}
 
 ## Ex vivo allograft monitoring (EXAM)
 
 EXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.
 
-![EXAM analytics dashboard based on flexdashboard an plotly.](images/exam-dashboard.png){width=6.7in alt="EXAM analytics dashboard with time series and statistical indicators."}
+![EXAM analytics dashboard based on flexdashboard an plotly.](images/exam-dashboard.png){width="6.7in" alt="EXAM analytics dashboard with time series and statistical indicators."}
 
 ## Projects as statistical consultant
 
-* *Universitäts-Kinderspital Zürich*\
+- *Universitäts-Kinderspital Zürich*\
 Prediction of renal graft function after transplantation. An approach to integrate donor and recipient information to assess posttransplant kidney function in children.
+    
+- *Kantonspital St. Gallen*\
+Outcome of dual kidney transplantation in Switzerland---a national cohort study.
+    
+    
