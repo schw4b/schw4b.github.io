@@ -19,8 +19,8 @@ website:
         text: About me
 
   page-footer:
-    right: "Made with RStudio/Quarto."
-    left: 'Update: 15. January 2023'
+    right: ""
+    left: 'Update: 11. March 2023'
   google-analytics: "G-GPR2YZSX56"
       
 format:

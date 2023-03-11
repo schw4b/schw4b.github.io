@@ -11,9 +11,8 @@ I am also a member of the scientific committee of the [Swiss Transplant Cohort S
 * Clinical prediction models
 * Statistical methods for quality control
 * Statistical reporting in organ transplantation
-* Statistical programming (R)
+* Statistical programming and software packages (R)
 * Data visualization and analytics dashboards
-* Good research practice
 * Reproducible data analysis and reporting
 
 ## Private

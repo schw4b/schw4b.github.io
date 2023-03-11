@@ -2,9 +2,9 @@
 title: "Output"
 ---
 
-## Selected publications
+## Recent publications
 
-See also [Google Scholar](https://scholar.google.ch/citations?user=uR1_O0UAAAAJ) / [Pubmed](https://pubmed.ncbi.nlm.nih.gov/?term=Schwab+Simon%5BAuthor%5D+AND+%28+Zurich%5BAffiliation%5D+OR++Bern%5BAffiliation%5D+OR+Warwick%5BAffiliation%5D+OR+Oxford%5BAffiliation%5D+%29)
+See also at [Google Scholar](https://scholar.google.ch/citations?user=uR1_O0UAAAAJ) and [Pubmed](https://pubmed.ncbi.nlm.nih.gov/?term=Schwab+Simon%5BAuthor%5D+AND+%28+Zurich%5BAffiliation%5D+OR++Bern%5BAffiliation%5D+OR+Warwick%5BAffiliation%5D+OR+Oxford%5BAffiliation%5D+%29).
 
 **Schwab, S.**, Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagnostic and Prognostic Research*, 7(1), 6. [doi:10.1186/s41512-022-00139-5](https://doi.org/10.1186/s41512-022-00139-5)
 
@@ -18,6 +18,8 @@ See also [Google Scholar](https://scholar.google.ch/citations?user=uR1_O0UAAAAJ)
 [cochrane](https://github.com/schw4b/cochrane)---Import Data from the Cochrane Database of Systematic Reviews (CDSR).
 
 ## Reproducibility Notes
+
+These are a series of commentaries that will highlight topics related to the production of robust, effective and reproducible science
 
 **Schwab, S.**, & Held, L. (2021). Statistical programming: Small mistakes, big impacts. *Significance, 18(3)*, 6–7. [doi:10.1111/1740-9713.01522](https://doi.org/10.1111/1740-9713.01522)
 

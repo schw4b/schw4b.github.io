@@ -4,7 +4,7 @@ title: "Projects"
 
 ## Kidney prediction model (KIDMO)
 
-KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2'000 kidney transplant recipients.
+KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2'000 kidney transplant recipients. More information can be found here:
 
 -   [KIDMO OSF repository](https://osf.io/35apn/)
 -   [KIDMO study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ)
@@ -23,7 +23,9 @@ EXAM is an analytics dashboard for ex vivo allograft monitoring during hypotherm
 - *Universitäts-Kinderspital Zürich*\
 Prediction of renal graft function after transplantation. An approach to integrate donor and recipient information to assess posttransplant kidney function in children.
     
-- *Kantonspital St. Gallen*\
+- *Kantonsspital St. Gallen*\
 Outcome of dual kidney transplantation in Switzerland---a national cohort study.
-    
+
+- *University Hospital Zürich (USZ)*\
+Differences between the observed and expected serum creatinine range after kidney transplantation. 
     
