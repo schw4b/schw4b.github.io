@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Statistics (yup!)",
     "section": "",
-    "text": "I am a senior researcher and statistician in organ transplantation at Swisstransplant—the national organisation for organ donation and transplantation in Switzerland."
+    "text": "I am a senior researcher and statistician at Swisstransplant—the national organisation for organ donation and transplantation in Switzerland."
   },
   {
     "objectID": "index.html#qualifications",
@@ -25,35 +25,35 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nKIDMO OSF repository\nKIDMO study registration\nKIDMO study protocol\n\n\n\n\nSchematic overview of the multivariable prediction models and the data sources involved."
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nStudy protocol\nStudy registration\n\n\n\n\nSchematic overview of the KIDMO multivariable prediction model."
   },
   {
     "objectID": "projects.html#kidney-prediction-model-kidmo",
     "href": "projects.html#kidney-prediction-model-kidmo",
     "title": "Projects",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nKIDMO OSF repository\nKIDMO study registration\nKIDMO study protocol\n\n\n\n\nSchematic overview of the multivariable prediction models and the data sources involved."
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nStudy protocol\nStudy registration\n\n\n\n\nSchematic overview of the KIDMO multivariable prediction model."
   },
   {
     "objectID": "projects.html#ex-vivo-allograft-monitoring-exam",
     "href": "projects.html#ex-vivo-allograft-monitoring-exam",
     "title": "Projects",
     "section": "Ex vivo allograft monitoring (EXAM)",
-    "text": "Ex vivo allograft monitoring (EXAM)\nEXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.\n\nEXAM Preprint\nEXAM online showcase\nGitHub code repository\n\n\n\n\nEXAM analytics dashboard with time series and statistical indicators."
+    "text": "Ex vivo allograft monitoring (EXAM)\nEXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.\n\nStudy preprint\nOnline showcase\nCode repository\n\n\n\n\nEXAM analytics dashboard."
   },
   {
     "objectID": "projects.html#projects-as-statistical-consultant",
     "href": "projects.html#projects-as-statistical-consultant",
     "title": "Projects",
     "section": "Projects as statistical consultant",
-    "text": "Projects as statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of renal graft function after transplantation. An approach to integrate donor and recipient information to assess posttransplant kidney function in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
+    "text": "Projects as statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of the serum creatinine after kidney transplantation in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About me",
     "section": "",
-    "text": "My main responsibilities at Swisstransplant are risk prediction in organ transplantation, developing novel tools to assist quality control, and statistical reporting of the transplantation activity in Switzerland.\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS) and a founding member of the interest group Statistics in Organ Transplantation (SOT)."
+    "text": "My main responsibilities at Swisstransplant are risk prediction in organ transplantation, developing novel tools to assist quality control, and statistical reporting of the transplantation activity in Switzerland.\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), a founding member of the interest group Statistics in Organ Transplantation (SOT), and a guest researcher at the CRS."
   },
   {
     "objectID": "about.html#interests",
@@ -67,40 +67,40 @@
     "href": "about.html#private",
     "title": "About me",
     "section": "Private",
-    "text": "Private\nI am married and a father of a two children (born 2021, 2023). I enjoy playing guitar and listening to indie music."
+    "text": "Private\nI am married and a father of a two children (born 2021, 2023). I enjoy playing guitar and listening to alternative metal and indie rock.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
   },
   {
     "objectID": "output.html",
     "href": "output.html",
-    "title": "Output",
+    "title": "Research output",
     "section": "",
     "text": "See also at Google Scholar and Pubmed.\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nSchwab, S., Janiaud, P., Dayan, M., Amrhein, V., Panczak, R., Palagi, P. M., Hemkens, L. G., Ramon, M., Rothen, N., Senn, S., Furrer, E., & Held, L. (2022). Ten simple rules for good research practice. PLoS Computational Biology, 18(6), e1010139. doi:10.1371/journal.pcbi.1010139"
   },
   {
     "objectID": "output.html#recent-publications",
     "href": "output.html#recent-publications",
-    "title": "Output",
+    "title": "Research output",
     "section": "",
     "text": "See also at Google Scholar and Pubmed.\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nSchwab, S., Janiaud, P., Dayan, M., Amrhein, V., Panczak, R., Palagi, P. M., Hemkens, L. G., Ramon, M., Rothen, N., Senn, S., Furrer, E., & Held, L. (2022). Ten simple rules for good research practice. PLoS Computational Biology, 18(6), e1010139. doi:10.1371/journal.pcbi.1010139"
   },
   {
     "objectID": "output.html#r-software",
     "href": "output.html#r-software",
-    "title": "Output",
+    "title": "Research output",
     "section": "R Software",
     "text": "R Software\nEXAM—Ex vivo allograft monitoring dashboard.\nswt—Swisstransplant R package.\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR)."
   },
   {
     "objectID": "output.html#reproducibility-notes",
     "href": "output.html#reproducibility-notes",
-    "title": "Output",
+    "title": "Research output",
     "section": "Reproducibility Notes",
-    "text": "Reproducibility Notes\nThese are a series of commentaries that will highlight topics related to the production of robust, effective and reproducible science\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., Pawel, S., & Schwab, S. (2020). Replication power and regression to the mean. Significance, 17(6), 10–11. doi:10.1111/1740-9713.01462\nSchwab, S., & Held, L. (2020). Science after Covid-19: Faster, better, stronger? Significance, 17(4), 8–9. doi:10.1111/1740-9713.01415\nSchwab, S., & Held, L. (2020). Different worlds Confirmatory versus exploratory research. Significance, 17(2), 8–9. doi:10.1111/1740-9713.01369\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x"
+    "text": "Reproducibility Notes\nA series of commentaries highlight topics related to the production of robust, effective and reproducible science, see also here.\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., Pawel, S., & Schwab, S. (2020). Replication power and regression to the mean. Significance, 17(6), 10–11. doi:10.1111/1740-9713.01462\nSchwab, S., & Held, L. (2020). Science after Covid-19: Faster, better, stronger? Significance, 17(4), 8–9. doi:10.1111/1740-9713.01415\nSchwab, S., & Held, L. (2020). Different worlds Confirmatory versus exploratory research. Significance, 17(2), 8–9. doi:10.1111/1740-9713.01369\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x"
   },
   {
     "objectID": "output.html#presentations",
     "href": "output.html#presentations",
-    "title": "Output",
+    "title": "Research output",
     "section": "Presentations",
     "text": "Presentations\nA complete list with slides from my presentations are available at OSF.\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology\n04/02/22\nAn Introduction to R with the Stanford Heart Transplant data\nTalk at BernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (see also video recording)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/21"
   }

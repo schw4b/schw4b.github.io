@@ -22,7 +22,7 @@ about:
       text: Mastodon
       href: https://fosstodon.org/@sims
 ---
-I am a *senior researcher* and *statistician* in organ transplantation at [Swisstransplant](https://www.swisstransplant.org/)---the national organisation for organ donation and transplantation in Switzerland.
+I am a senior researcher and statistician at [Swisstransplant](https://www.swisstransplant.org/)---the national organisation for organ donation and transplantation in Switzerland.
 
 ## Qualifications
 

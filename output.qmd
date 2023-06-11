@@ -1,5 +1,5 @@
 ---
-title: "Output"
+title: "Research output"
 ---
 
 ## Recent publications
@@ -19,7 +19,7 @@ See also at [Google Scholar](https://scholar.google.ch/citations?user=uR1_O0UAAA
 
 ## Reproducibility Notes
 
-These are a series of commentaries that will highlight topics related to the production of robust, effective and reproducible science
+A series of commentaries highlight topics related to the production of robust, effective and reproducible science, see also [here](https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html).
 
 **Schwab, S.**, & Held, L. (2021). Statistical programming: Small mistakes, big impacts. *Significance, 18(3)*, 6–7. [doi:10.1111/1740-9713.01522](https://doi.org/10.1111/1740-9713.01522)
 

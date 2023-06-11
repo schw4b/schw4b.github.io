@@ -4,9 +4,9 @@ project:
 website:
   title: "Simon Schwab"
   search: false
-  favicon: icons8-s-16.png
+  favicon: icons8-cafe-16.png
   navbar:
-    background: "#003764"
+    background: "#EB3F84"
     foreground: "white"
     left:
       - href: index.qmd
@@ -26,8 +26,9 @@ website:
       
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+      - cosmo
+      - custom.scss
     toc: true
 
 editor: visual

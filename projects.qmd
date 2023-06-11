@@ -6,29 +6,28 @@ title: "Projects"
 
 KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2'000 kidney transplant recipients. More information can be found here:
 
--   [KIDMO OSF repository](https://osf.io/35apn/)
--   [KIDMO study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ)
--   [KIDMO study protocol](https://doi.org/10.1186/s41512-022-00139-5)
+-   [Study protocol](https://doi.org/10.1186/s41512-022-00139-5)
+-   [Study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ)
 
-![Schematic overview of the multivariable prediction models and the data sources involved.](images/Figure-Multivariable%20prediction%20model.png){width="6.7in" alt="Schematic overview of the multivariable prediction models and the data sources involved."}
+![Schematic overview of the KIDMO multivariable prediction model.](images/Figure-Multivariable%20prediction%20model.png){width="6.7in" alt="Schematic overview of the KIDMO multivariable prediction model."}
 
 ## Ex vivo allograft monitoring (EXAM)
 
 EXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.
 
--   [EXAM Preprint](https://doi.org/10.21203/rs.3.rs-2713168/v1)
--   [EXAM online showcase](https://swisstransplant.shinyapps.io/EXAM/)
--   [GitHub code repository](https://github.com/Swisstransplant/EXAM)
+-   [Study preprint](https://doi.org/10.21203/rs.3.rs-2713168/v1)
+-   [Online showcase](https://swisstransplant.shinyapps.io/EXAM/)
+-   [Code repository](https://github.com/Swisstransplant/EXAM)
 
-![EXAM analytics dashboard based on flexdashboard an plotly.](images/exam-dashboard.png){width="6.7in" alt="EXAM analytics dashboard with time series and statistical indicators."}
+![EXAM analytics dashboard.](images/exam-dashboard.png){width="6.7in" alt="EXAM analytics dashboard."}
 
 ## Projects as statistical consultant
 
 -   *Hôpitaux Universitaires Genève (HUG)*\
-  Donation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.
+    Donation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.
 
 -   *Universitäts-Kinderspital Zürich*\
-    Prediction of renal graft function after transplantation. An approach to integrate donor and recipient information to assess posttransplant kidney function in children.
+    Prediction of the serum creatinine after kidney transplantation in children.
 
 -   *Kantonsspital St. Gallen (KSSG)*\
     Outcome of dual kidney transplantation in Switzerland---a national cohort study.
