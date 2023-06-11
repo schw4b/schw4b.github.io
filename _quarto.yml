@@ -4,6 +4,7 @@ project:
 website:
   title: "Simon Schwab"
   search: false
+  favicon: icons8-s-16.png
   navbar:
     background: "#003764"
     foreground: "white"
@@ -30,4 +31,3 @@ format:
     toc: true
 
 editor: visual
-
