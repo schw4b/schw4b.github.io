@@ -8,7 +8,7 @@ about:
   links:
     - icon: envelope
       text: Email
-      href: mailto:schwab@gmail.com
+      href: mailto:schw4b@gmail.com
     - icon: github
       text: Github
       href: https://github.com/schw4b
