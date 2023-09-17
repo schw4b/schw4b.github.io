@@ -4,7 +4,7 @@ title: "Research output"
 
 ## Recent publications
 
-See also at [Google Scholar](https://scholar.google.ch/citations?user=uR1_O0UAAAAJ) and [Pubmed](https://pubmed.ncbi.nlm.nih.gov/?term=Schwab+Simon%5BAuthor%5D+AND+%28+Zurich%5BAffiliation%5D+OR++Bern%5BAffiliation%5D+OR+Warwick%5BAffiliation%5D+OR+Oxford%5BAffiliation%5D+%29).
+See also at [Google Scholar](https://scholar.google.ch/citations?user=uR1_O0UAAAAJ) and [Pubmed](https://pubmed.ncbi.nlm.nih.gov/?term=Schwab+Simon%5BAuthor%5D+AND+%28+Zurich%5BAffiliation%5D+OR+Bern%5BAffiliation%5D+OR+Warwick%5BAffiliation%5D+OR+Oxford%5BAffiliation%5D+%29&sort=date).
 
 **Schwab, S.**, Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagnostic and Prognostic Research*, 7(1), 6. [doi:10.1186/s41512-022-00139-5](https://doi.org/10.1186/s41512-022-00139-5)
 
@@ -35,15 +35,19 @@ Held, L., & **Schwab, S.** (2020). Improving the reproducibility of science. *Si
 
 A complete list with slides from [my presentations](https://osf.io/a3g5c/) are available at OSF.
 
+[EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://osf.io/8kbt2/) (see also [video](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh))\
+Talk at R/Basel 2023---Roche\
+*21/06/23*
+
 [Understanding and managing bias in medical research](https://osf.io/yh76a/)\
-Talk for the Swiss Society for Pneumology\
-*04/02/22*
+Talk for the Swiss Society for Pneumology---University Hospital of Zurich\
+*04/02/22 / 14/04/2023*
 
 [An Introduction to R with the Stanford Heart Transplant data](https://osf.io/6mcah/)\
 Talk at BernR---Bern R user group\
 *09/12/21*
 
-[From Regression to Machine Learning in R](https://osf.io/rua6x/) (see also [video recording](https://www.youtube.com/watch?v=h5A1v678Djk))\
+[From Regression to Machine Learning in R](https://osf.io/rua6x/) (see also [video](https://www.youtube.com/watch?v=h5A1v678Djk))\
 Talk in the seminar *Applied Machine Learning in Diagnostic Imaging*---University Hospital of Zurich\
 *15/04/21*
 

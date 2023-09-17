@@ -2,18 +2,18 @@
 title: "About me"
 ---
 
-I'm a senior researcher with professional qualification in statistics and medical research. My main focus at [Swisstransplant](https://www.swisstransplant.org/) is risk prediction in organ transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the transplantation activity in Switzerland.
+I'm a senior researcher with professional qualification in statistics and medical research. My main focus at [Swisstransplant](https://www.swisstransplant.org/) is risk prediction in organ transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the national transplantation activity in Switzerland.
 
-I am also a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/), a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite), and a guest researcher at the [CRS](https://www.crs.uzh.ch/) (University of Zurich).
+I am also a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/), a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite), and a guest researcher at the [CRS](https://www.crs.uzh.ch/), and interfaculty competence center of the University of Zurich.
 
 ## Interests
 
 * Clinical prediction models in kidney and liver transplantation
-* Statistical methods for quality control in organ donation
-* Statistical reporting in organ transplantation
+* Statistical methods for quality control in organ donation and transplantation
+* Statistical reporting of national transplantation activity
 * Statistical programming and software packages (R)
 * Data visualization and analytics dashboards (R Shiny, Plotly)
-* Dynamic, reproducible reporting in data analysis (R Quarto)
+* Dynamic, reproducible reporting (R Quarto)
 
 ## Private
 I am married and a father of a two children (born 2021, 2023). I enjoy playing guitar and listening to alternative metal and indie rock.

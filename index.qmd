@@ -22,7 +22,7 @@ about:
       text: Mastodon
       href: https://fosstodon.org/@sims
 ---
-I am a senior researcher and statistician at [Swisstransplant](https://www.swisstransplant.org/)---the national organisation for organ donation and transplantation in Switzerland.
+I am a statistician at [Swisstransplant](https://www.swisstransplant.org/)---the Swiss National Foundation for organ donation and transplantation.
 
 ## Qualifications
 
@@ -55,6 +55,6 @@ Visiting Academic \
 [Department of Statistics](https://warwick.ac.uk/fac/sci/statistics/) | University of Warwick\
 *01/2016---06/2017*
 
-Postdoctoral Researcher / Statistical Consultant\
+Research Assistant / Statistical Consultant\
 [University Hospital of Psychiatry](https://www.upd.ch/de/), Bern\
-*12/2013---12/2015*
+*10/2008---12/2015*

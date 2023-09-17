@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Statistics (yup!)",
     "section": "",
-    "text": "I am a senior researcher and statistician at Swisstransplant—the national organisation for organ donation and transplantation in Switzerland."
+    "text": "I am a statistician at Swisstransplant—the Swiss National Foundation for organ donation and transplantation."
   },
   {
     "objectID": "index.html#qualifications",
@@ -18,28 +18,28 @@
     "href": "index.html#experiences",
     "title": "Statistics (yup!)",
     "section": "Experiences",
-    "text": "Experiences\nSenior Researcher / Statistician\nSwisstransplant, Bern\n11/2021—Present\nPostdoctoral Researcher\nDepartment of Biostatistics | University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute | University of Oxford\n07/2017—06/2018\nVisiting Academic\nDepartment of Statistics | University of Warwick\n01/2016—06/2017\nPostdoctoral Researcher / Statistical Consultant\nUniversity Hospital of Psychiatry, Bern\n12/2013—12/2015"
+    "text": "Experiences\nSenior Researcher / Statistician\nSwisstransplant, Bern\n11/2021—Present\nPostdoctoral Researcher\nDepartment of Biostatistics | University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute | University of Oxford\n07/2017—06/2018\nVisiting Academic\nDepartment of Statistics | University of Warwick\n01/2016—06/2017\nResearch Assistant / Statistical Consultant\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nStudy protocol\nStudy registration\n\n\n\n\nSchematic overview of the KIDMO multivariable prediction model."
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nStudy registration\nStudy protocol\nPoster presented at ISCB44\n\n\n\n\nSchematic overview of the KIDMO multivariable prediction model."
   },
   {
     "objectID": "projects.html#kidney-prediction-model-kidmo",
     "href": "projects.html#kidney-prediction-model-kidmo",
     "title": "Projects",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nStudy protocol\nStudy registration\n\n\n\n\nSchematic overview of the KIDMO multivariable prediction model."
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nStudy registration\nStudy protocol\nPoster presented at ISCB44\n\n\n\n\nSchematic overview of the KIDMO multivariable prediction model."
   },
   {
     "objectID": "projects.html#ex-vivo-allograft-monitoring-exam",
     "href": "projects.html#ex-vivo-allograft-monitoring-exam",
     "title": "Projects",
     "section": "Ex vivo allograft monitoring (EXAM)",
-    "text": "Ex vivo allograft monitoring (EXAM)\nEXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.\n\nStudy preprint\nOnline showcase\nCode repository\n\n\n\n\nEXAM analytics dashboard."
+    "text": "Ex vivo allograft monitoring (EXAM)\nEXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.\n\nStudy preprint\nOnline showcase\nCode repository\nTalk at R/Basel 2023 (Video)\n\n\n\n\nEXAM analytics dashboard."
   },
   {
     "objectID": "projects.html#projects-as-statistical-consultant",
@@ -53,14 +53,14 @@
     "href": "about.html",
     "title": "About me",
     "section": "",
-    "text": "I’m a senior researcher with professional qualification in statistics and medical research. My main focus at Swisstransplant is risk prediction in organ transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the transplantation activity in Switzerland.\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), a founding member of the interest group Statistics in Organ Transplantation (SOT), and a guest researcher at the CRS (University of Zurich)."
+    "text": "I’m a senior researcher with professional qualification in statistics and medical research. My main focus at Swisstransplant is risk prediction in organ transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the national transplantation activity in Switzerland.\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), a founding member of the interest group Statistics in Organ Transplantation (SOT), and a guest researcher at the CRS, and interfaculty competence center of the University of Zurich."
   },
   {
     "objectID": "about.html#interests",
     "href": "about.html#interests",
     "title": "About me",
     "section": "Interests",
-    "text": "Interests\n\nClinical prediction models in kidney and liver transplantation\nStatistical methods for quality control in organ donation\nStatistical reporting in organ transplantation\nStatistical programming and software packages (R)\nData visualization and analytics dashboards (R Shiny, Plotly)\nDynamic, reproducible reporting in data analysis (R Quarto)"
+    "text": "Interests\n\nClinical prediction models in kidney and liver transplantation\nStatistical methods for quality control in organ donation and transplantation\nStatistical reporting of national transplantation activity\nStatistical programming and software packages (R)\nData visualization and analytics dashboards (R Shiny, Plotly)\nDynamic, reproducible reporting (R Quarto)"
   },
   {
     "objectID": "about.html#private",
@@ -102,6 +102,6 @@
     "href": "output.html#presentations",
     "title": "Research output",
     "section": "Presentations",
-    "text": "Presentations\nA complete list with slides from my presentations are available at OSF.\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology\n04/02/22\nAn Introduction to R with the Stanford Heart Transplant data\nTalk at BernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (see also video recording)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/21"
+    "text": "Presentations\nA complete list with slides from my presentations are available at OSF.\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche\n21/06/23\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n04/02/22 / 14/04/2023\nAn Introduction to R with the Stanford Heart Transplant data\nTalk at BernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/21"
   }
 ]
