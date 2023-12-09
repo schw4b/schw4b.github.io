@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Statistics (yup!)",
     "section": "",
-    "text": "I am a statistician at Swisstransplant—the Swiss National Foundation for organ donation and transplantation."
+    "text": "I am a senior statistician at Swisstransplant—the Swiss National Foundation for organ donation and transplantation."
   },
   {
     "objectID": "index.html#qualifications",
@@ -25,14 +25,14 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nStudy registration\nStudy protocol\nPoster presented at ISCB44\n\n\n\n\nSchematic overview of the KIDMO multivariable prediction model."
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient and transplant-related risks. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/.\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7(1):6. doi:10.1186/s41512-022-00139-5"
   },
   {
     "objectID": "projects.html#kidney-prediction-model-kidmo",
     "href": "projects.html#kidney-prediction-model-kidmo",
     "title": "Projects",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\nStudy registration\nStudy protocol\nPoster presented at ISCB44\n\n\n\n\nSchematic overview of the KIDMO multivariable prediction model."
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2’000 kidney transplant recipients. More information can be found here:\n\n\n\nSchematic overview of the KIDMO multivariable prediction model.\n\n\n\n\nSchwab S, Sidler D, Haidar F, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7(1):6. doi:10.1186/s41512-022-00139-5"
   },
   {
     "objectID": "projects.html#ex-vivo-allograft-monitoring-exam",
@@ -53,7 +53,7 @@
     "href": "about.html",
     "title": "About me",
     "section": "",
-    "text": "I’m a senior statistician and researcher with professional qualification in statistics and medical research. My main focus at Swisstransplant is risk prediction in kidney and liver transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the national transplantation activity in Switzerland.\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), a founding member of the interest group Statistics in Organ Transplantation (SOT), and a lecturer at the Center for Reproducible Science, a competence center of the University of Zurich."
+    "text": "I’m a senior statistician and researcher with professional qualifications in statistics and medical research. My main focus at Swisstransplant is risk prediction in kidney and liver transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the national transplantation activity in Switzerland.\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), a founding member of the interest group Statistics in Organ Transplantation (SOT), and a lecturer at the Center for Reproducible Science, a competence center of the University of Zurich."
   },
   {
     "objectID": "about.html#interests",
@@ -103,5 +103,19 @@
     "title": "Research output",
     "section": "Presentations",
     "text": "Presentations\nA complete list with slides from my presentations are available at OSF.\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche\n21/06/23\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n04/02/22 / 14/04/2023\nAn Introduction to R with the Stanford Heart Transplant data\nTalk at BernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/21"
+  },
+  {
+    "objectID": "projects.html#kidmokidney-prediction-model",
+    "href": "projects.html#kidmokidney-prediction-model",
+    "title": "Projects",
+    "section": "",
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient and transplant-related risks. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/.\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7(1):6. doi:10.1186/s41512-022-00139-5"
+  },
+  {
+    "objectID": "projects.html#examex-vivo-allograft-monitoring",
+    "href": "projects.html#examex-vivo-allograft-monitoring",
+    "title": "Projects",
+    "section": "2. EXAM—Ex vivo allograft monitoring",
+    "text": "2. EXAM—Ex vivo allograft monitoring\nEXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.\n\n\n\nFigrue: EXAM analytics dashboard.\n\n\n\nRessources\n\nEXAM online dahsboard\nGitHub code repository\nTalk at R/Basel 2023 (Video)\n\n\n\nPublications\nSchwab S, Steck H, Binet I, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. Research Square. 2023. doi:10.21203/rs.3.rs-2713168/v1"
   }
 ]

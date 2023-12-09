@@ -2,7 +2,7 @@
 title: "About me"
 ---
 
-I'm a senior statistician and researcher with professional qualification in statistics and medical research. My main focus at [Swisstransplant](https://www.swisstransplant.org/) is risk prediction in kidney and liver transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the national transplantation activity in Switzerland.
+I'm a senior statistician and researcher with professional qualifications in statistics and medical research. My main focus at [Swisstransplant](https://www.swisstransplant.org/) is risk prediction in kidney and liver transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the national transplantation activity in Switzerland.
 
 I am also a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/), a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite), and a lecturer at the [Center for Reproducible Science](https://www.crs.uzh.ch/), a competence center of the University of Zurich.
 

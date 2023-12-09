@@ -2,26 +2,36 @@
 title: "Projects"
 ---
 
-## Kidney prediction model (KIDMO)
+## 1. KIDMO---Kidney prediction model
 
-KIDMO is a clinical prediction model for the prognosis in kidney-transplanted patients. The model is currently developed with data from over 2'000 kidney transplant recipients. More information can be found here:
+KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient and transplant-related risks. The model is currently developed with data from over 2'000 kidney transplant recipients.
 
--   [Study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ)
--   [Study protocol](https://doi.org/10.1186/s41512-022-00139-5)
--   [Poster presented at ISCB44](https://osf.io/7fx9z)
+![**Figure:** Schematic overview of the KIDMO multivariable prediction model.](images/Figure-Multivariable%20prediction%20model.png){width="6.7in" alt="Schematic overview of the KIDMO multivariable prediction model."}
 
-![Schematic overview of the KIDMO multivariable prediction model.](images/Figure-Multivariable%20prediction%20model.png){width="6.7in" alt="Schematic overview of the KIDMO multivariable prediction model."}
+### Ressources
+* [Study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ) on OSF Registries from 1. September 2022
+* The online risk calculator is available at <https://swtdata.org/kidmo/>.
+* [Poster presentation](https://osf.io/7fx9z) at the ISCB44 in Milano
 
-## Ex vivo allograft monitoring (EXAM)
+
+### Publications
+
+Schwab S, Sidler D, Haidar F, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagn Progn Res*. 2023;7(1):6. [doi:10.1186/s41512-022-00139-5](http://dx.doi.org/10.1186/s41512-022-00139-5)
+
+## 2. EXAM---Ex vivo allograft monitoring
 
 EXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.
 
--   [Study preprint](https://doi.org/10.21203/rs.3.rs-2713168/v1)
--   [Online showcase](https://swisstransplant.shinyapps.io/EXAM/)
--   [Code repository](https://github.com/Swisstransplant/EXAM)
+![**Figrue:** EXAM analytics dashboard.](images/exam_dashboard.png){width="6.7in" alt="EXAM analytics dashboard."}
+
+### Ressources
+-   [EXAM online dahsboard](https://swisstransplant.shinyapps.io/EXAM/)
+-   [GitHub code repository](https://github.com/Swisstransplant/EXAM)
 -   [Talk at R/Basel 2023](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh) (Video)
 
-![EXAM analytics dashboard.](images/exam-dashboard.png){width="6.7in" alt="EXAM analytics dashboard."}
+### Publications
+
+Schwab S, Steck H, Binet I, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. *Research Square*. 2023. [doi:10.21203/rs.3.rs-2713168/v1](https://doi.org/10.21203/rs.3.rs-2713168/v1)
 
 ## Projects as statistical consultant
 
