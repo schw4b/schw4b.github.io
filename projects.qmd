@@ -16,13 +16,13 @@ KIDMO is a clinical prediction model for the prognosis in kidney transplant reci
 
 ### Publications
 
-Schwab S, Sidler D, Haidar F, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagn Progn Res*. 2023;7(1):6. [doi:10.1186/s41512-022-00139-5](http://dx.doi.org/10.1186/s41512-022-00139-5)
+Schwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagn Progn Res*. 2023;7: 6. [doi:10.1186/s41512-022-00139-5](http://dx.doi.org/10.1186/s41512-022-00139-5)
 
 ## 2. EXAM---Ex vivo allograft monitoring
 
 EXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.
 
-![**Figrue:** EXAM analytics dashboard.](images/exam_dashboard.png){width="6.7in" alt="EXAM analytics dashboard."}
+![**Figure:** EXAM analytics dashboard.](images/exam_dashboard.png){width="6.7in" alt="EXAM analytics dashboard."}
 
 ### Ressources
 -   [EXAM online dahsboard](https://swisstransplant.shinyapps.io/EXAM/)
@@ -31,7 +31,17 @@ EXAM is an analytics dashboard for ex vivo allograft monitoring during hypotherm
 
 ### Publications
 
-Schwab S, Steck H, Binet I, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. *Research Square*. 2023. [doi:10.21203/rs.3.rs-2713168/v1](https://doi.org/10.21203/rs.3.rs-2713168/v1)
+Schwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. *Research Square*. 2023. [doi:10.21203/rs.3.rs-2713168/v1](https://doi.org/10.21203/rs.3.rs-2713168/v1)
+
+## 3. WAIT---Waiting list analysis in transplantation
+
+Median waiting times published by transplant organizations around the world may be biased when death or censoring is disregarded. Competing risk multistate models are suited for the analysis of time-to-event data of the organ waiting list. Resulting cumulative incidences are probabilities for transplantation or death by a given time, and are a more accurate description of the events occurring on the waiting list. In accordance with the concept of median survival time in survival analysis in clinical trials, we can derive the median time to transplantation (MTT) , the waiting time duration at which the transplant probability is 0.50.
+
+![**Figure:** Cumulative incidence curves for transplantation for the different organs **A**—**E** with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).](images/WAIT-Figure3.png){width="6.7in" alt="Cumulative incidence curves."}
+
+### Publications
+
+Schwab S, Elmer A, Sidler D, Straumann L, Stuerzinger U, Immer F. Selection bias in reporting of median waiting times in organ transplantation. *medRxiv*. 2023. p. 2023.12.13.23299859. [doi:10.1101/2023.12.13.23299859](http://dx.doi.org/10.1101/2023.12.13.23299859)
 
 ## Projects as statistical consultant
 

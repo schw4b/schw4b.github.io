@@ -32,10 +32,10 @@ GradStat---Graduate Statistician\
 CAS---Advanced Statistical Data Science\
 *University of Bern, 2022*
 
-PhD---Health Science\
+PhD---Health Science (Neurosciences & Statistics)\
 *University of Bern, 2013*
 
-MSc---Psychology & Computer Science\
+MSc---Psychology, Statistics & Computer Science\
 *University of Bern, 2008*
 
 ## Experiences
