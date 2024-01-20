@@ -74,7 +74,7 @@
     "href": "output.html#r-software",
     "title": "Research output",
     "section": "R Software",
-    "text": "R Software\nEXAM—Ex vivo allograft monitoring dashboard.\nswt—Swisstransplant R package.\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR)."
+    "text": "R Software\n\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR).\nEXAM—Ex vivo allograft monitoring dashboard.\nswt—Swisstransplant R package."
   },
   {
     "objectID": "output.html#reproducibility-notes",
