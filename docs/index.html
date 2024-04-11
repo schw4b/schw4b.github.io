@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.533">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -118,7 +118,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </nav>
     </div>
 <!-- main -->
-<div class="quarto-about-trestles">
+<div class="quarto-about-trestles content">
   <div class="about-entity">
     <img src="profile_gymbiel.jpg" class="about-image
   round " style="height: 10em; width: 10em;">
@@ -154,7 +154,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
   </div>
   <div class="about-contents"><main class="content" id="quarto-document-content">
 
-<p>I am a senior statistician at <a href="https://www.swisstransplant.org/">Swisstransplant</a>—the Swiss National Foundation for organ donation and transplantation.</p>
+<p>I am a senior statistician at <a href="https://www.swisstransplant.org/">Swisstransplant</a>, the Swiss National Foundation for Organ Donation and Transplantation.</p>
 <section id="qualifications" class="level2">
 <h2 data-anchor-id="qualifications">Qualifications</h2>
 <p>GradStat—Graduate Statistician<br>
@@ -177,10 +177,10 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <p>Research Fellow<br>
 <a href="https://www.bdi.ox.ac.uk/">Big Data Institute</a>, University of Oxford<br>
 <em>07/2017—06/2018</em></p>
-<p>Visiting Academic<br>
+<p>Visiting Scientist<br>
 <a href="https://warwick.ac.uk/fac/sci/statistics/">Department of Statistics</a>, University of Warwick<br>
 <em>01/2016—06/2017</em></p>
-<p>Research Assistant / Statistical Consultant<br>
+<p>Research Assistant<br>
 <a href="https://www.upd.ch/de/">University Hospital of Psychiatry</a>, Bern<br>
 <em>10/2008—12/2015</em></p>
 
@@ -272,6 +272,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -313,7 +318,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -361,7 +370,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -586,7 +600,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Update: 23. December 2023</p>
+<p>Update: 11. April 2024</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.533">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -160,7 +160,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </section>
 <section id="reproducibility-notes" class="level2">
 <h2 class="anchored" data-anchor-id="reproducibility-notes">Reproducibility Notes</h2>
-<p>A series of commentaries highlight topics related to the production of robust, effective and reproducible science, see also <a href="https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html">here</a>.</p>
+<p>A series of commentaries highlight topics related to the production of robust, effective, and reproducible science; see also <a href="https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html">here</a>.</p>
 <p><strong>Schwab, S.</strong>, &amp; Held, L. (2021). Statistical programming: Small mistakes, big impacts. <em>Significance, 18(3)</em>, 6–7. <a href="https://doi.org/10.1111/1740-9713.01522">doi:10.1111/1740-9713.01522</a></p>
 <p>Held, L., Pawel, S., &amp; <strong>Schwab, S.</strong> (2020). Replication power and regression to the mean. <em>Significance, 17(6)</em>, 10–11. <a href="https://doi.org/10.1111/1740-9713.01462">doi:10.1111/1740-9713.01462</a></p>
 <p><strong>Schwab, S.</strong>, &amp; Held, L. (2020). Science after Covid-19: Faster, better, stronger? <em>Significance, 17(4)</em>, 8–9. <a href="https://doi.org/10.1111/1740-9713.01415">doi:10.1111/1740-9713.01415</a></p>
@@ -169,7 +169,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </section>
 <section id="presentations" class="level2">
 <h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
-<p>A complete list with slides from <a href="https://osf.io/a3g5c/">my presentations</a> are available at OSF.</p>
+<p>A complete list with slides from <a href="https://osf.io/a3g5c/">my presentations</a> is available at OSF.</p>
 <p><a href="https://osf.io/8kbt2/">EXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation</a> (see also <a href="https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh">video</a>)<br>
 Talk at R/Basel 2023—Roche<br>
 <em>21/06/23</em></p>
@@ -277,6 +277,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -318,7 +323,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -366,7 +375,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -591,7 +605,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Update: 23. December 2023</p>
+<p>Update: 11. April 2024</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

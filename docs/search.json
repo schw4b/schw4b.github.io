@@ -1,10 +1,52 @@
 [
   {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
+  },
+  {
+    "objectID": "projects.html#kidmokidney-prediction-model",
+    "href": "projects.html#kidmokidney-prediction-model",
+    "title": "Projects",
+    "section": "",
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
+  },
+  {
+    "objectID": "projects.html#examex-vivo-allograft-monitoring",
+    "href": "projects.html#examex-vivo-allograft-monitoring",
+    "title": "Projects",
+    "section": "2. EXAM—Ex vivo allograft monitoring",
+    "text": "2. EXAM—Ex vivo allograft monitoring\nEXAM is an analytics dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation.\n\n\n\nFigure: EXAM analytics dashboard.\n\n\n\nRessources\n\nEXAM online dashboard\nGitHub code repository\nTalk at R/Basel 2023 (Video)\n\n\n\nPublications\nSchwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. Research Square. 2023. doi:10.21203/rs.3.rs-2713168/v1"
+  },
+  {
+    "objectID": "projects.html#waitwaiting-list-analysis-in-transplantation",
+    "href": "projects.html#waitwaiting-list-analysis-in-transplantation",
+    "title": "Projects",
+    "section": "3. WAIT—Waiting list analysis in transplantation",
+    "text": "3. WAIT—Waiting list analysis in transplantation\nMedian waiting times published by transplant organizations around the world may be biased when death or censoring is disregarded. Competing risk multistate models are suited for the analysis of time-to-event data of the organ waiting list. Resulting cumulative incidences are probabilities for transplantation or death by a given time and are a more accurate description of the events occurring on the waiting list. In accordance with the concept of median survival time in survival analysis in clinical trials, we can derive the median time to transplantation (MTT), the waiting time duration at which the transplant probability is 0.50.\n\n\n\nFigure: Cumulative incidence curves for transplantation for the different organs A—E with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).\n\n\n\nPublications\nSchwab S, Elmer A, Sidler D, Straumann L, Stuerzinger U, Immer F. Selection bias in reporting of median waiting times in organ transplantation. medRxiv. 2023. p. 2023.12.13.23299859. doi:10.1101/2023.12.13.23299859"
+  },
+  {
+    "objectID": "projects.html#reportreporting-and-evaluation-of-prediction-models-in-organ-transplantation",
+    "href": "projects.html#reportreporting-and-evaluation-of-prediction-models-in-organ-transplantation",
+    "title": "Projects",
+    "section": "4. REPORT—Reporting and evaluation of prediction models in organ transplantation",
+    "text": "4. REPORT—Reporting and evaluation of prediction models in organ transplantation\nClinical prediction models for prognosis can be used to predict outcomes and support decision-making. Previous research criticized the quality of prediction models concerning poor reporting and the risk of bias. How this applies to prediction models in organ donation and transplantation needs to be clarified. Therefore, this scoping review aims to assess prediction models used in transplant centers in Switzerland and update clinicians on the transparency, quality of reporting, and risk of bias of these tools.\n\n\n\nFigure: To transplant or not to transplant? Assessing the quality and limitations of existing prediction models, this study can inform further research to develop novel or update existing models to improve the decision-making at transplant centers.\n\n\n\nRessources\n\nStudy registration on OSF Registries from 6. April 2024"
+  },
+  {
+    "objectID": "projects.html#projects-as-a-statistical-consultant",
+    "href": "projects.html#projects-as-a-statistical-consultant",
+    "title": "Projects",
+    "section": "Projects as a statistical consultant",
+    "text": "Projects as a statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of the serum creatinine after kidney transplantation in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Statistics (yup!)",
     "section": "",
-    "text": "I am a senior statistician at Swisstransplant—the Swiss National Foundation for organ donation and transplantation."
+    "text": "I am a senior statistician at Swisstransplant, the Swiss National Foundation for Organ Donation and Transplantation."
   },
   {
     "objectID": "index.html#qualifications",
@@ -18,42 +60,7 @@
     "href": "index.html#experiences",
     "title": "Statistics (yup!)",
     "section": "Experiences",
-    "text": "Experiences\nSenior Statistician\nSwisstransplant, Bern\n11/2021—Present\nPostdoctoral Researcher\nDepartment of Biostatistics, University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute, University of Oxford\n07/2017—06/2018\nVisiting Academic\nDepartment of Statistics, University of Warwick\n01/2016—06/2017\nResearch Assistant / Statistical Consultant\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient and transplant-related risks. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/.\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
-  },
-  {
-    "objectID": "projects.html#kidmokidney-prediction-model",
-    "href": "projects.html#kidmokidney-prediction-model",
-    "title": "Projects",
-    "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient and transplant-related risks. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/.\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
-  },
-  {
-    "objectID": "projects.html#examex-vivo-allograft-monitoring",
-    "href": "projects.html#examex-vivo-allograft-monitoring",
-    "title": "Projects",
-    "section": "2. EXAM—Ex vivo allograft monitoring",
-    "text": "2. EXAM—Ex vivo allograft monitoring\nEXAM is an analytics dashboard for ex vivo allograft monitoring during hypothermic machine perfusion in deceased-donor kidney transplantation.\n\n\n\nFigure: EXAM analytics dashboard.\n\n\n\nRessources\n\nEXAM online dahsboard\nGitHub code repository\nTalk at R/Basel 2023 (Video)\n\n\n\nPublications\nSchwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. Research Square. 2023. doi:10.21203/rs.3.rs-2713168/v1"
-  },
-  {
-    "objectID": "projects.html#waitwaiting-list-analysis-in-transplantation",
-    "href": "projects.html#waitwaiting-list-analysis-in-transplantation",
-    "title": "Projects",
-    "section": "3. WAIT—Waiting list analysis in transplantation",
-    "text": "3. WAIT—Waiting list analysis in transplantation\nMedian waiting times published by transplant organizations around the world may be biased when death or censoring is disregarded. Competing risk multistate models are suited for the analysis of time-to-event data of the organ waiting list. Resulting cumulative incidences are probabilities for transplantation or death by a given time, and are a more accurate description of the events occurring on the waiting list. In accordance with the concept of median survival time in survival analysis in clinical trials, we can derive the median time to transplantation (MTT) , the waiting time duration at which the transplant probability is 0.50.\n\n\n\nFigure: Cumulative incidence curves for transplantation for the different organs A—E with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).\n\n\n\nPublications\nSchwab S, Elmer A, Sidler D, Straumann L, Stuerzinger U, Immer F. Selection bias in reporting of median waiting times in organ transplantation. medRxiv. 2023. p. 2023.12.13.23299859. doi:10.1101/2023.12.13.23299859"
-  },
-  {
-    "objectID": "projects.html#projects-as-statistical-consultant",
-    "href": "projects.html#projects-as-statistical-consultant",
-    "title": "Projects",
-    "section": "Projects as statistical consultant",
-    "text": "Projects as statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of the serum creatinine after kidney transplantation in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
+    "text": "Experiences\nSenior Statistician\nSwisstransplant, Bern\n11/2021—Present\nPostdoctoral Researcher\nDepartment of Biostatistics, University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute, University of Oxford\n07/2017—06/2018\nVisiting Scientist\nDepartment of Statistics, University of Warwick\n01/2016—06/2017\nResearch Assistant\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
   },
   {
     "objectID": "output.html",
@@ -81,21 +88,21 @@
     "href": "output.html#reproducibility-notes",
     "title": "Research output",
     "section": "Reproducibility Notes",
-    "text": "Reproducibility Notes\nA series of commentaries highlight topics related to the production of robust, effective and reproducible science, see also here.\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., Pawel, S., & Schwab, S. (2020). Replication power and regression to the mean. Significance, 17(6), 10–11. doi:10.1111/1740-9713.01462\nSchwab, S., & Held, L. (2020). Science after Covid-19: Faster, better, stronger? Significance, 17(4), 8–9. doi:10.1111/1740-9713.01415\nSchwab, S., & Held, L. (2020). Different worlds Confirmatory versus exploratory research. Significance, 17(2), 8–9. doi:10.1111/1740-9713.01369\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x"
+    "text": "Reproducibility Notes\nA series of commentaries highlight topics related to the production of robust, effective, and reproducible science; see also here.\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., Pawel, S., & Schwab, S. (2020). Replication power and regression to the mean. Significance, 17(6), 10–11. doi:10.1111/1740-9713.01462\nSchwab, S., & Held, L. (2020). Science after Covid-19: Faster, better, stronger? Significance, 17(4), 8–9. doi:10.1111/1740-9713.01415\nSchwab, S., & Held, L. (2020). Different worlds Confirmatory versus exploratory research. Significance, 17(2), 8–9. doi:10.1111/1740-9713.01369\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x"
   },
   {
     "objectID": "output.html#presentations",
     "href": "output.html#presentations",
     "title": "Research output",
     "section": "Presentations",
-    "text": "Presentations\nA complete list with slides from my presentations are available at OSF.\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche\n21/06/23\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n04/02/22 / 14/04/2023\nAn Introduction to R with the Stanford Heart Transplant data\nTalk at BernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/21"
+    "text": "Presentations\nA complete list with slides from my presentations is available at OSF.\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche\n21/06/23\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n04/02/22 / 14/04/2023\nAn Introduction to R with the Stanford Heart Transplant data\nTalk at BernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/21"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About me",
     "section": "",
-    "text": "I’m a senior statistician and researcher with professional qualifications in statistics and medical research. My main focus at Swisstransplant is risk prediction in kidney and liver transplantation (prognosis), developing novel data science tools to assist quality control, and statistical reporting of the national transplantation activity in Switzerland.\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), a founding member of the interest group Statistics in Organ Transplantation (SOT), and a lecturer at the Center for Reproducible Science, a competence center of the University of Zurich."
+    "text": "I’m a senior statistician and researcher with professional qualifications in statistics and medical research. My main focus at Swisstransplant is:\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), and a founding member of the interest group Statistics in Organ Transplantation (SOT). Furthermore, I am a lecturer in biostatistics and good research practice at the Center for Reproducible Science, a competence center of the University of Zurich."
   },
   {
     "objectID": "about.html#interests",
@@ -109,6 +116,13 @@
     "href": "about.html#private",
     "title": "About me",
     "section": "Private",
-    "text": "Private\nI am married and a father of a two children (born 2021, 2023). I enjoy playing guitar and listening to alternative metal and indie rock.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
+    "text": "Private\nI am married and the father of two children (born 2021 and 2023). I enjoy playing guitar and listening to alternative metal and indie rock.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
+  },
+  {
+    "objectID": "about.html#memberships",
+    "href": "about.html#memberships",
+    "title": "About me",
+    "section": "Memberships",
+    "text": "Memberships\n\nFellow of the Royal Statistical Society (RSS)\nMember of the Swiss Statistical Society (SSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
   }
 ]

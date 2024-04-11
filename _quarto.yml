@@ -6,7 +6,7 @@ website:
   search: false
   favicon: icons8-cafe-16.png
   navbar:
-    background: "#D1CDBD"
+    background: "#9BBDC5"
     foreground: "white"
     left:
       - href: index.qmd
@@ -21,7 +21,7 @@ website:
 
   page-footer:
     right: ""
-    left: 'Update: 23. December 2023'
+    left: 'Update: 11. April 2024'
   google-analytics: "G-GPR2YZSX56"
       
 format:

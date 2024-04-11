@@ -26,7 +26,7 @@ van Zwet, E., Gelman, A., Greenland, S., Imbens, G., **Schwab, S.**, & Goodman, 
 
 ## Reproducibility Notes
 
-A series of commentaries highlight topics related to the production of robust, effective and reproducible science, see also [here](https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html).
+A series of commentaries highlight topics related to the production of robust, effective, and reproducible science; see also [here](https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html).
 
 **Schwab, S.**, & Held, L. (2021). Statistical programming: Small mistakes, big impacts. *Significance, 18(3)*, 6–7. [doi:10.1111/1740-9713.01522](https://doi.org/10.1111/1740-9713.01522)
 
@@ -40,7 +40,7 @@ Held, L., & **Schwab, S.** (2020). Improving the reproducibility of science. *Si
 
 ## Presentations
 
-A complete list with slides from [my presentations](https://osf.io/a3g5c/) are available at OSF.
+A complete list with slides from [my presentations](https://osf.io/a3g5c/) is available at OSF.
 
 [EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://osf.io/8kbt2/) (see also [video](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh))\
 Talk at R/Basel 2023---Roche\
