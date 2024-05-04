@@ -3,6 +3,7 @@ project:
   output-dir: docs
 website:
   title: "Simon Schwab"
+  site-url: https://www.statsyup.org
   search: false
   favicon: icons8-cafe-16.png
   navbar:
