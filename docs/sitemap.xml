@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.statsyup.org/index.html</loc>
-    <lastmod>2024-05-04T13:31:41.101Z</lastmod>
+    <loc>https://www.statsyup.org/posts.html</loc>
+    <lastmod>2024-04-29T20:13:29.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/posts/fake/index.html</loc>
+    <lastmod>2024-05-05T19:17:56.562Z</lastmod>
   </url>
   <url>
     <loc>https://www.statsyup.org/output.html</loc>
-    <lastmod>2024-05-04T13:30:07.130Z</lastmod>
+    <lastmod>2024-04-28T18:46:24.000Z</lastmod>
   </url>
   <url>
     <loc>https://www.statsyup.org/projects.html</loc>
-    <lastmod>2024-05-04T13:30:07.130Z</lastmod>
+    <lastmod>2024-04-28T11:51:46.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/about.html</loc>
+    <lastmod>2024-05-02T05:46:05.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/index.html</loc>
+    <lastmod>2024-05-04T21:09:52.994Z</lastmod>
   </url>
 </urlset>

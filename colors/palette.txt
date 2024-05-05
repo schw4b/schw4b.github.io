@@ -1,0 +1,10 @@
+Palette 1
+#241C26 (dark)
+#6F87A6 (blue)
+#818C70 (green)
+#F2F1E9 (white)
+#D9A282 (tuna)
+
+Palette 2
+#:q
+:q (red)

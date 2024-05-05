@@ -4,11 +4,11 @@ title: "Projects"
 
 ## 1. KIDMO---Kidney prediction model
 
-KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2'000 kidney transplant recipients.
+KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2,000 kidney transplant recipients.
 
 ![**Figure:** Schematic overview of the KIDMO multivariable prediction model.](images/proj-kidmo-multivariable_prediction_model.png){width="6.7in" alt="Schematic overview of the KIDMO multivariable prediction model."}
 
-### Ressources
+### Resources
 * [Study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ) on OSF Registries from 1. September 2022
 * The online risk calculator is available at <https://swtdata.org/kidmo/>
 * [Poster presentation](https://osf.io/7fx9z) at the ISCB44 in Milano
@@ -20,11 +20,11 @@ Schwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical predic
 
 ## 2. EXAM---Ex vivo allograft monitoring
 
-EXAM is an analytics dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation.
+EXAM is an analytics dashboard for analyzing hypothermic machine perfusion data in deceased-donor kidney transplantation.
 
 ![**Figure:** EXAM analytics dashboard.](images/proj-exam-dashboard.png){width="6.7in" alt="EXAM analytics dashboard."}
 
-### Ressources
+### Resources
 -   [EXAM online dashboard](https://swisstransplant.shinyapps.io/EXAM/)
 -   [GitHub code repository](https://github.com/Swisstransplant/EXAM)
 -   [Talk at R/Basel 2023](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh) (Video)
@@ -45,11 +45,11 @@ Schwab S, Elmer A, Sidler D, Straumann L, Stuerzinger U, Immer F. Selection bias
 
 ## 4. REPORT---Reporting and evaluation of prediction models in organ transplantation
 
-Clinical prediction models for prognosis can be used to predict outcomes and support decision-making. Previous research criticized the quality of prediction models concerning poor reporting and the risk of bias. How this applies to prediction models in organ donation and transplantation needs to be clarified. Therefore, this scoping review aims to assess prediction models used in transplant centers in Switzerland and update clinicians on the transparency, quality of reporting, and risk of bias of these tools.
+Clinical prediction models for prognosis can predict outcomes and support decision-making. Previous research criticized the quality of prediction models concerning poor reporting and the risk of bias. How this applies to prediction models in organ donation and transplantation needs to be clarified. Therefore, this scoping review aims to assess prediction models used in transplant centers in Switzerland and update clinicians on the transparency, quality of reporting, and risk of bias of these tools.
 
-![**Figure:** To transplant or not to transplant? Assessing the quality and limitations of existing prediction models, this study can inform further research to develop novel or update existing models to improve the decision-making at transplant centers.](images/proj-report-organ_transplant.jpg){width="6.7in" alt="Cumulative incidence curves."}
+![**Figure:** To transplant or not to transplant? Assessing the quality and limitations of existing prediction models can inform further research to develop novel or update existing models to improve the decision-making at transplant centers.](images/proj-report-organ_transplant.jpg){width="6.7in" alt="Cumulative incidence curves."}
 
-### Ressources
+### Resources
 * [Study registration](https://doi.org/10.17605/OSF.IO/FTXK8) on OSF Registries from 6. April 2024
 
 ## Projects as a statistical consultant

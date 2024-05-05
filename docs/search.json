@@ -1,80 +1,31 @@
 [
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Fiction, future, and prediction",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
+    "text": "Fake plastic trees\n\n\nData are overvalued, and statistics are undervalued. New tools and technologies will most likely not revolutionize healthcare but may confuse us about which data and evidence are real and which are not.\n\n\n\nReproducibility\n\n\nDark Statistics\n\n\n\n\n\n\n\n\n\nMay 5, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects.html#kidmokidney-prediction-model",
-    "href": "projects.html#kidmokidney-prediction-model",
-    "title": "Projects",
+    "objectID": "posts/fake/index.html",
+    "href": "posts/fake/index.html",
+    "title": "Fake plastic trees",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2’000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
-  },
-  {
-    "objectID": "projects.html#examex-vivo-allograft-monitoring",
-    "href": "projects.html#examex-vivo-allograft-monitoring",
-    "title": "Projects",
-    "section": "2. EXAM—Ex vivo allograft monitoring",
-    "text": "2. EXAM—Ex vivo allograft monitoring\nEXAM is an analytics dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation.\n\n\n\nFigure: EXAM analytics dashboard.\n\n\n\nRessources\n\nEXAM online dashboard\nGitHub code repository\nTalk at R/Basel 2023 (Video)\n\n\n\nPublications\nSchwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. Research Square. 2023. doi:10.21203/rs.3.rs-2713168/v1"
-  },
-  {
-    "objectID": "projects.html#waitwaiting-list-analysis-in-transplantation",
-    "href": "projects.html#waitwaiting-list-analysis-in-transplantation",
-    "title": "Projects",
-    "section": "3. WAIT—Waiting list analysis in transplantation",
-    "text": "3. WAIT—Waiting list analysis in transplantation\nMedian waiting times published by transplant organizations around the world may be biased when death or censoring is disregarded. Competing risk multistate models are suited for the analysis of time-to-event data of the organ waiting list. Resulting cumulative incidences are probabilities for transplantation or death by a given time and are a more accurate description of the events occurring on the waiting list. In accordance with the concept of median survival time in survival analysis in clinical trials, we can derive the median time to transplantation (MTT), the waiting time duration at which the transplant probability is 0.50.\n\n\n\nFigure: Cumulative incidence curves for transplantation for the different organs A—E with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).\n\n\n\nPublications\nSchwab S, Elmer A, Sidler D, Straumann L, Stuerzinger U, Immer F. Selection bias in reporting of median waiting times in organ transplantation. medRxiv. 2023. p. 2023.12.13.23299859. doi:10.1101/2023.12.13.23299859"
-  },
-  {
-    "objectID": "projects.html#reportreporting-and-evaluation-of-prediction-models-in-organ-transplantation",
-    "href": "projects.html#reportreporting-and-evaluation-of-prediction-models-in-organ-transplantation",
-    "title": "Projects",
-    "section": "4. REPORT—Reporting and evaluation of prediction models in organ transplantation",
-    "text": "4. REPORT—Reporting and evaluation of prediction models in organ transplantation\nClinical prediction models for prognosis can be used to predict outcomes and support decision-making. Previous research criticized the quality of prediction models concerning poor reporting and the risk of bias. How this applies to prediction models in organ donation and transplantation needs to be clarified. Therefore, this scoping review aims to assess prediction models used in transplant centers in Switzerland and update clinicians on the transparency, quality of reporting, and risk of bias of these tools.\n\n\n\nFigure: To transplant or not to transplant? Assessing the quality and limitations of existing prediction models, this study can inform further research to develop novel or update existing models to improve the decision-making at transplant centers.\n\n\n\nRessources\n\nStudy registration on OSF Registries from 6. April 2024"
-  },
-  {
-    "objectID": "projects.html#projects-as-a-statistical-consultant",
-    "href": "projects.html#projects-as-a-statistical-consultant",
-    "title": "Projects",
-    "section": "Projects as a statistical consultant",
-    "text": "Projects as a statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of the serum creatinine after kidney transplantation in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistics (yup!)",
-    "section": "",
-    "text": "I am a senior statistician at Swisstransplant, the Swiss National Foundation for Organ Donation and Transplantation."
-  },
-  {
-    "objectID": "index.html#qualifications",
-    "href": "index.html#qualifications",
-    "title": "Statistics (yup!)",
-    "section": "Qualifications",
-    "text": "Qualifications\nGradStat—Graduate Statistician\nRoyal Statistical Society, 2023\nCAS—Advanced Statistical Data Science\nUniversity of Bern, 2022\nPhD—Health Science\nUniversity of Bern, 2013\nMSc—Psychology, Statistics & Computer Science\nUniversity of Bern, 2008"
-  },
-  {
-    "objectID": "index.html#experiences",
-    "href": "index.html#experiences",
-    "title": "Statistics (yup!)",
-    "section": "Experiences",
-    "text": "Experiences\nSenior Statistician\nSwisstransplant, Bern\n11/2021—Present\nPostdoctoral Researcher\nDepartment of Biostatistics, University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute, University of Oxford\n07/2017—06/2018\nVisiting Scientist\nDepartment of Statistics, University of Warwick\n01/2016—06/2017\nResearch Assistant\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
+    "text": "Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.\n“You can be rich in data but poor in information.” —Stephen Senn\nPut bluntly, all data are rubbish without statistics. Nevertheless, the glorification of data has evolved dramatically over the last decade and continues to do so. An example is the front cover of the magazine Science from 2011. It is a collage of words, but only one stands out in large letters: “data.”\nWe are indeed very hungry for data. However, I don’t believe data should take center stage. What is more important is how we analyze and interpret data. In other words, it is all about how we perform statistics on the data.\nI tried to find the word “statistics” on the front cover but could not find it. Can you see it? Maybe Science should have made the word “data” a bit smaller to leave more room for the word “statistics,” the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data.\nNevertheless, many medical studies are conducted with no or little involvement of adequately trained statisticians; and the same is true for scientific peer-review [1].\nIt seem that we live in a world where data is overvalued and statistics is undervalued.\n\n\n\nScience magazine front cover from 11. February 2011.\n\n\n\nBig data\nAnother example of the glorification of data is the term Big Data.\nWhat does big data even mean? I make the outrageous claim that big data is not the latest accomplishment of science in tackling unsolved problems. Instead, it is our defeat against data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply “AI.” Please make no mistake: 20,000 biomarkers for 100 patients is not big data; the sample size is still N=100, and I consider this a small study. For a prediction model for prognosis, for example, I would instead prefer 10 clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example.\nToo much data can make data analysis harder, but this is often unrecognized. The unsystematic collection of high-dimensional data, when data is more “wide” than “long,” can lead to more questions than answers. For example, the failure of protein cancer biomarker research [2] or the Human Brain Project [3]. Maybe the combination of big data and overhyped promises is a reason for concern. I recognize this pattern of big data and exaggerated promises that are now being made in the field of AI in medicine.\nWhat I am trying to say is that data alone does not represent any real value, even if it is big data. Data can’t speak for themselves. Data is pretty dumb. Think about your favorite restaurant and your favorite dish. Imagine being served only unprepared food, raw and uncooked. That’s what data is basically without statistics; it’s just the ingredients, the parts. Data on their own are inedible food. And when you get plenty of it, it does not turn things for the better.\nOne may object that more data will always lead to less uncertainty. This is, in principle, true. However, then I imagine the many attempts very large datasets are being explored, analyzed, and reanalyzed until the the desired result is obtained, or until the model fits the data. Then, this process only appears to reduce the uncertainty.\nIt is called phantom degrees of freedom [4]. We have reduced uncertainty through a very well-fitting model, but this is an illusion because, in reality, the process by which the data were analyzed has increased uncertainty. The standard errors and p-values lie to us.\n\n\nBrave new tools\nStatistics summarize data into eatable bites. However, statistical data analysis is not easily prepared like a microwave-ready meal. It requires specialist work. And yes, mistakes can be made in this process [5]. Why can’t AI do all the difficult work for us?\nStatistic software from the past created the illusion that a nice graphical interface would empower those who wanted to explore statistics at the push of a button. The exact opposite has happened with the R programming language. I recently discovered a website with another attempt to make statistics easy: an AI-powered statistics tool.\n“It makes complex data analytics accessible to anyone, eliminating the need for advanced technical knowledge or expertise.” —Advertisement for an AI-based statistics tool\nHow does it work? You simply chat with your data files. For me, it sounds more like the production of flawed conclusions by untrained people via dangerous tools. That will be the gloomy future, it seems.\nThe production of science fiction as science facts.\nThe irony is that the tool was named after an assassinated Roman emperor. This is not a very good omen for the tool. Maybe we are all going to be very disappointed with AI doing our statistical analyses.\nMaybe, just maybe, AI sucks at being a personal statistical assistant. Maybe AI is much better at misusing statistics. The perfect p-hacking machine. AI is misused in many ways to produce fake images, fake texts, fake human voices, and fake videos. Why not fake statistics? AI confuses the real with the unreal, and why can’t this also be applied to data? The perfect tool for data fabrication in the future: a new weapon of math destruction [6]?\nI think we will need more people like Elisabeth Bik [7].\n\n\nWhat lies ahead of us?\nNowadays, AI and machine learning are heavily promoted to “revolutionize healthcare”; this seems an overhyped claim given the notorious overfitting of data in the field [8]. To be fair, it is not just AI that baffles me. Recently, 246 biologists obtained different results from the same data [9] or the latest blunder in functional MRI research [10]. This all demonstrates that we researchers seem to learn a lot from the noise in the data.\nFor now, I want to say that whenever there is a novel, exciting claim, my first reaction is often very reserved. I usually don’t believe it when I see some red flags.\nNow, are you ready for what is next? A world where the relentless rush of technology blurs the lines between what’s real and what’s not?\nFake plastic trees?\n\n\nJust one more thing\n\n\nCode\nset.seed(2024)\n\nSNR = 0.65 # corresponds to 20% explained variance r^2\nN = 2000 # number of patients\nq = 3 # number of biomarkers\n\n# generate data for a study\ndata = array(rnorm(N*q), dim = c(N, q))\nnoise = rnorm(N) # generate standard normal errors\ny = 0.5*data[,1] + 0.3*data[,2] + 0.2*data[,3] + 1/sqrt(SNR)*noise \n\nd = data.frame (y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3])\nfit = lm(y ~ x1 + x2 + x3, data = d)\nsummary(fit)\n\n\n\nCall:\nlm(formula = y ~ x1 + x2 + x3, data = d)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-4.3870 -0.8567 -0.0304  0.8180  4.1861 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -0.05997    0.02820  -2.127   0.0336 *  \nx1           0.46122    0.02888  15.968  &lt; 2e-16 ***\nx2           0.27876    0.02816   9.900  &lt; 2e-16 ***\nx3           0.20915    0.02860   7.312  3.8e-13 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.261 on 1996 degrees of freedom\nMultiple R-squared:  0.1736,    Adjusted R-squared:  0.1723 \nF-statistic: 139.7 on 3 and 1996 DF,  p-value: &lt; 2.2e-16\n\n\n\nSNR / (1 + SNR )\n\n[1] 0.3939394\n\n\nBelow I create a biomarker study using simulated data. I make the following assumptions.\n\nI simulate 100 studies\nEach study has \\(N\\) = 300 patients with \\(q\\) = 500 biomarkers\nAll predictors are uncorrelated and normally distributed, with a mean of 0 and SD of 1.\nThe outcome is additive of predictor \\(x_1\\), \\(x_{11}\\), and \\(x_{111}\\), with an SNR of 0.2\nThe true effect parameters are \\(\\beta_1\\) of 0.5, \\(\\beta_{11}\\) of 0.3, and \\(\\beta_{111}\\) of 0.2.\n\n\n\nCode\nset.seed(2024)\n\nSNR = 0.65\nk = 2 # number of studies\nN = 200 # number of patients\nq = 3000 # number of biomarkers\n\nhas.model = rep(NA, k)\nppv = rep(NA, k)\n\npb = txtProgressBar(min = 1, max = k, style = 3)\nfor (j in 1:k) { # iterate across studies\n  \n  # generate data for a study\n  data = array(rnorm(N*q), dim = c(N, q))\n  noise = rnorm(N) # generate standard normal errors\n  y = 0.5*data[,1] + 0.3*data[,2] + 0.2*data[,3] + 1/sqrt(SNR)*noise\n  \n  pvalues = rep(NA, q)\n  for (i in 1:q) { # iterate across biomarkers\n    d = data.frame (y = y, x = data[, i]) # univariable screening\n    fit = lm(y ~ x, data = d)\n    stats = summary(fit)\n    pvalues[i] = stats$coefficients[2,4]\n  }\n  # results of single studies\n  model = which(pvalues &lt;= 0.05) # variable selection\n  has.model[j] = all(c(1, 2, 3) %in% model) # correct biomarkers found\n  # proportion of true biomarkers among all positive biomarkers\n  ppv[j] = sum(c(1, 2, 3) %in% model) / length(model)\n  setTxtProgressBar(pb, j)\n}\n\n\n\n  |                                                                            \n  |                                                                      |   0%\n  |                                                                            \n  |======================================================================| 100%\n\n\nHere you see the regression results from one of the 2 studies as an example.\n\n\nCode\nfit = lm(y ~ data[,1] + data[,2] + data[,3] + data[,4], data = data.frame(y = y, data = data))\nsfit = summary(fit)\n\nlower = confint(fit)[,1]\nupper = confint(fit)[,2]\nbetas = coef(fit)\neffect = sprintf(\"%.2f (from %.2f to %.2f)\", betas, lower, upper)\n\ntab = data.frame(Effect = effect, Pvalue = swt::tidy_pvalues(sfit$coefficients[,4]))\nrownames(tab) = c(\"Intercept\", \"x1\", \"x2\", \"x3\", \"x4\")\ntab\n\n\n\n\n\n\n\nEffect\nPvalue\n\n\n\n\nIntercept\n0.09 (from -0.09 to 0.27)\n0.30\n\n\nx1\n0.53 (from 0.36 to 0.71)\n&lt; 0.001 ***\n\n\nx2\n0.25 (from 0.08 to 0.42)\n0.004 **\n\n\nx3\n0.09 (from -0.09 to 0.28)\n0.33\n\n\nx4\n-0.05 (from -0.23 to 0.14)\n0.63\n\n\n\n\n\n\nHowever, from the 2 study results, only 0 contain the three variables \\(x_1\\), \\(x_{11}\\), and \\(x_{111}\\) when univariable screening is used. Furthermore, the proportion of variables found which are true (\\(x_1\\), \\(x_{11}\\), or \\(x_{111}\\)) from all positive variables found due to the screening is only 0.01 (range from 0.01 to 0.01); this is also known as the positive predictive value.\nWhat is true is unlikely to be found, and what we found is unlikely to be true.\nThe title of this post is a song by the band Radiohead.\n\n\n\n\n\nReferences\n\n1. Van Calster B, Wynants L, Riley RD, Smeden M van, Collins GS. Methodology over metrics: Current scientific standards are a disservice to patients and society. J Clin Epidemiol. 2021;138: 219–226. doi:10.1016/j.jclinepi.2021.05.018\n\n\n2. Diamandis EP. The failure of protein cancer biomarkers to reach the clinic: Why, and what can be done to address the problem? BMC Med. 2012;10: 87. doi:10.1186/1741-7015-10-87\n\n\n3. Yong E. The human brain project hasn’t lived up to its promise. The Atlantic. 2019. \n\n\n4. Harrell FE. Regression modeling strategies. Springer International Publishing; 2015. doi:10.1007/978-3-319-19425-7\n\n\n5. Schwab S, Held L. Statistical programming: Small mistakes, big impacts. Significance. 2021;18: 6–7. doi:10.1111/1740-9713.01522\n\n\n6. O’Neil C. Weapons of math destruction: How big data increases inequality and threatens democracy. 1st ed. Crown; 2016. \n\n\n7. Shen H. Meet this super-spotter of duplicated images in science papers. Nature. 2020;581: 132–136. doi:10.1038/d41586-020-01363-z\n\n\n8. Volovici V, Syn NL, Ercole A, Zhao JJ, Liu N. Steps to avoid overuse and misuse of machine learning in clinical research. Nat Med. 2022;28: 1996–1999. doi:10.1038/s41591-022-01961-6\n\n\n9. Oza A. Reproducibility trial: 246 biologists get different results from same data sets. Nature. 2023;622: 677–678. doi:10.1038/d41586-023-03177-1\n\n\n10. Prillaman M. This fMRI technique promised to transform brain research - why can no one replicate it? Nature. 2024. doi:10.1038/d41586-024-00931-x\n\nCitationBibTeX citation:@misc{schwab2024,\n  author = {Schwab, Simon},\n  title = {Fake Plastic Trees},\n  date = {2024},\n  url = {https://www.statsyup.org/posts/fake/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nSchwab S. Fake plastic trees. 2024. Available:\nhttps://www.statsyup.org/posts/fake/"
   },
   {
     "objectID": "output.html",
     "href": "output.html",
     "title": "Research output",
     "section": "",
-    "text": "See also at Google Scholar and Pubmed.\nvan Zwet, E., Gelman, A., Greenland, S., Imbens, G., Schwab, S., & Goodman, S. N. (2023). A New Look at P Values for Randomized Clinical Trials. NEJM Evidence, EVIDoa2300003. doi:10.1056/EVIDoa2300003\nSchwab, S., & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. SAEZ Schweizerische Ärztezeitung. doi:10.4414/saez.2023.1266894718\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nSchwab, S., Janiaud, P., Dayan, M., Amrhein, V., Panczak, R., Palagi, P. M., Hemkens, L. G., Ramon, M., Rothen, N., Senn, S., Furrer, E., & Held, L. (2022). Ten simple rules for good research practice. PLoS Computational Biology, 18(6), e1010139. doi:10.1371/journal.pcbi.1010139"
+    "text": "van Zwet, E., Gelman, A., Greenland, S., Imbens, G., Schwab, S., & Goodman, S. N. (2024). A New Look at P Values for Randomized Clinical Trials. NEJM Evidence, 3(1), EVIDoa2300003. doi:10.1056/EVIDoa2300003\nSchwab, S., & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. Schweizerische Arztezeitung. doi:10.4414/saez.2023.1266894718\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nFor more publications, see Google Scholar and Pubmed."
   },
   {
     "objectID": "output.html#recent-publications",
     "href": "output.html#recent-publications",
     "title": "Research output",
     "section": "",
-    "text": "See also at Google Scholar and Pubmed.\nvan Zwet, E., Gelman, A., Greenland, S., Imbens, G., Schwab, S., & Goodman, S. N. (2023). A New Look at P Values for Randomized Clinical Trials. NEJM Evidence, EVIDoa2300003. doi:10.1056/EVIDoa2300003\nSchwab, S., & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. SAEZ Schweizerische Ärztezeitung. doi:10.4414/saez.2023.1266894718\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nSchwab, S., Janiaud, P., Dayan, M., Amrhein, V., Panczak, R., Palagi, P. M., Hemkens, L. G., Ramon, M., Rothen, N., Senn, S., Furrer, E., & Held, L. (2022). Ten simple rules for good research practice. PLoS Computational Biology, 18(6), e1010139. doi:10.1371/journal.pcbi.1010139"
+    "text": "van Zwet, E., Gelman, A., Greenland, S., Imbens, G., Schwab, S., & Goodman, S. N. (2024). A New Look at P Values for Randomized Clinical Trials. NEJM Evidence, 3(1), EVIDoa2300003. doi:10.1056/EVIDoa2300003\nSchwab, S., & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. Schweizerische Arztezeitung. doi:10.4414/saez.2023.1266894718\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nFor more publications, see Google Scholar and Pubmed."
   },
   {
     "objectID": "output.html#r-software",
@@ -88,28 +39,77 @@
     "href": "output.html#reproducibility-notes",
     "title": "Research output",
     "section": "Reproducibility Notes",
-    "text": "Reproducibility Notes\nA series of commentaries highlight topics related to the production of robust, effective, and reproducible science; see also here.\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., Pawel, S., & Schwab, S. (2020). Replication power and regression to the mean. Significance, 17(6), 10–11. doi:10.1111/1740-9713.01462\nSchwab, S., & Held, L. (2020). Science after Covid-19: Faster, better, stronger? Significance, 17(4), 8–9. doi:10.1111/1740-9713.01415\nSchwab, S., & Held, L. (2020). Different worlds Confirmatory versus exploratory research. Significance, 17(2), 8–9. doi:10.1111/1740-9713.01369\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x"
+    "text": "Reproducibility Notes\nA series of commentaries highlight topics related to the production of robust, effective, and reproducible science; see also here.\nSchwab, S., Janiaud, P., Dayan, M., Amrhein, V., Panczak, R., Palagi, P. M., Hemkens, L. G., Ramon, M., Rothen, N., Senn, S., Furrer, E., & Held, L. (2022). Ten simple rules for good research practice. PLoS Computational Biology, 18(6), e1010139. doi:10.1371/journal.pcbi.1010139\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., Pawel, S., & Schwab, S. (2020). Replication power and regression to the mean. Significance, 17(6), 10–11. doi:10.1111/1740-9713.01462\nSchwab, S., & Held, L. (2020). Science after Covid-19: Faster, better, stronger? Significance, 17(4), 8–9. doi:10.1111/1740-9713.01415\nSchwab, S., & Held, L. (2020). Different worlds Confirmatory versus exploratory research. Significance, 17(2), 8–9. doi:10.1111/1740-9713.01369\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x"
   },
   {
     "objectID": "output.html#presentations",
     "href": "output.html#presentations",
     "title": "Research output",
     "section": "Presentations",
-    "text": "Presentations\nA complete list with slides from my presentations is available at OSF.\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche\n21/06/23\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n04/02/22 / 14/04/2023\nAn Introduction to R with the Stanford Heart Transplant data\nTalk at BernR—Bern R user group\n09/12/21\nFrom Regression to Machine Learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/21"
+    "text": "Presentations\nA complete list of slides from my presentations is available at OSF.\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche\n21/06/2023\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n04/02/2022, 14/04/2023, 28/03/2024\nAn introduction to R with the Stanford Heart Transplant Data\nTalk at BernR—Bern R user group\n09/12/2021\nFrom regression to machine learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/2021"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2,000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
+  },
+  {
+    "objectID": "projects.html#kidmokidney-prediction-model",
+    "href": "projects.html#kidmokidney-prediction-model",
+    "title": "Projects",
+    "section": "",
+    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2,000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
+  },
+  {
+    "objectID": "projects.html#examex-vivo-allograft-monitoring",
+    "href": "projects.html#examex-vivo-allograft-monitoring",
+    "title": "Projects",
+    "section": "2. EXAM—Ex vivo allograft monitoring",
+    "text": "2. EXAM—Ex vivo allograft monitoring\nEXAM is an analytics dashboard for analyzing hypothermic machine perfusion data in deceased-donor kidney transplantation.\n\n\n\nFigure: EXAM analytics dashboard.\n\n\n\nResources\n\nEXAM online dashboard\nGitHub code repository\nTalk at R/Basel 2023 (Video)\n\n\n\nPublications\nSchwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. Research Square. 2023. doi:10.21203/rs.3.rs-2713168/v1"
+  },
+  {
+    "objectID": "projects.html#waitwaiting-list-analysis-in-transplantation",
+    "href": "projects.html#waitwaiting-list-analysis-in-transplantation",
+    "title": "Projects",
+    "section": "3. WAIT—Waiting list analysis in transplantation",
+    "text": "3. WAIT—Waiting list analysis in transplantation\nMedian waiting times published by transplant organizations around the world may be biased when death or censoring is disregarded. Competing risk multistate models are suited for the analysis of time-to-event data of the organ waiting list. Resulting cumulative incidences are probabilities for transplantation or death by a given time and are a more accurate description of the events occurring on the waiting list. In accordance with the concept of median survival time in survival analysis in clinical trials, we can derive the median time to transplantation (MTT), the waiting time duration at which the transplant probability is 0.50.\n\n\n\nFigure: Cumulative incidence curves for transplantation for the different organs A—E with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).\n\n\n\nPublications\nSchwab S, Elmer A, Sidler D, Straumann L, Stuerzinger U, Immer F. Selection bias in reporting of median waiting times in organ transplantation. medRxiv. 2023. p. 2023.12.13.23299859. doi:10.1101/2023.12.13.23299859"
+  },
+  {
+    "objectID": "projects.html#reportreporting-and-evaluation-of-prediction-models-in-organ-transplantation",
+    "href": "projects.html#reportreporting-and-evaluation-of-prediction-models-in-organ-transplantation",
+    "title": "Projects",
+    "section": "4. REPORT—Reporting and evaluation of prediction models in organ transplantation",
+    "text": "4. REPORT—Reporting and evaluation of prediction models in organ transplantation\nClinical prediction models for prognosis can predict outcomes and support decision-making. Previous research criticized the quality of prediction models concerning poor reporting and the risk of bias. How this applies to prediction models in organ donation and transplantation needs to be clarified. Therefore, this scoping review aims to assess prediction models used in transplant centers in Switzerland and update clinicians on the transparency, quality of reporting, and risk of bias of these tools.\n\n\n\nFigure: To transplant or not to transplant? Assessing the quality and limitations of existing prediction models can inform further research to develop novel or update existing models to improve the decision-making at transplant centers.\n\n\n\nResources\n\nStudy registration on OSF Registries from 6. April 2024"
+  },
+  {
+    "objectID": "projects.html#projects-as-a-statistical-consultant",
+    "href": "projects.html#projects-as-a-statistical-consultant",
+    "title": "Projects",
+    "section": "Projects as a statistical consultant",
+    "text": "Projects as a statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of the serum creatinine after kidney transplantation in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About me",
     "section": "",
-    "text": "I’m a senior statistician and researcher with professional qualifications in statistics and medical research. My main focus at Swisstransplant is:\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), and a founding member of the interest group Statistics in Organ Transplantation (SOT). Furthermore, I am a lecturer in biostatistics and good research practice at the Center for Reproducible Science, a competence center of the University of Zurich."
+    "text": "I’m a senior statistician and researcher with professional qualifications in statistics and medical research. My main focus at Swisstransplant is:\n\nrisk prediction in kidney and liver transplantation (prediction models for prognosis)\nanalysis of the waiting list to estimate probability of transplantation\ndevelopment of methodology for quality control\nstatistical reporting of national transplant activity\n\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), and a founding member of the interest group Statistics in Organ Transplantation (SOT). Furthermore, I am a lecturer in biostatistics and good research practice at the Center for Reproducible Science, a competence center of the University of Zurich."
   },
   {
-    "objectID": "about.html#interests",
-    "href": "about.html#interests",
+    "objectID": "about.html#professional",
+    "href": "about.html#professional",
     "title": "About me",
-    "section": "Interests",
-    "text": "Interests\n\nClinical prediction models in kidney and liver transplantation\nStatistical methods for quality control in organ donation and transplantation\nStatistical reporting of national transplantation activity\nStatistical programming and software packages (R)\nData visualization and analytics dashboards (R Shiny, Plotly)\nDynamic, reproducible reporting (R Quarto)"
+    "section": "",
+    "text": "I’m a senior statistician and researcher with professional qualifications in statistics and medical research. My main focus at Swisstransplant is:\n\nrisk prediction in kidney and liver transplantation (prediction models for prognosis)\nanalysis of the waiting list to estimate probability of transplantation\ndevelopment of methodology for quality control\nstatistical reporting of national transplant activity\n\nI am also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS), and a founding member of the interest group Statistics in Organ Transplantation (SOT). Furthermore, I am a lecturer in biostatistics and good research practice at the Center for Reproducible Science, a competence center of the University of Zurich."
+  },
+  {
+    "objectID": "about.html#memberships",
+    "href": "about.html#memberships",
+    "title": "About me",
+    "section": "Memberships",
+    "text": "Memberships\n\nFellow of the Royal Statistical Society (RSS)\nMember of the Swiss Statistical Society (SSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
   },
   {
     "objectID": "about.html#private",
@@ -119,10 +119,24 @@
     "text": "Private\nI am married and the father of two children (born 2021 and 2023). I enjoy playing guitar and listening to alternative metal and indie rock.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
   },
   {
-    "objectID": "about.html#memberships",
-    "href": "about.html#memberships",
-    "title": "About me",
-    "section": "Memberships",
-    "text": "Memberships\n\nFellow of the Royal Statistical Society (RSS)\nMember of the Swiss Statistical Society (SSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Simon Schwab",
+    "section": "",
+    "text": "I am a senior statistician at Swisstransplant, the Swiss National Foundation for Organ Donation and Transplantation."
+  },
+  {
+    "objectID": "index.html#qualifications",
+    "href": "index.html#qualifications",
+    "title": "Simon Schwab",
+    "section": "Qualifications",
+    "text": "Qualifications\nGradStat—Graduate Statistician\nRoyal Statistical Society, 2023\nCAS—Advanced Statistical Data Science\nUniversity of Bern, 2022\nPhD—Health Science\nUniversity of Bern, 2013\nMSc—Psychology, Statistics & Computer Science\nUniversity of Bern, 2008"
+  },
+  {
+    "objectID": "index.html#experiences",
+    "href": "index.html#experiences",
+    "title": "Simon Schwab",
+    "section": "Experiences",
+    "text": "Experiences\nSenior Statistician\nSwisstransplant, Bern\n11/2021—Present\nPostdoctoral Researcher\nDepartment of Biostatistics, University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute, University of Oxford\n07/2017—06/2018\nVisiting Scientist\nDepartment of Statistics, University of Warwick\n01/2016—06/2017\nResearch Assistant\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
   }
 ]

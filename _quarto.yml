@@ -1,13 +1,15 @@
 project:
   type: website
   output-dir: docs
+  
 website:
-  title: "Simon Schwab"
-  site-url: https://www.statsyup.org
+  title: "Statistics, yup!"
+  site-url: https://www.statsyup.org/
+  description: "This is Simon Schwab's personal website."
   search: false
-  favicon: icons8-cafe-16.png
+  favicon: images/icons8-coffee-96.png
   navbar:
-    background: "#9BBDC5"
+    background: "#BF505A"
     foreground: "white"
     left:
       - href: index.qmd
@@ -16,14 +18,17 @@ website:
         text: Projects
       - href: output.qmd
         text: Output
+      - href: posts.qmd
+        text: Posts
     right:
       - href: about.qmd
         text: About me
-
   page-footer:
     right: ""
-    left: 'Update: 11. April 2024'
-  google-analytics: "G-GPR2YZSX56"
+    left: '© 2024 Simon Schwab'
+  google-analytics:
+    tracking-id: "G-GPR2YZSX56"
+    anonymize-ip: true
       
 format:
   html:
@@ -33,5 +38,3 @@ format:
     toc: true
     link-external-icon: false
     link-external-newwindow: true
-
-editor: visual
