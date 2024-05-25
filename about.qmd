@@ -4,7 +4,7 @@ title: "About me"
 
 ## Professional
 
-I'm a senior statistician and researcher with professional qualifications in statistics and medical research. My main focus at [Swisstransplant](https://www.swisstransplant.org/) is:
+I'm a senior statistician and researcher at [Swisstransplant](https://www.swisstransplant.org/) with professional qualifications in statistics and medical research. My main focus at  is:
 
 -   risk prediction in kidney and liver transplantation (prediction models for prognosis)
 -   analysis of the waiting list to estimate probability of transplantation

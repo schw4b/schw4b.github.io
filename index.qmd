@@ -22,7 +22,8 @@ about:
       text: Mastodon
       href: https://fosstodon.org/@sims
 ---
-I am a senior statistician at [Swisstransplant](https://www.swisstransplant.org/), the Swiss National Foundation for Organ Donation and Transplantation.
+
+I'm a coffee and data junkie, that's all.
 
 ## Qualifications
 

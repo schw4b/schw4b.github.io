@@ -7,9 +7,9 @@ website:
   site-url: https://www.statsyup.org/
   description: "This is Simon Schwab's personal website."
   search: false
-  favicon: images/icons8-coffee-96.png
+  favicon: images/icons8-kaffeetasse-96-color.png
   navbar:
-    background: "#BF505A"
+    background: "#6F87A6"
     foreground: "white"
     left:
       - href: index.qmd
