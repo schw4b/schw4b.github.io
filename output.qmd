@@ -6,7 +6,7 @@ title: "Research output"
 
 van Zwet, E., Gelman, A., Greenland, S., Imbens, G., **Schwab, S.**, & Goodman, S. N. (2024). A New Look at P Values for Randomized Clinical Trials. *NEJM Evidence, 3(1)*, EVIDoa2300003. [doi:10.1056/EVIDoa2300003](https://doi.org/10.1056/EVIDoa2300003)
 
-**Schwab, S.**, & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. *Schweizerische Arztezeitung*. [doi:10.4414/saez.2023.1266894718](https://doi.org/10.4414/saez.2023.1266894718)
+**Schwab, S.**, & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. *Schweizerische Ärztezeitung*. [doi:10.4414/saez.2023.1266894718](https://doi.org/10.4414/saez.2023.1266894718)
 
 **Schwab, S.**, Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagnostic and Prognostic Research, 7(1)*, 6. [doi:10.1186/s41512-022-00139-5](https://doi.org/10.1186/s41512-022-00139-5)
 
@@ -42,13 +42,17 @@ Held, L., & **Schwab, S.** (2020). Improving the reproducibility of science. *Si
 
 A complete list of slides from [my presentations](https://osf.io/a3g5c/) is available at OSF.
 
-[EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://osf.io/8kbt2/) (see also [video](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh))\
-Talk at R/Basel 2023---Roche\
-*21/06/2023*
+[Ten simple rules for good research practice](https://osf.io/zrqta/)\
+Talk at the Computational Reproducibility Seminar---NEXUS Personalized Health Technologies, ETH Zurich\
+*16/05/2024*
 
 [Understanding and managing bias in medical research](https://osf.io/yh76a/)\
 Talk for the Swiss Society for Pneumology---University Hospital of Zurich\
-*04/02/2022, 14/04/2023, 28/03/2024*
+*28/03/2024*
+
+[EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://osf.io/8kbt2/) (see also [video](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh))\
+Talk at R/Basel 2023---Roche Switzerland\
+*21/06/2023*
 
 [An introduction to R with the Stanford Heart Transplant Data](https://osf.io/6mcah/)\
 Talk at BernR---Bern R user group\

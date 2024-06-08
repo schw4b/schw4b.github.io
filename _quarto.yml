@@ -1,13 +1,13 @@
 project:
   type: website
   output-dir: docs
-  
+
 website:
   title: "Statistics, yup!"
   site-url: https://www.statsyup.org/
   description: "This is Simon Schwab's personal website."
   search: false
-  favicon: images/icons8-kaffeetasse-96-color.png
+  favicon: images/favicon.png
   navbar:
     background: "#6F87A6"
     foreground: "white"
