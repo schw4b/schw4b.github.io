@@ -20,12 +20,14 @@
   "Nationality": "Switzerland",
   "url": "https://www.statsyup.org/",
   "sameAs": [
-          "https://www.linkedin.com/in/schw4b/",
+          "https://www.linkedin.com/in/schw4b",
           "https://github.com/schw4b",
           "https://scholar.google.ch/citations?user=uR1_O0UAAAAJ",
           "https://data.snf.ch/grants/person/564019",
           "https://www.crs.uzh.ch/en/people/team/Simon-Schwab.html",
-          "https://orcid.org/0000-0002-1588-2689"
+          "https://orcid.org/0000-0002-1588-2689",
+          "https://metascience2021.org/speakers/schwab",
+          "https://osf.io/profile"
         ]
 }
 </script>

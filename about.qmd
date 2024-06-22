@@ -9,11 +9,11 @@ I'm a senior statistician at [Swisstransplant](https://www.swisstransplant.org/)
 My main tasks include: 
 
 -   risk prediction in kidney and liver transplantation (prediction models for prognosis)
--   analysis of the waiting list to estimate probability of transplantation
+-   analysis of the waiting list to estimate the probability of transplantation
 -   development of methodology for quality control
 -   statistical reporting of national transplant activity
 
-I'm also a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/), and a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite). Furthermore, I am a lecturer in biostatistics and good research practice at the [Center for Reproducible Science](https://www.crs.uzh.ch/), a competence center of the University of Zurich.
+I'm also a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/) and a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite). Furthermore, I am a lecturer in biostatistics and good research practice at the [Center for Reproducible Science](https://www.crs.uzh.ch/), a competence center of the University of Zurich.
 
 ## Memberships
 
