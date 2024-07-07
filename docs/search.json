@@ -21,6 +21,41 @@
     "text": "Experiences\nSenior Statistician\nSwisstransplant, Bern\n11/2021—Present\nPostdoctoral Researcher\nDepartment of Biostatistics, University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute, University of Oxford\n07/2017—06/2018\nVisiting Scientist\nDepartment of Statistics, University of Warwick\n01/2016—06/2017\nResearch Assistant\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
   },
   {
+    "objectID": "output.html",
+    "href": "output.html",
+    "title": "Research output",
+    "section": "",
+    "text": "van Zwet, E., Gelman, A., Greenland, S., Imbens, G., Schwab, S., & Goodman, S. N. (2024). A New Look at P Values for Randomized Clinical Trials. NEJM Evidence, 3(1), EVIDoa2300003. doi:10.1056/EVIDoa2300003\nSchwab, S., & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. Schweizerische Ärztezeitung. doi:10.4414/saez.2023.1266894718\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nFor more publications, see Google Scholar and Pubmed."
+  },
+  {
+    "objectID": "output.html#recent-publications",
+    "href": "output.html#recent-publications",
+    "title": "Research output",
+    "section": "",
+    "text": "van Zwet, E., Gelman, A., Greenland, S., Imbens, G., Schwab, S., & Goodman, S. N. (2024). A New Look at P Values for Randomized Clinical Trials. NEJM Evidence, 3(1), EVIDoa2300003. doi:10.1056/EVIDoa2300003\nSchwab, S., & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. Schweizerische Ärztezeitung. doi:10.4414/saez.2023.1266894718\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nFor more publications, see Google Scholar and Pubmed."
+  },
+  {
+    "objectID": "output.html#r-software",
+    "href": "output.html#r-software",
+    "title": "Research output",
+    "section": "R Software",
+    "text": "R Software\n\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR).\nEXAM—Ex vivo allograft monitoring dashboard.\nswt—Swisstransplant R package."
+  },
+  {
+    "objectID": "output.html#reproducibility-notes",
+    "href": "output.html#reproducibility-notes",
+    "title": "Research output",
+    "section": "Reproducibility Notes",
+    "text": "Reproducibility Notes\nA series of commentaries highlight topics related to the production of robust, effective, and reproducible science; see also the notes featured on the CRS website.\nSchwab, S., Janiaud, P., Dayan, M., Amrhein, V., Panczak, R., Palagi, P. M., Hemkens, L. G., Ramon, M., Rothen, N., Senn, S., Furrer, E., & Held, L. (2022). Ten simple rules for good research practice. PLoS Computational Biology, 18(6), e1010139. doi:10.1371/journal.pcbi.1010139\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., Pawel, S., & Schwab, S. (2020). Replication power and regression to the mean. Significance, 17(6), 10–11. doi:10.1111/1740-9713.01462\nSchwab, S., & Held, L. (2020). Science after Covid-19: Faster, better, stronger? Significance, 17(4), 8–9. doi:10.1111/1740-9713.01415\nSchwab, S., & Held, L. (2020). Different worlds Confirmatory versus exploratory research. Significance, 17(2), 8–9. doi:10.1111/1740-9713.01369\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x"
+  },
+  {
+    "objectID": "output.html#presentations",
+    "href": "output.html#presentations",
+    "title": "Research output",
+    "section": "Presentations",
+    "text": "Presentations\nA complete list of slides from my presentations is available at OSF.\nTen simple rules for good research practice\nTalk at the Computational Reproducibility Seminar—NEXUS Personalized Health Technologies, ETH Zurich\n16/05/2024\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n28/03/2024\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche Switzerland\n21/06/2023\nAn introduction to R with the Stanford Heart Transplant Data\nTalk at BernR—Bern R user group\n09/12/2021\nFrom regression to machine learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/2021"
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
@@ -82,47 +117,5 @@
     "title": "About Simon Schwab",
     "section": "Private",
     "text": "Private\nI am married and the father of two children (born 2021 and 2023). I enjoy playing guitar and listening to alternative metal and indie rock.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
-  },
-  {
-    "objectID": "output.html",
-    "href": "output.html",
-    "title": "Research output",
-    "section": "",
-    "text": "van Zwet, E., Gelman, A., Greenland, S., Imbens, G., Schwab, S., & Goodman, S. N. (2024). A New Look at P Values for Randomized Clinical Trials. NEJM Evidence, 3(1), EVIDoa2300003. doi:10.1056/EVIDoa2300003\nSchwab, S., & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. Schweizerische Ärztezeitung. doi:10.4414/saez.2023.1266894718\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nFor more publications, see Google Scholar and Pubmed."
-  },
-  {
-    "objectID": "output.html#recent-publications",
-    "href": "output.html#recent-publications",
-    "title": "Research output",
-    "section": "",
-    "text": "van Zwet, E., Gelman, A., Greenland, S., Imbens, G., Schwab, S., & Goodman, S. N. (2024). A New Look at P Values for Randomized Clinical Trials. NEJM Evidence, 3(1), EVIDoa2300003. doi:10.1056/EVIDoa2300003\nSchwab, S., & Immer, F. (2023). Prognosemodelle und künstliche Intelligenz. Schweizerische Ärztezeitung. doi:10.4414/saez.2023.1266894718\nSchwab, S., Sidler, D., Haidar, F., Kuhn, C., Schaub, S., Koller, M., Mellac, K., Stürzinger, U., Tischhauser, B., Binet, I., Golshayan, D., Müller, T., Elmer, A., Franscini, N., Krügel, N., Fehr, T., Immer, F., Swisstransplant Kidney Working Group (STAN), & Swiss Transplant Cohort Study. (2023). Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagnostic and Prognostic Research, 7(1), 6. doi:10.1186/s41512-022-00139-5\nFor more publications, see Google Scholar and Pubmed."
-  },
-  {
-    "objectID": "output.html#r-software",
-    "href": "output.html#r-software",
-    "title": "Research output",
-    "section": "R Software",
-    "text": "R Software\n\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR).\nEXAM—Ex vivo allograft monitoring dashboard.\nswt—Swisstransplant R package."
-  },
-  {
-    "objectID": "output.html#reproducibility-notes",
-    "href": "output.html#reproducibility-notes",
-    "title": "Research output",
-    "section": "Reproducibility Notes",
-    "text": "Reproducibility Notes\nA series of commentaries highlight topics related to the production of robust, effective, and reproducible science; see also the notes featured on the CRS website.\nSchwab, S., Janiaud, P., Dayan, M., Amrhein, V., Panczak, R., Palagi, P. M., Hemkens, L. G., Ramon, M., Rothen, N., Senn, S., Furrer, E., & Held, L. (2022). Ten simple rules for good research practice. PLoS Computational Biology, 18(6), e1010139. doi:10.1371/journal.pcbi.1010139\nSchwab, S., & Held, L. (2021). Statistical programming: Small mistakes, big impacts. Significance, 18(3), 6–7. doi:10.1111/1740-9713.01522\nHeld, L., Pawel, S., & Schwab, S. (2020). Replication power and regression to the mean. Significance, 17(6), 10–11. doi:10.1111/1740-9713.01462\nSchwab, S., & Held, L. (2020). Science after Covid-19: Faster, better, stronger? Significance, 17(4), 8–9. doi:10.1111/1740-9713.01415\nSchwab, S., & Held, L. (2020). Different worlds Confirmatory versus exploratory research. Significance, 17(2), 8–9. doi:10.1111/1740-9713.01369\nHeld, L., & Schwab, S. (2020). Improving the reproducibility of science. Significance, 17(1), 10–11. doi:10.1111/j.1740-9713.2020.01351.x"
-  },
-  {
-    "objectID": "output.html#presentations",
-    "href": "output.html#presentations",
-    "title": "Research output",
-    "section": "Presentations",
-    "text": "Presentations\nA complete list of slides from my presentations is available at OSF.\nTen simple rules for good research practice\nTalk at the Computational Reproducibility Seminar—NEXUS Personalized Health Technologies, ETH Zurich\n16/05/2024\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n28/03/2024\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche Switzerland\n21/06/2023\nAn introduction to R with the Stanford Heart Transplant Data\nTalk at BernR—Bern R user group\n09/12/2021\nFrom regression to machine learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/2021"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Fiction, future, and prediction",
-    "section": "",
-    "text": "My posts will delve into the fascinating topic of data science and statistics in medicine. The posts are always presented in a general context, peppered with personal opinions, and ideally, we’ll explore a compelling data example at the end.\nAlways remember that opinions are the lowest form of evidence in the epidemiologists’ famous pyramid of negligence.\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
