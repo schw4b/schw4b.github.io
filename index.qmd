@@ -23,7 +23,6 @@ about:
       href: https://fosstodon.org/@sims
 include-in-header:
   - text: <meta name="description" content="This is Simon Schwab's personal website on statistics and data science.">
-embed-resources: true
 ---
 
 I'm a coffee and data junkie, that's all.
