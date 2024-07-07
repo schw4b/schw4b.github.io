@@ -2,7 +2,7 @@
 title: "Simon Schwab"
 about:
   template: trestles
-  image: images/profile_gymbiel.jpg
+  image: images/profile_gymbiel_200-75.jpg
   image-shape: round
   image-width: 10em
   links:
