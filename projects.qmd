@@ -1,5 +1,7 @@
 ---
 title: "Projects"
+include-in-header:
+  - text: <meta name="description" content="Simon Schwab's research projects.">
 ---
 
 ## 1. KIDMO---Kidney prediction model
@@ -37,7 +39,7 @@ Schwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, et al. EXAM: Ex vivo 
 
 Median waiting times published by transplant organizations around the world may be biased when death or censoring is disregarded. Competing risk multistate models are suited for the analysis of time-to-event data of the organ waiting list. Resulting cumulative incidences are probabilities for transplantation or death by a given time and are a more accurate description of the events occurring on the waiting list. In accordance with the concept of median survival time in survival analysis in clinical trials, we can derive the median time to transplantation (MTT), the waiting time duration at which the transplant probability is 0.50.
 
-![**Figure:** Cumulative incidence curves for transplantation for the different organs **A**—**E** with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).](images/proj-wait-CI.png){width="6.7in" alt="Cumulative incidence curves."}
+![**Figure:** Cumulative incidence curves for transplantation for the different organs **A**—**E** with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).](images/proj-wait-CI.png){width="6.7in" alt="Cumulative incidence curves for the events on the waiting list."}
 
 ### Publications
 
@@ -47,7 +49,7 @@ Schwab S, Elmer A, Sidler D, Straumann L, Stuerzinger U, Immer F. Selection bias
 
 Clinical prediction models for prognosis can predict outcomes and support decision-making. Previous research criticized the quality of prediction models concerning poor reporting and the risk of bias. How this applies to prediction models in organ donation and transplantation needs to be clarified. Therefore, this scoping review aims to assess prediction models used in transplant centers in Switzerland and update clinicians on the transparency, quality of reporting, and risk of bias of these tools.
 
-![**Figure:** To transplant or not to transplant? Assessing the quality and limitations of existing prediction models can inform further research to develop novel or update existing models to improve the decision-making at transplant centers.](images/proj-report-organ_transplant.jpg){width="6.7in" alt="Cumulative incidence curves."}
+![**Figure:** To transplant or not to transplant? Assessing the quality and limitations of existing prediction models can inform further research to develop novel or update existing models to improve the decision-making at transplant centers.](images/proj-report-organ_transplant.jpg){width="6.7in" alt="Solid organ transplant in ice box."}
 
 ### Resources
 * [Study registration](https://doi.org/10.17605/OSF.IO/FTXK8) on OSF Registries from 6. April 2024
