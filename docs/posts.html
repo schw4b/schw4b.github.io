@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Simon Schwab – Statistics, yup!</title>
+<title>Fiction, future, and prediction – Statistics, yup!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,6 +26,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <link href="./images/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -51,6 +53,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPR2YZSX56"></script>
 
 <script type="text/javascript">
@@ -60,41 +91,36 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Simon Schwab",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Effingerstrasse 1",
-    "postalCode": "3011",
-    "addressLocality": "Bern"
-  },
-  "alternateName": "schw4b",
-  "email": "mailto:schw4b@gmail.com",
-  "image": "https://www.statsyup.org/images/profile_gymbiel.jpg",
-  "birthDate": "1980-03-11",
-  "birthPlace": "Biel-Bienne",
-  "jobTitle": "Statistician",
-  "worksFor": "Swisstransplant",
-  "knowsAbout": "Medical statistics, biostatistics, statistical programming.",
-  "Nationality": "Switzerland",
-  "url": "https://www.statsyup.org/",
-  "sameAs": [
-          "https://www.linkedin.com/in/schw4b",
-          "https://github.com/schw4b",
-          "https://scholar.google.ch/citations?user=uR1_O0UAAAAJ",
-          "https://data.snf.ch/grants/person/564019",
-          "https://www.crs.uzh.ch/en/people/team/Simon-Schwab.html",
-          "https://orcid.org/0000-0002-1588-2689",
-          "https://metascience2021.org/speakers/schwab",
-          "https://osf.io/profile"
-        ]
-}
-</script>
-<meta name="description" content="About Simon Schwab.">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -127,13 +153,13 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <span class="menu-text">Output</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link active" href="./posts.html" aria-current="page"> 
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -148,21 +174,14 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#memberships" id="toc-memberships" class="nav-link active" data-scroll-target="#memberships">Memberships</a></li>
-  <li><a href="#private" id="toc-private" class="nav-link" data-scroll-target="#private">Private</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Dark Statistics">Dark Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Reproducibility">Reproducibility <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Simon Schwab</h1>
+<h1 class="title">Fiction, future, and prediction</h1>
 </div>
 
 
@@ -179,37 +198,54 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </header>
 
 
-<p>I’m a senior statistician at <a href="https://www.swisstransplant.org/">Swisstransplant</a> with professional qualifications in medical research and statistics.</p>
-<p>My main tasks include:</p>
-<ul>
-<li>risk prediction in kidney and liver transplantation (prediction models for prognosis)</li>
-<li>analysis of the waiting list to estimate the probability of transplantation</li>
-<li>development of methodology for quality control</li>
-<li>statistical reporting of national transplant activity</li>
-</ul>
-<p>I’m also a member of the scientific committee of the <a href="https://www.stcs.ch/">Swiss Transplant Cohort Study (STCS)</a> and a founding member of the interest group <a href="https://sites.google.com/view/statistics-in-transplantation/startseite">Statistics in Organ Transplantation (SOT)</a>. Furthermore, I am a lecturer in biostatistics and good research practice at the <a href="https://www.crs.uzh.ch/">Center for Reproducible Science</a>, a competence center of the University of Zurich.</p>
-<section id="memberships" class="level2">
-<h2 class="anchored" data-anchor-id="memberships">Memberships</h2>
-<ul>
-<li>Fellow of the Royal Statistical Society (RSS)</li>
-<li>Member of the Swiss Statistical Society (SSS)</li>
-<li>Member of the International Society for Clinical Biostatistics (ISCB)</li>
-</ul>
-</section>
-<section id="private" class="level2">
-<h2 class="anchored" data-anchor-id="private">Private</h2>
-<p>I am married and the father of two children (born 2021 and 2023). I enjoy playing guitar and listening to alternative metal and indie rock.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/pj_zurich.jpg" class="img-fluid figure-img" style="width:6.7in"></p>
-<figcaption>Pearl Jam live in Zurich on 22. June 2022.</figcaption>
-</figure>
+<p>I post about statistics and data in medical research.</p>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Reproducibility,Dark Statistics" data-listing-date-sort="1720476000000" data-listing-file-modified-sort="1720478373444" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2269">
+<div class="thumbnail">
+<p><a href="./posts/fake/index.html" class="no-external"></a></p><a href="./posts/fake/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/fake/frames-for-your-heart-mALJ-AAR13c-unsplash.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/fake/index.html" class="no-external"></a></p>
 </div>
-
-
-</section>
-
-</main> <!-- /main -->
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/fake/index.html" class="no-external">Fake plastic trees, or why AI and big data may be bad for you</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/fake/index.html" class="no-external">Data are overvalued, and statistics are undervalued. New tools and technologies will likely not revolutionize healthcare but may confuse us about which data and evidence are real and which are not. More data is not always better, and a data example with voodoo statistics is provided at the end.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Reproducibility'); return false;">
+Reproducibility
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Dark Statistics'); return false;">
+Dark Statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/fake/index.html" class="no-external">Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/fake/index.html" class="no-external">
+<div class="listing-date">
+Jul 9, 2024
+</div>
+<div class="listing-author">
+Simon Schwab
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

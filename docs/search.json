@@ -56,6 +56,41 @@
     "text": "Presentations\nA complete list of slides from my presentations is available at OSF.\nTen simple rules for good research practice\nTalk at the Computational Reproducibility Seminar—NEXUS Personalized Health Technologies, ETH Zurich\n16/05/2024\nUnderstanding and managing bias in medical research\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\n28/03/2024\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (see also video)\nTalk at R/Basel 2023—Roche Switzerland\n21/06/2023\nAn introduction to R with the Stanford Heart Transplant Data\nTalk at BernR—Bern R user group\n09/12/2021\nFrom regression to machine learning in R (see also video)\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich\n15/04/2021"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Simon Schwab",
+    "section": "",
+    "text": "I’m a senior statistician at Swisstransplant with professional qualifications in medical research and statistics.\nMy main tasks include:\nI’m also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS) and a founding member of the interest group Statistics in Organ Transplantation (SOT). Furthermore, I am a lecturer in biostatistics and good research practice at the Center for Reproducible Science, a competence center of the University of Zurich."
+  },
+  {
+    "objectID": "about.html#memberships",
+    "href": "about.html#memberships",
+    "title": "About Simon Schwab",
+    "section": "Memberships",
+    "text": "Memberships\n\nFellow of the Royal Statistical Society (RSS)\nMember of the Swiss Statistical Society (SSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
+  },
+  {
+    "objectID": "about.html#private",
+    "href": "about.html#private",
+    "title": "About Simon Schwab",
+    "section": "Private",
+    "text": "Private\nI am married and the father of two children (born 2021 and 2023). I enjoy playing guitar and listening to alternative metal and indie rock.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
+  },
+  {
+    "objectID": "posts/fake/index.html",
+    "href": "posts/fake/index.html",
+    "title": "Fake plastic trees, or why AI and big data may be bad for you",
+    "section": "",
+    "text": "Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.\n“You can be rich in data but poor in information.” —Stephen Senn\nMy view is that all data are rubbish without proper statistics. Nevertheless, the glorification of data has evolved drastically over the last decade and continues to do so. An example is the front cover of the magazine Science from 2011. It is a collage of words, but only one stands out in large letters: “data.”\nWe are indeed very hungry for data. However, I don’t believe data should take center stage. What is more important is how we perform statistics on the data.\nI tried to find the word “statistics” on the Science front cover but could not find it. Can you see it? Maybe the word “data” should be a bit smaller to leave more room for the word “statistics,” the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data.\nNevertheless, many medical studies are conducted with little or no involvement of adequately trained statisticians, and the same is true for scientific peer review [1]. Many researchers don’t use statistics properly. They might not know enough about it, or they might ignore expert advice. Statisticians are often only involved at the end of a study to analyze the data despite being specialists in helping researchers clarify the question and designing the study from scratch. Often, research projects do not include enough funding for statistical work.\nIt sounds absurd, but data is largely overvalued these days, and statistics is largely undervalued."
+  },
+  {
+    "objectID": "posts/fake/index.html#so-what",
+    "href": "posts/fake/index.html#so-what",
+    "title": "Fake plastic trees, or why AI and big data may be bad for you",
+    "section": "So what?",
+    "text": "So what?\nSo what does this mean? I find the analysis of high-dimensional data is extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme.\nYou may object that the simulations I made could be made differently, yielding different results. Yes, but we often don’t know how good the signal-to-noise ratio is. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).\nFor further reading, see “How to Do Bad Biomarker Research” by Frank Harrell [12].\nThe title of this post is a song by Radiohead. The preview image of this post is a photo by Frames For Your Heart on Unsplash."
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
@@ -98,24 +133,10 @@
     "text": "Projects as a statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of the serum creatinine after kidney transplantation in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Simon Schwab",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Fiction, future, and prediction",
     "section": "",
-    "text": "I’m a senior statistician at Swisstransplant with professional qualifications in medical research and statistics.\nMy main tasks include:\nI’m also a member of the scientific committee of the Swiss Transplant Cohort Study (STCS) and a founding member of the interest group Statistics in Organ Transplantation (SOT). Furthermore, I am a lecturer in biostatistics and good research practice at the Center for Reproducible Science, a competence center of the University of Zurich."
-  },
-  {
-    "objectID": "about.html#memberships",
-    "href": "about.html#memberships",
-    "title": "About Simon Schwab",
-    "section": "Memberships",
-    "text": "Memberships\n\nFellow of the Royal Statistical Society (RSS)\nMember of the Swiss Statistical Society (SSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
-  },
-  {
-    "objectID": "about.html#private",
-    "href": "about.html#private",
-    "title": "About Simon Schwab",
-    "section": "Private",
-    "text": "Private\nI am married and the father of two children (born 2021 and 2023). I enjoy playing guitar and listening to alternative metal and indie rock.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
+    "text": "I post about statistics and data in medical research.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFake plastic trees, or why AI and big data may be bad for you\n\n\nData are overvalued, and statistics are undervalued. New tools and technologies will likely not revolutionize healthcare but may confuse us about which data and evidence are real and which are not. More data is not always better, and a data example with voodoo statistics is provided at the end.\n\n\n\nReproducibility\n\n\nDark Statistics\n\n\n\n\n\n\n\n\n\nJul 9, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\nNo matching items"
   }
 ]

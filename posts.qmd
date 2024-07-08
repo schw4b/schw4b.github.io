@@ -1,0 +1,10 @@
+---
+title: "Fiction, future, and prediction"
+listing: 
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+---
+
+I post about statistics and data in medical research.

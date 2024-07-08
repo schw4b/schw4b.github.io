@@ -18,8 +18,8 @@ website:
         text: Projects
       - href: output.qmd
         text: Output
-      # - href: posts.qmd
-      #   text: Posts
+      - href: posts.qmd
+        text: Posts
     right:
       - href: about.qmd
         text: About

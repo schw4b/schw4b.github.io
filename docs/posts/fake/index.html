@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.53">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Simon Schwab">
+<meta name="dcterms.date" content="2024-07-09">
+
+<title>Fake plastic trees, or why AI and big data may be bad for you – Statistics, yup!</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPR2YZSX56"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="citation_title" content="Fake plastic trees, or why AI and big data may be bad for you">
+<meta name="citation_author" content="Simon Schwab">
+<meta name="citation_publication_date" content="2024">
+<meta name="citation_cover_date" content="2024">
+<meta name="citation_year" content="2024">
+<meta name="citation_online_date" content="2024-07-09">
+<meta name="citation_fulltext_html_url" content="https://www.statsyup.org/posts/fake/">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Methodology over metrics: Current scientific standards are a disservice to patients and society;,citation_author=Ben Van Calster;,citation_author=Laure Wynants;,citation_author=Richard D Riley;,citation_author=Maarten Smeden;,citation_author=Gary S Collins;,citation_publication_date=2021-10;,citation_cover_date=2021-10;,citation_year=2021;,citation_doi=10.1016/j.jclinepi.2021.05.018;,citation_issn=0895-4356, 1878-5921;,citation_pmid=34077797;,citation_volume=138;,citation_journal_title=J. Clin. Epidemiol.;">
+<meta name="citation_reference" content="citation_title=Axes of a revolution: Challenges and promises of big data in healthcare;,citation_author=Smadar Shilo;,citation_author=Hagai Rossman;,citation_author=Eran Segal;,citation_publication_date=2020-01;,citation_cover_date=2020-01;,citation_year=2020;,citation_issue=1;,citation_doi=10.1038/s41591-019-0727-5;,citation_issn=1078-8956, 1546-170X;,citation_pmid=31932803;,citation_volume=26;,citation_journal_title=Nat. Med.;">
+<meta name="citation_reference" content="citation_title=The failure of protein cancer biomarkers to reach the clinic: Why, and what can be done to address the problem?;,citation_author=Eleftherios P Diamandis;,citation_publication_date=2012-08;,citation_cover_date=2012-08;,citation_year=2012;,citation_doi=10.1186/1741-7015-10-87;,citation_issn=1741-7015;,citation_pmid=22876833;,citation_volume=10;,citation_journal_title=BMC Med.;">
+<meta name="citation_reference" content="citation_title=Regression modeling strategies;,citation_author=Frank E Harrell;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_doi=10.1007/978-3-319-19425-7;">
+<meta name="citation_reference" content="citation_title=The human brain project hasn’t lived up to its promise;,citation_author=Ed Yong;,citation_publication_date=2019-07;,citation_cover_date=2019-07;,citation_year=2019;,citation_issn=1072-7825;,citation_journal_title=The Atlantic;">
+<meta name="citation_reference" content="citation_title=Statistical programming: Small mistakes, big impacts;,citation_author=Simon Schwab;,citation_author=Leonhard Held;,citation_publication_date=2021-05;,citation_cover_date=2021-05;,citation_year=2021;,citation_issue=3;,citation_doi=10.1111/1740-9713.01522;,citation_issn=1740-9705, 1740-9713;,citation_volume=18;,citation_journal_title=Significance;,citation_publisher=Oxford Academic;">
+<meta name="citation_reference" content="citation_title=Steps to avoid overuse and misuse of machine learning in clinical research;,citation_author=Victor Volovici;,citation_author=Nicholas L Syn;,citation_author=Ari Ercole;,citation_author=Joseph J Zhao;,citation_author=Nan Liu;,citation_publication_date=2022-10;,citation_cover_date=2022-10;,citation_year=2022;,citation_issue=10;,citation_doi=10.1038/s41591-022-01961-6;,citation_issn=1078-8956, 1546-170X;,citation_pmid=36097217;,citation_volume=28;,citation_journal_title=Nat. Med.;">
+<meta name="citation_reference" content="citation_title=Reproducibility trial: 246 biologists get different results from same data sets;,citation_author=Anil Oza;,citation_publication_date=2023-10;,citation_cover_date=2023-10;,citation_year=2023;,citation_issue=7984;,citation_doi=10.1038/d41586-023-03177-1;,citation_issn=0028-0836, 1476-4687;,citation_pmid=37828216;,citation_volume=622;,citation_journal_title=Nature;">
+<meta name="citation_reference" content="citation_title=This fMRI technique promised to transform brain research - why can no one replicate it?;,citation_author=Mckenzie Prillaman;,citation_publication_date=2024-04;,citation_cover_date=2024-04;,citation_year=2024;,citation_doi=10.1038/d41586-024-00931-x;,citation_issn=0028-0836, 1476-4687;,citation_pmid=38600205;,citation_journal_title=Nature;">
+<meta name="citation_reference" content="citation_title=Weapons of math destruction: How big data increases inequality and threatens democracy;,citation_author=Cathy O’Neil;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_isbn=9780553418811;">
+<meta name="citation_reference" content="citation_title=Meet this super-spotter of duplicated images in science papers;,citation_author=Helen Shen;,citation_publication_date=2020-05;,citation_cover_date=2020-05;,citation_year=2020;,citation_issue=7807;,citation_doi=10.1038/d41586-020-01363-z;,citation_issn=0028-0836, 1476-4687;,citation_pmid=32405024;,citation_volume=581;,citation_journal_title=Nature;">
+<meta name="citation_reference" content="citation_title=Statistical thinking - how to do bad biomarker research;,citation_author=Frank Harrell;,citation_publication_date=2022-10;,citation_cover_date=2022-10;,citation_year=2022;,citation_publisher=https://www.fharrell.com/post/badb/;">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Statistics, yup!</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Bio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../output.html"> 
+<span class="menu-text">Output</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#big-data" id="toc-big-data" class="nav-link active" data-scroll-target="#big-data">Big data</a></li>
+  <li><a href="#brave-new-tools" id="toc-brave-new-tools" class="nav-link" data-scroll-target="#brave-new-tools">Brave new tools</a></li>
+  <li><a href="#what-lies-ahead-of-us" id="toc-what-lies-ahead-of-us" class="nav-link" data-scroll-target="#what-lies-ahead-of-us">What lies ahead of us?</a></li>
+  <li><a href="#just-one-more-thing" id="toc-just-one-more-thing" class="nav-link" data-scroll-target="#just-one-more-thing">Just one more thing</a>
+  <ul class="collapse">
+  <li><a href="#long-data" id="toc-long-data" class="nav-link" data-scroll-target="#long-data">Long data</a></li>
+  <li><a href="#wide-data" id="toc-wide-data" class="nav-link" data-scroll-target="#wide-data">Wide data</a></li>
+  <li><a href="#so-what" id="toc-so-what" class="nav-link" data-scroll-target="#so-what">So what?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Fake plastic trees, or why AI and big data may be bad for you</h1>
+<p class="subtitle lead">Data are overvalued, and statistics are undervalued. New tools and technologies will likely not revolutionize healthcare but may confuse us about which data and evidence are real and which are not. More data is not always better, and a data example with voodoo statistics is provided at the end.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Reproducibility</div>
+    <div class="quarto-category">Dark Statistics</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Simon Schwab </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 9, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.</p>
+<p><em>“You can be rich in data but poor in information.”</em> —Stephen Senn</p>
+<p>My view is that all data are rubbish without proper statistics. Nevertheless, the glorification of data has evolved drastically over the last decade and continues to do so. An example is the front cover of the magazine <em>Science</em> from 2011. It is a collage of words, but only one stands out in large letters: “data.”</p>
+<p>We are indeed very hungry for data. However, I don’t believe data should take center stage. What is more important is <em>how</em> we perform statistics on the data.</p>
+<p>I tried to find the word “statistics” on the <em>Science</em> front cover but could not find it. Can you see it? Maybe the word “data” should be a bit smaller to leave more room for the word “statistics,” the discipline that concerns the collection, organization, analysis, interpretation, and presentation of <em>data</em>.</p>
+<p>Nevertheless, many medical studies are conducted with little or no involvement of adequately trained statisticians, and the same is true for scientific peer review <span class="citation" data-cites="Van_Calster2021-hs">[<a href="#ref-Van_Calster2021-hs" role="doc-biblioref">1</a>]</span>. Many researchers don’t use statistics properly. They might not know enough about it, or they might ignore expert advice. Statisticians are often only involved at the end of a study to analyze the data despite being specialists in helping researchers clarify the question and designing the study from scratch. Often, research projects do not include enough funding for statistical work.</p>
+<p>It sounds absurd, but data is largely overvalued these days, and statistics is largely undervalued.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="science.2011.331.issue-6018.largecover.jpg" class="img-fluid figure-img" style="width:33.0%"></p>
+<figcaption><em>Science</em> magazine front cover from 11. February 2011.</figcaption>
+</figure>
+</div>
+<section id="big-data" class="level1">
+<h1>Big data</h1>
+<p>Another example of the glorification of data is the term <em>Big Data</em>.</p>
+<p>What does big data even mean? Often omics data is mentioned, for example, transcriptional, epigenetic, proteomic and metabolomic data <span class="citation" data-cites="Shilo2020-mh">[<a href="#ref-Shilo2020-mh" role="doc-biblioref">2</a>]</span>.</p>
+<p>Big data may not be the latest advancement of biomedicine in tackling unsolved problems. Instead, it is our defeat against data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply “AI.” However, 4,000 biomarkers times 200 patients are not big data; the sample size is still N=200, and I consider this a small study. For a prediction model for prognosis, for example, I would instead prefer four clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example. Don’t be too impressed by the width of a data set.</p>
+<p>Too much data can make data analysis harder, but this is often unrecognized. The unsystematic collection of high-dimensional data, when data is more “wide” than “long,” can lead to more questions than answers. For example, the failure of protein cancer biomarker research <span class="citation" data-cites="Diamandis2012-ih">[<a href="#ref-Diamandis2012-ih" role="doc-biblioref">3</a>]</span> or the failure of the <em>Human Brain Project</em> <span class="citation" data-cites="Yong2019-jl">[<a href="#ref-Yong2019-jl" role="doc-biblioref">4</a>]</span>. Learning from the past, the combination of big data and overhyped promises is a reason for concern.</p>
+<p>Data alone does not represent any real value, even if it is big data. Data can’t speak for themselves. Data is pretty dumb. Think about your favorite restaurant and your favorite dish. Imagine being served only unprepared raw food. That’s what data is basically without statistics; it’s just the ingredients, the uncooked parts. Data on their own are inedible food.</p>
+<p>One may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, however, I imagine the many attempts data are explored, analyzed, and reanalyzed until the desired result is obtained or until the model fits the data. Then, this process only <em>appears</em> to reduce the uncertainty when looking at the p-values and standard errors. However, the process by which the data was analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.</p>
+<p>Excessive analytic attempts generate phantom degrees of freedom <span class="citation" data-cites="Harrell2015-pf">[<a href="#ref-Harrell2015-pf" role="doc-biblioref">5</a>]</span>, which is one of the many ways <em>dark statistics</em> can deceive us. We can only trust our statistical results if we don’t torture the data too much.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="victor-_qXjdWm8YEo-unsplash.jpg" class="img-fluid figure-img" style="width:33.0%"></p>
+<figcaption>Garden of forking paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)</figcaption>
+</figure>
+</div>
+</section>
+<section id="brave-new-tools" class="level1">
+<h1>Brave new tools</h1>
+<p>Statistics summarize data into eatable bites. However, statistical data analysis is not something that can be prepared quickly and easily like a microwave-ready meal. It requires specialist work. And yes, mistakes can be made in this process <span class="citation" data-cites="Schwab2021-ui">[<a href="#ref-Schwab2021-ui" role="doc-biblioref">6</a>]</span>. Why can’t AI do all the difficult work for us?</p>
+<p>Statistical software once tried to create the illusion that a nice graphical interface could enable statistics at the push of a button. The exact opposite has happened with the <em>R programming language</em>. We moved away from pressing buttons to writing code, which is, as an attractive side effect, more straightforward to reproduce.</p>
+<p>I recently discovered a website with yet another doomed attempt to make statistics easy: an AI-powered statistics tool.</p>
+<p><em>“It makes complex data analytics accessible to anyone, eliminating the need for advanced technical knowledge or expertise.”</em> —from a website about an AI-based statistics tool</p>
+<p>How does it work? I don’t know. Perhaps you can simply chat with your data files? For me, it sounds more like the production of flawed conclusions by untrained people via dangerous tools. That will be the gloomy future, it seems.</p>
+<p>Ironically, the tool has the same name as an assassinated Roman emperor. This is not a very good omen for the tool. Maybe its future is already doomed, as we are all going to be very disappointed with AI doing our statistical analyses.</p>
+<p>Maybe, just maybe, AI sucks at being a personal statistical assistant. Maybe AI is much better at misusing statistics. It may be the perfect p-hacking machine. AI is misused in many ways to produce fake images, fake texts, fake human voices, and fake videos. Why not fake statistics? AI confuses the real with the unreal, and why can’t this also be applied to scientific data? The perfect tool for data fabrication in the future. Or, as Cathy O’Neil said, a new weapon of <em>math</em> destruction <span class="citation" data-cites="ONeil2016-ux">[<a href="#ref-ONeil2016-ux" role="doc-biblioref">7</a>]</span>. AI will do more harm than good, and in the future, we will need more people like Elisabeth Bik, who can spot fake research <span class="citation" data-cites="Shen2020-ar">[<a href="#ref-Shen2020-ar" role="doc-biblioref">8</a>]</span>.</p>
+</section>
+<section id="what-lies-ahead-of-us" class="level1">
+<h1>What lies ahead of us?</h1>
+<p>Nowadays, AI and machine learning are heavily promoted to “revolutionize healthcare”; this seems an overhyped claim given the notorious overfitting of data in the field <span class="citation" data-cites="Volovici2022-qn">[<a href="#ref-Volovici2022-qn" role="doc-biblioref">9</a>]</span>. To be fair, it is not just AI that baffles me. Recently, 246 biologists obtained different results from the same data <span class="citation" data-cites="Oza2023-ek">[<a href="#ref-Oza2023-ek" role="doc-biblioref">10</a>]</span> or the latest blunder in functional MRI research <span class="citation" data-cites="Prillaman2024-nu">[<a href="#ref-Prillaman2024-nu" role="doc-biblioref">11</a>]</span>. This all demonstrates that we researchers seem to learn a lot from the noise in the data.</p>
+<p>Now, are you ready for what is next? A world where the relentless rush of technology blurs the lines between what’s real and what’s not?</p>
+<p>A world of fake plastic trees?</p>
+</section>
+<section id="just-one-more-thing" class="level1">
+<h1>Just one more thing</h1>
+<p>Let’s perform a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.</p>
+<p>In a second approach, I generated some high-dimensional data with many more variables than patients (wide data).</p>
+<p>But first, I needed to write a short function <code>tidy_lm()</code> to produce a tidy output from a linear regression model; this is just cosmetics.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># helper function for lm output</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>tidy_lm <span class="ot">&lt;-</span> <span class="cf">function</span>(fit) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  sfit <span class="ot">=</span>  <span class="fu">summary</span>(fit)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  lower  <span class="ot">=</span> <span class="fu">confint</span>(fit)[,<span class="dv">1</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  upper  <span class="ot">=</span> <span class="fu">confint</span>(fit)[,<span class="dv">2</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  betas  <span class="ot">=</span> <span class="fu">coef</span>(fit)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  effect <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.2f"</span>, betas)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  ci     <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"from %.2f to %.2f"</span>, lower, upper)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  tab <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">effect =</span> effect,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                   <span class="at">ci     =</span> ci,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                   <span class="at">pvalue =</span> swt<span class="sc">::</span><span class="fu">tidy_pvalues</span>(sfit<span class="sc">$</span>coefficients[,<span class="dv">4</span>]))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(tab) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Effect estimate"</span>, <span class="st">"95% CI"</span>, <span class="st">"p-value"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(tab)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="long-data" class="level3">
+<h3 class="anchored" data-anchor-id="long-data">Long data</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>SNR <span class="ot">=</span> <span class="fl">0.65</span> <span class="co"># corresponds to 20% explained variance R^2</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>N <span class="ot">=</span> <span class="dv">2000</span> <span class="co"># number of patients</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>q <span class="ot">=</span> <span class="dv">4</span> <span class="co"># number of predictors</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data for a study</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">array</span>(<span class="fu">rnorm</span>(N<span class="sc">*</span>q), <span class="at">dim =</span> <span class="fu">c</span>(N, q))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>noise <span class="ot">=</span> <span class="fu">rnorm</span>(N) <span class="co"># generate standard normal errors</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fl">0.5</span><span class="sc">*</span>data[,<span class="dv">1</span>] <span class="sc">+</span> <span class="fl">0.3</span><span class="sc">*</span>data[,<span class="dv">2</span>] <span class="sc">+</span> <span class="fl">0.2</span><span class="sc">*</span>data[,<span class="dv">3</span>] <span class="sc">+</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(SNR)<span class="sc">*</span>noise</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>I simulated data for <span class="math inline">\(N\)</span> = 2000 patients and <span class="math inline">\(q\)</span> = 4 variables. I assumed the three prognostic variables (<span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span>) were uncorrelated and related to the outcome using an additive model. The true effects were <span class="math inline">\(\beta_1\)</span> = 0.5, <span class="math inline">\(\beta_2\)</span> = 0.3, <span class="math inline">\(\beta_3\)</span> = 0.2. For the unrelated variable <span class="math inline">\(x_4\)</span>, we had <span class="math inline">\(\beta_4\)</span> = 0. I added some noise so that the explained variance was about 20% (<span class="math inline">\(R^2\)</span>).</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">y =</span> y, <span class="at">x1 =</span> data[,<span class="dv">1</span>], <span class="at">x2 =</span> data[,<span class="dv">2</span>], <span class="at">x3 =</span> data[,<span class="dv">3</span>], <span class="at">x4 =</span> data[,<span class="dv">4</span>])</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> ., <span class="at">data =</span> d)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy_lm</span>(fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Effect estimate</th>
+<th style="text-align: left;">95% CI</th>
+<th style="text-align: left;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: left;">0.00</td>
+<td style="text-align: left;">from -0.05 to 0.06</td>
+<td style="text-align: left;">0.96</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x1</td>
+<td style="text-align: left;">0.49</td>
+<td style="text-align: left;">from 0.43 to 0.54</td>
+<td style="text-align: left;">&lt; 0.001 ***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x2</td>
+<td style="text-align: left;">0.31</td>
+<td style="text-align: left;">from 0.25 to 0.37</td>
+<td style="text-align: left;">&lt; 0.001 ***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x3</td>
+<td style="text-align: left;">0.23</td>
+<td style="text-align: left;">from 0.17 to 0.29</td>
+<td style="text-align: left;">&lt; 0.001 ***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x4</td>
+<td style="text-align: left;">-0.01</td>
+<td style="text-align: left;">from -0.07 to 0.04</td>
+<td style="text-align: left;">0.67</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The p-values for the first three variables were statistically significant. This basically means that the data were very incompatible with our null model that the true effects were zero (my lawyers helped me with the wording of this sentence). For <span class="math inline">\(x_4\)</span>, the p-value was statistically non-significant. But this is all not really interesting, is it?</p>
+<p>Much more interesting than the p-values were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects, but not exactly. For the effect estimates to match the true effects even better, we would need even more data. But I think it was very acceptable.</p>
+</section>
+<section id="wide-data" class="level3">
+<h3 class="anchored" data-anchor-id="wide-data">Wide data</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>SNR <span class="ot">=</span> <span class="fl">0.65</span> <span class="co"># corresponds to 20% explained variance R^2</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>N <span class="ot">=</span> <span class="dv">200</span> <span class="co"># number of patients</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>q <span class="ot">=</span> <span class="dv">4000</span> <span class="co"># number of biomarkers</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># generate data for a study</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">array</span>(<span class="fu">rnorm</span>(N<span class="sc">*</span>q), <span class="at">dim =</span> <span class="fu">c</span>(N, q))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>noise <span class="ot">=</span> <span class="fu">rnorm</span>(N) <span class="co"># generate standard normal errors</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fl">0.5</span><span class="sc">*</span>data[,<span class="dv">1</span>] <span class="sc">+</span> <span class="fl">0.3</span><span class="sc">*</span>data[,<span class="dv">2</span>] <span class="sc">+</span> <span class="fl">0.2</span><span class="sc">*</span>data[,<span class="dv">3</span>] <span class="sc">+</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(SNR)<span class="sc">*</span>noise</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>pvalues <span class="ot">=</span> <span class="fu">rep</span>(<span class="cn">NA</span>, q)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>q) { <span class="co"># iterate across biomarkers</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">=</span> <span class="fu">data.frame</span> (<span class="at">y =</span> y, <span class="at">x =</span> data[, i]) <span class="co"># univariable screening</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> d)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  stats <span class="ot">=</span> <span class="fu">summary</span>(fit)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  pvalues[i] <span class="ot">=</span> stats<span class="sc">$</span>coefficients[<span class="dv">2</span>,<span class="dv">4</span>]</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Now, I increased the amount of data by a factor of 100. However, I did not increase the sample size in terms of the number of patients; I even decreased the sample size to <span class="math inline">\(N\)</span> = 200. In return, I created data with <span class="math inline">\(q\)</span> = 4000 biomarkers (high-dimensional data). For each biomarker, I estimated a univariable model and used a cutoff of <span class="math inline">\(p \le\)</span> 0.05 for screening (univariable screening). I know it is a really bad idea, but since so many papers have done it, it shouldn’t hurt anyone to do it just one more time.</p>
+<p>Let’s now pretend we knew that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. The regression results from the same model as above (<span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_4\)</span>) are shown below.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">=</span> <span class="fu">data.frame</span> (<span class="at">y =</span> y, <span class="at">x1 =</span> data[,<span class="dv">1</span>], <span class="at">x2 =</span> data[,<span class="dv">2</span>], <span class="at">x3 =</span> data[,<span class="dv">3</span>], <span class="at">x4 =</span> data[,<span class="dv">4</span>])</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> x3 <span class="sc">+</span> x4, <span class="at">data =</span> d)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy_lm</span>(fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Effect estimate</th>
+<th style="text-align: left;">95% CI</th>
+<th style="text-align: left;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: left;">-0.05</td>
+<td style="text-align: left;">from -0.21 to 0.12</td>
+<td style="text-align: left;">0.58</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x1</td>
+<td style="text-align: left;">0.47</td>
+<td style="text-align: left;">from 0.31 to 0.63</td>
+<td style="text-align: left;">&lt; 0.001 ***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x2</td>
+<td style="text-align: left;">0.20</td>
+<td style="text-align: left;">from 0.02 to 0.38</td>
+<td style="text-align: left;">0.026 *</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x3</td>
+<td style="text-align: left;">0.24</td>
+<td style="text-align: left;">from 0.07 to 0.41</td>
+<td style="text-align: left;">0.005 **</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x4</td>
+<td style="text-align: left;">0.07</td>
+<td style="text-align: left;">from -0.10 to 0.24</td>
+<td style="text-align: left;">0.41</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The effect estimates were more off from the truth, particularly <span class="math inline">\(x_2\)</span>, and the confidence intervals were much wider. This was not surprising as the sample size was only <span class="math inline">\(N =\)</span> 200. All in all, we are much more uncertain; though, the p-values for <span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_3\)</span> were still statistically significant. However, the larger uncertainty was not the main problem.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">=</span> <span class="fu">sum</span>(pvalues  <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>pvalues.adj <span class="ot">=</span> <span class="fu">p.adjust</span>(pvalues, <span class="at">method =</span> <span class="st">"fdr"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>k.adj <span class="ot">=</span> <span class="fu">sum</span>(pvalues.adj  <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>The main problem here is we didn’t know that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. Using univariable screening, with <span class="math inline">\(p \le\)</span> 0.05 for variable selection, 214 out of a total of 4000 variables were statistically significant; this matches up with the alpha level of 5%.</p>
+<p>I tried to adjust the p-values to control the false discovery rate at 5% using the Benjamini &amp; Hochberg procedure; however, only <span class="math inline">\(x_1\)</span> remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity.</p>
+<p>In the next step, maybe a little bit desperate, I tried to use a different threshold of <span class="math inline">\(p \le\)</span> 0.001.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">=</span> <span class="fu">which</span>(pvalues <span class="sc">&lt;=</span> <span class="fl">0.001</span>) <span class="co"># select variables with arbitrary threshold</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">y =</span> y, <span class="at">x =</span> data[, idx]) </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> ., <span class="at">data =</span> d)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">=</span> <span class="fu">tidy_lm</span>(fit)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># add variable names</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(tab)[<span class="dv">2</span><span class="sc">:</span>(<span class="fu">length</span>(idx) <span class="sc">+</span> <span class="dv">1</span>)] <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">"x"</span>, idx)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>tab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Effect estimate</th>
+<th style="text-align: left;">95% CI</th>
+<th style="text-align: left;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: left;">-0.01</td>
+<td style="text-align: left;">from -0.17 to 0.14</td>
+<td style="text-align: left;">0.86</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x1</td>
+<td style="text-align: left;">0.36</td>
+<td style="text-align: left;">from 0.20 to 0.51</td>
+<td style="text-align: left;">&lt; 0.001 ***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x602</td>
+<td style="text-align: left;">-0.34</td>
+<td style="text-align: left;">from -0.50 to -0.17</td>
+<td style="text-align: left;">&lt; 0.001 ***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x971</td>
+<td style="text-align: left;">0.19</td>
+<td style="text-align: left;">from 0.03 to 0.35</td>
+<td style="text-align: left;">0.017 *</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">x2186</td>
+<td style="text-align: left;">0.28</td>
+<td style="text-align: left;">from 0.12 to 0.45</td>
+<td style="text-align: left;">&lt; 0.001 ***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x3748</td>
+<td style="text-align: left;">0.14</td>
+<td style="text-align: left;">from -0.01 to 0.30</td>
+<td style="text-align: left;">0.073 .</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>With this step, we have left the realm of science facts and entered the realm of science fiction. The results above show voodoo statistics with statistically significant results for the variables that are pure noise (except <span class="math inline">\(x_1\)</span>). The model now explained 28% of the variance (adj. <span class="math inline">\(R^2\)</span>).</p>
+<p>Surely, a high-impact journal would publish such statistically significant results?</p>
+</section>
+<section id="so-what" class="level2">
+<h2 class="anchored" data-anchor-id="so-what">So what?</h2>
+<p>So what does this mean? I find the analysis of high-dimensional data is extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme.</p>
+<p>You may object that the simulations I made could be made differently, yielding different results. Yes, but we often don’t know how good the signal-to-noise ratio is. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).</p>
+<p>For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell <span class="citation" data-cites="Harrell2022-gi">[<a href="#ref-Harrell2022-gi" role="doc-biblioref">12</a>]</span>.</p>
+<p><em>The title of this post is a song by Radiohead. The preview image of this post is a photo by Frames For Your Heart on Unsplash.</em></p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-Van_Calster2021-hs" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Van Calster B, Wynants L, Riley RD, Smeden M van, Collins GS. Methodology over metrics: Current scientific standards are a disservice to patients and society. J Clin Epidemiol. 2021;138: 219–226. doi:<a href="https://doi.org/10.1016/j.jclinepi.2021.05.018">10.1016/j.jclinepi.2021.05.018</a></div>
+</div>
+<div id="ref-Shilo2020-mh" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Shilo S, Rossman H, Segal E. Axes of a revolution: Challenges and promises of big data in healthcare. Nat Med. 2020;26: 29–38. doi:<a href="https://doi.org/10.1038/s41591-019-0727-5">10.1038/s41591-019-0727-5</a></div>
+</div>
+<div id="ref-Diamandis2012-ih" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Diamandis EP. The failure of protein cancer biomarkers to reach the clinic: Why, and what can be done to address the problem? BMC Med. 2012;10: 87. doi:<a href="https://doi.org/10.1186/1741-7015-10-87">10.1186/1741-7015-10-87</a></div>
+</div>
+<div id="ref-Yong2019-jl" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Yong E. The human brain project hasn’t lived up to its promise. The Atlantic. 2019. </div>
+</div>
+<div id="ref-Harrell2015-pf" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Harrell FE. Regression modeling strategies. Springer International Publishing; 2015. doi:<a href="https://doi.org/10.1007/978-3-319-19425-7">10.1007/978-3-319-19425-7</a></div>
+</div>
+<div id="ref-Schwab2021-ui" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Schwab S, Held L. Statistical programming: Small mistakes, big impacts. Significance. 2021;18: 6–7. doi:<a href="https://doi.org/10.1111/1740-9713.01522">10.1111/1740-9713.01522</a></div>
+</div>
+<div id="ref-ONeil2016-ux" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">O’Neil C. Weapons of math destruction: How big data increases inequality and threatens democracy. 1st ed. Crown; 2016. </div>
+</div>
+<div id="ref-Shen2020-ar" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Shen H. Meet this super-spotter of duplicated images in science papers. Nature. 2020;581: 132–136. doi:<a href="https://doi.org/10.1038/d41586-020-01363-z">10.1038/d41586-020-01363-z</a></div>
+</div>
+<div id="ref-Volovici2022-qn" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Volovici V, Syn NL, Ercole A, Zhao JJ, Liu N. Steps to avoid overuse and misuse of machine learning in clinical research. Nat Med. 2022;28: 1996–1999. doi:<a href="https://doi.org/10.1038/s41591-022-01961-6">10.1038/s41591-022-01961-6</a></div>
+</div>
+<div id="ref-Oza2023-ek" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Oza A. Reproducibility trial: 246 biologists get different results from same data sets. Nature. 2023;622: 677–678. doi:<a href="https://doi.org/10.1038/d41586-023-03177-1">10.1038/d41586-023-03177-1</a></div>
+</div>
+<div id="ref-Prillaman2024-nu" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Prillaman M. This <span class="nocase">fMRI</span> technique promised to transform brain research - why can no one replicate it? Nature. 2024. doi:<a href="https://doi.org/10.1038/d41586-024-00931-x">10.1038/d41586-024-00931-x</a></div>
+</div>
+<div id="ref-Harrell2022-gi" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Harrell F. Statistical thinking - how to do bad biomarker research. <a href="https://www.fharrell.com/post/badb/" class="uri">https://www.fharrell.com/post/badb/</a>; 2022. </div>
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{schwab2024,
+  author = {Schwab, Simon},
+  title = {Fake Plastic Trees, or Why {AI} and Big Data May Be Bad for
+    You},
+  date = {2024},
+  url = {https://www.statsyup.org/posts/fake/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-schwab2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div class="">Schwab S. Fake plastic trees, or why AI and big
+data may be bad for you. 2024. Available: <a href="https://www.statsyup.org/posts/fake/">https://www.statsyup.org/posts/fake/</a></div>
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.statsyup\.org\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2024 Simon Schwab</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
