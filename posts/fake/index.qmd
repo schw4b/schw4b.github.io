@@ -31,7 +31,7 @@ Nevertheless, many medical studies are conducted with little or no involvement o
 
 It sounds absurd, but data is largely overvalued these days, and statistics is largely undervalued.
 
-![*Science* magazine front cover from 11. February 2011.](science.2011.331.issue-6018.largecover.jpg){width=33%}
+![*Science* magazine front cover from 11. February 2011.](science.2011.331.issue-6018.largecover.jpg){width=50%}
 
 # Big data
 
@@ -49,7 +49,7 @@ One may object that more data will always lead to less uncertainty. This is, in 
 
 Excessive analytic attempts generate phantom degrees of freedom [@Harrell2015-pf], which is one of the many ways *dark statistics* can deceive us. We can only trust our statistical results if we don't torture the data too much.
 
-![Garden of forking paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)](victor-_qXjdWm8YEo-unsplash.jpg){width=33%}
+![Garden of forking paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)](victor-_qXjdWm8YEo-unsplash.jpg){width=50%}
 
 # Brave new tools
 
@@ -187,7 +187,7 @@ pvalues.adj = p.adjust(pvalues, method = "fdr")
 k.adj = sum(pvalues.adj  <= 0.05)
 ```
 
-The main problem here is we didn't know that $x_1$, $x_2$, and $x_3$ were the relevant biomarkers. Using univariable screening, with $p \le$ 0.05 for variable selection, `r k` out of a total of `r q` variables were statistically significant; this matches up with the alpha level of 5%.
+The main problem was we didn't know that $x_1$, $x_2$, and $x_3$ were the relevant biomarkers. Using univariable screening, with $p \le$ 0.05 for variable selection, `r k` out of a total of `r q` variables were statistically significant; this matches up with the alpha level of 5%.
 
 I tried to adjust the p-values to control the false discovery rate at 5% using the Benjamini & Hochberg procedure; however, only $x_1$ remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity.
 

@@ -282,7 +282,7 @@ window.Quarto = {
 <p>It sounds absurd, but data is largely overvalued these days, and statistics is largely undervalued.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="science.2011.331.issue-6018.largecover.jpg" class="img-fluid figure-img" style="width:33.0%"></p>
+<p><img src="science.2011.331.issue-6018.largecover.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
 <figcaption><em>Science</em> magazine front cover from 11. February 2011.</figcaption>
 </figure>
 </div>
@@ -297,7 +297,7 @@ window.Quarto = {
 <p>Excessive analytic attempts generate phantom degrees of freedom <span class="citation" data-cites="Harrell2015-pf">[<a href="#ref-Harrell2015-pf" role="doc-biblioref">5</a>]</span>, which is one of the many ways <em>dark statistics</em> can deceive us. We can only trust our statistical results if we don’t torture the data too much.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="victor-_qXjdWm8YEo-unsplash.jpg" class="img-fluid figure-img" style="width:33.0%"></p>
+<p><img src="victor-_qXjdWm8YEo-unsplash.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
 <figcaption>Garden of forking paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)</figcaption>
 </figure>
 </div>
@@ -510,7 +510,7 @@ window.Quarto = {
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>k.adj <span class="ot">=</span> <span class="fu">sum</span>(pvalues.adj  <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>The main problem here is we didn’t know that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. Using univariable screening, with <span class="math inline">\(p \le\)</span> 0.05 for variable selection, 214 out of a total of 4000 variables were statistically significant; this matches up with the alpha level of 5%.</p>
+<p>The main problem was we didn’t know that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. Using univariable screening, with <span class="math inline">\(p \le\)</span> 0.05 for variable selection, 214 out of a total of 4000 variables were statistically significant; this matches up with the alpha level of 5%.</p>
 <p>I tried to adjust the p-values to control the false discovery rate at 5% using the Benjamini &amp; Hochberg procedure; however, only <span class="math inline">\(x_1\)</span> remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity.</p>
 <p>In the next step, maybe a little bit desperate, I tried to use a different threshold of <span class="math inline">\(p \le\)</span> 0.001.</p>
 <div class="cell">
