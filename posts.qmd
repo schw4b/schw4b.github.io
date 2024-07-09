@@ -7,4 +7,4 @@ listing:
   categories: true
 ---
 
-I post about statistics and data in medical research.
+I post about statistics and data in medical research. Every post ends with a section "Just one more thing" to provide a concrete data example with code in the R programming language that the reader can try out and examine.
