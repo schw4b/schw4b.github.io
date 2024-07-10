@@ -45,11 +45,11 @@ Too much data can make data analysis harder, but this is often unrecognized. The
 
 The catchphrase "let the data speak for itself" is misleading because data rarely have meaning without context. To extract valuable insights, you need a good question and the appropriate method to answer it. Think about your favorite restaurant and dish: imagine being served only unprepared raw food. That's what data are basically without a statistical analysis; it's just the ingredients, the uncooked parts. Data on their own are inedible food. In fact, data on their own is pretty dumb.
 
-While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, however, I imagine the many attempts very large data sets are explored, analyzed, and reanalyzed until the desired result is obtained or until the model fits the data. Then, this process only *appears* to reduce the uncertainty when looking at the p-values and standard errors. However, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.
+While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, however, I imagine the many attempts to explore, analyze, and reanalyze the large data sets until the desired result is obtained or until the model fits the data. Then, this process only *appears* to reduce the uncertainty when looking at the p-values and standard errors. However, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.
 
 Excessive analytic attempts generate phantom degrees of freedom [@Harrell2015-pf], which is one of the many ways *dark statistics* can deceive us. We can only trust our statistical results if we don't torture the data too much.
 
-![Garden of forking paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)](victor-_qXjdWm8YEo-unsplash.jpg){width=50%}
+![Garden of Forking Paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)](victor-_qXjdWm8YEo-unsplash.jpg){width=50%}
 
 # Brave new tools
 
@@ -192,7 +192,7 @@ k.adj = sum(pvalues.adj  <= 0.05)
 
 The main problem was we didn't know that $x_1$, $x_2$, and $x_3$ were the relevant biomarkers. Using univariable screening, with $p \le 0.05$ for variable selection, a striking `r k` out of a total of `r q` variables were statistically significant; this matches up with the alpha level of 5%.
 
-I tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini & Hochberg procedure; however, only $x_1$ remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seem to be really difficult to get the correct model with such a large data set. It's like looking for a needle in a haystack.
+I tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini & Hochberg procedure; however, only $x_1$ remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It's like looking for a needle in a haystack.
 
 In the final step, perhaps out of desperation, I opted for a middle way: instead of using an unadjusted threshold of 5% or an FDR of 5%, I applied an unadjusted threshold of $p \le 0.001$. The results are shown below.
 
@@ -215,7 +215,7 @@ I think I tortured the data too much. Surely, a journal would publish such stati
 
 ## So what?
 
-So what does this mean? I find the analysis of high-dimensional data is extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant "truths" in the data when trying too many different things (the garden of forking paths).
+So what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant "truths" in the data when trying too many different things (the garden of forking paths).
 
 You may object that the simulations I made are too pessimistic. Yes, but we often don't know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).
 

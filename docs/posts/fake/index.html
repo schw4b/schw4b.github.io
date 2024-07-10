@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -293,12 +293,12 @@ window.Quarto = {
 <p>Big data may not be the latest advancement of biomedicine in tackling unsolved problems. Instead, it is our defeat against data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply “AI.” However, 4,000 biomarkers times 200 patients are not big data; the sample size is still N=200, and I consider this a small study. For a prediction model for prognosis, for example, I would instead prefer four clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example. Don’t be too impressed by the width of a data set.</p>
 <p>Too much data can make data analysis harder, but this is often unrecognized. The unsystematic collection of high-dimensional data, when data sets are more “wide” than “long,” can lead to more questions than answers. For example, the failure of protein cancer biomarker research <span class="citation" data-cites="Diamandis2012-ih">[<a href="#ref-Diamandis2012-ih" role="doc-biblioref">3</a>]</span> or the failure of the <em>Human Brain Project</em> <span class="citation" data-cites="Yong2019-jl">[<a href="#ref-Yong2019-jl" role="doc-biblioref">4</a>]</span>. Learning from the past, the combination of big data and overhyped promises is a reason for concern.</p>
 <p>The catchphrase “let the data speak for itself” is misleading because data rarely have meaning without context. To extract valuable insights, you need a good question and the appropriate method to answer it. Think about your favorite restaurant and dish: imagine being served only unprepared raw food. That’s what data are basically without a statistical analysis; it’s just the ingredients, the uncooked parts. Data on their own are inedible food. In fact, data on their own is pretty dumb.</p>
-<p>While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, however, I imagine the many attempts very large data sets are explored, analyzed, and reanalyzed until the desired result is obtained or until the model fits the data. Then, this process only <em>appears</em> to reduce the uncertainty when looking at the p-values and standard errors. However, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.</p>
+<p>While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, however, I imagine the many attempts to explore, analyze, and reanalyze the large data sets until the desired result is obtained or until the model fits the data. Then, this process only <em>appears</em> to reduce the uncertainty when looking at the p-values and standard errors. However, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.</p>
 <p>Excessive analytic attempts generate phantom degrees of freedom <span class="citation" data-cites="Harrell2015-pf">[<a href="#ref-Harrell2015-pf" role="doc-biblioref">5</a>]</span>, which is one of the many ways <em>dark statistics</em> can deceive us. We can only trust our statistical results if we don’t torture the data too much.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="victor-_qXjdWm8YEo-unsplash.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Garden of forking paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)</figcaption>
+<figcaption>Garden of Forking Paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)</figcaption>
 </figure>
 </div>
 </section>
@@ -512,7 +512,7 @@ window.Quarto = {
 </details>
 </div>
 <p>The main problem was we didn’t know that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. Using univariable screening, with <span class="math inline">\(p \le 0.05\)</span> for variable selection, a striking 214 out of a total of 4000 variables were statistically significant; this matches up with the alpha level of 5%.</p>
-<p>I tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini &amp; Hochberg procedure; however, only <span class="math inline">\(x_1\)</span> remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seem to be really difficult to get the correct model with such a large data set. It’s like looking for a needle in a haystack.</p>
+<p>I tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini &amp; Hochberg procedure; however, only <span class="math inline">\(x_1\)</span> remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It’s like looking for a needle in a haystack.</p>
 <p>In the final step, perhaps out of desperation, I opted for a middle way: instead of using an unadjusted threshold of 5% or an FDR of 5%, I applied an unadjusted threshold of <span class="math inline">\(p \le 0.001\)</span>. The results are shown below.</p>
 <div class="cell">
 <details class="code-fold">
@@ -583,7 +583,7 @@ window.Quarto = {
 </section>
 <section id="so-what" class="level2">
 <h2 class="anchored" data-anchor-id="so-what">So what?</h2>
-<p>So what does this mean? I find the analysis of high-dimensional data is extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant “truths” in the data when trying too many different things (the garden of forking paths).</p>
+<p>So what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant “truths” in the data when trying too many different things (the garden of forking paths).</p>
 <p>You may object that the simulations I made are too pessimistic. Yes, but we often don’t know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).</p>
 <p>The process of how the result is obtained is much more important than the result itself.</p>
 <p>For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell <span class="citation" data-cites="Harrell2022-gi">[<a href="#ref-Harrell2022-gi" role="doc-biblioref">12</a>]</span>.</p>
