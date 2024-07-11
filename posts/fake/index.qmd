@@ -221,4 +221,4 @@ You may object that the simulations I made are too pessimistic. Yes, but we ofte
 
 The process of how the result is obtained is much more important than the result itself.
 
-For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell [@Harrell2022-gi].
+For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell [@Harrell2022-gi], and the excellent training materials "Analysis of High-Dimensional Data" by Nicolas Städler [@Stadler2024-if].
