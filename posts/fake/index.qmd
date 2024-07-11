@@ -45,7 +45,7 @@ Too much data can make data analysis harder, but this is often unrecognized. The
 
 The catchphrase "let the data speak for itself" is misleading because data rarely have meaning without context. To extract valuable insights, you need a good question and the appropriate method to answer it. Think about your favorite restaurant and dish: imagine being served only unprepared raw food. That's what data are basically without a statistical analysis; it's just the ingredients, the uncooked parts. Data on their own are inedible food. In fact, data on their own is pretty dumb.
 
-While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, however, I imagine the many attempts to explore, analyze, and reanalyze the large data sets until the desired result is obtained or until the model fits the data. Then, this process only *appears* to reduce the uncertainty when looking at the p-values and standard errors. However, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.
+While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, though, I can see lots of different ways that large data sets could be explored, analyzed, and reanalyzed until we get the result we want or until the model fits the data. Then, this process only *appears* to reduce the uncertainty when looking at the p-values and standard errors. More likely, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.
 
 Excessive analytic attempts generate phantom degrees of freedom [@Harrell2015-pf], which is one of the many ways *dark statistics* can deceive us. We can only trust our statistical results if we don't torture the data too much.
 
@@ -179,7 +179,7 @@ d = data.frame (y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3], x4 = data[,4
 fit = lm(y ~ x1 + x2 + x3 + x4, data = d)
 tidy_lm(fit)
 ```
-The effect estimates were more off from the truth, particularly $x_2$, and the confidence intervals were much wider. This was not surprising as the sample size was only $N =$ `r N`. All in all, we are much more uncertain; though, the p-values for $x_1$ to $x_3$ were still statistically significant. However, the larger uncertainty was not the main problem.
+The effect estimates were more off from the truth, particularly $x_2$, and the confidence intervals were much wider. This was not surprising as the sample size was only $N = `r N`$. All in all, we are much more uncertain; though, the p-values for $x_1$ to $x_3$ were still statistically significant. However, the larger uncertainty was not the main problem.
 
 ```{r}
 #| eval: true
