@@ -93,42 +93,42 @@
   {
     "objectID": "projects.html",
     "href": "projects.html",
-    "title": "Projects",
+    "title": "Research projects",
     "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2,000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
+    "text": "Below are showcases of my research projects, which include links to publications, study protocols, and presentations (talks, posters)."
   },
   {
     "objectID": "projects.html#kidmokidney-prediction-model",
     "href": "projects.html#kidmokidney-prediction-model",
-    "title": "Projects",
-    "section": "",
-    "text": "KIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2,000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\n\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\n\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
+    "title": "Research projects",
+    "section": "1. KIDMO—Kidney prediction model",
+    "text": "1. KIDMO—Kidney prediction model\nKIDMO is a clinical prediction model for the prognosis in kidney transplant recipients at the time of organ offer. It will support decision-making to better understand donor, recipient, and transplant-related risks. The model is currently developed with data from over 2,000 kidney transplant recipients.\n\n\n\nFigure: Schematic overview of the KIDMO multivariable prediction model.\n\n\n\nResources\n\nStudy registration on OSF Registries from 1. September 2022\nThe online risk calculator is available at https://swtdata.org/kidmo/\nPoster presentation at the ISCB44 in Milano\n\n\n\nPublications\nSchwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. Diagn Progn Res. 2023;7: 6. doi:10.1186/s41512-022-00139-5"
   },
   {
     "objectID": "projects.html#examex-vivo-allograft-monitoring",
     "href": "projects.html#examex-vivo-allograft-monitoring",
-    "title": "Projects",
+    "title": "Research projects",
     "section": "2. EXAM—Ex vivo allograft monitoring",
     "text": "2. EXAM—Ex vivo allograft monitoring\nEXAM is an analytics dashboard for analyzing hypothermic machine perfusion data in deceased-donor kidney transplantation.\n\n\n\nFigure: EXAM analytics dashboard.\n\n\n\nResources\n\nEXAM online dashboard\nGitHub code repository\nTalk at R/Basel 2023 (Video)\n\n\n\nPublications\nSchwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. Research Square. 2023. doi:10.21203/rs.3.rs-2713168/v1"
   },
   {
     "objectID": "projects.html#waitwaiting-list-analysis-in-transplantation",
     "href": "projects.html#waitwaiting-list-analysis-in-transplantation",
-    "title": "Projects",
+    "title": "Research projects",
     "section": "3. WAIT—Waiting list analysis in transplantation",
     "text": "3. WAIT—Waiting list analysis in transplantation\nMedian waiting times published by transplant organizations around the world may be biased when death or censoring is disregarded. Competing risk multistate models are suited for the analysis of time-to-event data of the organ waiting list. Resulting cumulative incidences are probabilities for transplantation or death by a given time and are a more accurate description of the events occurring on the waiting list. In accordance with the concept of median survival time in survival analysis in clinical trials, we can derive the median time to transplantation (MTT), the waiting time duration at which the transplant probability is 0.50.\n\n\n\nFigure: Cumulative incidence curves for transplantation for the different organs A—E with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).\n\n\n\nPublications\nSchwab S, Elmer A, Sidler D, Straumann L, Stuerzinger U, Immer F. Selection bias in reporting of median waiting times in organ transplantation. medRxiv. 2023. p. 2023.12.13.23299859. doi:10.1101/2023.12.13.23299859"
   },
   {
     "objectID": "projects.html#reportreporting-and-evaluation-of-prediction-models-in-organ-transplantation",
     "href": "projects.html#reportreporting-and-evaluation-of-prediction-models-in-organ-transplantation",
-    "title": "Projects",
+    "title": "Research projects",
     "section": "4. REPORT—Reporting and evaluation of prediction models in organ transplantation",
     "text": "4. REPORT—Reporting and evaluation of prediction models in organ transplantation\nClinical prediction models for prognosis can predict outcomes and support decision-making. Previous research criticized the quality of prediction models concerning poor reporting and the risk of bias. How this applies to prediction models in organ donation and transplantation needs to be clarified. Therefore, this scoping review aims to assess prediction models used in transplant centers in Switzerland and update clinicians on the transparency, quality of reporting, and risk of bias of these tools.\n\n\n\nFigure: To transplant or not to transplant? Assessing the quality and limitations of existing prediction models can inform further research to develop novel or update existing models to improve the decision-making at transplant centers.\n\n\n\nResources\n\nStudy registration on OSF Registries from 6. April 2024"
   },
   {
     "objectID": "projects.html#projects-as-a-statistical-consultant",
     "href": "projects.html#projects-as-a-statistical-consultant",
-    "title": "Projects",
+    "title": "Research projects",
     "section": "Projects as a statistical consultant",
     "text": "Projects as a statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of the serum creatinine after kidney transplantation in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
   },

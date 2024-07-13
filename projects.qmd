@@ -1,8 +1,10 @@
 ---
-title: "Projects"
+title: "Research projects"
 include-in-header:
   - text: <meta name="description" content="Simon Schwab's research projects.">
 ---
+
+Below are showcases of my research projects, which include links to publications, study protocols, and presentations (talks, posters).
 
 ## 1. KIDMO---Kidney prediction model
 
