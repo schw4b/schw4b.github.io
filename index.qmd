@@ -2,7 +2,7 @@
 title: "Simon Schwab"
 about:
   template: trestles
-  image: images/profile_gymbiel_200-75.jpg
+  image: images/profile_gymbiel.jpg
   image-shape: round
   image-width: 10em
   links:
@@ -38,7 +38,7 @@ CAS---Advanced Statistical Data Science\
 PhD---Health Science\
 *University of Bern, 2013*
 
-MSc---Psychology, Statistics & Computer Science\
+MSc---Quantitative Psychology & Computer Science\
 *University of Bern, 2008*
 
 ## Experiences

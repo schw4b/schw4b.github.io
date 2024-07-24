@@ -5,20 +5,15 @@ include-in-header:
   - text: <meta name="description" content="About Simon Schwab.">
 ---
 
-I'm a senior statistician at [Swisstransplant](https://www.swisstransplant.org/) with professional qualifications in medical research and statistics.
+I'm a senior statistician at [Swisstransplant](https://www.swisstransplant.org/) with professional qualifications in medical research and statistics. I'm also lecturer in biostatistics and good research practice at the [Center for Reproducible Science](https://www.crs.uzh.ch/), a competence center of the University of Zurich.
 
-My main tasks include: 
+I obtained my PhD in Health Sciences and a postgraduate certificate in Advanced Statistical Data Science from the University of Bern. I received 3.5 years of postdoctoral training in statistics at the University of Warwick and the University of Oxford funded by the Swiss National Science Foundation (SNF).
 
--   risk prediction in kidney and liver transplantation (prediction models for prognosis)
--   analysis of the waiting list to estimate the probability of transplantation
--   development of methodology for quality control
--   statistical reporting of national transplant activity
-
-I'm also a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/) and a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite). Furthermore, I am a lecturer in biostatistics and good research practice at the [Center for Reproducible Science](https://www.crs.uzh.ch/), a competence center of the University of Zurich.
+Furthermore, I'm a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/) and a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite).
 
 ## Memberships
 
--   Fellow of the Royal Statistical Society (RSS)
+-   Fellow and Graduate Statistician of the Royal Statistical Society (RSS)
 -   Member of the Swiss Statistical Society (SSS)
 -   Member of the International Society for Clinical Biostatistics (ISCB)
 
