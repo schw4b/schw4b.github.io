@@ -1,7 +1,7 @@
 ---
 title: "Fake plastic trees, or why AI and big data may be bad for you"
 draft: false
-subtitle: "Data are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end."
+description: "Data are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end."
 author: "Simon Schwab"
 date: "2024-07-09"
 categories: [Reproducibility, Dark Statistics]
@@ -13,13 +13,13 @@ citation:
 bibliography: references.bib
 google-scholar: true
 csl: plos.csl 
-title-block-banner: false
+title-block-banner: true
 df-print: kable
 ---
 
 Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.
 
-*"You can be rich in data but poor in information."* ---Stephen Senn
+> "You can be rich in data but poor in information." ---Stephen Senn
 
 My view is that all data are rubbish without proper statistics. Nevertheless, the glorification of data has evolved  over the last decades and continues to do so. An example is the front cover of the magazine *Science* from 2011. It is a collage of words, but only one stands out in large letters: "data."
 
@@ -59,7 +59,7 @@ Statistical software once tried to create the illusion that a nice graphical int
 
 I recently discovered a website with yet another doomed attempt to make statistics easy: an AI-powered statistics tool.
 
-*"It makes complex data analytics accessible to anyone, eliminating the need for advanced technical knowledge or expertise."* ---from a website about an AI-based statistics tool
+> "It makes complex data analytics accessible to anyone, eliminating the need for advanced technical knowledge or expertise." ---from a website about an AI-based statistics tool
 
 How does it work? I don't know. Perhaps you can simply chat with your data files? For me, it sounds more like the production of flawed conclusions by untrained people via dangerous tools. That will be the gloomy future, it seems.
 
