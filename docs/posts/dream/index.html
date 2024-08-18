@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Simon Schwab">
+<meta name="dcterms.date" content="2024-08-18">
+<meta name="description" content="A 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong to the realm of dark statistics because they are more likely to produce a false positive result.">
+
+<title>I don’t sleep, I dream – Statistics, yup!</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPR2YZSX56"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="citation_title" content="I don&amp;amp;#039;t sleep, I dream">
+<meta name="citation_author" content="Simon Schwab">
+<meta name="citation_publication_date" content="2024">
+<meta name="citation_cover_date" content="2024">
+<meta name="citation_year" content="2024">
+<meta name="citation_online_date" content="2024-08-18">
+<meta name="citation_fulltext_html_url" content="https://www.statsyup.org/posts/dream/">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Regulation of REM and Non-REM sleep by periaqueductal GABAergic neurons;,citation_author=Franz Weber;,citation_author=Johnny Phong Hoang Do;,citation_author=Shinjae Chung;,citation_author=Kevin T Beier;,citation_author=Mike Bikov;,citation_author=Mohammad Saffari Doost;,citation_author=Yang Dan;,citation_publication_date=2018-01;,citation_cover_date=2018-01;,citation_year=2018;,citation_issue=1;,citation_doi=10.1038/s41467-017-02765-w;,citation_issn=2041-1723;,citation_pmid=29367602;,citation_volume=9;,citation_journal_title=Nat. Commun.;">
+<meta name="citation_reference" content="citation_title=Discovering statistics using R;,citation_author=Andy Field;,citation_author=Jeremy Miles;,citation_author=Zoë Field;,citation_publication_date=2012-03;,citation_cover_date=2012-03;,citation_year=2012;,citation_isbn=9781446200452;">
+<meta name="citation_reference" content="citation_title=Drug development: Raise standards for preclinical cancer research;,citation_author=C Glenn Begley;,citation_author=Lee M Ellis;,citation_publication_date=2012-03;,citation_cover_date=2012-03;,citation_year=2012;,citation_issue=7391;,citation_doi=10.1038/483531a;,citation_issn=0028-0836, 1476-4687;,citation_pmid=22460880;,citation_volume=483;,citation_journal_title=Nature;">
+<meta name="citation_reference" content="citation_title=To adjust or not to adjust: It is not the tests performed that count, but how they are reported and interpreted;,citation_author=Anne-Laure Boulesteix;,citation_author=Sabine Hoffmann;,citation_publication_date=2024-04;,citation_cover_date=2024-04;,citation_year=2024;,citation_issue=1;,citation_doi=10.1136/bmjmed-2023-000783;,citation_issn=2754-0413;,citation_pmid=38645892;,citation_volume=3;,citation_journal_title=BMJ Med;">
+<meta name="citation_reference" content="citation_title=Mortality and morbidity in patients receiving encainide, flecainide, or placebo. The cardiac arrhythmia suppression trial;,citation_author=D S Echt;,citation_author=P R Liebson;,citation_author=L B Mitchell;,citation_author=R W Peters;,citation_author=D Obias-Manno;,citation_author=A H Barker;,citation_author=D Arensberg;,citation_author=A Baker;,citation_author=L Friedman;,citation_author=H L Greene;,citation_publication_date=1991-03;,citation_cover_date=1991-03;,citation_year=1991;,citation_issue=12;,citation_doi=10.1056/NEJM199103213241201;,citation_issn=0028-4793;,citation_pmid=1900101;,citation_volume=324;,citation_journal_title=N. Engl. J. Med.;">
+<meta name="citation_reference" content="citation_title=Stopping trials early due to harm;,citation_author=Thomas Cook;,citation_author=Olive D Buhule;,citation_publication_date=2022-05;,citation_cover_date=2022-05;,citation_year=2022;,citation_issue=5;,citation_doi=10.1056/EVIDctw2100026;,citation_issn=2766-5526;,citation_pmid=38319224;,citation_volume=1;,citation_journal_title=NEJM Evid;">
+<meta name="citation_reference" content="citation_title=Improving the reproducibility of science;,citation_author=Leonhard Held;,citation_author=Simon Schwab;,citation_publication_date=2020-01;,citation_cover_date=2020-01;,citation_year=2020;,citation_issue=1;,citation_doi=10.1111/j.1740-9713.2020.01351.x;,citation_issn=1740-9705, 1740-9713;,citation_volume=17;,citation_journal_title=Significance;,citation_publisher=Oxford Academic;">
+<meta name="citation_reference" content="citation_title=Reproducibility of animal research in light of biological variation;,citation_author=Bernhard Voelkl;,citation_author=Naomi S Altman;,citation_author=Anders Forsman;,citation_author=Wolfgang Forstmeier;,citation_author=Jessica Gurevitch;,citation_author=Ivana Jaric;,citation_author=Natasha A Karp;,citation_author=Martien J Kas;,citation_author=Holger Schielzeth;,citation_author=Tom Van de Casteele;,citation_author=Hanno Würbel;,citation_publication_date=2020-07;,citation_cover_date=2020-07;,citation_year=2020;,citation_issue=7;,citation_doi=10.1038/s41583-020-0313-3;,citation_issn=1471-003X, 1471-0048;,citation_pmid=32488205;,citation_volume=21;,citation_journal_title=Nat. Rev. Neurosci.;">
+<meta name="citation_reference" content="citation_title=Believe it or not: How much can we rely on published data on potential drug targets?;,citation_author=Florian Prinz;,citation_author=Thomas Schlange;,citation_author=Khusru Asadullah;,citation_publication_date=2011-08;,citation_cover_date=2011-08;,citation_year=2011;,citation_issue=9;,citation_doi=10.1038/nrd3439-c1;,citation_issn=1474-1784, 1474-1776;,citation_pmid=21892149;,citation_volume=10;,citation_journal_title=Nat. Rev. Drug Discov.;">
+<meta name="citation_reference" content="citation_title=Investigating the replicability of preclinical cancer biology;,citation_author=Timothy M Errington;,citation_author=Maya Mathur;,citation_author=Courtney K Soderberg;,citation_author=Alexandria Denis;,citation_author=Nicole Perfito;,citation_author=Elizabeth Iorns;,citation_author=Brian A Nosek;,citation_publication_date=2021-12;,citation_cover_date=2021-12;,citation_year=2021;,citation_doi=10.7554/eLife.71601;,citation_issn=2050-084X;,citation_pmid=34874005;,citation_volume=10;,citation_journal_title=Elife;">
+<meta name="citation_reference" content="citation_title=The ARRIVE guidelines 2.0: Updated guidelines for reporting animal research;,citation_author=Nathalie Percie du Sert;,citation_author=Viki Hurst;,citation_author=Amrita Ahluwalia;,citation_author=Sabina Alam;,citation_author=Marc T Avey;,citation_author=Monya Baker;,citation_author=William J Browne;,citation_author=Alejandra Clark;,citation_author=Innes C Cuthill;,citation_author=Ulrich Dirnagl;,citation_author=Michael Emerson;,citation_author=Paul Garner;,citation_author=Stephen T Holgate;,citation_author=David W Howells;,citation_author=Natasha A Karp;,citation_author=Stanley E Lazic;,citation_author=Katie Lidster;,citation_author=Catriona J MacCallum;,citation_author=Malcolm Macleod;,citation_author=Esther J Pearl;,citation_author=Ole H Petersen;,citation_author=Frances Rawle;,citation_author=Penny Reynolds;,citation_author=Kieron Rooney;,citation_author=Emily S Sena;,citation_author=Shai D Silberberg;,citation_author=Thomas Steckler;,citation_author=Hanno Würbel;,citation_publication_date=2020-07;,citation_cover_date=2020-07;,citation_year=2020;,citation_issue=7;,citation_doi=10.1371/journal.pbio.3000410;,citation_issn=1544-9173, 1545-7885;,citation_pmid=32663219;,citation_volume=18;,citation_journal_title=PLoS Biol.;">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/Logo_noback.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Statistics, yup!</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Bio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../output.html"> 
+<span class="menu-text">Output</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">I don’t sleep, I dream</h1>
+                  <div>
+        <div class="description">
+          A 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong to the realm of dark statistics because they are more likely to produce a false positive result.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Animal Studies</div>
+                <div class="quarto-category">Repeated inspection of data</div>
+                <div class="quarto-category">p-values</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Simon Schwab </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 18, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#peeping-tom" id="toc-peeping-tom" class="nav-link active" data-scroll-target="#peeping-tom">Peeping Tom</a></li>
+  <li><a href="#seven-mice" id="toc-seven-mice" class="nav-link" data-scroll-target="#seven-mice">Seven mice</a></li>
+  <li><a href="#an-exception-to-the-rule" id="toc-an-exception-to-the-rule" class="nav-link" data-scroll-target="#an-exception-to-the-rule">An exception to the rule</a></li>
+  <li><a href="#just-one-more-thing" id="toc-just-one-more-thing" class="nav-link" data-scroll-target="#just-one-more-thing">Just one more thing</a>
+  <ul class="collapse">
+  <li><a href="#so-what" id="toc-so-what" class="nav-link" data-scroll-target="#so-what">So what?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Sleep is fascinating. We all sleep at night, but we don’t really know what is happening during this period. Sometimes we dream, sometimes we don’t. All in all, it is a bit of a mystery.</p>
+<p>For some researchers, statistics is also a bit of a mystery. In 2018, a study titled “Regulation of REM and Non-REM Sleep by Periaqueductal GABAergic Neurons” was published in <em>Nature Communications</em> led by researchers from the University of California in Berkeley, Stanford University, and the University of Pennsylvania <span class="citation" data-cites="Weber2018-fp">[<a href="#ref-Weber2018-fp" role="doc-biblioref">1</a>]</span>. The study investigated rapid eye movement (REM) sleep in mice, which is a sleep phase characterized by vivid dreams and random movement of the eyes.</p>
+<p>The only thing I know about R.E.M. is that it is also the name of a pretty good rock band; I grew up listening to their music. The very first album I bought as a kid was <em>The Best of R.E.M.</em> from 1991. For me, rock music and statistics go hand in hand, just like in Andy Field’s book <em>Discovering Statistics Using R</em> <span class="citation" data-cites="Field2012-hs">[<a href="#ref-Field2012-hs" role="doc-biblioref">2</a>]</span>. But now, let’s return to our sleep study.</p>
+<p>The good news is we do not need to understand anything about REM sleep, the brain, or the mouse. I probably don’t even know the difference between a mouse, a rat, and a hamster. The subject matter would only distract us. Let’s ignore everything in this paper except a tiny bit from the methods section.</p>
+<p>Have you ever read only a single sentence from a research study? It may be enough to make a case.</p>
+<p>But first, let me say another thing. In some prestigious journals, the methods and statistics section, the most relevant part for judging the validity and credibility of a study, is literally the small print at the end. Reminds me of what I wrote last time, that <a href="https://www.statsyup.org/posts/fake/">statistics is largely undervalued</a>. Does anybody read that part?</p>
+<p>Well, I do.</p>
+<blockquote class="blockquote">
+<p>“we continuously increased the number of animals until statistical significance was reached to support our conclusions.” —p.&nbsp;12, the small print</p>
+</blockquote>
+<section id="peeping-tom" class="level1">
+<h1>Peeping Tom</h1>
+<p>During my time at the University of Warwick in Coventry, I learned about the <a href="https://en.wikipedia.org/wiki/Lady_Godiva#Peeping_Tom">legend of “Peeping Tom.”</a> In my version, however, Peeping Tom was a scientist obsessed with observing the p-value. The scientist would always take a glimpse at that darn p-value and how it changed throughout the course of the experiment when adding more data. In the end, the scientist was struck blind—end of the story.</p>
+<p>When looking at the data again and again (and again) as more data are added and a statistical test is run each time, it essentially is a multiple-testing situation that would require some form of adjustment of the p-value. The reason is that this (bad) research practice considerably increases the chance that a statistically significant finding is a fluke.</p>
+<p>Moreover, the study authors failed to report the non-significant results from all the statistical tests they conducted. They continued testing until they found a significant result, which they then reported. This selective reporting, based on the significance of the test, skews the interpretation of their findings. Despite the ongoing debate about when to adjust p-values, the situation here clearly calls for a “haircut” for their p-values <span class="citation" data-cites="Boulesteix2024-kg">[<a href="#ref-Boulesteix2024-kg" role="doc-biblioref">3</a>]</span>.</p>
+<p>In the <em>Seven Sins</em> in statistical significance testing <span class="citation" data-cites="Held2020-yx">[<a href="#ref-Held2020-yx" role="doc-biblioref">4</a>]</span>, the practice of repeatedly looking at the p-value is described as the sin number three, the <em>repeated inspection of data</em>.</p>
+<p>The solution to this issue is straightforward. It can be avoided by not analyzing the data before the study has been completed and the planned sample size has been reached. But I’m not sure if sample size is often planned in animal research.</p>
+</section>
+<section id="seven-mice" class="level1">
+<h1>Seven mice</h1>
+<p>In 2017, I applied for a grant for a project that planned to analyze a large dataset with thousands of magnetic resonance imaging (MRI) recordings from neuroscience. I was shortlisted for the second round, and after my talk, I was asked by a member of the committee, why I would not perform my own MRI experiment to collect my own data. I answered I did not want to do another MRI study with N = 30 patients. The person replied that there have been studies published in the journal <em>Nature</em> with only 7 mice. I then had to laugh because I thought it was a joke, but nobody else was laughing.</p>
+<p>Well, here we are, years later, making deeper thoughts about this matter. In the present study, the sample size was not 7 mice. It was 12 mice, to be fair.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="awa-spr-por-25979-4-f.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Andy Warhol, Myths: Mickey Mouse from 1981 (Halcyon Gallery)</figcaption>
+</figure>
+</div>
+<p>In 2011, two comments about preclinical cancer research raised eyebrows <span class="citation" data-cites="Prinz2011-hm Begley2012-zy">[<a href="#ref-Prinz2011-hm" role="doc-biblioref">5</a>,<a href="#ref-Begley2012-zy" role="doc-biblioref">6</a>]</span>. Apparently, several of landmark studies in high-impact journals that generated hundreds of secondary publications could not be verified by the pharmaceutical companies Bayer and Amgen. In these studies, investigators sometimes reported a single finding that supported their hypothesis, but that was often cherry-picking. That was the starting point of Tim Errington’s investigation of reproducibility in preclinical cancer research <span class="citation" data-cites="Errington2021-gj">[<a href="#ref-Errington2021-gj" role="doc-biblioref">7</a>]</span>. Reasons for the irreproducibility of preclinical animal studies may be low sample size and, thus, low statistical power, as well as over-standardization of experiments <span class="citation" data-cites="Voelkl2020-nt">[<a href="#ref-Voelkl2020-nt" role="doc-biblioref">8</a>]</span>. Having read all this, I’m not so surprised anymore when another lab cannot confirm an exciting study finding from an animal experiment in a prestigious journal.</p>
+<p>If a result cannot be repeated, what is it worth?</p>
+<p>Reproducible animal studies require transparent reporting. The ARRIVE guidelines (Animal Research: Reporting of In Vivo Experiments) were initially developed in 2010 to improve the reporting of animal research, and in 2020, version 2.0 was released <span class="citation" data-cites="Percie_du_Sert2020-le">[<a href="#ref-Percie_du_Sert2020-le" role="doc-biblioref">9</a>]</span>.</p>
+</section>
+<section id="an-exception-to-the-rule" class="level1">
+<h1>An exception to the rule</h1>
+<p>There are some exceptions in which stopping a study early can be justified. However, that’s a whole different ballgame. Such situations need to be predefined, and adequate statistical methods must be used in the analysis. In clinical trials there is the term “interim analysis” were an analysis is conducted before the end of the study and data collection. This may be very useful when a treatment is clearly beneficial or harmful compared to the control arm <span class="citation" data-cites="Cook2022-dc">[<a href="#ref-Cook2022-dc" role="doc-biblioref">10</a>]</span>. Then, the investigator may stop the study early. However, as I said, this is all very well planned and defined in a study protocol and statistical analysis plan <em>a priori</em>.</p>
+<p>For example, the Cardiac Arrhythmia Suppression Trial (CAST) was a four-arm trial investigating three antiarrhythmic drugs versus placebo on the risk of sudden cardiac death <span class="citation" data-cites="Echt1991-mh">[<a href="#ref-Echt1991-mh" role="doc-biblioref">11</a>]</span>. Early in the CAST study, two arms (encainide and flecainide) were stopped because of excess mortality compared to the placebo arm.</p>
+<p>In the present mouse study, however, the authors stopped the experiment because the p-value fell below the magical <span class="math inline">\(p \le 0.05\)</span>, apparently signaling to them that they could publish their results and didn’t need to kill any more mice. If you perform enough tests, you will always obtain a p-value that is smaller than the magical threshold.</p>
+<blockquote class="blockquote">
+<p>“I’m looking for an interruption. Do you believe?” —I don’t sleep, I dream (song by R.E.M.)</p>
+</blockquote>
+<p>I don’t believe in stopping this study early, and I cannot trust the results. However, I believe that the study authors did not want to cheat. Most likely, the authors didn’t know better. They thought the approach was okay, so they wrote it in the methods section. No statistician was on the author list, I guess, and no statistician reviewed this paper.</p>
+<p>One last thought. When the authors of the study stopped the experiment, it was good for the next mouse whose life was saved. Unless the study was flawed.</p>
+<p>Then all of the mice would be wasted.</p>
+<p><em>The title of this post is a song by R.E.M.; the preview image of this post is a photo by Karsten Winegeart on Unsplash.</em></p>
+</section>
+<section id="just-one-more-thing" class="level1">
+<h1>Just one more thing</h1>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>N <span class="ot">=</span> <span class="dv">30</span> <span class="co"># number of mice</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">=</span> <span class="dv">10</span><span class="sc">:</span>N <span class="co"># stop rules</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>k <span class="ot">=</span> <span class="dv">10000</span> <span class="co"># number of studies</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>ps <span class="ot">=</span> <span class="fu">array</span>(<span class="cn">NA</span>, <span class="at">dim =</span> <span class="fu">c</span>(k, <span class="fu">length</span>(stop)))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># iterate across studies s</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (s <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>k) {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  y1 <span class="ot">=</span> <span class="fu">rnorm</span>(N)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  y2 <span class="ot">=</span> <span class="fu">rnorm</span>(N)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  c <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> stop) {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    stat <span class="ot">=</span> <span class="fu">wilcox.test</span>(y1[<span class="dv">1</span><span class="sc">:</span>i], y2[<span class="dv">1</span><span class="sc">:</span>i], <span class="at">paired =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    ps[s, c] <span class="ot">=</span> stat<span class="sc">$</span>p.value</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    c <span class="ot">=</span> c <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Let’s perform a mouse study. We assume we planned <span class="math inline">\(N = 30\)</span> animals. However, we peep at the data already after 10 were tested and then repeated testing after each additional animal until <span class="math inline">\(p \leq 0.05\)</span> or the total sample size was reached. As no animals were killed in my experiment here, we will perform <span class="math inline">\(k = 10000\)</span> of such studies.</p>
+<p>In the mouse study, two measurements were obtained for each mouse. I will sample both observations from a normal distribution with a mean of 0 and standard deviation of 1, so the model behind the simulation assumes there is no difference in the pre and post-testing of the mice. Thus, every result I find is a fluke.</p>
+<p>I performed the same test reported in the paper, a Wilcoxon signed-rank test, but that doesn’t really matter to make the case. You could make the case with any statistical significance test that successfully controls the type I error at 5% to falsely reject the null.</p>
+<p>Altogether, I collected <span class="math inline">\(21 \times 10^{4}\)</span> p-values (21 repeated inspections and 10000 studies).</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>FP <span class="ot">=</span> <span class="fu">sum</span>(ps[,<span class="fu">ncol</span>(ps)] <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>I looked at the last p-value for each study, i.e., after data from the total of <span class="math inline">\(N = 30\)</span> animals were collected. I found that 452 from 10000 studies were statistically significant, which is a type I error rate of 0.045. Thanks God we are in control of the error. So far, so good.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># function peep() to get p value using repeated inspection</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>peep <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">t =</span> <span class="cn">NA</span>, <span class="at">p =</span> <span class="cn">NA</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># pick first p value that is below cutoff</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">min</span>(x) <span class="sc">&lt;=</span> <span class="fl">0.05</span>) {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    i <span class="ot">=</span> <span class="fu">which</span>(x <span class="sc">&lt;=</span> <span class="fl">0.05</span>)[<span class="dv">1</span>] <span class="co"># pick first p value that is below cutoff</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    d<span class="sc">$</span>t <span class="ot">=</span> i</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    d<span class="sc">$</span>p <span class="ot">=</span> x[i]</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if no success pick last p value</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    d<span class="sc">$</span>t <span class="ot">=</span> <span class="fu">length</span>(x)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    d<span class="sc">$</span>p <span class="ot">=</span> x[<span class="fu">length</span>(x)]</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(d)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>myp <span class="ot">=</span> <span class="fu">apply</span>(ps, <span class="dv">1</span>, peep)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>myp <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">t</span>(<span class="fu">array</span>(<span class="fu">unlist</span>(myp), <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>, k))))</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(myp) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"t"</span>, <span class="st">"p"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Now, the twist. I peeped at the other p-values. I picked the p-value as soon as it turned statistically significant and stopped the experiment. But when I was not lucky enough to observe a <span class="math inline">\(p \leq 0.05\)</span>, I collected the p-value from the last repeated test with <span class="math inline">\(N = 30\)</span> animals, whatever that value looked like.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>FP <span class="ot">=</span> <span class="fu">sum</span>(myp<span class="sc">$</span>p <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>I found that 1637 from 10000 studies were statistically significant, which is a type I error rate of 0.16. Now, we lost control. The type I error of falsely rejecting the null has tripled.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>N_plots <span class="ot">=</span> <span class="dv">2</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># pick two significant studies</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">=</span> <span class="fu">which</span>(myp<span class="sc">$</span>p <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">=</span> <span class="fu">sample</span>(idx, N_plots)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="fu">list</span>()</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N_plots) {</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">p =</span> ps[idx[i],], <span class="at">stop =</span> stop)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  p[[i]] <span class="ot">=</span> <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="at">x =</span> stop, <span class="at">y =</span> p, <span class="at">col =</span> <span class="st">"red"</span>)) <span class="sc">+</span> </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">data =</span> myp[idx[i],], </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">2</span>,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>               <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> t <span class="sc">+</span> stop[<span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>                             <span class="at">y =</span> p, <span class="at">col=</span><span class="st">"green"</span>)) <span class="sc">+</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#BF505A"</span>, <span class="st">"#6F87A6"</span>)) <span class="sc">+</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">"Study"</span>, i), <span class="at">tag =</span> LETTERS[i]) <span class="sc">+</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Number of mice observed"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"p-value"</span>) <span class="sc">+</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="fu">do.call</span>(<span class="st">"grid.arrange"</span>, <span class="fu">c</span>(p, <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Figure 1: Two example studies that stopped early due to peeping at the p-value before the study was completed. The red data point highlights the statisticially significant p-value where the study was stopped early. In (A), the study stopped after observing 10 mice, and (B) after observing 25 mice. The horizontal line shows the significance threshold at 0.05. As we can see, the p-value is very wiggly and can be exploited by bad research practices such as the repeated inspection of data.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>I highlight two case studies from the 1637 positive findings that were statistically significant by peeping. Study 1 was statistically significant at the first glimpse, so we can already go home after 10 mice. Brilliant. Study 2 was statistically significant after 25 mice. Notice that if we observed only the last p-value at the end, after completing the 30 mice, then both study 1 and study 2 failed to be statistically significant. This finding would be correct since I was the creator of the data and knew the truth behind the data.</p>
+<p>The truth was, there was nothing there.</p>
+<section id="so-what" class="level2">
+<h2 class="anchored" data-anchor-id="so-what">So what?</h2>
+<p>First, a p-value from repeated inspection of data is nothing more than a fluke of the universe. Don’t trust them. Second, <em>Nature Communications</em> may consider involving expert statisticians in the assessment of a study. After all, their article processing charges amount to 6790 US dollars.</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-Weber2018-fp" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Weber F, Hoang Do JP, Chung S, Beier KT, Bikov M, Saffari Doost M, et al. Regulation of <span>REM</span> and <span>Non-REM</span> sleep by periaqueductal <span>GABAergic</span> neurons. Nat Commun. 2018;9: 354. doi:<a href="https://doi.org/10.1038/s41467-017-02765-w">10.1038/s41467-017-02765-w</a></div>
+</div>
+<div id="ref-Field2012-hs" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Field A, Miles J, Field Z. Discovering statistics using <span>R</span>. London, England: SAGE; 2012. </div>
+</div>
+<div id="ref-Boulesteix2024-kg" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Boulesteix A-L, Hoffmann S. To adjust or not to adjust: It is not the tests performed that count, but how they are reported and interpreted. BMJ Med. 2024;3: e000783. doi:<a href="https://doi.org/10.1136/bmjmed-2023-000783">10.1136/bmjmed-2023-000783</a></div>
+</div>
+<div id="ref-Held2020-yx" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Held L, Schwab S. Improving the reproducibility of science. Significance. 2020;17: 10–11. doi:<a href="https://doi.org/10.1111/j.1740-9713.2020.01351.x">10.1111/j.1740-9713.2020.01351.x</a></div>
+</div>
+<div id="ref-Prinz2011-hm" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Prinz F, Schlange T, Asadullah K. Believe it or not: How much can we rely on published data on potential drug targets? Nat Rev Drug Discov. 2011;10: 712. doi:<a href="https://doi.org/10.1038/nrd3439-c1">10.1038/nrd3439-c1</a></div>
+</div>
+<div id="ref-Begley2012-zy" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Begley CG, Ellis LM. Drug development: Raise standards for preclinical cancer research. Nature. 2012;483: 531–533. doi:<a href="https://doi.org/10.1038/483531a">10.1038/483531a</a></div>
+</div>
+<div id="ref-Errington2021-gj" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Errington TM, Mathur M, Soderberg CK, Denis A, Perfito N, Iorns E, et al. Investigating the replicability of preclinical cancer biology. Elife. 2021;10. doi:<a href="https://doi.org/10.7554/eLife.71601">10.7554/eLife.71601</a></div>
+</div>
+<div id="ref-Voelkl2020-nt" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Voelkl B, Altman NS, Forsman A, Forstmeier W, Gurevitch J, Jaric I, et al. Reproducibility of animal research in light of biological variation. Nat Rev Neurosci. 2020;21: 384–393. doi:<a href="https://doi.org/10.1038/s41583-020-0313-3">10.1038/s41583-020-0313-3</a></div>
+</div>
+<div id="ref-Percie_du_Sert2020-le" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Percie du Sert N, Hurst V, Ahluwalia A, Alam S, Avey MT, Baker M, et al. The <span>ARRIVE</span> guidelines 2.0: Updated guidelines for reporting animal research. PLoS Biol. 2020;18: e3000410. doi:<a href="https://doi.org/10.1371/journal.pbio.3000410">10.1371/journal.pbio.3000410</a></div>
+</div>
+<div id="ref-Cook2022-dc" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Cook T, Buhule OD. Stopping trials early due to harm. NEJM Evid. 2022;1: EVIDctw2100026. doi:<a href="https://doi.org/10.1056/EVIDctw2100026">10.1056/EVIDctw2100026</a></div>
+</div>
+<div id="ref-Echt1991-mh" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Echt DS, Liebson PR, Mitchell LB, Peters RW, Obias-Manno D, Barker AH, et al. Mortality and morbidity in patients receiving encainide, flecainide, or placebo. The cardiac arrhythmia suppression trial. N Engl J Med. 1991;324: 781–788. doi:<a href="https://doi.org/10.1056/NEJM199103213241201">10.1056/NEJM199103213241201</a></div>
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{schwab2024,
+  author = {Schwab, Simon},
+  title = {I Don’t Sleep, {I} Dream},
+  date = {2024},
+  url = {https://www.statsyup.org/posts/dream/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-schwab2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div class="">Schwab S. I don’t sleep, I dream. 2024.
+Available: <a href="https://www.statsyup.org/posts/dream/">https://www.statsyup.org/posts/dream/</a></div>
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.statsyup\.org\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2024 Simon Schwab</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
