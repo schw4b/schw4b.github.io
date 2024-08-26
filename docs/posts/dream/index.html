@@ -8,7 +8,7 @@
 
 <meta name="author" content="Simon Schwab">
 <meta name="dcterms.date" content="2024-08-18">
-<meta name="description" content="A 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong to the realm of dark statistics because they are more likely to produce a false positive result.">
+<meta name="description" content="A 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong in the realm of dark statistics because they are more likely to produce a false positive result.">
 
 <title>I don’t sleep, I dream – Statistics, yup!</title>
 <style>
@@ -223,7 +223,7 @@ window.Quarto = {
       <h1 class="title">I don’t sleep, I dream</h1>
                   <div>
         <div class="description">
-          A 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong to the realm of dark statistics because they are more likely to produce a false positive result.
+          A 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong in the realm of dark statistics because they are more likely to produce a false positive result.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -281,48 +281,48 @@ window.Quarto = {
 
 
 <p>Sleep is fascinating. We all sleep at night, but we don’t really know what is happening during this period. Sometimes we dream, sometimes we don’t. All in all, it is a bit of a mystery.</p>
-<p>For some researchers, statistics is also a bit of a mystery. In 2018, a study titled “Regulation of REM and Non-REM Sleep by Periaqueductal GABAergic Neurons” was published in <em>Nature Communications</em> led by researchers from the University of California in Berkeley, Stanford University, and the University of Pennsylvania <span class="citation" data-cites="Weber2018-fp">[<a href="#ref-Weber2018-fp" role="doc-biblioref">1</a>]</span>. The study investigated rapid eye movement (REM) sleep in mice, which is a sleep phase characterized by vivid dreams and random movement of the eyes.</p>
-<p>The only thing I know about R.E.M. is that it is also the name of a pretty good rock band; I grew up listening to their music. The very first album I bought as a kid was <em>The Best of R.E.M.</em> from 1991. For me, rock music and statistics go hand in hand, just like in Andy Field’s book <em>Discovering Statistics Using R</em> <span class="citation" data-cites="Field2012-hs">[<a href="#ref-Field2012-hs" role="doc-biblioref">2</a>]</span>. But now, let’s return to our sleep study.</p>
-<p>The good news is we do not need to understand anything about REM sleep, the brain, or the mouse. I probably don’t even know the difference between a mouse, a rat, and a hamster. The subject matter would only distract us. Let’s ignore everything in this paper except a tiny bit from the methods section.</p>
-<p>Have you ever read only a single sentence from a research study? It may be enough to make a case.</p>
-<p>But first, let me say another thing. In some prestigious journals, the methods and statistics section, the most relevant part for judging the validity and credibility of a study, is literally the small print at the end. Reminds me of what I wrote last time, that <a href="https://www.statsyup.org/posts/fake/">statistics is largely undervalued</a>. Does anybody read that part?</p>
+<p>For some researchers, statistics is also a bit of a mystery. In 2018, a study titled “Regulation of REM and Non-REM Sleep by Periaqueductal GABAergic Neurons” was published in <em>Nature Communications</em> led by researchers from the University of California at Berkeley, Stanford University, and the University of Pennsylvania <span class="citation" data-cites="Weber2018-fp">[<a href="#ref-Weber2018-fp" role="doc-biblioref">1</a>]</span>. The study investigated rapid eye movement (REM) sleep in mice, which is a sleep phase characterized by vivid dreams and random movement of the eyes.</p>
+<p>The only thing I know about R.E.M. is that it is also the name of a pretty good rock band; I grew up listening to their music. The very first album I bought as a kid was <em>The Best of R.E.M.</em> from 1991. For me, rock music and statistics go hand in hand, just like in Andy Field’s book <em>Discovering Statistics Using R</em> <span class="citation" data-cites="Field2012-hs">[<a href="#ref-Field2012-hs" role="doc-biblioref">2</a>]</span>. But now, let’s get back to our sleep study.</p>
+<p>The good news is that we don’t need to understand anything about REM sleep, the brain, or the mouse. I probably don’t even know the difference between a mouse, a rat, and a hamster. The subject matter would only distract us. Let’s ignore everything in this paper except a tiny bit from the methods section.</p>
+<p>Have you ever read just one sentence from a research study? It can be enough to make a case.</p>
+<p>But first, let me say something else. In some prestigious journals, the methods and statistics section, the most relevant part for judging the validity and credibility of a study, is literally the small print at the end. This reminds me of what I wrote last time, that <a href="https://www.statsyup.org/posts/fake/">statistics is largely undervalued</a>. Does anyone read that part?</p>
 <p>Well, I do.</p>
 <blockquote class="blockquote">
 <p>“we continuously increased the number of animals until statistical significance was reached to support our conclusions.” —p.&nbsp;12, the small print</p>
 </blockquote>
 <section id="peeping-tom" class="level1">
 <h1>Peeping Tom</h1>
-<p>During my time at the University of Warwick in Coventry, I learned about the <a href="https://en.wikipedia.org/wiki/Lady_Godiva#Peeping_Tom">legend of “Peeping Tom.”</a> In my version, however, Peeping Tom was a scientist obsessed with observing the p-value. The scientist would always take a glimpse at that darn p-value and how it changed throughout the course of the experiment when adding more data. In the end, the scientist was struck blind—end of the story.</p>
-<p>When looking at the data again and again (and again) as more data are added and a statistical test is run each time, it essentially is a multiple-testing situation that would require some form of adjustment of the p-value. The reason is that this (bad) research practice considerably increases the chance that a statistically significant finding is a fluke.</p>
-<p>Moreover, the study authors failed to report the non-significant results from all the statistical tests they conducted. They continued testing until they found a significant result, which they then reported. This selective reporting, based on the significance of the test, skews the interpretation of their findings. Despite the ongoing debate about when to adjust p-values, the situation here clearly calls for a “haircut” for their p-values <span class="citation" data-cites="Boulesteix2024-kg">[<a href="#ref-Boulesteix2024-kg" role="doc-biblioref">3</a>]</span>.</p>
+<p>During my time at the University of Warwick in Coventry, I learned about the <a href="https://en.wikipedia.org/wiki/Lady_Godiva#Peeping_Tom">legend of “Peeping Tom.”</a> In my version, however, Peeping Tom was a scientist obsessed with observing the p-value. The scientist would always take a glimpse at that darn p-value and how it changed over the course of the experiment as more data was added. In the end, the scientist was struck blind—end of the story.</p>
+<p>looking at the data again and again (and again) as more data are added and a statistical test is run each time, it is essentially a multiple-testing situation that would require some form of adjustment of the p-value. The reason is that this (bad) research practice considerably increases the chance that a statistically significant finding is a fluke.</p>
+<p>Moreover, the study authors failed to report the non-significant results from all the statistical tests they conducted. They continued testing until they found a significant result, which they then reported. This selective reporting, based on the significance of the test, skews the interpretation of their findings. Despite the ongoing debate about when to adjust p-values, the situation here clearly calls for a “haircut” to their p-values <span class="citation" data-cites="Boulesteix2024-kg">[<a href="#ref-Boulesteix2024-kg" role="doc-biblioref">3</a>]</span>.</p>
 <p>In the <em>Seven Sins</em> in statistical significance testing <span class="citation" data-cites="Held2020-yx">[<a href="#ref-Held2020-yx" role="doc-biblioref">4</a>]</span>, the practice of repeatedly looking at the p-value is described as the sin number three, the <em>repeated inspection of data</em>.</p>
-<p>The solution to this issue is straightforward. It can be avoided by not analyzing the data before the study has been completed and the planned sample size has been reached. But I’m not sure if sample size is often planned in animal research.</p>
+<p>The solution to this issue is simple. It can be avoided by not analyzing the data before the study is complete and the planned sample size has been reached. But I’m not sure if sample size is often planned in animal research.</p>
 </section>
 <section id="seven-mice" class="level1">
 <h1>Seven mice</h1>
-<p>In 2017, I applied for a grant for a project that planned to analyze a large dataset with thousands of magnetic resonance imaging (MRI) recordings from neuroscience. I was shortlisted for the second round, and after my talk, I was asked by a member of the committee, why I would not perform my own MRI experiment to collect my own data. I answered I did not want to do another MRI study with N = 30 patients. The person replied that there have been studies published in the journal <em>Nature</em> with only 7 mice. I then had to laugh because I thought it was a joke, but nobody else was laughing.</p>
-<p>Well, here we are, years later, making deeper thoughts about this matter. In the present study, the sample size was not 7 mice. It was 12 mice, to be fair.</p>
+<p>In 2017, I applied for a grant for a neuroscience project that would analyze a large dataset of thousands of magnetic resonance imaging (MRI) scans. I was shortlisted for the second round, and after my presentation, a member of the committee asked me why I would not do my own MRI experiment to collect my own data. I replied that I did not want to do another N = 30 MRI study. The person replied that there were studies published in the journal <em>Nature</em> with only 7 mice. I had to laugh because I thought it was a joke, but nobody else was laughing.</p>
+<p>Well, here we are, years later, thinking more deeply about this. In the present study, the sample size was not 7 mice. It was 12 mice, to be fair.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="awa-spr-por-25979-4-f.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
 <figcaption>Andy Warhol, Myths: Mickey Mouse from 1981 (Halcyon Gallery)</figcaption>
 </figure>
 </div>
-<p>In 2011, two comments about preclinical cancer research raised eyebrows <span class="citation" data-cites="Prinz2011-hm Begley2012-zy">[<a href="#ref-Prinz2011-hm" role="doc-biblioref">5</a>,<a href="#ref-Begley2012-zy" role="doc-biblioref">6</a>]</span>. Apparently, several landmark studies in high-impact journals that generated hundreds of secondary publications could not be verified by the pharmaceutical companies Bayer and Amgen. In these studies, investigators sometimes reported a single finding that supported their hypothesis, but that was often cherry-picking. That was the starting point of Tim Errington’s investigation of reproducibility in preclinical cancer research <span class="citation" data-cites="Errington2021-gj">[<a href="#ref-Errington2021-gj" role="doc-biblioref">7</a>]</span>. Reasons for the irreproducibility of preclinical animal studies may be low sample size and, thus, low statistical power, as well as over-standardization of experiments <span class="citation" data-cites="Voelkl2020-nt">[<a href="#ref-Voelkl2020-nt" role="doc-biblioref">8</a>]</span>. Having read all this, I’m not so surprised anymore when another lab cannot confirm an exciting study finding from an animal experiment in a prestigious journal.</p>
+<p>In 2011, two comments about preclinical cancer research raised eyebrows <span class="citation" data-cites="Prinz2011-hm Begley2012-zy">[<a href="#ref-Prinz2011-hm" role="doc-biblioref">5</a>,<a href="#ref-Begley2012-zy" role="doc-biblioref">6</a>]</span>. Apparently, several landmark studies in high-impact journals that generated hundreds of secondary publications could not be verified by the pharmaceutical companies Bayer and Amgen. In these studies, investigators sometimes reported a single finding that supported their hypothesis, but it was often cherry-picked. This was the starting point for Tim Errington’s investigation of reproducibility in preclinical cancer research <span class="citation" data-cites="Errington2021-gj">[<a href="#ref-Errington2021-gj" role="doc-biblioref">7</a>]</span>. Reasons for irreproducibility in preclinical animal studies can include small sample sizes and thus low statistical power, as well as over-standardization of experiments <span class="citation" data-cites="Voelkl2020-nt">[<a href="#ref-Voelkl2020-nt" role="doc-biblioref">8</a>]</span>. After reading all all this, I’m not so surprised when another lab can’t confirm an exciting study finding from an animal experiment in a prestigious journal.</p>
 <p>If a result cannot be repeated, what is it worth?</p>
-<p>Reproducible animal studies require transparent reporting. The ARRIVE guidelines (Animal Research: Reporting of In Vivo Experiments) were initially developed in 2010 to improve the reporting of animal research, and in 2020, version 2.0 was released <span class="citation" data-cites="Percie_du_Sert2020-le">[<a href="#ref-Percie_du_Sert2020-le" role="doc-biblioref">9</a>]</span>.</p>
+<p>Reproducible animal studies require transparent reporting. The ARRIVE (Animal Research: Reporting of In Vivo Experiments) guidelines were initially developed in 2010 to improve the reporting of animal research, and version 2.0 was published in 2020 <span class="citation" data-cites="Percie_du_Sert2020-le">[<a href="#ref-Percie_du_Sert2020-le" role="doc-biblioref">9</a>]</span>.</p>
 </section>
 <section id="an-exception-to-the-rule" class="level1">
 <h1>An exception to the rule</h1>
-<p>There are some exceptions in which stopping a study early can be justified. However, that’s a whole different ballgame. Such situations need to be predefined, and adequate statistical methods must be used in the analysis. In clinical trials there is the term “interim analysis” were an analysis is conducted before the end of the study and data collection. This may be very useful when a treatment is clearly beneficial or harmful compared to the control arm <span class="citation" data-cites="Cook2022-dc">[<a href="#ref-Cook2022-dc" role="doc-biblioref">10</a>]</span>. Then, the investigator may stop the study early. However, as I said, this is all very well planned and defined in a study protocol and statistical analysis plan <em>a priori</em>.</p>
-<p>For example, the Cardiac Arrhythmia Suppression Trial (CAST) was a four-arm trial investigating three antiarrhythmic drugs versus placebo on the risk of sudden cardiac death <span class="citation" data-cites="Echt1991-mh">[<a href="#ref-Echt1991-mh" role="doc-biblioref">11</a>]</span>. Early in the CAST study, two arms (encainide and flecainide) were stopped because of excess mortality compared to the placebo arm.</p>
-<p>In the present mouse study, however, the authors stopped the experiment because the p-value fell below the magical <span class="math inline">\(p \le 0.05\)</span>, apparently signaling to them that they could publish their results and didn’t need to kill any more mice. If you perform enough tests, you will always obtain a p-value that is smaller than the magical threshold.</p>
+<p>There are some exceptions where stopping a study early may be justified. But that’s a whole different ballgame. Such situations need to be predefined, and adequate statistical methods need to be used in the analysis. In clinical trials there is the term “interim analysis”, where an analysis is conducted before the end of the study and data collection. This can be very useful when a treatment is clearly beneficial or harmful compared to the control arm <span class="citation" data-cites="Cook2022-dc">[<a href="#ref-Cook2022-dc" role="doc-biblioref">10</a>]</span>. Then, the investigator can stop the study early. However, as I said, this is all very well planned and defined <em>a priori</em> in a study protocol and statistical analysis plan.</p>
+<p>For example, the Cardiac Arrhythmia Suppression Trial (CAST) was a four-arm trial of three antiarrhythmic drugs versus placebo on the risk of sudden cardiac death <span class="citation" data-cites="Echt1991-mh">[<a href="#ref-Echt1991-mh" role="doc-biblioref">11</a>]</span>. Early in the CAST study, two arms (encainide and flecainide) were stopped because of excess mortality compared with the placebo arm.</p>
+<p>In the present mouse study, however, the authors stopped the experiment because the p-value fell below the magical level of <span class="math inline">\(p \le 0.05\)</span>, which apparently signaled to them that they could publish their results and didn’t need to kill any more mice. If you do enough tests, you will always obtain a p-value less than the magical threshold.</p>
 <blockquote class="blockquote">
 <p>“I’m looking for an interruption. Do you believe?” —I don’t sleep, I dream (song by R.E.M.)</p>
 </blockquote>
-<p>I don’t believe in stopping this study early, and I cannot trust the results. However, I believe that the study authors did not want to cheat. Most likely, the authors didn’t know better. They thought the approach was okay, so they wrote it in the methods section. No statistician was on the author list, I guess, and no statistician reviewed this paper.</p>
+<p>I don’t believe in stopping this study early, and I don’t trust the results. However, I believe that the authors of the study did not want to cheat. They probably didn’t know any better. They thought the approach was okay, so they wrote it in the methods section. No statistician was on the list of authors, I guess, and no statistician reviewed the paper.</p>
 <p>One last thought. When the authors of the study stopped the experiment, it was good for the next mouse whose life was saved. Unless the study was flawed.</p>
-<p>Then all of the mice would be wasted.</p>
+<p>Then all those mice would have been wasted.</p>
 <p><em>The title of this post is a song by R.E.M.; the preview image of this post is a photo by Karsten Winegeart on Unsplash.</em></p>
 </section>
 <section id="just-one-more-thing" class="level1">
@@ -354,17 +354,17 @@ window.Quarto = {
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Let’s perform a mouse study. We assume we planned <span class="math inline">\(N = 30\)</span> animals. However, we peep at the data already after 10 were tested and then repeated testing after each additional animal until <span class="math inline">\(p \leq 0.05\)</span> or the total sample size was reached. As no animals were killed in my experiment here, we will perform <span class="math inline">\(k = 10000\)</span> of such studies.</p>
-<p>In the mouse study, two measurements were obtained for each mouse. I will sample both observations from a normal distribution with a mean of 0 and standard deviation of 1, so the model behind the simulation assumes there is no difference in the pre and post-testing of the mice. Thus, every result I find is a fluke.</p>
-<p>I performed the same test reported in the paper, a Wilcoxon signed-rank test, but that doesn’t really matter to make the case. You could make the case with any statistical significance test that successfully controls the type I error at 5% to falsely reject the null.</p>
-<p>Altogether, I collected <span class="math inline">\(21 \times 10^{4}\)</span> p-values (21 repeated inspections and 10000 studies).</p>
+<p>Let’s perform a mouse study. We assume that we planned <span class="math inline">\(N = 30\)</span> animals. However, we peep at the data already after 10 animals have been tested and then repeat the test after each additional animal until <span class="math inline">\(p \leq 0.05\)</span> or the total sample size was reached. Since no animals are harmed in my experiment, we will perform <span class="math inline">\(k = 10000\)</span> of such studies.</p>
+<p>In the mouse study, two measurements were obtained for each mouse. I will sample both observations from a normal distribution with a mean of 0 and standard deviation of 1. Thus, the model behind the simulation assumes that there is no difference between the pre- and post-exposure of the mice. So any result I find is a fluke.</p>
+<p>I performed the same test reported in the paper, a Wilcoxon signed-rank test, but that doesn’t really matter for making the case. You could make the case with any statistical significance test that successfully controls for type I error at 5% to falsely reject the null.</p>
+<p>In total, I collected <span class="math inline">\(21 \times 10^{4}\)</span> p-values (21 repeated inspections and 10000 studies).</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>FP <span class="ot">=</span> <span class="fu">sum</span>(ps[,<span class="fu">ncol</span>(ps)] <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>I looked at the last p-value for each study, i.e., after data from the total of <span class="math inline">\(N = 30\)</span> animals were collected. I found that 452 from 10000 studies were statistically significant, which is a type I error rate of 0.045. Thanks God we are in control of the error. So far, so good.</p>
+<p>I looked at the last p-value for each study, i.e., after data from the total of <span class="math inline">\(N = 30\)</span> animals had been collected. I found that 452 out of 10000 studies were statistically significant, which is a type I error rate of 0.045. Thank God we have the error under control. So far, so good.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -393,14 +393,14 @@ window.Quarto = {
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(myp) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"t"</span>, <span class="st">"p"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Now, the twist. I peeped at the other p-values. I picked the p-value as soon as it turned statistically significant and stopped the experiment. But when I was not lucky enough to observe a <span class="math inline">\(p \leq 0.05\)</span>, I collected the p-value from the last repeated test with <span class="math inline">\(N = 30\)</span> animals, whatever that value looked like.</p>
+<p>Now, the twist. I peeped at the other p-values. I picked the p-value as soon as it turned statistically significant and stopped the experiment. But when I was not lucky enough to observe a <span class="math inline">\(p \leq 0.05\)</span>, I picked the p-value from the last repeated test with <span class="math inline">\(N = 30\)</span> animals, whatever that value looked like.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>FP <span class="ot">=</span> <span class="fu">sum</span>(myp<span class="sc">$</span>p <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>I found that 1637 from 10000 studies were statistically significant, which is a type I error rate of 0.16. Now, we lost control. The type I error of falsely rejecting the null has tripled.</p>
+<p>I found that 1637 out of 10000 studies were statistically significant, which is a type I error rate of 0.16. Now, we have lost control. The type I error of falsely rejecting the null has tripled.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -442,16 +442,16 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="480"></p>
-<figcaption>Figure 1: Two example studies that stopped early due to peeping at the p-value before the study was completed. The red data point highlights the statisticially significant p-value where the study was stopped early. In (A), the study stopped after observing 10 mice, and (B) after observing 25 mice. The horizontal line shows the significance threshold at 0.05. As we can see, the p-value is very wiggly and can be exploited by bad research practices such as the repeated inspection of data.</figcaption>
+<figcaption>Figure 1: Two example studies that were stopped early due to peeping at the p-value before the study was completed. The red data point highlights the statistically significant p-value at which the study was stopped early. In (A), the study was stopped after observing 10 mice and (B) after observing 25 mice. The horizontal line shows the significance level of 0.05. As we can see, the p-value is very wiggly and can be exploited by bad research practices such as the repeated inspection of data.</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>I highlight two case studies from the 1637 positive findings that were statistically significant by peeping. Study 1 was statistically significant at the first glimpse, so we can already go home after 10 mice. Brilliant. Study 2 was statistically significant after 25 mice. Notice that if we observed only the last p-value at the end, after completing the 30 mice, then both study 1 and study 2 failed to be statistically significant. This finding would be correct since I was the creator of the data and knew the truth behind the data.</p>
-<p>The truth was, there was nothing there.</p>
+<p>I highlight two case studies from the 1637 positive findings that were statistically significant by peeping. Study 1 was statistically significant at the first glimpse, so we can already go home after 10 mice. Brilliant. Study 2 was statistically significant after 25 mice. Notice that if we only look the last p-value, after the 30 mice, then both Study 1 and Study 2 failed to be statistically significant. This result would be correct since I was the creator of the data and knew the truth behind the data.</p>
+<p>The truth was that there was nothing there.</p>
 <section id="so-what" class="level2">
 <h2 class="anchored" data-anchor-id="so-what">So what?</h2>
-<p>First, a p-value from repeated inspection of data is nothing more than a fluke of the universe. Don’t trust them. Second, <em>Nature Communications</em> may consider involving expert statisticians in the assessment of a study. After all, their article processing charges amount to 6790 US dollars.</p>
+<p>First, a p-value from repeated inspection of data is nothing more than a fluke of the universe. Don’t trust it. Second, <em>Nature Communications</em> might consider involving expert statisticians in the evaluation of a study. After all, their article processing fee is 6790 US dollars.</p>
 
 
 
