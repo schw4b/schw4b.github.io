@@ -9,7 +9,7 @@ website:
   search: false
   favicon: images/favicon.png
   navbar:
-    logo: "images/Logo_noback.png"
+    logo: "images/Logo-200.png"
     left:
       - href: index.qmd
         text: Bio
