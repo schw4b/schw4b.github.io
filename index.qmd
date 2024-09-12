@@ -2,7 +2,7 @@
 title: "Simon Schwab"
 about:
   template: trestles
-  image: images/profile_gymbiel.jpg
+  image: images/Simon_2024_400_bg_white.jpg
   image-shape: round
   image-width: 10em
   links:
@@ -18,14 +18,11 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/schw4b/
-    - icon: mastodon
-      text: Mastodon
-      href: https://fosstodon.org/@sims
 include-in-header:
   - text: <meta name="description" content="This is Simon Schwab's personal website on statistics and data science.">
 ---
 
-I'm a coffee and data junkie, that's all.
+I'm addicted to coffee and data.
 
 ## Qualifications
 
