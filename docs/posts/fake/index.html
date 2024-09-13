@@ -379,7 +379,7 @@ window.Quarto = {
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fl">0.5</span><span class="sc">*</span>data[,<span class="dv">1</span>] <span class="sc">+</span> <span class="fl">0.3</span><span class="sc">*</span>data[,<span class="dv">2</span>] <span class="sc">+</span> <span class="fl">0.2</span><span class="sc">*</span>data[,<span class="dv">3</span>] <span class="sc">+</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(SNR)<span class="sc">*</span>noise</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>I simulated data for <span class="math inline">\(N = 2000\)</span> patients and <span class="math inline">\(q = 4\)</span> variables. I assumed the three prognostic variables (<span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span>) were uncorrelated and related to the outcome using an additive model. The true effects were <span class="math inline">\(\beta_1 = 0.5\)</span>, <span class="math inline">\(\beta_2 = 0.3\)</span>, and <span class="math inline">\(\beta_3 = 0.2\)</span>. For the unrelated variable <span class="math inline">\(x_4\)</span>, we had <span class="math inline">\(\beta_4 = 0\)</span>. I added some noise so that the explained variance was about 20% (<span class="math inline">\(R^2\)</span>). Below are the results.</p>
+<p>I simulated data for <span class="math inline">\(N = 2000\)</span> patients and <span class="math inline">\(q = 4\)</span> variables. I assumed the three prognostic variables (<span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span>) were uncorrelated and related to the outcome using an additive model. The true effects were <span class="math inline">\(\beta_1 = 0.5\)</span>, <span class="math inline">\(\beta_2 = 0.3\)</span>, and <span class="math inline">\(\beta_3 = 0.2\)</span>. For the unrelated variable <span class="math inline">\(x_4\)</span>, we had <span class="math inline">\(\beta_4 = 0\)</span>. I added some noise so that the explained variance was about 20% (<span class="math inline">\(R^2\)</span>). Below are the results, see Table 1.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -390,6 +390,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
+<caption>Table 1: Results from a regression model fitted with long data using simulated data from N=2000 patients.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -463,7 +464,7 @@ window.Quarto = {
 </details>
 </div>
 <p>Now, I increased the amount of data by a factor of 100. However, I did not increase the sample size in terms of the number of patients. Instead, I created data with <span class="math inline">\(q = 4000\)</span> biomarkers (high-dimensional data). Since these are expensive and complex measurements, I decreased the sample size to <span class="math inline">\(N = 200\)</span>. For each biomarker, I estimated a univariable model and used a cutoff of <span class="math inline">\(p \le 0.05\)</span> for screening (univariable screening). I know it is a really bad idea, but since so many papers have done it, it shouldn’t hurt anyone to do it just one more time.</p>
-<p>Let’s now pretend we knew that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. The regression results from the same model as above (<span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_4\)</span>) are shown below.</p>
+<p>Let’s now pretend we knew that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. The regression results from the same model as above (<span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_4\)</span>) are shown below in Table 2.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -474,6 +475,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
+<caption>Table 2: Results from a regression model fitted with wide data using simulated data form N=200 patients.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -529,7 +531,7 @@ window.Quarto = {
 </div>
 <p>The main problem was we didn’t know that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. Using univariable screening, with <span class="math inline">\(p \le 0.05\)</span> for variable selection, a striking 214 out of a total of 4000 variables were statistically significant; this matches up with the alpha level of 5%.</p>
 <p>I tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini &amp; Hochberg procedure; however, only <span class="math inline">\(x_1\)</span> remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It’s like looking for a needle in a haystack.</p>
-<p>In the final step, perhaps out of desperation, I opted for a middle way: instead of using an unadjusted threshold of 5% or an FDR of 5%, I applied an unadjusted threshold of <span class="math inline">\(p \le 0.001\)</span>. The results are shown below.</p>
+<p>In the final step, perhaps out of desperation, I opted for a middle way: instead of using an unadjusted threshold of 5% or an FDR of 5%, I applied an unadjusted threshold of <span class="math inline">\(p \le 0.001\)</span>. The results are shown in Table 3.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -544,6 +546,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
+<caption>Table 3: Results from a regression model fitted with wide data and using univariable screening to find relevant biomarkers.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -595,7 +598,7 @@ window.Quarto = {
 </div>
 </div>
 <p>With this step, we have left the realm of science facts and entered the realm of science fiction. The results above show voodoo statistics with statistically significant results for the variables that are pure noise (except <span class="math inline">\(x_1\)</span>). The model explained 28% of the variance (adj. <span class="math inline">\(R^2\)</span>).</p>
-<p>I think I tortured the data too much. Surely, a journal would publish such statistically significant results?</p>
+<p>I think I tortured the data too much. Surely, a journal would publish such statistically significant results!</p>
 </section>
 <section id="so-what" class="level2">
 <h2 class="anchored" data-anchor-id="so-what">So what?</h2>
