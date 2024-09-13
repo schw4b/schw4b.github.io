@@ -7,7 +7,7 @@ include-in-header:
 
 I'm a senior statistician at [Swisstransplant](https://www.swisstransplant.org/) with professional qualifications in medical research and statistics. I'm also lecturer in biostatistics and good research practice at the [Center for Reproducible Science](https://www.crs.uzh.ch/), a competence center of the University of Zurich.
 
-I obtained my PhD in Health Sciences and a postgraduate certificate in Advanced Statistical Data Science from the University of Bern. I received 3.5 years of postdoctoral training in statistics at the University of Warwick and the University of Oxford funded by the Swiss National Science Foundation (SNF).
+I obtained my PhD in Health Sciences and a postgraduate certificate in Advanced Statistical Data Science from the University of Bern. I received 2.5 years of postdoctoral training in statistics at the University of Warwick and the University of Oxford funded by the Swiss National Science Foundation (SNSF).
 
 Furthermore, I'm a member of the scientific committee of the [Swiss Transplant Cohort Study (STCS)](https://www.stcs.ch/) and a founding member of the interest group [Statistics in Organ Transplantation (SOT)](https://sites.google.com/view/statistics-in-transplantation/startseite).
 
@@ -21,4 +21,4 @@ Furthermore, I'm a member of the scientific committee of the [Swiss Transplant C
 
 I am married and the father of two children (born 2021 and 2023). I enjoy playing guitar and listening to alternative metal and indie rock.
 
-![Pearl Jam live in Zurich on 22. June 2022.](images/pj_zurich.jpg){width="6.7in" alt="Pearl Jam live in Zurich."}
+![Pearl Jam live in Zurich on 22. June 2022.](images/about-pj_zurich.jpg){width="6.7in" alt="Pearl Jam live in Zurich."}

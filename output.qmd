@@ -18,7 +18,7 @@ For more publications, see [Google Scholar](https://scholar.google.ch/citations?
 
 ## R Software
 
-![](images/stickers_400.png){width="3.35in" alt="Hex stickers for R packages."}
+![](images/output-stickers_400.png){width="3.35in" alt="Hex stickers for R packages."}
 
 * [cochrane](https://github.com/schw4b/cochrane)---Import Data from the Cochrane Database of Systematic Reviews (CDSR).
 
