@@ -37,7 +37,7 @@ Well, I do.
 
 During my time at the University of Warwick in Coventry, I learned about the [legend of "Peeping Tom."](https://en.wikipedia.org/wiki/Lady_Godiva#Peeping_Tom) In my version, however, Peeping Tom was a scientist obsessed with observing the p-value. The scientist would always take a glimpse at that darn p-value and how it changed over the course of the experiment as more data was added. In the end, the scientist was struck blind---end of the story.
 
-looking at the data again and again (and again) as more data are added and a statistical test is run each time, it is essentially a multiple-testing situation that would require some form of adjustment of the p-value. The reason is that this (bad) research practice considerably increases the chance that a statistically significant finding is a fluke.
+Looking at the data again and again (and again) as more data are added and a statistical test is run each time, it is essentially a multiple-testing situation that would require some form of adjustment of the p-value. The reason is that this (bad) research practice considerably increases the chance that a statistically significant finding is a fluke.
 
 Moreover, the study authors failed to report the non-significant results from all the statistical tests they conducted. They continued testing until they found a significant result, which they then reported. This selective reporting, based on the significance of the test, skews the interpretation of their findings. Despite the ongoing debate about when to adjust p-values, the situation here clearly calls for a "haircut" to their p-values [@Boulesteix2024-kg].
 

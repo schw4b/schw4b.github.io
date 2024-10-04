@@ -18,6 +18,9 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/schw4b/
+    - icon: file-person-fill
+      text: CV
+      href: https://www.statsyup.org/pdf/CV-Simon-Schwab.pdf
 include-in-header:
   - text: <meta name="description" content="This is Simon Schwab's personal website on statistics and data science.">
 ---
@@ -52,10 +55,10 @@ Research Fellow\
 [Big Data Institute](https://www.bdi.ox.ac.uk/), University of Oxford\
 *07/2017---06/2018*
 
-Visiting Scientist\
+Visiting Academic\
 [Department of Statistics](https://warwick.ac.uk/fac/sci/statistics/), University of Warwick\
 *01/2016---06/2017*
 
-Research Assistant\
+Research Associate\
 [University Hospital of Psychiatry](https://www.upd.ch/de/), Bern\
 *10/2008---12/2015*
