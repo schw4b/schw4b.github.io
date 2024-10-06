@@ -3,22 +3,19 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Simon Schwab",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Effingerstrasse 1",
-    "postalCode": "3011",
-    "addressLocality": "Bern"
-  },
   "alternateName": "schw4b",
   "email": "mailto:schw4b@gmail.com",
-  "image": "https://www.statsyup.org/images/profile_gymbiel.jpg",
+  "image": "https://www.statsyup.org/images/Simon_2024_400_bg_white.jpg",
   "birthDate": "1980-03-11",
   "birthPlace": "Biel-Bienne",
   "jobTitle": "Statistician",
-  "worksFor": "Swisstransplant",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Swisstransplant"
+  }
   "knowsAbout": "Medical statistics, biostatistics, statistical programming.",
   "Nationality": "Switzerland",
-  "url": "https://www.statsyup.org/",
+  "url": "https://www.statsyup.org/about.html",
   "sameAs": [
           "https://www.linkedin.com/in/schw4b",
           "https://github.com/schw4b",
