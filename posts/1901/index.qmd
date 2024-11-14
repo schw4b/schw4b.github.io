@@ -39,12 +39,12 @@ The result was an M52 with the look of an S50, brilliant; see a photo in Figure 
 
 ![Figure 1: IBM ThinkCentre M52 with S50 front bezel and floppy drive.](20241020_140902-700.jpg){width=55%}
 
-I spent a little money to upgrad the machine from 1GB memory to 4GB memory (purchased online; CHF 7.50).  I also replaced the hard disk, which was an HDD, with a modern SSD that I had as a spare. Then I installed [Lubuntu](https://lubuntu.me/) 24.04 LTS, a lightweight Linux based on Ubuntu, R 4.4.1, and the latest version of RStudio and Quarto.
+I spent a little money to upgrade the machine from 1GB memory to 4GB memory (purchased online; CHF 7.50).  I also replaced the hard disk, which was an HDD, with a modern SSD that I had as a spare. Then I installed [Lubuntu](https://lubuntu.me/) 24.04 LTS, a lightweight Linux based on Ubuntu, R 4.4.1, and the latest version of RStudio and Quarto.
 
 I collected some system information using the `system()` function which called `neofetch` from within this Quarto Blog post, see Table 1. Exactly, I wrote this blog post using the old IBM computer.
 
 ```{r}
-#| eval: false
+#| eval: true
 #| code-fold: true
 #| tbl-cap: "Table 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine."
 
