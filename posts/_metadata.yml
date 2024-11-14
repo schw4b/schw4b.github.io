@@ -6,3 +6,8 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+# Enables richer sharing of links to articles on the web
+open-graph: true
+
+df-print: kable

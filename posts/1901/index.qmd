@@ -4,7 +4,7 @@ draft: false
 description: "While cleaning out my basement, I found a 20-year-old IBM computer. First, I wanted to get rid of it because the computer has become too old and useless. Instead, I installed a lightweight Linux operating system, R, RStudio, and analyzed the Titanic dataset as a showcase. It worked extremely well. Linux can bring new life to old computer hardware."
 author: "Simon Schwab"
 date: "2024-10-20"
-categories: [Statistical Computing, Linux]
+categories: [Statistical computing, Linux]
 image: "denny-muller-hqktsr9Bhww-unsplash.jpg"
 citation:
   issued: 2024
@@ -12,9 +12,7 @@ citation:
   url: https://www.statsyup.org/posts/1901/
 bibliography: references.bib
 google-scholar: true
-csl: plos.csl 
-title-block-banner: true
-df-print: kable
+csl: plos.csl
 ---
 
 It was 2004, I was a student, and at that time, I was really in love with Linux. One day, I saw an IBM commercial, ["The Kid"](https://www.youtube.com/watch?v=x7ozaFbqg00). There were so many cool messages in this commercial; it kind of blew my mind. In the end, Muhammad Ali appeared and delivered the following line to the kid.
@@ -46,7 +44,7 @@ I spent a little money to upgrad the machine from 1GB memory to 4GB memory (purc
 I collected some system information using the `system()` function which called `neofetch` from within this Quarto Blog post, see Table 1. Exactly, I wrote this blog post using the old IBM computer.
 
 ```{r}
-#| eval: true
+#| eval: false
 #| code-fold: true
 #| tbl-cap: "Table 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine."
 
