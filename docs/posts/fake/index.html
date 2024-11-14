@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-07-09">
 <meta name="description" content="Data are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end.">
 
-<title>Fake plastic trees, or why AI and big data may be bad for you – Statistics, yup!</title>
+<title>Fake plastic trees – Statistics, yup!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,7 +147,11 @@ window.Quarto = {
 };
 </script>
 
-<meta name="citation_title" content="Fake plastic trees, or why AI and big data may be bad for you">
+<meta property="og:title" content="Fake plastic trees – Statistics, yup!">
+<meta property="og:description" content="Data are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end.">
+<meta property="og:image" content="https://www.statsyup.org/posts/fake/frames-for-your-heart-mALJ-AAR13c-unsplash.jpg">
+<meta property="og:site_name" content="Statistics, yup!">
+<meta name="citation_title" content="Fake plastic trees">
 <meta name="citation_author" content="Simon Schwab">
 <meta name="citation_publication_date" content="2024">
 <meta name="citation_cover_date" content="2024">
@@ -222,7 +226,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Fake plastic trees, or why AI and big data may be bad for you</h1>
+      <h1 class="title">Fake plastic trees</h1>
                   <div>
         <div class="description">
           Data are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end.
@@ -231,8 +235,9 @@ window.Quarto = {
                           <div class="quarto-categories">
                 <div class="quarto-category">AI</div>
                 <div class="quarto-category">Big Data</div>
-                <div class="quarto-category">Biomarkers</div>
+                <div class="quarto-category">biomarkers</div>
                 <div class="quarto-category">p-values</div>
+                <div class="quarto-category">univariable screening</div>
               </div>
                   </div>
   </div>
@@ -337,7 +342,7 @@ window.Quarto = {
 </section>
 <section id="just-one-more-thing" class="level1">
 <h1>Just one more thing</h1>
-<p>Let’s perform a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.</p>
+<p>I performed a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.</p>
 <p>In a second approach, I generated some high-dimensional data with many more variables than patients (wide data).</p>
 <p>But first, I needed to write a short function <code>tidy_lm()</code> to produce a tidy output from a linear regression model; this is just cosmetics.</p>
 <div class="cell">
@@ -463,7 +468,7 @@ window.Quarto = {
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Now, I increased the amount of data by a factor of 100. However, I did not increase the sample size in terms of the number of patients. Instead, I created data with <span class="math inline">\(q = 4000\)</span> biomarkers (high-dimensional data). Since these are expensive and complex measurements, I decreased the sample size to <span class="math inline">\(N = 200\)</span>. For each biomarker, I estimated a univariable model and used a cutoff of <span class="math inline">\(p \le 0.05\)</span> for screening (univariable screening). I know it is a really bad idea, but since so many papers have done it, it shouldn’t hurt anyone to do it just one more time.</p>
+<p>Next, I increased the amount of data by a factor of 100. However, I did not increase the sample size in terms of the number of patients. Instead, I created data with <span class="math inline">\(q = 4000\)</span> biomarkers (high-dimensional data). Since these may be expensive and complex measurements, I decreased the sample size to <span class="math inline">\(N = 200\)</span>. For each biomarker, I estimated a univariable model and used a cutoff of <span class="math inline">\(p \le 0.05\)</span> for screening (univariable screening). I know it is a really bad idea, but since so many papers have done it, it shouldn’t hurt anyone to do it just one more time.</p>
 <p>Let’s now pretend we knew that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. The regression results from the same model as above (<span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_4\)</span>) are shown below in Table 2.</p>
 <div class="cell">
 <details class="code-fold">
@@ -603,9 +608,9 @@ window.Quarto = {
 <section id="so-what" class="level2">
 <h2 class="anchored" data-anchor-id="so-what">So what?</h2>
 <p>So what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant “truths” in the data when trying too many different things (the garden of forking paths).</p>
-<p>You may object that the simulations I made are too pessimistic. Yes, but we often don’t know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).</p>
-<p>The process of how the result is obtained is much more important than the result itself.</p>
-<p>For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell <span class="citation" data-cites="Harrell2022-gi">[<a href="#ref-Harrell2022-gi" role="doc-biblioref">12</a>]</span>, and the excellent training materials “Analysis of High-Dimensional Data” by Nicolas Städler <span class="citation" data-cites="Stadler2024-if">[<a href="#ref-Stadler2024-if" role="doc-biblioref">13</a>]</span>.</p>
+<p>You may object that the simulations I made were too pessimistic. Yes, but we often don’t know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).</p>
+<p>The process of how the result was obtained is much more important than the result itself.</p>
+<p>For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell <span class="citation" data-cites="Harrell2022-gi">[<a href="#ref-Harrell2022-gi" role="doc-biblioref">12</a>]</span>. For training, see the course materials “Analysis of High-Dimensional Data” by Nicolas Städler <span class="citation" data-cites="Stadler2024-if">[<a href="#ref-Stadler2024-if" role="doc-biblioref">13</a>]</span>.</p>
 
 
 
@@ -654,15 +659,14 @@ window.Quarto = {
 </div>
 </div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{schwab2024,
   author = {Schwab, Simon},
-  title = {Fake Plastic Trees, or Why {AI} and Big Data May Be Bad for
-    You},
+  title = {Fake Plastic Trees},
   date = {2024},
   url = {https://www.statsyup.org/posts/fake/},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-schwab2024" class="csl-entry quarto-appendix-citeas" role="listitem">
-<div class="">Schwab S. Fake plastic trees, or why AI and big
-data may be bad for you. 2024. Available: <a href="https://www.statsyup.org/posts/fake/">https://www.statsyup.org/posts/fake/</a></div>
+<div class="">Schwab S. Fake plastic trees. 2024. Available:
+<a href="https://www.statsyup.org/posts/fake/">https://www.statsyup.org/posts/fake/</a></div>
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

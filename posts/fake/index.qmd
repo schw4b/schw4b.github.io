@@ -1,10 +1,10 @@
 ---
-title: "Fake plastic trees, or why AI and big data may be bad for you"
+title: "Fake plastic trees"
 draft: false
 description: "Data are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end."
 author: "Simon Schwab"
 date: "2024-07-09"
-categories: [AI, Big Data, Biomarkers, p-values]
+categories: [AI, Big Data, biomarkers, p-values, univariable screening]
 image: "frames-for-your-heart-mALJ-AAR13c-unsplash.jpg"
 citation:
   issued: 2024
@@ -12,9 +12,7 @@ citation:
   url: https://www.statsyup.org/posts/fake/
 bibliography: references.bib
 google-scholar: true
-csl: plos.csl 
-title-block-banner: true
-df-print: kable
+csl: plos.csl
 ---
 
 Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.
@@ -79,7 +77,7 @@ A world of fake plastic trees?
 
 # Just one more thing
 
-Let's perform a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.
+I performed a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.
 
 In a second approach, I generated some high-dimensional data with many more variables than patients (wide data).
 
@@ -168,7 +166,7 @@ for (i in 1:q) { # iterate across biomarkers
 }
 ```
 
-Now, I increased the amount of data by a factor of 100. However, I did not increase the sample size in terms of the number of patients. Instead, I created data with $q = `r q`$ biomarkers (high-dimensional data). Since these are expensive and complex measurements, I decreased the sample size to $N = `r N`$. For each biomarker, I estimated a univariable model and used a cutoff of $p \le 0.05$ for screening (univariable screening). I know it is a really bad idea, but since so many papers have done it, it shouldn't hurt anyone to do it just one more time.
+Next, I increased the amount of data by a factor of 100. However, I did not increase the sample size in terms of the number of patients. Instead, I created data with $q = `r q`$ biomarkers (high-dimensional data). Since these may be expensive and complex measurements, I decreased the sample size to $N = `r N`$. For each biomarker, I estimated a univariable model and used a cutoff of $p \le 0.05$ for screening (univariable screening). I know it is a really bad idea, but since so many papers have done it, it shouldn't hurt anyone to do it just one more time.
 
 Let's now pretend we knew that $x_1$, $x_2$, and $x_3$ were the relevant biomarkers. The regression results from the same model as above ($x_1$ to $x_4$) are shown below in Table 2.
 
@@ -221,8 +219,8 @@ I think I tortured the data too much. Surely, a journal would publish such stati
 
 So what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant "truths" in the data when trying too many different things (the garden of forking paths).
 
-You may object that the simulations I made are too pessimistic. Yes, but we often don't know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).
+You may object that the simulations I made were too pessimistic. Yes, but we often don't know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).
 
-The process of how the result is obtained is much more important than the result itself.
+The process of how the result was obtained is much more important than the result itself.
 
-For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell [@Harrell2022-gi], and the excellent training materials "Analysis of High-Dimensional Data" by Nicolas Städler [@Stadler2024-if].
+For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell [@Harrell2022-gi]. For training, see the course materials "Analysis of High-Dimensional Data" by Nicolas Städler [@Stadler2024-if].
