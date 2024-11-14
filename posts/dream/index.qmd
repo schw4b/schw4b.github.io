@@ -4,7 +4,7 @@ draft: false
 description: "A 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong in the realm of dark statistics because they are more likely to produce a false positive result."
 author: "Simon Schwab"
 date: "2024-08-18"
-categories: [Animal Studies, Repeated inspection of data, p-values]
+categories: [Animal studies, repeated inspection of data, p-values]
 image: "karsten-winegeart-4PWkY4HILj0-unsplash.jpg"
 citation:
   issued: 2024
@@ -13,8 +13,6 @@ citation:
 bibliography: references.bib
 google-scholar: true
 csl: plos.csl 
-title-block-banner: true
-df-print: kable
 ---
 
 Sleep is fascinating. We all sleep at night, but we don't really know what is happening during this period. Sometimes we dream, sometimes we don't. All in all, it is a bit of a mystery.
@@ -43,7 +41,7 @@ Moreover, the study authors failed to report the non-significant results from al
 
 In the *Seven Sins* in statistical significance testing [@Held2020-yx], the practice of repeatedly looking at the p-value is described as the sin number three, the *repeated inspection of data*.
 
-The solution to this issue is simple. It can be avoided by not analyzing the data before the study is complete and the planned sample size has been reached. But I'm not sure if sample size is often planned in animal research.
+The solution to this problem is simple. It can be avoided by not analyzing the data until the study is completed and the planned sample size is reached. But I'm not sure that sample size is often planned in animal research.
 
 # Seven mice
 
@@ -106,11 +104,11 @@ for (s in 1:k) {
 }
 ```
 
-Let's perform a mouse study. We assume that we planned $N = `r N`$ animals. However, we peep at the data already after `r stop[1]` animals have been tested and then repeat the test after each additional animal until $p \leq 0.05$ or the total sample size was reached. Since no animals are harmed in my experiment, we will perform $k = `r sprintf("%d", k)`$ of such studies.
+I conducted a mouse study. I assumed that the planned sample size was $N = `r N`$ animals. However, I peeped at the data already after testing `r stop[1]` animals and then repeated the test after each additional animal until $p \leq 0.05$ or the total sample size was reached. Since no animals are harmed in my experiment, we will perform $k = `r sprintf("%d", k)`$ of such studies.
 
-In the mouse study, two measurements were obtained for each mouse. I will sample both observations from a normal distribution with a mean of 0 and standard deviation of 1. Thus, the model behind the simulation assumes that there is no difference between the pre- and post-exposure of the mice. So any result I find is a fluke.
+In the mouse study, two measurements were obtained for each mouse. I sampled both observations from a normal distribution with a mean of 0 and a standard deviation of 1. Thus, the model behind the simulation assumed that there was no difference between the mice before and after exposure. Thus, any result I found was a fluke.
 
-I performed the same test reported in the paper, a Wilcoxon signed-rank test, but that doesn't really matter for making the case. You could make the case with any statistical significance test that successfully controls for type I error at 5% to falsely reject the null.
+I performed the same test reported in the paper, a Wilcoxon signed-rank test, but that doesn't really matter for making the case. You could make the case with any statistical significance test that successfully controls the type I error at 5% (falsely rejecting the null).
 
 In total, I collected $`r length(stop)` \times `r k`$ p-values (`r length(stop)` repeated inspections and `r sprintf("%d", k)` studies).
 
@@ -119,7 +117,7 @@ In total, I collected $`r length(stop)` \times `r k`$ p-values (`r length(stop)`
 
 FP = sum(ps[,ncol(ps)] <= 0.05)
 ```
-I looked at the last p-value for each study, i.e., after data from the total of $N = `r N`$ animals had been collected. I found that `r FP` out of `r sprintf("%d", k)` studies were statistically significant, which is a type I error rate of `r sprintf("%.3f", FP/k)`. Thank God we have the error under control. So far, so good.
+I looked at the last p-value for each study, i.e., after data from the total of $N = `r N`$ animals had been collected. I found that `r FP` out of `r sprintf("%d", k)` studies were statistically significant, which is a type I error rate of `r sprintf("%.3f", FP/k)`. Thank God, the error was under control. So far, so good.
 
 ```{r}
 #| code-fold: true
@@ -157,7 +155,7 @@ Now, the twist. I peeped at the other p-values. I picked the p-value as soon as 
 FP = sum(myp$p <= 0.05)
 ```
 
-I found that `r FP` out of `r sprintf("%d", k)` studies were statistically significant, which is a type I error rate of `r sprintf("%.2f", FP/k)`. Now, we have lost control. The type I error of falsely rejecting the null has tripled.
+I found that `r FP` out of `r sprintf("%d", k)` studies were statistically significant, which was a type I error rate of `r sprintf("%.2f", FP/k)`. Now, we have lost control. The type I error of falsely rejecting the null has tripled.
 
 ```{r}
 #| fig-height: 2.5
@@ -200,7 +198,7 @@ for (i in 1:N_plots) {
 do.call("grid.arrange", c(p, nrow = 1, ncol=2))
 ```
 
-I highlight two case studies from the `r FP` positive findings that were statistically significant by peeping, see Figure 1. Study 1 was statistically significant at the first glimpse, so we can already go home after 10 mice. Brilliant. Study 2 was statistically significant after 25 mice. Notice that if we only look the last p-value, after the `r N` mice, then both Study 1 and Study 2 failed to be statistically significant. This result would be correct since I was the creator of the data and knew the truth behind the data.
+Two case studies from the `r FP` positive findings that were statistically significant by peeping are shown in Figure 1. Study 1 was statistically significant at the first glimpse, so we could already go home after 10 mice. Brilliant. Study 2 was statistically significant after 25 mice. Looking only at the last p-value, after the `r N` mice, then both Study 1 and Study 2 were not statistically significant. This result would be correct since I was the creator of the data and knew the truth behind the data.
 
 The truth was that there was nothing there.
 
