@@ -1,6 +1,6 @@
 ---
 title: "True colors"
-draft: false
+draft: true
 description: "Science is often viewed as a reliable mechanism for producing facts. However, a large proportion of scientific findings may be incorrect. Even when a low p-value is obtained, it does not guarantee that the result is true; in fact, it may still be wrong. This claim can be effectively illustrated using an example involving colors which reveal how many studies were true and how many false."
 author: "Simon Schwab"
 date: "2024-11-24"
