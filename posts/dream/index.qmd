@@ -104,7 +104,7 @@ for (s in 1:k) {
 }
 ```
 
-I conducted a mouse study. I assumed that the planned sample size was $N = `r N`$ animals. However, I peeped at the data already after testing `r stop[1]` animals and then repeated the test after each additional animal until $p \leq 0.05$ or the total sample size was reached. Since no animals are harmed in my experiment, we will perform $k = `r sprintf("%d", k)`$ of such studies.
+I conducted a mouse study. I assumed that the planned sample size was $N = `r N`$ animals. However, I peeped at the data already after testing `r stop[1]` animals and then repeated the test after each additional animal until $p \leq 0.05$ or the total sample size was reached. Since no animals were harmed in my experiment, I performed $k = `r sprintf("%d", k)`$ of such studies.
 
 In the mouse study, two measurements were obtained for each mouse. I sampled both observations from a normal distribution with a mean of 0 and a standard deviation of 1. Thus, the model behind the simulation assumed that there was no difference between the mice before and after exposure. Thus, any result I found was a fluke.
 

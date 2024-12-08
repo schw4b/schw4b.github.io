@@ -7,9 +7,11 @@ website:
   site-url: https://www.statsyup.org/
   description: "This is Simon Schwab's personal website."
   search: false
-  favicon: images/donut-chart-w-96.png
+  favicon: images/logo-96.png
   navbar:
-    logo: "images/donut-chart-w-200.png"
+    title: false
+    logo: "images/logo.png"
+    logo-alt: "A statistics chart as logo."
     left:
       - href: index.qmd
         text: Bio

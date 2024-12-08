@@ -3,7 +3,8 @@ Palette 1
 #6F87A6 (blue)
 #818C70 (green)
 #F2F1E9 (white)
-#D9A282 (tuna)
+#D9A282 (tan)
 
 Palette 2
 #BF505A (red)
+#B4BF8A (greentea)
