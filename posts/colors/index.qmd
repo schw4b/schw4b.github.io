@@ -1,9 +1,9 @@
 ---
 title: "True colors"
-draft: true
-description: "Science is often viewed as a reliable mechanism for producing facts. However, a large proportion of scientific findings may be incorrect. Even when a low p-value is obtained, it does not guarantee that the result is true; in fact, it may still be wrong. This claim can be effectively illustrated using an example involving colors which reveal how many studies were true and how many false."
+draft: false
+description: "Science is often viewed as a reliable machinery for producing facts. However, a surprising number of scientific findings may be incorrect. Even when a low p-value is obtained, it does not guarantee the result is true; in fact, it may still be wrong. This claim can be effectively illustrated with an example using a few colors, revealing how many studies were really true and how many were false. Without skepticism and blindly focusing on the magnitude of a p-value while ignoring other factors, I might just as well believe in Santa Claus."
 author: "Simon Schwab"
-date: "2024-11-24"
+date: "2024-12-15"
 categories: [p-values]
 image: "drew-beamer-Hk6E4UxjmGo-unsplash.jpg"
 citation:
@@ -15,53 +15,51 @@ google-scholar: true
 csl: plos.csl 
 ---
 
-Science has a high credibility and reputation. The public, the media, and politics would usually believe that a scientific result is true. After all, it is science, isn't it? If we don't believe science, what should we believe in?
-
-However, scientific findings are often based on weak statistical results. The quality of statistics is often lacking in the published scientific literature. I may be delving into a controversial topic here, and I will only focus on a single aspect: the widespread misunderstanding of the p-value.
+Science has a high credibility and reputation. The public, the media, and politicians usually believe a scientific result is true. After all, it is science. If we don't believe in science, what should we believe in? However, scientific findings are sometimes based on weak statistical results. I will focus on the widespread misunderstanding of the p-value.
 
 > "The problem is not that people use p-values poorly. It is that the vast majority of data analysis is not performed by people properly trained to perform data analysis”. ---Jeff Leek
 
-I would say it differently. The vast majority of data analysis is performed by people not properly trained. Therefore, p-values are indeed used poorly as a consequence.
+I would say it slightly differently. The vast majority of data analysis is performed by people who are not properly trained. Therefore, p-values are indeed used poorly as a consequence.
 
-The poor understanding and use of p-values made the American Statistical Association (ASA) release a statement in 2016 [@Wasserstein2016-nu]. The ASA argued that the p-values are commonly misused and misinterpreted. Many researcher believe a low p-value is some form of insurance that the result is credible. For example, a p-value of 0.012 may indicate that there is some high probability that the results is *real*, and therefore,  the result is meaningful and worth publishing. I can show in an example below that this is not the case.
+The poor understanding and misuse of p-values caused the American Statistical Association (ASA) to release a statement in 2016 [@Wasserstein2016-nu]. The ASA argued that the p-values are commonly misinterpreted. Many researchers believe a low p-value is some form of insurance that the result or study is credible and worth publishing. For example, a p-value of 0.012 may indicate that there is some low probability that the result is wrong or that the result was produced by chance alone. However, these interpretations are incorrect.
 
-A scientific results is worth publishing when the study was well planned, designed, conducted, and reported. Only study protocols with a statistical analysis plan can assure this. The p-value on itself does not matter at all. In a perfect world, we would see mostly high-quality studies with both low and high p-values. The opposite is true, there are too many low-quality studies, and too many studies report exclusively low p-values.
+A scientific result is worth publishing when the study was well planned, designed, conducted, and reported. A study protocol with a statistical analysis plan can help with this. The p-value in itself does not matter at all. In a perfect world, we see mostly high-quality studies with both low and high p-values. The opposite is true; there are too many low-quality studies, and too many studies report exclusively low p-values.
 
 # What does the p-value actually mean?
 
-The way I interpret the p-value is that it is a probability how compatible the data are with a specified model. This model is under the null hypothesis which often says that there is no difference between two groups, or there is an absence of a relationship between a variable and an outcome. The smaller the p-value, the greater this incompatibility of the data with the null hypothesis. Thus, a small p-value may then provide evidence against the null hypothesis.
+The p-value is a measure of how compatible the data are with a specified model. This model is under the null hypothesis, which often says that there is no difference between two groups or there is an absence of a relationship between a variable and an outcome. The smaller the p-value, the greater this incompatibility of the data with the null hypothesis. Thus, a small p-value may then provide evidence against the null hypothesis.
 
 Here is how the ASA explained the p-value:
 
 > Informally, a p-value is the probability under a specified statistical model that a statistical summary of the data (e.g., the sample mean difference between two compared groups) would be equal to or more extreme than its observed value. ---ASA Statment
 
-In other words, it is a probability statement about the data, and not about the truth of a hypothesis. The most common misunderstanding is that a p-value of 0.012 reflects a 1.2% chance of the result being a false alarm. This interpretation is not correct. Most researchers may not be aware that the commonly used alpha level of 5% is absolutely no insurance that the result is not a fluke. In fact, p-values, the alleged gold standard of statistical validity are not as reliable as many researchers believe [@Nuzzo2014-wf].
+In other words, it is a probability statement about the data and not about the truth of a hypothesis. The most common misunderstanding is that a p-value of 0.012 reflects a 1.2% probability that the null hypothesis is true or that the data were produced by coincidence. These interpretations are not correct. Most researchers may not be aware that the commonly used alpha level of 5% is absolutely no guarantee that the result is not a fluke. In fact, p-values, the alleged gold standard of statistical validity, are not as reliable as many researchers believe [@Nuzzo2014-wf].
 
 # A lot of science may be wrong
 
-When looking at the body of, for example, medical research, I wonder, how many results are correct? How many results are incorrect? What is the probability that a research finding is false? Unfortunately, the answer is not exactly amusing [@Altman1994-vw; @Ioannidis2005-pn; @Colquhoun2014-hb].
+When looking at the body of, for example, medical research, I wonder, how many results are really true? How many results are not? Unfortunately, the answer may not be very amusing [@Altman1994-vw; @Ioannidis2005-pn; @Colquhoun2014-hb].
 
-To get an approximate answer for a specific situation. I consider a 1,000 studies, each is well designed and conducted. I assume the widely used alpha level of 5%, meaning that in 5 of 100 studies where there was no effect, I will find a positive result; however, these results are false positive results, also known as the type I error. Furthermore, I assume all the studies have a statistical power of 80%. Thus, among the studies where there really was a true effect, I will find it in 80 of 100 studies. Consequently, in 20 out of 100 studies, however, I will miss the true result; these are the false negatives, also known as the type II error. My last assumption is about the question, how many hypothesis are really true? I assume a study area where many hypothesis turn out to be true, say, in 30% of the cases.
+To get an approximate answer for a specific situation, I considered 1,000 studies; each was well-designed and conducted. I assume the widely used alpha level was 5%, meaning that in 5 of 100 studies where there was no effect, I found a positive result. This is known as the type I error. Furthermore, I assume all the studies had a statistical power of 80%. Thus, among the studies where there really was a true effect, I will find it in 80 of 100 studies. Consequently, in 20 out of 100 studies, however, I will miss the true result. These are the false negatives, also known as the type II error. My last assumption is about the question, how many hypotheses are really true? I assume a study area where a good number of hypotheses turn out to be true, say, 3 in 10.
 
-Imagine a 1,000 hypotheses under investigation, where 3 in 10 are true. Thus, 300 are true and 700 are false. From the 700 false hypotheses, we still find 5% to be falsely positive, which are 35. From the 300 true hypotheses, we find a positive result in 80% of the cases, which are 240. Altogether, we see 35 and 240 results as positive results; however, the 35 are false results, which is 13%.
+Imagine 1,000 hypotheses under investigation, where 3 in 10 are true. Thus, 300 are true, and 700 are false. From the 700 false hypotheses, we still find 5% to be falsely positive, which is 35. From the 300 true hypotheses, we find a positive result in 80% of the cases, which are 240. Altogether, we see 35 and 240 results as positive results; however, 35 are false, which is 13%.
 
-Thus, more than 10% of the results are wrong, even though we used the common alpha level of 5%. However, this really is the best case scenario with a alpha level of 5% and a statistcial power of 80%,
+We used the common alpha level of 5%, but 13% of the results were wrong. This really is the best-case scenario with an alpha level of 5% and a statistical power of 80%. The reality is much worse.
 
-In reality, however, the reported standard errors and p-values are not honest. The reason is that data was often reanalyzed until the desired result was obtained. Thus, many reported results have probably a much higher p-values if data was analyzed according to a prespecified protocol. In other words, the 5% alpha level is in reality maybe 10% or higher due to the bias in the statistical analysis. Furthermore, the statistical power of 80% is from a perfect world, and this assumption is not realistic at all even in the domain of highest standards such as clinical trials. I don't know that the true statistical power might be, maybe it is as low as 50%. Lastly, there are domains where true hypotheses are not so prevalent, for example, where only 1 in 10 hypotheses are in fact true.
+In reality, the reported standard errors and p-values are often biased. The reason is that data was often reanalyzed until the desired result was obtained. Thus, many reported results probably have a much higher p-value than if data were analyzed according to a prespecified protocol. The 5% alpha level is maybe 10% or higher. Furthermore, the statistical power of 80% is from a perfect world, and this assumption is not realistic at all, even in the domain of the highest standards, such as clinical trials [@van-Zwet2024-pn]. I don't know what the true statistical power might be; maybe it is as low as 50%. Lastly, there are domains where true hypotheses are not so prevalent, for example, where only 1 in 10 hypotheses are, in fact, true.
 
-Making a scientific claim in a domain where novel findings are hard to discover, where p-hacking is prevalent, and where sample size calculations and statistical power are dismissed makes a result very unlikely to be true, even if the p-value is statistically significant. We cannot ignore the process of how the p-value was obtained. We must have some prior skeptical believe when looking at each p-values.
+Making a scientific claim in a domain where novel findings are hard to discover, where p-hacking is prevalent, and where sample size calculations and statistical power are dismissed makes a result very unlikely to be true, even if the p-value is statistically significant.
 
-When I look at a p-value I don't see them in terms of statistically significant or not. I look at a p-value an ask myself, can I believe a finding when taking other information into the equation, for example, the study design, the sample size, the statistical analysis, and how results have been reported? If I had no  prior skepticism and just look at the magnitiude of a p-values, ignoring everything else, I can equally likely believe in Santa Clause.
+When I look at a p-value, I don't see it solely in terms of whether it is statistically significant. I put it in some context and ask myself, can I believe a finding when taking other information into the equation, for example, the study design, the sample size, the statistical analysis, and how results have been reported? If I had no skepticism and just looked at the magnitude of a p-value, ignoring everything else, I would equally likely believe in Santa Claus.
 
-Or let my make a better example. Ignoring the story behind a p-value and take it as face value would be like waking up one morning with a headache, and conclude that you have a rare brain tumor.
+Or let me take a better example. Ignoring the story behind a p-value and taking it at face value would be like waking up one morning with a headache and concluding that you have a rare brain tumor [@Nuzzo2014-wf].
 
-Fortunately, however, it is an unlikely result.
+A brain tumor may be possible but very unlikely. So are the results of many scientific discoveries.
 
 *The title of this post is a song by Cindy Lauper. The preview image of this post is a photo by Drew Beamer on Unsplash.*
 
 # Just one more thing
 
-Below I used some plots to illustrate that p-values are not as reliable as many researchers believe. In these plots, each square was a hypothesis which was either true or false. Each hypothesis was tested by a study, and ased on some assumptions about the proportions of true hypotheses, the alpha level, and the statistical power, I determined how likely scientific results may be. This approach was strongly inpired by an article and video by the Economist [@Unknown2013-ji]. 
+Below, I used some plots to illustrate that p-values are not as reliable as many researchers believe. In these plots, each square was a hypothesis that was either true or false. Each hypothesis was tested by a study. Based on some assumptions about the proportions of true hypotheses, the alpha level, and the statistical power, I determined how likely scientific a result may be. This approach was strongly inspired by an article and video by the Economist [@P-T-W2013-za].
 
 ```{r}
 #| eval: true
@@ -138,7 +136,7 @@ ggplot(mylist$data, aes(x=col, y=row, fill=H)) +
   scale_fill_manual(values = COLORS[c(1, 3)], guide = guide_none())
 ```
 
-Imagine each hypothesis was tested by a study. Given an alpha level of `r mylist$alpha`, there were `r mylist$fp` studies that produced a false positive result (type I error). The studies also had a power of `r mylist$power`; thus, `r mylist$fn` of the studies were false negatives (type II error), see Figure 2.
+Imagine each hypothesis was tested by a study. Given an alpha level of `r mylist$alpha`, there were `r mylist$fp` studies that produced a false positive result (type I error). The studies also had a power of `r sprintf("%.0f%%", mylist$power*100)`; thus, `r mylist$fn` of the studies were false negatives (type II error), see Figure 2.
 
 ```{r}
 #| fig-height: 2
@@ -153,9 +151,9 @@ ggplot(mylist$data, aes(x=col, y=row, fill=H_)) +
   scale_fill_manual(values = COLORS, guide = guide_none())
 ```
 
-In reality we only see the positive results which were the `r mylist$pos` positive results (green) and the `r mylist$fp` false positive results (light green). Therefore, `r mylist$fp` from the total of `r sum(mylist$pos, mylist$fp)` positive results were wrong. This proportion is `r sprintf("%.2f", mylist$fdr)` and is also known as the false discovery rate (FDR). Note that this error rate is more than double as high as the convenient alpha level of 0.05.
+In reality, we see positive results, and we don't know which are false. There were `r mylist$pos` positive results (green) and `r mylist$fp` false positive results (light green). The proportion of false positive results among all the positive results was `r sprintf("%.2f", mylist$fdr)`; this is also known as the false discovery rate (FDR). Note that this error rate is more than double as high as the convenient alpha level of 0.05.
 
-
+However, the assumptions above really came from a perfect world. I then used a more realistic setting, for example, assuming a scientific field where 1 in 10 hypotheses was true, with an alpha level of 0.10 and a statistical power of 50%.
 
 ```{r}
 #| eval: true
@@ -177,3 +175,9 @@ ggplot(mylist$data, aes(x=col, y=row, fill=H_)) +
   theme_void() +
   scale_fill_manual(values = COLORS, guide = guide_none())
 ```
+
+In such a scenario, there were `r mylist$pos` positive results (green) and `r mylist$fp` false positive results (light green). Thus, `r sprintf("%.0f%%", mylist$fdr*100)` of all positive results were wrong. That was more than half of all the studies.
+
+## So what?
+
+Many research results may be wrong. Only trust studies that were well designed, conducted, analyzed, and reported. Don't take the p-value as a measure of credibility or importance of a result. By the way, the reader can use the function `true_colors()` to try out different scenarios.
