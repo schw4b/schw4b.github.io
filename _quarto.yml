@@ -26,7 +26,7 @@ website:
         text: About
   page-footer:
     right: ""
-    left: '© 2024 Simon Schwab'
+    left: '© 2024, 2025 Simon Schwab'
   google-analytics:
     tracking-id: "G-GPR2YZSX56"
     anonymize-ip: true
@@ -37,5 +37,5 @@ format:
       - cosmo
       - custom.scss
     toc: true
-    link-external-icon: false
+    link-external-icon: true
     link-external-newwindow: true

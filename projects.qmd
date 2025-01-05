@@ -14,37 +14,33 @@ KIDMO is a clinical prediction model for the prognosis in kidney transplant reci
 
 ### Resources
 * [Study registration](https://doi.org/10.17605/OSF.IO/Z6MVJ) on OSF Registries from 1. September 2022
-* The online risk calculator is available at <https://swtdata.org/kidmo/>
+* The online risk calculator is available at <https://data.swisstransplant.org/kidmo/>
 * [Poster presentation](https://osf.io/7fx9z) at the ISCB44 in Milano
 
-
 ### Publications
-
-Schwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagn Progn Res*. 2023;7: 6. [doi:10.1186/s41512-022-00139-5](http://dx.doi.org/10.1186/s41512-022-00139-5)
+Schwab S, Sidler D, Haidar F, Kuhn C, Schaub S, Koller M, Mellac K, Stürzinger U, Tischhauser B, Binet I, Golshayan D, Müller T, Elmer A, Franscini N, Krügel N, Fehr T, Immer F, Swisstransplant Kidney Working Group (STAN), Swiss Transplant Cohort Study. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagn Progn Res.* 2023;7(1):6. [doi:10.1186/s41512-022-00139-5](http://dx.doi.org/10.1186/s41512-022-00139-5)
 
 ## 2. EXAM---Ex vivo allograft monitoring
 
 EXAM is an analytics dashboard for analyzing hypothermic machine perfusion data in deceased-donor kidney transplantation.
 
-![**Figure:** EXAM analytics dashboard.](images/proj-exam-dashboard.png){width="6.7in" alt="EXAM analytics dashboard."}
+![**Figure:** EXAM analytics dashboard showing perfusion and temperature time series and various statistical indicators.](images/proj-exam-dashboard.png){width="6.7in" alt="EXAM analytics dashboard."}
 
 ### Resources
--   [EXAM online dashboard](https://swisstransplant.shinyapps.io/EXAM/)
+-   [EXAM online dashboard](https://data.swisstransplant.org/exam/)
 -   [GitHub code repository](https://github.com/Swisstransplant/EXAM)
 -   [Talk at R/Basel 2023](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh) (Video)
 
 ### Publications
-
-Schwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, et al. EXAM: Ex vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. *Research Square*. 2023. [doi:10.21203/rs.3.rs-2713168/v1](https://doi.org/10.21203/rs.3.rs-2713168/v1)
+Schwab S, Steck H, Binet I, Elmer A, Ender W, Franscini N, Haidar F, Kuhn C, Sidler D, Storni F, Krügel N, Immer F. EXAM: Ex-vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. *PLOS Digit Health.* 2024;3(12):e0000691. [doi:10.1371/journal.pdig.0000691](http://dx.doi.org/10.1371/journal.pdig.0000691)
 
 ## 3. WAIT---Waitlist analysis in transplantation
 
-Median organ waiting times published by transplant organizations may be biased when not appropriately accounting for censoring, death, and competing events. This can lead to overly optimistic waiting times for all transplant programs and, consequently, may deceive patients on the waiting list, transplant physicians, and health care policymakers. This study applyied competing-risk multistate models to calculate probabilities for transplantation and adverse outcomes on the Swiss national transplant waiting list.
+Median organ waiting times published by transplant organizations may be biased when not appropriately accounting for censoring, death, and competing events. This can lead to overly optimistic waiting times for all transplant programs and, consequently, may deceive patients on the waiting list, transplant physicians, and healthcare policymakers. This study applied competing-risk multistate models to calculate probabilities for transplantation and adverse outcomes on the Swiss national transplant waiting list.
 
 ![**Figure:** Cumulative incidence curves for transplantation for the different organs **A**—**E** with 95% confidence bands and median time to transplantation (MTT) defined as the duration corresponding to the cumulative incidence of 0.50 (dashed line).](images/proj-wait-CI.png){width="6.7in" alt="Cumulative incidence curves for the events on the waiting list."}
 
 ### Publications
-
 Schwab S, Elmer A, Sidler D, Straumann L, Stürzinger U, Immer F. Selection Bias in Reporting of Median Waiting Times in Organ Transplantation. *JAMA Netw Open.* 2024;7(9):e2432415-e2432415. [doi:10.1001/jamanetworkopen.2024.32415](https://doi.org/10.1001/jamanetworkopen.2024.32415)
 
 ## 4. REPORT---Reporting and evaluation of prediction models in organ transplantation

@@ -26,7 +26,7 @@ include-in-header:
   - text: <meta name="description" content="This is Simon Schwab's personal website on statistics and data science.">
 ---
 
-I'm addicted to coffee and data.
+"I'm addicted to coffee and data."
 
 ## Qualifications
 
@@ -42,14 +42,20 @@ PhD---Health Sciences\
 MSc---Quantitative Psychology & Computer Science\
 *University of Bern, 2008*
 
-## Experiences
+## Current positions
 
-Senior Statistician\
+Lecturer in Biostatistics (5%)\
+[Department of Biostatistics](https://www.ebpi.uzh.ch/), University of Zurich\
+*09/2023---Present*
+
+Senior Statistician (80%)\
 [Swisstransplant](https://www.swisstransplant.org/), Bern\
 *11/2021---Present*
 
+## Past positions
+
 Postdoctoral Researcher\
-[Department of Biostatistics](https://www.ebpi.uzh.ch/), University of Zurich\
+[Center for Reproducible Science](https://www.crs.uzh.ch/), University of Zurich\
 *08/2018---09/2021*
 
 Research Fellow\

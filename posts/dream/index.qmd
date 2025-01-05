@@ -4,7 +4,7 @@ draft: false
 description: "A 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong in the realm of dark statistics because they are more likely to produce a false positive result."
 author: "Simon Schwab"
 date: "2024-08-18"
-categories: [Animal studies, repeated inspection of data, p-values]
+categories: [Animal studies, Repeated inspection of data, p-values]
 image: "karsten-winegeart-4PWkY4HILj0-unsplash.jpg"
 citation:
   issued: 2024

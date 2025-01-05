@@ -4,7 +4,10 @@ include-in-header:
   - text: <meta name="description" content="Simon Schwab's research output.">
 ---
 
-## Recent publications
+## Selected publications
+
+
+* **Schwab S**, Steck H, Binet I, Elmer A, Ender W, Franscini N, Haidar F, Kuhn C, Sidler D, Storni F, Krügel N, Immer F. EXAM: Ex-vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. *PLOS Digit Health.* 2024;3(12):e0000691. [doi:10.1371/journal.pdig.0000691](http://dx.doi.org/10.1371/journal.pdig.0000691)
 
 * **Schwab S**, Elmer A, Sidler D, Straumann L, Stürzinger U, Immer F. Selection Bias in Reporting of Median Waiting Times in Organ Transplantation. *JAMA Netw Open.* 2024;7(9):e2432415-e2432415. [doi:10.1001/jamanetworkopen.2024.32415](https://doi.org/10.1001/jamanetworkopen.2024.32415)
 
@@ -14,11 +17,14 @@ include-in-header:
 
 * **Schwab S**, Sidler D, Haidar F, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagn Progn Res.* 2023;7(1):6. [doi:10.1186/s41512-022-00139-5](https://doi.org/10.1186/s41512-022-00139-5)
 
+
+* **Schwab S**, Janiaud P, Dayan M, Amrhein V, Panczak R, Palagi PM, Hemkens LG, Ramon M, Rothen N, Senn S, Furrer E, Held L. Ten simple rules for good research practice. *PLoS Comput Biol.* 2022;18(6):e1010139. [doi:10.1371/journal.pcbi.1010139](http://dx.doi.org/10.1371/journal.pcbi.1010139)
+
 For more publications, see [Google Scholar](https://scholar.google.ch/citations?user=uR1_O0UAAAAJ) and [Pubmed](https://pubmed.ncbi.nlm.nih.gov/?term=Schwab+Simon%5BAuthor%5D+AND+%28+Zurich%5BAffiliation%5D+OR+Bern%5BAffiliation%5D+OR+Warwick%5BAffiliation%5D+OR+Oxford%5BAffiliation%5D+%29&sort=date).
 
 ## R Software
 
-![](images/output-stickers_400.png){width="3.35in" alt="Hex stickers for R packages."}
+![](images/hex-stickers.png){width="4in" alt="Hex stickers for R packages."}
 
 * [cochrane](https://github.com/schw4b/cochrane)---Import Data from the Cochrane Database of Systematic Reviews (CDSR).
 
@@ -34,21 +40,17 @@ A series of commentaries highlight topics related to the production of robust, e
 
 A complete list of slides from [my presentations](https://osf.io/a3g5c/) is available at OSF.
 
-* [Ten simple rules for good research practice](https://osf.io/zrqta/)---16/05/2024\
+* [Ten simple rules for good research practice](https://osf.io/zrqta/) ([link to video](https://www.youtube.com/watch?v=IFIq0EMl3eM))---16/05/2024\
 Talk at the Computational Reproducibility Seminar---NEXUS Personalized Health Technologies, ETH Zurich\
-[Link to video](https://www.youtube.com/watch?v=IFIq0EMl3eM)
 
 * [Understanding and managing bias in medical research](https://osf.io/yh76a/)---28/03/2024\
 Talk for the Swiss Society for Pneumology---University Hospital of Zurich
 
-* [EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://osf.io/8kbt2/)---21/06/2023\
+* [EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://osf.io/8kbt2/) ([link to video](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh))---21/06/2023\
 Talk at R/Basel 2023---Roche Switzerland\
-[Link to video](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh)
 
 * [An introduction to R with the Stanford Heart Transplant Data](https://osf.io/6mcah/)---09/12/2021\
 Talk at BernR---Bern R user group
 
-* [From regression to machine learning in R](https://osf.io/rua6x/)---15/04/2021\
+* [From regression to machine learning in R](https://osf.io/rua6x/) ([link to video](https://www.youtube.com/watch?v=h5A1v678Djk))---15/04/2021\
 Talk in the seminar Applied Machine Learning in Diagnostic Imaging---University Hospital of Zurich\
-[Link to video](https://www.youtube.com/watch?v=h5A1v678Djk)
-

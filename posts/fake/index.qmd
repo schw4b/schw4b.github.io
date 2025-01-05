@@ -4,7 +4,7 @@ draft: false
 description: "Data are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end."
 author: "Simon Schwab"
 date: "2024-07-09"
-categories: [AI, Big Data, biomarkers, p-values, univariable screening]
+categories: [AI, Big data, Biomarkers, p-values, Univariable screening]
 image: "frames-for-your-heart-mALJ-AAR13c-unsplash.jpg"
 citation:
   issued: 2024
