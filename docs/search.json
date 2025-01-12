@@ -101,8 +101,8 @@
     "objectID": "output.html#r-software",
     "href": "output.html#r-software",
     "title": "Research output",
-    "section": "R Software",
-    "text": "R Software\n\n\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR).\nEXAM—Ex vivo allograft monitoring dashboard.\nswt—Swisstransplant R package."
+    "section": "R software",
+    "text": "R software\n\n\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR).\nEXAM—Ex vivo allograft monitoring dashboard.\nswt—Swisstransplant R package."
   },
   {
     "objectID": "output.html#reproducibility-notes",
@@ -117,27 +117,6 @@
     "title": "Research output",
     "section": "Presentations",
     "text": "Presentations\nA complete list of slides from my presentations is available at OSF.\n\nTen simple rules for good research practice (link to video)—16/05/2024\nTalk at the Computational Reproducibility Seminar—NEXUS Personalized Health Technologies, ETH Zurich\n\nUnderstanding and managing bias in medical research—28/03/2024\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (link to video)—21/06/2023\nTalk at R/Basel 2023—Roche Switzerland\n\nAn introduction to R with the Stanford Heart Transplant Data—09/12/2021\nTalk at BernR—Bern R user group\nFrom regression to machine learning in R (link to video)—15/04/2021\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Simon Schwab",
-    "section": "",
-    "text": "I’m a statistician at Swisstransplant with professional qualifications in medical research and statistics. I’m also a lecturer in biostatistics and good research practice at the Department of Biostatistics and the Center for Reproducible Science of the University of Zurich.\nI obtained my PhD in Health Sciences and a postgraduate certificate in Advanced Statistical Data Science from the University of Bern. I received 2.5 years of postdoctoral training in statistics at the University of Warwick and the University of Oxford, funded by the Swiss National Science Foundation (SNSF).\nFurthermore, I’m a member of the scientific committee of the Swiss Transplant Cohort Study (STCS) and a founding member of the interest group Statistics in Organ Transplantation (SOT)."
-  },
-  {
-    "objectID": "about.html#memberships",
-    "href": "about.html#memberships",
-    "title": "About Simon Schwab",
-    "section": "Memberships",
-    "text": "Memberships\n\nMember of the Swiss Statistical Society (SSS)\nFellow and Graduate Statistician of the Royal Statistical Society (RSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
-  },
-  {
-    "objectID": "about.html#private",
-    "href": "about.html#private",
-    "title": "About Simon Schwab",
-    "section": "Private",
-    "text": "Private\nI am married and the father of two children (born in 2021 and 2023). I enjoy playing guitar and listening to rock music.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
   },
   {
     "objectID": "index.html",
@@ -166,6 +145,55 @@
     "title": "Simon Schwab",
     "section": "Past positions",
     "text": "Past positions\nPostdoctoral Researcher\nCenter for Reproducible Science, University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute, University of Oxford\n07/2017—06/2018\nVisiting Academic\nDepartment of Statistics, University of Warwick\n01/2016—06/2017\nResearch Associate\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Simon Schwab",
+    "section": "",
+    "text": "I’m a statistician at Swisstransplant with professional qualifications in medical research and statistics. I’m also a lecturer in biostatistics and good research practice at the Department of Biostatistics and the Center for Reproducible Science of the University of Zurich.\nI obtained my PhD in Health Sciences and a postgraduate certificate in Advanced Statistical Data Science from the University of Bern. I received 2.5 years of postdoctoral training in statistics at the University of Warwick and the University of Oxford, funded by the Swiss National Science Foundation (SNSF).\nFurthermore, I’m a member of the scientific committee of the Swiss Transplant Cohort Study (STCS) and a founding member of the interest group Statistics in Organ Transplantation (SOT)."
+  },
+  {
+    "objectID": "about.html#memberships",
+    "href": "about.html#memberships",
+    "title": "About Simon Schwab",
+    "section": "Memberships",
+    "text": "Memberships\n\nMember of the Swiss Statistical Society (SSS)\nFellow and Graduate Statistician of the Royal Statistical Society (RSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
+  },
+  {
+    "objectID": "about.html#private",
+    "href": "about.html#private",
+    "title": "About Simon Schwab",
+    "section": "Private",
+    "text": "Private\nI am married and the father of two children (born in 2021 and 2023). I enjoy playing guitar and listening to rock music.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
+  },
+  {
+    "objectID": "library.html",
+    "href": "library.html",
+    "title": "Library of medical statistics",
+    "section": "",
+    "text": "Below is a list of important books, papers, websites and other ressources that are useful."
+  },
+  {
+    "objectID": "library.html#medical-statistics-books",
+    "href": "library.html#medical-statistics-books",
+    "title": "Library of medical statistics",
+    "section": "Medical statistics books",
+    "text": "Medical statistics books\n\nBland M. An Introduction to Medical Statistics. 4th ed. Oxford University Press; 2015.\nChan BKC. Biostatistics for Epidemiology and Public Health Using R. Springer Publishing; 2015.\nField A, Miles J, Field Z. Discovering Statistics Using R. SAGE Publications; 2012.\nHeld L, Rufibach K, Seifert B. Medizinische Statistik: Konzepte, Methoden, Anwendungen. 1st ed. Pearson; 2013.\nKirkwood BR, Sterne JAC. Essential Medical Statistics. 2nd ed. Blackwell Science; 2003.\nDevore J, Peck R. Statistics: The Exploration & Analysis of Data. 7th ed. Cengage Learning; 2010.\nRosner B. Fundamentals of Biostatistics. 7th ed. Cengage Learning; 2010."
+  },
+  {
+    "objectID": "library.html#journal-collections",
+    "href": "library.html#journal-collections",
+    "title": "Library of medical statistics",
+    "section": "Journal collections",
+    "text": "Journal collections\n\nBland & Altman Statistics Notes. BMJ. https://www-users.york.ac.uk/~mb55/pubs/pbstnote.htm\nCRS Reproducibilty Notes. Significance. https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html\nEndgames by Philip Sedgwick. BMJ. Pubmed link\nStatistics at Square One. BMJ. https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one\nStatistics for Biologists. Nature. https://www.nature.com/collections/qghhqm"
+  },
+  {
+    "objectID": "library.html#software",
+    "href": "library.html#software",
+    "title": "Library of medical statistics",
+    "section": "Software",
+    "text": "Software\n\nThe R Project for Statistical Computing https://stat.ethz.ch/CRAN/\nRStudio Desktop https://posit.co/download/rstudio-desktop/\nQuarto https://quarto.org/docs/download/\nGit version control system https://git-scm.com/downloads\nRTools https://cran.r-project.org/bin/windows/Rtools/"
   },
   {
     "objectID": "posts/1901/index.html",

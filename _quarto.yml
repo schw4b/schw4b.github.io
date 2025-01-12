@@ -21,6 +21,8 @@ website:
         text: Output
       - href: posts.qmd
         text: Posts
+      - href: library.qmd
+        text: Library
     right:
       - href: about.qmd
         text: About
