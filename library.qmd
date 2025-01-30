@@ -4,30 +4,40 @@ include-in-header:
   - text: <meta name="description" content="Simon Schwab's library of medical statistics.">
 ---
 
-Below is a list of important books, papers, websites and other ressources that are useful.
+Below is a curated list of essential books, research papers, guidelines, collections, and online resources that have proven to be highly valuable.
 
 ## Medical statistics books
 
-* Bland M. *An Introduction to Medical Statistics.* 4th ed. Oxford University Press; 2015.
-* Chan BKC. *Biostatistics for Epidemiology and Public Health Using R.* Springer Publishing; 2015.
-* Field A, Miles J, Field Z. *Discovering Statistics Using R.* SAGE Publications; 2012.
-* Held L, Rufibach K, Seifert B. *Medizinische Statistik: Konzepte, Methoden, Anwendungen.* 1st ed. Pearson; 2013.
-* Kirkwood BR, Sterne JAC. *Essential Medical Statistics.* 2nd ed. Blackwell Science; 2003.
-* Devore J, Peck R. *Statistics: The Exploration & Analysis of Data.* 7th ed. Cengage Learning; 2010.
-* Rosner B. *Fundamentals of Biostatistics.* 7th ed. Cengage Learning; 2010.
+(@) Bland M. *An Introduction to Medical Statistics.* 4th ed. Oxford University Press; 2015.
+(@) Chan BKC. *Biostatistics for Epidemiology and Public Health Using R.* Springer Publishing; 2015.
+(@) Devore J, Peck R. *Statistics: The Exploration & Analysis of Data.* 7th ed. Cengage Learning; 2010.
+(@) Field A, Miles J, Field Z. *Discovering Statistics Using R.* SAGE Publications; 2012.
+(@) Held L, Rufibach K, Seifert B. *Medizinische Statistik: Konzepte, Methoden, Anwendungen.* 1st ed. Pearson; 2013.
+(@) Kirkwood BR, Sterne JAC. *Essential Medical Statistics.* 2nd ed. Blackwell Science; 2003.
+(@) Rosner B. *Fundamentals of Biostatistics.* 7th ed. Cengage Learning; 2010.
 
-## Journal collections
+## Journal statistics collections
 
-* Bland & Altman Statistics Notes. *BMJ.* <https://www-users.york.ac.uk/~mb55/pubs/pbstnote.htm>
-* CRS Reproducibilty Notes. *Significance.* <https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html>
-* Endgames by Philip Sedgwick. *BMJ.* [Pubmed link](https://pubmed.ncbi.nlm.nih.gov/?term=Sedgwick+P%5Bau%5D+AND+BMJ%5Bjournal%5D&filter=years.2000-2025&sort=date&size=100)
-* Statistics at Square One. *BMJ.* <https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one>
-* Statistics for Biologists. *Nature.* <https://www.nature.com/collections/qghhqm>
+(@) Bland & Altman Statistics Notes. *BMJ.* <https://www-users.york.ac.uk/~mb55/pubs/pbstnote.htm>
+(@) CRS Reproducibilty Notes. *Significance.* <https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html>
+(@) Endgames by Philip Sedgwick. *BMJ.* [Pubmed link](https://pubmed.ncbi.nlm.nih.gov/?term=Sedgwick+P%5Bau%5D+AND+BMJ%5Bjournal%5D&filter=years.2000-2025&sort=date&size=100)
+(@) Guide to Statistics and Methods. *JAMA.* <https://jamanetwork.com/collections/44042/jama-guide-to-statistics-and-methods>
+(@) Statistics at Square One. *BMJ.* <https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one>
+(@) Statistics for Biologists. *Nature.* <https://www.nature.com/collections/qghhqm>
 
 ## Software
 
-* The R Project for Statistical Computing <https://stat.ethz.ch/CRAN/>
-* RStudio Desktop <https://posit.co/download/rstudio-desktop/>
-* Quarto <https://quarto.org/docs/download/>
-* Git version control system <https://git-scm.com/downloads>
-* RTools <https://cran.r-project.org/bin/windows/Rtools/>
+(@) The R Project for Statistical Computing <https://stat.ethz.ch/CRAN/>
+(@) RStudio Desktop <https://posit.co/download/rstudio-desktop/>
+(@) Quarto <https://quarto.org/docs/download/>
+(@) Git version control system <https://git-scm.com/downloads>
+(@) RTools <https://cran.r-project.org/bin/windows/Rtools/>
+
+## Compilations
+
+(@) Catalogue of Bias <https://catalogofbias.org/>
+(@) EQUATOR Network and reporting guidelines <https://www.equator-network.org/>
+
+## Guidelines
+
+(@) ICMJE Recommendations <https://www.icmje.org/recommendations/browse/>

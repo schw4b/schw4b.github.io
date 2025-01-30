@@ -42,46 +42,130 @@
     "text": "Projects as a statistical consultant\n\nHôpitaux Universitaires Genève (HUG)\nDonation-after-circulatory death liver transplantation. Outcomes and risk factors for graft loss and ischemic cholangiopathy in the Swiss setting.\nUniversitäts-Kinderspital Zürich\nPrediction of the serum creatinine after kidney transplantation in children.\nKantonsspital St. Gallen (KSSG)\nOutcome of dual kidney transplantation in Switzerland—a national cohort study.\nUniversity Hospital Zürich (USZ)\nDifferences between the observed and expected serum creatinine range after kidney transplantation."
   },
   {
-    "objectID": "posts/fake/index.html",
-    "href": "posts/fake/index.html",
-    "title": "Fake plastic trees",
+    "objectID": "posts/gold/index.html",
+    "href": "posts/gold/index.html",
+    "title": "Heart of Gold",
     "section": "",
-    "text": "Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.\nMy view is that all data are rubbish without proper statistics. Nevertheless, the glorification of data has evolved over the last decades and continues to do so. An example is the front cover of the magazine Science from 2011. It is a collage of words, but only one stands out in large letters: “data.”\nWe are indeed very hungry for data. However, I don’t believe data should take center stage. What is more important is how we perform statistics on the data.\nI tried to find the word “statistics” on the Science front cover but could not find it. Can you see it? Maybe the word “data” should be a bit smaller to leave more room for the word “statistics,” the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data.\nNevertheless, many medical studies are conducted with little or no involvement of adequately trained statisticians, and the same is true for scientific peer review [1]. Many researchers don’t use statistics properly. They might not know enough about it, or they might ignore expert advice. Statisticians are often only involved at the end of a study to analyze the data despite being specialists in helping researchers clarify the question and designing the study from scratch. Often, research projects do not include enough funding for statistical work.\nIt sounds absurd, but data is largely overvalued these days, and statistics is largely undervalued."
+    "text": "Confounding bias arises when estimating the effect of a risk factor or treatment (referred to as the exposure) on an outcome or disease. In such cases, it is crucial to account for the influence of other variables that are associated with both the exposure and the outcome to ensure an accurate assessment. I give two examples from the medical literature.\nIn the first example, early evidence suggested that hormone replacement therapy (HRT) reduced the risk of cardiovascular disease (CVD). However, this association may not be accurate. A newer study [1] found no evidence that HRT reduced the risk of CVD or cardiovascular-related death. The apparent benefits were likely influenced by confounders such as socioeconomic status and education. Lower socioeconomic status is a strong risk factor for CVD, coronary artery disease (CAD), and many other adverse health outcomes. Additionally, women using HRT tend to have higher socioeconomic status, which may partially explain their better outcomes in earlier studies.\nSecond example."
   },
   {
-    "objectID": "posts/fake/index.html#long-data",
-    "href": "posts/fake/index.html#long-data",
-    "title": "Fake plastic trees",
-    "section": "Long data",
-    "text": "Long data\n\n\nCode\nset.seed(2024)\n\nSNR = 0.65 # corresponds to 20% explained variance R^2\nN = 2000 # number of patients\nq = 4 # number of predictors\n\n# generate data for a study\ndata = array(rnorm(N*q), dim = c(N, q))\nnoise = rnorm(N) # generate standard normal errors\ny = 0.5*data[,1] + 0.3*data[,2] + 0.2*data[,3] + 1/sqrt(SNR)*noise\n\n\nI simulated data for \\(N = 2000\\) patients and \\(q = 4\\) variables. I assumed the three prognostic variables (\\(x_1\\), \\(x_2\\), and \\(x_3\\)) were uncorrelated and related to the outcome using an additive model. The true effects were \\(\\beta_1 = 0.5\\), \\(\\beta_2 = 0.3\\), and \\(\\beta_3 = 0.2\\). For the unrelated variable \\(x_4\\), we had \\(\\beta_4 = 0\\). I added some noise so that the explained variance was about 20% (\\(R^2\\)). Below are the results, see Table 1.\n\n\nCode\nd = data.frame(y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3], x4 = data[,4])\nfit = lm(y ~ ., data = d)\ntidy_lm(fit)\n\n\n\n\nTable 1: Results from a regression model fitted with long data using simulated data from N=2000 patients.\n\n\n\nEffect estimate\n95% CI\np-value\n\n\n\n\n(Intercept)\n0.00\nfrom -0.05 to 0.06\n0.96\n\n\nx1\n0.49\nfrom 0.43 to 0.54\n&lt; 0.001 ***\n\n\nx2\n0.31\nfrom 0.25 to 0.37\n&lt; 0.001 ***\n\n\nx3\n0.23\nfrom 0.17 to 0.29\n&lt; 0.001 ***\n\n\nx4\n-0.01\nfrom -0.07 to 0.04\n0.67\n\n\n\n\n\n\nThe p-values for the first three variables were statistically significant. This basically means that the data were very incompatible with our null model that the true effects were zero (my lawyers helped me with the wording of this sentence). For \\(x_4\\), the p-value was statistically non-significant. But this is all not really interesting, is it? And I don’t particularly like to focus on the results in terms of statistical significance.\nMuch more interesting than the p-values were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects, but not exactly. For the effect estimates to match the true effects even better, we would need even more data (tens of thousands of patients). But I think it was quite acceptable."
-  },
-  {
-    "objectID": "posts/fake/index.html#wide-data",
-    "href": "posts/fake/index.html#wide-data",
-    "title": "Fake plastic trees",
-    "section": "Wide data",
-    "text": "Wide data\n\n\nCode\nset.seed(2024)\n\nSNR = 0.65 # corresponds to 20% explained variance R^2\nN = 200 # number of patients\nq = 4000 # number of biomarkers\n\n# generate data for a study\ndata = array(rnorm(N*q), dim = c(N, q))\nnoise = rnorm(N) # generate standard normal errors\ny = 0.5*data[,1] + 0.3*data[,2] + 0.2*data[,3] + 1/sqrt(SNR)*noise\n\npvalues = rep(NA, q)\nfor (i in 1:q) { # iterate across biomarkers\n  d = data.frame (y = y, x = data[, i]) # univariable screening\n  fit = lm(y ~ x, data = d)\n  stats = summary(fit)\n  pvalues[i] = stats$coefficients[2,4]\n}\n\n\nNext, I increased the amount of data by a factor of 100. However, I did not increase the sample size in terms of the number of patients. Instead, I created data with \\(q = 4000\\) biomarkers (high-dimensional data). Since these may be expensive and complex measurements, I decreased the sample size to \\(N = 200\\). For each biomarker, I estimated a univariable model and used a cutoff of \\(p \\le 0.05\\) for screening (univariable screening). I know it is a really bad idea, but since so many papers have done it, it shouldn’t hurt anyone to do it just one more time.\nLet’s now pretend we knew that \\(x_1\\), \\(x_2\\), and \\(x_3\\) were the relevant biomarkers. The regression results from the same model as above (\\(x_1\\) to \\(x_4\\)) are shown below in Table 2.\n\n\nCode\nd = data.frame (y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3], x4 = data[,4])\nfit = lm(y ~ x1 + x2 + x3 + x4, data = d)\ntidy_lm(fit)\n\n\n\n\nTable 2: Results from a regression model fitted with wide data using simulated data form N=200 patients.\n\n\n\nEffect estimate\n95% CI\np-value\n\n\n\n\n(Intercept)\n-0.05\nfrom -0.21 to 0.12\n0.58\n\n\nx1\n0.47\nfrom 0.31 to 0.63\n&lt; 0.001 ***\n\n\nx2\n0.20\nfrom 0.02 to 0.38\n0.026 *\n\n\nx3\n0.24\nfrom 0.07 to 0.41\n0.005 **\n\n\nx4\n0.07\nfrom -0.10 to 0.24\n0.41\n\n\n\n\n\n\nThe effect estimates were more off from the truth, particularly \\(x_2\\), and the confidence intervals were much wider. This was not surprising as the sample size was only \\(N = 200\\). All in all, we are much more uncertain; though, the p-values for \\(x_1\\) to \\(x_3\\) were still statistically significant. However, the larger uncertainty was not the main problem.\n\n\nCode\nk = sum(pvalues  &lt;= 0.05)\npvalues.adj = p.adjust(pvalues, method = \"fdr\")\nk.adj = sum(pvalues.adj  &lt;= 0.05)\n\n\nThe main problem was we didn’t know that \\(x_1\\), \\(x_2\\), and \\(x_3\\) were the relevant biomarkers. Using univariable screening, with \\(p \\le 0.05\\) for variable selection, a striking 214 out of a total of 4000 variables were statistically significant; this matches up with the alpha level of 5%.\nI tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini & Hochberg procedure; however, only \\(x_1\\) remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It’s like looking for a needle in a haystack.\nIn the final step, perhaps out of desperation, I opted for a middle way: instead of using an unadjusted threshold of 5% or an FDR of 5%, I applied an unadjusted threshold of \\(p \\le 0.001\\). The results are shown in Table 3.\n\n\nCode\nidx = which(pvalues &lt;= 0.001) # select variables with arbitrary threshold\nd = data.frame(y = y, x = data[, idx]) \nfit = lm(y ~ ., data = d)\ntab = tidy_lm(fit)\n# add variable names\nrownames(tab)[2:(length(idx) + 1)] = paste0(\"x\", idx)\ntab\n\n\n\n\nTable 3: Results from a regression model fitted with wide data and using univariable screening to find relevant biomarkers.\n\n\n\nEffect estimate\n95% CI\np-value\n\n\n\n\n(Intercept)\n-0.01\nfrom -0.17 to 0.14\n0.86\n\n\nx1\n0.36\nfrom 0.20 to 0.51\n&lt; 0.001 ***\n\n\nx602\n-0.34\nfrom -0.50 to -0.17\n&lt; 0.001 ***\n\n\nx971\n0.19\nfrom 0.03 to 0.35\n0.017 *\n\n\nx2186\n0.28\nfrom 0.12 to 0.45\n&lt; 0.001 ***\n\n\nx3748\n0.14\nfrom -0.01 to 0.30\n0.073 .\n\n\n\n\n\n\nWith this step, we have left the realm of science facts and entered the realm of science fiction. The results above show voodoo statistics with statistically significant results for the variables that are pure noise (except \\(x_1\\)). The model explained 28% of the variance (adj. \\(R^2\\)).\nI think I tortured the data too much. Surely, a journal would publish such statistically significant results!"
-  },
-  {
-    "objectID": "posts/fake/index.html#so-what",
-    "href": "posts/fake/index.html#so-what",
-    "title": "Fake plastic trees",
-    "section": "So what?",
-    "text": "So what?\nSo what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant “truths” in the data when trying too many different things (the garden of forking paths).\nYou may object that the simulations I made were too pessimistic. Yes, but we often don’t know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).\nThe process of how the result was obtained is much more important than the result itself.\nFor further reading, see “How to Do Bad Biomarker Research” by Frank Harrell [12]. For training, see the course materials “Analysis of High-Dimensional Data” by Nicolas Städler [13]."
-  },
-  {
-    "objectID": "posts/colors/index.html",
-    "href": "posts/colors/index.html",
-    "title": "True colors",
+    "objectID": "posts/dream/index.html",
+    "href": "posts/dream/index.html",
+    "title": "I don’t sleep, I dream",
     "section": "",
-    "text": "Science has a high credibility and reputation. The public, the media, and politicians usually believe a scientific result is true. After all, it is science. If we don’t believe in science, what should we believe in? However, scientific findings are sometimes based on weak statistical results. I will focus on the widespread misunderstanding of the p-value.\nI would say it slightly differently. The vast majority of data analysis is performed by people who are not properly trained. Therefore, p-values are indeed used poorly as a consequence.\nThe poor understanding and misuse of p-values caused the American Statistical Association (ASA) to release a statement in 2016 [1]. The ASA argued that the p-values are commonly misinterpreted. Many researchers believe a low p-value is some form of insurance that the result or study is credible and worth publishing. A scientific result is worth publishing when the study was well planned, designed, conducted, and reported. A study protocol with a statistical analysis plan can help with this. The p-value in itself does not matter at all. In a perfect world, we see mostly high-quality studies with both low and high p-values. The opposite is true; there are too many low-quality studies, and too many studies report exclusively low p-values."
+    "text": "Sleep is fascinating. We all sleep at night, but we don’t really know what is happening during this period. Sometimes we dream, sometimes we don’t. All in all, it is a bit of a mystery.\nFor some researchers, statistics is also a bit of a mystery. In 2018, a study titled “Regulation of REM and Non-REM Sleep by Periaqueductal GABAergic Neurons” was published in Nature Communications led by researchers from the University of California at Berkeley, Stanford University, and the University of Pennsylvania [1]. The study investigated rapid eye movement (REM) sleep in mice, which is a sleep phase characterized by vivid dreams and random movement of the eyes.\nThe only thing I know about R.E.M. is that it is also the name of a pretty good rock band; I grew up listening to their music. The very first album I bought as a kid was The Best of R.E.M. from 1991. For me, rock music and statistics go hand in hand, just like in Andy Field’s book Discovering Statistics Using R [2]. But now, let’s get back to our sleep study.\nThe good news is that we don’t need to understand anything about REM sleep, the brain, or the mouse. I probably don’t even know the difference between a mouse, a rat, and a hamster. The subject matter would only distract us. Let’s ignore everything in this paper except a tiny bit from the methods section.\nHave you ever read just one sentence from a research study? It can be enough to make a case.\nBut first, let me say something else. In some prestigious journals, the methods and statistics section, the most relevant part for judging the validity and credibility of a study, is literally the small print at the end. This reminds me of what I wrote last time, that statistics is largely undervalued. Does anyone read that part?\nWell, I do."
   },
   {
-    "objectID": "posts/colors/index.html#so-what",
-    "href": "posts/colors/index.html#so-what",
-    "title": "True colors",
+    "objectID": "posts/dream/index.html#so-what",
+    "href": "posts/dream/index.html#so-what",
+    "title": "I don’t sleep, I dream",
     "section": "So what?",
-    "text": "So what?\nMany research results may be wrong. Only trust studies that were well designed, conducted, analyzed, and reported. Don’t take the p-value as a measure of credibility or importance of a result. By the way, the reader can use the function true_colors() to try out different scenarios."
+    "text": "So what?\nFirst, a p-value from repeated inspection of data is nothing more than a fluke of the universe. Don’t trust it. Second, Nature Communications might consider involving expert statisticians in the evaluation of a study. After all, their article processing fee is 6790 US dollars."
+  },
+  {
+    "objectID": "posts/1901/index.html",
+    "href": "posts/1901/index.html",
+    "title": "1901",
+    "section": "",
+    "text": "It was 2004, I was a student, and at that time, I was really in love with Linux. One day, I saw an IBM commercial, “The Kid”. There were so many cool messages in this commercial; it kind of blew my mind. In the end, Muhammad Ali appeared and delivered the following line to the kid.\nSince IBM loved Linux, too, I wanted to work for IBM. I applied for an internship and was eventually accepted. As I already started University, I had to take a break from my studies. Before I realized it, I was an intern at the data center of IBM Switzerland.\nAfter six months, I could take a lot of stuff home. I worked on a large project for the first time. I reported to a manager and had deliverables, and I taught myself the command language Bash from reading Newham & Rosenblatt [1]. The things I learned back then still largely influence my daily interactions with computers today, which is by using a Unix type of shell program.\nDuring my internship, I bought an IBM ThinkCentre S50. On this machine, I learned programming, completed my software engineering classes, and wrote my first computer program in Java."
+  },
+  {
+    "objectID": "posts/1901/index.html#so-what",
+    "href": "posts/1901/index.html#so-what",
+    "title": "1901",
+    "section": "So what?",
+    "text": "So what?\nIf you were male, 3rd class, or old, you were more likely to die in the Titanic incident. However, this was only a quick showcase rather than an in-depth analysis of the Titanic data, and the large amount of missing data was not ideal. But I wanted to say something else.\nI wanted to say, don’t throw away old computers. They can still be fun."
+  },
+  {
+    "objectID": "library.html",
+    "href": "library.html",
+    "title": "Library of medical statistics",
+    "section": "",
+    "text": "Below is a curated list of essential books, research papers, guidelines, collections, and online resources that have proven to be highly valuable."
+  },
+  {
+    "objectID": "library.html#medical-statistics-books",
+    "href": "library.html#medical-statistics-books",
+    "title": "Library of medical statistics",
+    "section": "Medical statistics books",
+    "text": "Medical statistics books\n\nBland M. An Introduction to Medical Statistics. 4th ed. Oxford University Press; 2015.\nChan BKC. Biostatistics for Epidemiology and Public Health Using R. Springer Publishing; 2015.\nDevore J, Peck R. Statistics: The Exploration & Analysis of Data. 7th ed. Cengage Learning; 2010.\nField A, Miles J, Field Z. Discovering Statistics Using R. SAGE Publications; 2012.\nHeld L, Rufibach K, Seifert B. Medizinische Statistik: Konzepte, Methoden, Anwendungen. 1st ed. Pearson; 2013.\nKirkwood BR, Sterne JAC. Essential Medical Statistics. 2nd ed. Blackwell Science; 2003.\nRosner B. Fundamentals of Biostatistics. 7th ed. Cengage Learning; 2010."
+  },
+  {
+    "objectID": "library.html#journal-statistics-collections",
+    "href": "library.html#journal-statistics-collections",
+    "title": "Library of medical statistics",
+    "section": "Journal statistics collections",
+    "text": "Journal statistics collections\n\nBland & Altman Statistics Notes. BMJ. https://www-users.york.ac.uk/~mb55/pubs/pbstnote.htm\nCRS Reproducibilty Notes. Significance. https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html\nEndgames by Philip Sedgwick. BMJ. Pubmed link\nGuide to Statistics and Methods. JAMA. https://jamanetwork.com/collections/44042/jama-guide-to-statistics-and-methods\nStatistics at Square One. BMJ. https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one\nStatistics for Biologists. Nature. https://www.nature.com/collections/qghhqm"
+  },
+  {
+    "objectID": "library.html#software",
+    "href": "library.html#software",
+    "title": "Library of medical statistics",
+    "section": "Software",
+    "text": "Software\n\nThe R Project for Statistical Computing https://stat.ethz.ch/CRAN/\nRStudio Desktop https://posit.co/download/rstudio-desktop/\nQuarto https://quarto.org/docs/download/\nGit version control system https://git-scm.com/downloads\nRTools https://cran.r-project.org/bin/windows/Rtools/"
+  },
+  {
+    "objectID": "library.html#compilations",
+    "href": "library.html#compilations",
+    "title": "Library of medical statistics",
+    "section": "Compilations",
+    "text": "Compilations\n\nCatalogue of Bias https://catalogofbias.org/\nEQUATOR Network and reporting guidelines https://www.equator-network.org/"
+  },
+  {
+    "objectID": "library.html#guidelines",
+    "href": "library.html#guidelines",
+    "title": "Library of medical statistics",
+    "section": "Guidelines",
+    "text": "Guidelines\n\nICMJE Recommendations https://www.icmje.org/recommendations/browse/"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Simon Schwab",
+    "section": "",
+    "text": "I’m a statistician at Swisstransplant with professional qualifications in medical research and statistics. I’m also a lecturer in biostatistics and good research practice at the Department of Biostatistics and the Center for Reproducible Science of the University of Zurich.\nI obtained my PhD in Health Sciences and a postgraduate certificate in Advanced Statistical Data Science from the University of Bern. I received 2.5 years of postdoctoral training in statistics at the University of Warwick and the University of Oxford, funded by the Swiss National Science Foundation (SNSF).\nFurthermore, I’m a member of the scientific committee of the Swiss Transplant Cohort Study (STCS) and a founding member of the interest group Statistics in Organ Transplantation (SOT)."
+  },
+  {
+    "objectID": "about.html#memberships",
+    "href": "about.html#memberships",
+    "title": "About Simon Schwab",
+    "section": "Memberships",
+    "text": "Memberships\n\nMember of the Swiss Statistical Society (SSS)\nFellow and Graduate Statistician of the Royal Statistical Society (RSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
+  },
+  {
+    "objectID": "about.html#private",
+    "href": "about.html#private",
+    "title": "About Simon Schwab",
+    "section": "Private",
+    "text": "Private\nI am married and the father of two children (born in 2021 and 2023). I enjoy playing guitar and listening to rock music.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Simon Schwab",
+    "section": "",
+    "text": "“I’m addicted to coffee and data.”"
+  },
+  {
+    "objectID": "index.html#qualifications",
+    "href": "index.html#qualifications",
+    "title": "Simon Schwab",
+    "section": "Qualifications",
+    "text": "Qualifications\nGradStat—Graduate Statistician\nRoyal Statistical Society, 2023\nCAS—Advanced Statistical Data Science\nUniversity of Bern, 2022\nPhD—Health Sciences\nUniversity of Bern, 2013\nMSc—Quantitative Psychology & Computer Science\nUniversity of Bern, 2008"
+  },
+  {
+    "objectID": "index.html#current-positions",
+    "href": "index.html#current-positions",
+    "title": "Simon Schwab",
+    "section": "Current positions",
+    "text": "Current positions\nLecturer in Biostatistics (5%)\nDepartment of Biostatistics, University of Zurich\n09/2023—Present\nSenior Statistician (80%)\nSwisstransplant, Bern\n11/2021—Present"
+  },
+  {
+    "objectID": "index.html#past-positions",
+    "href": "index.html#past-positions",
+    "title": "Simon Schwab",
+    "section": "Past positions",
+    "text": "Past positions\nPostdoctoral Researcher\nCenter for Reproducible Science, University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute, University of Oxford\n07/2017—06/2018\nVisiting Academic\nDepartment of Statistics, University of Warwick\n01/2016—06/2017\nResearch Associate\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
   },
   {
     "objectID": "output.html",
@@ -119,115 +203,52 @@
     "text": "Presentations\nA complete list of slides from my presentations is available at OSF.\n\nTen simple rules for good research practice (link to video)—16/05/2024\nTalk at the Computational Reproducibility Seminar—NEXUS Personalized Health Technologies, ETH Zurich\n\nUnderstanding and managing bias in medical research—28/03/2024\nTalk for the Swiss Society for Pneumology—University Hospital of Zurich\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation (link to video)—21/06/2023\nTalk at R/Basel 2023—Roche Switzerland\n\nAn introduction to R with the Stanford Heart Transplant Data—09/12/2021\nTalk at BernR—Bern R user group\nFrom regression to machine learning in R (link to video)—15/04/2021\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging—University Hospital of Zurich"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Simon Schwab",
+    "objectID": "posts/colors/index.html",
+    "href": "posts/colors/index.html",
+    "title": "True colors",
     "section": "",
-    "text": "“I’m addicted to coffee and data.”"
+    "text": "Science has a high credibility and reputation. The public, the media, and politicians usually believe a scientific result is true. After all, it is science. If we don’t believe in science, what should we believe in? However, scientific findings are sometimes based on weak statistical results. I will focus on the widespread misunderstanding of the p-value.\nI would say it slightly differently. The vast majority of data analysis is performed by people who are not properly trained. Therefore, p-values are indeed used poorly as a consequence.\nThe poor understanding and misuse of p-values caused the American Statistical Association (ASA) to release a statement in 2016 [1]. The ASA argued that the p-values are commonly misinterpreted. Many researchers believe a low p-value is some form of insurance that the result or study is credible and worth publishing. A scientific result is worth publishing when the study was well planned, designed, conducted, and reported. A study protocol with a statistical analysis plan can help with this. The p-value in itself does not matter at all. In a perfect world, we see mostly high-quality studies with both low and high p-values. The opposite is true; there are too many low-quality studies, and too many studies report exclusively low p-values."
   },
   {
-    "objectID": "index.html#qualifications",
-    "href": "index.html#qualifications",
-    "title": "Simon Schwab",
-    "section": "Qualifications",
-    "text": "Qualifications\nGradStat—Graduate Statistician\nRoyal Statistical Society, 2023\nCAS—Advanced Statistical Data Science\nUniversity of Bern, 2022\nPhD—Health Sciences\nUniversity of Bern, 2013\nMSc—Quantitative Psychology & Computer Science\nUniversity of Bern, 2008"
-  },
-  {
-    "objectID": "index.html#current-positions",
-    "href": "index.html#current-positions",
-    "title": "Simon Schwab",
-    "section": "Current positions",
-    "text": "Current positions\nLecturer in Biostatistics (5%)\nDepartment of Biostatistics, University of Zurich\n09/2023—Present\nSenior Statistician (80%)\nSwisstransplant, Bern\n11/2021—Present"
-  },
-  {
-    "objectID": "index.html#past-positions",
-    "href": "index.html#past-positions",
-    "title": "Simon Schwab",
-    "section": "Past positions",
-    "text": "Past positions\nPostdoctoral Researcher\nCenter for Reproducible Science, University of Zurich\n08/2018—09/2021\nResearch Fellow\nBig Data Institute, University of Oxford\n07/2017—06/2018\nVisiting Academic\nDepartment of Statistics, University of Warwick\n01/2016—06/2017\nResearch Associate\nUniversity Hospital of Psychiatry, Bern\n10/2008—12/2015"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Simon Schwab",
-    "section": "",
-    "text": "I’m a statistician at Swisstransplant with professional qualifications in medical research and statistics. I’m also a lecturer in biostatistics and good research practice at the Department of Biostatistics and the Center for Reproducible Science of the University of Zurich.\nI obtained my PhD in Health Sciences and a postgraduate certificate in Advanced Statistical Data Science from the University of Bern. I received 2.5 years of postdoctoral training in statistics at the University of Warwick and the University of Oxford, funded by the Swiss National Science Foundation (SNSF).\nFurthermore, I’m a member of the scientific committee of the Swiss Transplant Cohort Study (STCS) and a founding member of the interest group Statistics in Organ Transplantation (SOT)."
-  },
-  {
-    "objectID": "about.html#memberships",
-    "href": "about.html#memberships",
-    "title": "About Simon Schwab",
-    "section": "Memberships",
-    "text": "Memberships\n\nMember of the Swiss Statistical Society (SSS)\nFellow and Graduate Statistician of the Royal Statistical Society (RSS)\nMember of the International Society for Clinical Biostatistics (ISCB)"
-  },
-  {
-    "objectID": "about.html#private",
-    "href": "about.html#private",
-    "title": "About Simon Schwab",
-    "section": "Private",
-    "text": "Private\nI am married and the father of two children (born in 2021 and 2023). I enjoy playing guitar and listening to rock music.\n\n\n\nPearl Jam live in Zurich on 22. June 2022."
-  },
-  {
-    "objectID": "library.html",
-    "href": "library.html",
-    "title": "Library of medical statistics",
-    "section": "",
-    "text": "Below is a list of important books, papers, websites and other ressources that are useful."
-  },
-  {
-    "objectID": "library.html#medical-statistics-books",
-    "href": "library.html#medical-statistics-books",
-    "title": "Library of medical statistics",
-    "section": "Medical statistics books",
-    "text": "Medical statistics books\n\nBland M. An Introduction to Medical Statistics. 4th ed. Oxford University Press; 2015.\nChan BKC. Biostatistics for Epidemiology and Public Health Using R. Springer Publishing; 2015.\nField A, Miles J, Field Z. Discovering Statistics Using R. SAGE Publications; 2012.\nHeld L, Rufibach K, Seifert B. Medizinische Statistik: Konzepte, Methoden, Anwendungen. 1st ed. Pearson; 2013.\nKirkwood BR, Sterne JAC. Essential Medical Statistics. 2nd ed. Blackwell Science; 2003.\nDevore J, Peck R. Statistics: The Exploration & Analysis of Data. 7th ed. Cengage Learning; 2010.\nRosner B. Fundamentals of Biostatistics. 7th ed. Cengage Learning; 2010."
-  },
-  {
-    "objectID": "library.html#journal-collections",
-    "href": "library.html#journal-collections",
-    "title": "Library of medical statistics",
-    "section": "Journal collections",
-    "text": "Journal collections\n\nBland & Altman Statistics Notes. BMJ. https://www-users.york.ac.uk/~mb55/pubs/pbstnote.htm\nCRS Reproducibilty Notes. Significance. https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html\nEndgames by Philip Sedgwick. BMJ. Pubmed link\nStatistics at Square One. BMJ. https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one\nStatistics for Biologists. Nature. https://www.nature.com/collections/qghhqm"
-  },
-  {
-    "objectID": "library.html#software",
-    "href": "library.html#software",
-    "title": "Library of medical statistics",
-    "section": "Software",
-    "text": "Software\n\nThe R Project for Statistical Computing https://stat.ethz.ch/CRAN/\nRStudio Desktop https://posit.co/download/rstudio-desktop/\nQuarto https://quarto.org/docs/download/\nGit version control system https://git-scm.com/downloads\nRTools https://cran.r-project.org/bin/windows/Rtools/"
-  },
-  {
-    "objectID": "posts/1901/index.html",
-    "href": "posts/1901/index.html",
-    "title": "1901",
-    "section": "",
-    "text": "It was 2004, I was a student, and at that time, I was really in love with Linux. One day, I saw an IBM commercial, “The Kid”. There were so many cool messages in this commercial; it kind of blew my mind. In the end, Muhammad Ali appeared and delivered the following line to the kid.\nSince IBM loved Linux, too, I wanted to work for IBM. I applied for an internship and was eventually accepted. As I already started University, I had to take a break from my studies. Before I realized it, I was an intern at the data center of IBM Switzerland.\nAfter six months, I could take a lot of stuff home. I worked on a large project for the first time. I reported to a manager and had deliverables, and I taught myself the command language Bash from reading Newham & Rosenblatt [1]. The things I learned back then still largely influence my daily interactions with computers today, which is by using a Unix type of shell program.\nDuring my internship, I bought an IBM ThinkCentre S50. On this machine, I learned programming, completed my software engineering classes, and wrote my first computer program in Java."
-  },
-  {
-    "objectID": "posts/1901/index.html#so-what",
-    "href": "posts/1901/index.html#so-what",
-    "title": "1901",
+    "objectID": "posts/colors/index.html#so-what",
+    "href": "posts/colors/index.html#so-what",
+    "title": "True colors",
     "section": "So what?",
-    "text": "So what?\nIf you were male, 3rd class, or old, you were more likely to die in the Titanic incident. However, this was only a quick showcase rather than an in-depth analysis of the Titanic data, and the large amount of missing data was not ideal. But I wanted to say something else.\nI wanted to say, don’t throw away old computers. They can still be fun."
+    "text": "So what?\nMany research results may be wrong. Only trust studies that were well designed, conducted, analyzed, and reported. Don’t take the p-value as a measure of credibility or importance of a result. By the way, the reader can use the function true_colors() to try out different scenarios."
   },
   {
-    "objectID": "posts/dream/index.html",
-    "href": "posts/dream/index.html",
-    "title": "I don’t sleep, I dream",
+    "objectID": "posts/fake/index.html",
+    "href": "posts/fake/index.html",
+    "title": "Fake plastic trees",
     "section": "",
-    "text": "Sleep is fascinating. We all sleep at night, but we don’t really know what is happening during this period. Sometimes we dream, sometimes we don’t. All in all, it is a bit of a mystery.\nFor some researchers, statistics is also a bit of a mystery. In 2018, a study titled “Regulation of REM and Non-REM Sleep by Periaqueductal GABAergic Neurons” was published in Nature Communications led by researchers from the University of California at Berkeley, Stanford University, and the University of Pennsylvania [1]. The study investigated rapid eye movement (REM) sleep in mice, which is a sleep phase characterized by vivid dreams and random movement of the eyes.\nThe only thing I know about R.E.M. is that it is also the name of a pretty good rock band; I grew up listening to their music. The very first album I bought as a kid was The Best of R.E.M. from 1991. For me, rock music and statistics go hand in hand, just like in Andy Field’s book Discovering Statistics Using R [2]. But now, let’s get back to our sleep study.\nThe good news is that we don’t need to understand anything about REM sleep, the brain, or the mouse. I probably don’t even know the difference between a mouse, a rat, and a hamster. The subject matter would only distract us. Let’s ignore everything in this paper except a tiny bit from the methods section.\nHave you ever read just one sentence from a research study? It can be enough to make a case.\nBut first, let me say something else. In some prestigious journals, the methods and statistics section, the most relevant part for judging the validity and credibility of a study, is literally the small print at the end. This reminds me of what I wrote last time, that statistics is largely undervalued. Does anyone read that part?\nWell, I do."
+    "text": "Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.\nMy view is that all data are rubbish without proper statistics. Nevertheless, the glorification of data has evolved over the last decades and continues to do so. An example is the front cover of the magazine Science from 2011. It is a collage of words, but only one stands out in large letters: “data.”\nWe are indeed very hungry for data. However, I don’t believe data should take center stage. What is more important is how we perform statistics on the data.\nI tried to find the word “statistics” on the Science front cover but could not find it. Can you see it? Maybe the word “data” should be a bit smaller to leave more room for the word “statistics,” the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data.\nNevertheless, many medical studies are conducted with little or no involvement of adequately trained statisticians, and the same is true for scientific peer review [1]. Many researchers don’t use statistics properly. They might not know enough about it, or they might ignore expert advice. Statisticians are often only involved at the end of a study to analyze the data despite being specialists in helping researchers clarify the question and designing the study from scratch. Often, research projects do not include enough funding for statistical work.\nIt sounds absurd, but data is largely overvalued these days, and statistics is largely undervalued."
   },
   {
-    "objectID": "posts/dream/index.html#so-what",
-    "href": "posts/dream/index.html#so-what",
-    "title": "I don’t sleep, I dream",
+    "objectID": "posts/fake/index.html#long-data",
+    "href": "posts/fake/index.html#long-data",
+    "title": "Fake plastic trees",
+    "section": "Long data",
+    "text": "Long data\n\n\nCode\nset.seed(2024)\n\nSNR = 0.65 # corresponds to 20% explained variance R^2\nN = 2000 # number of patients\nq = 4 # number of predictors\n\n# generate data for a study\ndata = array(rnorm(N*q), dim = c(N, q))\nnoise = rnorm(N) # generate standard normal errors\ny = 0.5*data[,1] + 0.3*data[,2] + 0.2*data[,3] + 1/sqrt(SNR)*noise\n\n\nI simulated data for \\(N = 2000\\) patients and \\(q = 4\\) variables. I assumed the three prognostic variables (\\(x_1\\), \\(x_2\\), and \\(x_3\\)) were uncorrelated and related to the outcome using an additive model. The true effects were \\(\\beta_1 = 0.5\\), \\(\\beta_2 = 0.3\\), and \\(\\beta_3 = 0.2\\). For the unrelated variable \\(x_4\\), we had \\(\\beta_4 = 0\\). I added some noise so that the explained variance was about 20% (\\(R^2\\)). Below are the results, see Table 1.\n\n\nCode\nd = data.frame(y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3], x4 = data[,4])\nfit = lm(y ~ ., data = d)\ntidy_lm(fit)\n\n\n\n\nTable 1: Results from a regression model fitted with long data using simulated data from N=2000 patients.\n\n\n\nEffect estimate\n95% CI\np-value\n\n\n\n\n(Intercept)\n0.00\nfrom -0.05 to 0.06\n0.96\n\n\nx1\n0.49\nfrom 0.43 to 0.54\n&lt; 0.001 ***\n\n\nx2\n0.31\nfrom 0.25 to 0.37\n&lt; 0.001 ***\n\n\nx3\n0.23\nfrom 0.17 to 0.29\n&lt; 0.001 ***\n\n\nx4\n-0.01\nfrom -0.07 to 0.04\n0.67\n\n\n\n\n\n\nThe p-values for the first three variables were statistically significant. This basically means that the data were very incompatible with our null model that the true effects were zero (my lawyers helped me with the wording of this sentence). For \\(x_4\\), the p-value was statistically non-significant. But this is all not really interesting, is it? And I don’t particularly like to focus on the results in terms of statistical significance.\nMuch more interesting than the p-values were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects, but not exactly. For the effect estimates to match the true effects even better, we would need even more data (tens of thousands of patients). But I think it was quite acceptable."
+  },
+  {
+    "objectID": "posts/fake/index.html#wide-data",
+    "href": "posts/fake/index.html#wide-data",
+    "title": "Fake plastic trees",
+    "section": "Wide data",
+    "text": "Wide data\n\n\nCode\nset.seed(2024)\n\nSNR = 0.65 # corresponds to 20% explained variance R^2\nN = 200 # number of patients\nq = 4000 # number of biomarkers\n\n# generate data for a study\ndata = array(rnorm(N*q), dim = c(N, q))\nnoise = rnorm(N) # generate standard normal errors\ny = 0.5*data[,1] + 0.3*data[,2] + 0.2*data[,3] + 1/sqrt(SNR)*noise\n\npvalues = rep(NA, q)\nfor (i in 1:q) { # iterate across biomarkers\n  d = data.frame (y = y, x = data[, i]) # univariable screening\n  fit = lm(y ~ x, data = d)\n  stats = summary(fit)\n  pvalues[i] = stats$coefficients[2,4]\n}\n\n\nNext, I increased the amount of data by a factor of 100. However, I did not increase the sample size in terms of the number of patients. Instead, I created data with \\(q = 4000\\) biomarkers (high-dimensional data). Since these may be expensive and complex measurements, I decreased the sample size to \\(N = 200\\). For each biomarker, I estimated a univariable model and used a cutoff of \\(p \\le 0.05\\) for screening (univariable screening). I know it is a really bad idea, but since so many papers have done it, it shouldn’t hurt anyone to do it just one more time.\nLet’s now pretend we knew that \\(x_1\\), \\(x_2\\), and \\(x_3\\) were the relevant biomarkers. The regression results from the same model as above (\\(x_1\\) to \\(x_4\\)) are shown below in Table 2.\n\n\nCode\nd = data.frame (y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3], x4 = data[,4])\nfit = lm(y ~ x1 + x2 + x3 + x4, data = d)\ntidy_lm(fit)\n\n\n\n\nTable 2: Results from a regression model fitted with wide data using simulated data form N=200 patients.\n\n\n\nEffect estimate\n95% CI\np-value\n\n\n\n\n(Intercept)\n-0.05\nfrom -0.21 to 0.12\n0.58\n\n\nx1\n0.47\nfrom 0.31 to 0.63\n&lt; 0.001 ***\n\n\nx2\n0.20\nfrom 0.02 to 0.38\n0.026 *\n\n\nx3\n0.24\nfrom 0.07 to 0.41\n0.005 **\n\n\nx4\n0.07\nfrom -0.10 to 0.24\n0.41\n\n\n\n\n\n\nThe effect estimates were more off from the truth, particularly \\(x_2\\), and the confidence intervals were much wider. This was not surprising as the sample size was only \\(N = 200\\). All in all, we are much more uncertain; though, the p-values for \\(x_1\\) to \\(x_3\\) were still statistically significant. However, the larger uncertainty was not the main problem.\n\n\nCode\nk = sum(pvalues  &lt;= 0.05)\npvalues.adj = p.adjust(pvalues, method = \"fdr\")\nk.adj = sum(pvalues.adj  &lt;= 0.05)\n\n\nThe main problem was we didn’t know that \\(x_1\\), \\(x_2\\), and \\(x_3\\) were the relevant biomarkers. Using univariable screening, with \\(p \\le 0.05\\) for variable selection, a striking 214 out of a total of 4000 variables were statistically significant; this matches up with the alpha level of 5%.\nI tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini & Hochberg procedure; however, only \\(x_1\\) remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It’s like looking for a needle in a haystack.\nIn the final step, perhaps out of desperation, I opted for a middle way: instead of using an unadjusted threshold of 5% or an FDR of 5%, I applied an unadjusted threshold of \\(p \\le 0.001\\). The results are shown in Table 3.\n\n\nCode\nidx = which(pvalues &lt;= 0.001) # select variables with arbitrary threshold\nd = data.frame(y = y, x = data[, idx]) \nfit = lm(y ~ ., data = d)\ntab = tidy_lm(fit)\n# add variable names\nrownames(tab)[2:(length(idx) + 1)] = paste0(\"x\", idx)\ntab\n\n\n\n\nTable 3: Results from a regression model fitted with wide data and using univariable screening to find relevant biomarkers.\n\n\n\nEffect estimate\n95% CI\np-value\n\n\n\n\n(Intercept)\n-0.01\nfrom -0.17 to 0.14\n0.86\n\n\nx1\n0.36\nfrom 0.20 to 0.51\n&lt; 0.001 ***\n\n\nx602\n-0.34\nfrom -0.50 to -0.17\n&lt; 0.001 ***\n\n\nx971\n0.19\nfrom 0.03 to 0.35\n0.017 *\n\n\nx2186\n0.28\nfrom 0.12 to 0.45\n&lt; 0.001 ***\n\n\nx3748\n0.14\nfrom -0.01 to 0.30\n0.073 .\n\n\n\n\n\n\nWith this step, we have left the realm of science facts and entered the realm of science fiction. The results above show voodoo statistics with statistically significant results for the variables that are pure noise (except \\(x_1\\)). The model explained 28% of the variance (adj. \\(R^2\\)).\nI think I tortured the data too much. Surely, a journal would publish such statistically significant results!"
+  },
+  {
+    "objectID": "posts/fake/index.html#so-what",
+    "href": "posts/fake/index.html#so-what",
+    "title": "Fake plastic trees",
     "section": "So what?",
-    "text": "So what?\nFirst, a p-value from repeated inspection of data is nothing more than a fluke of the universe. Don’t trust it. Second, Nature Communications might consider involving expert statisticians in the evaluation of a study. After all, their article processing fee is 6790 US dollars."
+    "text": "So what?\nSo what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant “truths” in the data when trying too many different things (the garden of forking paths).\nYou may object that the simulations I made were too pessimistic. Yes, but we often don’t know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).\nThe process of how the result was obtained is much more important than the result itself.\nFor further reading, see “How to Do Bad Biomarker Research” by Frank Harrell [12]. For training, see the course materials “Analysis of High-Dimensional Data” by Nicolas Städler [13]."
   },
   {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "Fiction, future, and prediction",
     "section": "",
-    "text": "I post about statistics and data in medical research. Every post ends with a section “Just one more thing” to provide a concrete data example with code in the R programming language that the reader can try out and examine.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrue colors\n\n\n\n\n\n\np-values\n\n\n\nScience is often viewed as a reliable machinery for producing facts. However, a surprising number of scientific findings may be incorrect. Even when a low p-value is obtained, it does not guarantee the result is true; in fact, it may still be wrong. This claim can be effectively illustrated with an example using a few colors, revealing how many studies were really true and how many were false. Without skepticism and blindly focusing on the magnitude of a p-value while ignoring other factors, I might just as well believe in Santa Claus.\n\n\n\n\n\nDec 15, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\n\n\n\n\n\n\n1901\n\n\n\n\n\n\nStatistical computing\n\n\nLinux\n\n\n\nWhile cleaning out my basement, I found a 20-year-old IBM computer. First, I wanted to get rid of it because the computer has become too old and useless. Instead, I installed a lightweight Linux operating system, R, RStudio, and analyzed the Titanic dataset as a showcase. It worked extremely well. Linux can bring new life to old computer hardware.\n\n\n\n\n\nOct 20, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\n\n\n\n\n\n\nI don’t sleep, I dream\n\n\n\n\n\n\nAnimal studies\n\n\nRepeated inspection of data\n\n\np-values\n\n\n\nA 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong in the realm of dark statistics because they are more likely to produce a false positive result.\n\n\n\n\n\nAug 18, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\n\n\n\n\n\n\nFake plastic trees\n\n\n\n\n\n\nAI\n\n\nBig data\n\n\nBiomarkers\n\n\np-values\n\n\nUnivariable screening\n\n\n\nData are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end.\n\n\n\n\n\nJul 9, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\nNo matching items"
+    "text": "I post about statistics and data in medical research. Every post ends with a section “Just one more thing” to provide a concrete data example with code in the R programming language that the reader can try out and examine.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeart of Gold\n\n\n\n\n\n\np-values\n\n\n\nScience is often viewed as a reliable machinery for producing facts. However, a surprising number of scientific findings may be incorrect. Even when a low p-value is obtained, it does not guarantee the result is true; in fact, it may still be wrong. This claim can be effectively illustrated with an example using a few colors, revealing how many studies were really true and how many were false. Without skepticism and blindly focusing on the magnitude of a p-value while ignoring other factors, I might just as well believe in Santa Claus.\n\n\n\n\n\nJan 25, 2025\n\n\nSimon Schwab\n\n\n\n\n\n\n\n\n\n\n\n\nTrue colors\n\n\n\n\n\n\np-values\n\n\n\nScience is often viewed as a reliable machinery for producing facts. However, a surprising number of scientific findings may be incorrect. Even when a low p-value is obtained, it does not guarantee the result is true; in fact, it may still be wrong. This claim can be effectively illustrated with an example using a few colors, revealing how many studies were really true and how many were false. Without skepticism and blindly focusing on the magnitude of a p-value while ignoring other factors, I might just as well believe in Santa Claus.\n\n\n\n\n\nDec 15, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\n\n\n\n\n\n\n1901\n\n\n\n\n\n\nStatistical computing\n\n\nLinux\n\n\n\nWhile cleaning out my basement, I found a 20-year-old IBM computer. First, I wanted to get rid of it because the computer has become too old and useless. Instead, I installed a lightweight Linux operating system, R, RStudio, and analyzed the Titanic dataset as a showcase. It worked extremely well. Linux can bring new life to old computer hardware.\n\n\n\n\n\nOct 20, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\n\n\n\n\n\n\nI don’t sleep, I dream\n\n\n\n\n\n\nAnimal studies\n\n\nRepeated inspection of data\n\n\np-values\n\n\n\nA 2018 study reported in the methods section that the number of mice was continuously increased until statistical significance was reached. It is very easy to show that such approaches are flawed and belong in the realm of dark statistics because they are more likely to produce a false positive result.\n\n\n\n\n\nAug 18, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\n\n\n\n\n\n\nFake plastic trees\n\n\n\n\n\n\nAI\n\n\nBig data\n\n\nBiomarkers\n\n\np-values\n\n\nUnivariable screening\n\n\n\nData are often overvalued, while statistics are undervalued. New tools and technologies may not revolutionize healthcare but could instead create confusion about the validity of data and evidence. More data is not always better, and an example of misleading statistics is provided at the end.\n\n\n\n\n\nJul 9, 2024\n\n\nSimon Schwab\n\n\n\n\n\n\nNo matching items"
   }
 ]
