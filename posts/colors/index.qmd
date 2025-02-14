@@ -17,7 +17,7 @@ csl: plos.csl
 
 Science has a high credibility and reputation. The public, the media, and politicians usually believe a scientific result is true. After all, it is science. If we don't believe in science, what should we believe in? However, scientific findings are sometimes based on weak statistical results. I will focus on the widespread misunderstanding of the p-value.
 
-> "The problem is not that people use p-values poorly. It is that the vast majority of data analysis is not performed by people properly trained to perform data analysis”. ---Jeff Leek
+> The problem is not that people use p-values poorly. It is that the vast majority of data analysis is not performed by people properly trained to perform data analysis. ---Jeff Leek
 
 I would say it slightly differently. The vast majority of data analysis is performed by people who are not properly trained. Therefore, p-values are indeed used poorly as a consequence.
 
@@ -43,7 +43,7 @@ Imagine 1,000 hypotheses under investigation, where 3 in 10 were true. Thus, 300
 
 I used the common alpha level of 5%, but 13% of the results were wrong. This really is the best-case scenario with an alpha level of 5% and a statistical power of 80%. The reality is much worse.
 
-In reality, the reported standard errors and p-values are often biased. The reason is that data was often reanalyzed until the desired result was obtained. Thus, many reported results probably have a much higher p-value than if data were analyzed according to a prespecified protocol. The 5% alpha level is maybe 10% or higher. Furthermore, the statistical power of 80% is from a perfect world, and this assumption is not realistic at all, even in the domain of the highest standards, such as clinical trials [@van-Zwet2024-pn]. I don't know what the true statistical power might be; maybe it is as low as 50%. Lastly, there are domains where true hypotheses are not so prevalent, for example, where only 1 in 10 hypotheses are, in fact, true.
+In reality, the reported standard errors and p-values are often biased. The reason is that data is often reanalyzed until the desired result was obtained. Thus, many reported results probably have a much higher p-value than if data were analyzed according to a prespecified protocol. The 5% alpha level is maybe 10% or higher. Furthermore, the statistical power of 80% is from a perfect world, and this assumption is not realistic at all, even in the domain of the highest standards, such as clinical trials [@van-Zwet2024-pn]. I don't know what the true statistical power might be; maybe it is as low as 50%. Lastly, there are domains where true hypotheses are not so prevalent, for example, where only 1 in 10 hypotheses are, in fact, true.
 
 Making a scientific claim in a domain where novel findings are hard to discover, where p-hacking is prevalent, and where sample size calculations and statistical power are dismissed makes a result very unlikely to be true, even if the p-value is statistically significant.
 

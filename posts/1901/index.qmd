@@ -17,7 +17,7 @@ csl: plos.csl
 
 It was 2004, I was a student, and at that time, I was really in love with Linux. One day, I saw an IBM commercial, ["The Kid"](https://www.youtube.com/watch?v=x7ozaFbqg00). There were so many cool messages in this commercial; it kind of blew my mind. In the end, Muhammad Ali appeared and delivered the following line to the kid.
 
-> "Speak your mind. Don't back down." ---Muhammad Ali
+> Speak your mind. Don't back down. ---Muhammad Ali
 
 Since IBM loved Linux, too, I wanted to work for IBM. I applied for an internship and was eventually accepted. As I already started University, I had to take a break from my studies. Before I realized it, I was an intern at the data center of IBM Switzerland.
 
@@ -59,7 +59,7 @@ tab
 
 I wondered why I only had 3GB of memory available, even though I installed 4GB. Looking at the [technical specifications](https://support.lenovo.com/eg/en/solutions/pd006096-detailed-specifications-thinkcentre-a52-type-8155-8156-8157-8158-8159-8160-thinkcentre-m52-type-8099-8116-8215-9210-9211) of the M53, I found the following line:
 
-> "If 4GB of physical memory is installed approximately 3GB will be useable by the operating system. This is due to limitations from the address mapping of PCI busses and other system devices."
+> If 4GB of physical memory is installed approximately 3GB will be useable by the operating system. This is due to limitations from the address mapping of PCI busses and other system devices.
 
 Well, that was a shame, but okay, at least there was nothing wrong on my side.
 

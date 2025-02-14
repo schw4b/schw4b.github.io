@@ -29,7 +29,7 @@ But first, let me say something else. In some prestigious journals, the methods 
 
 Well, I do.
 
-> "we continuously increased the number of animals until statistical significance was reached to support our conclusions." ---p. 12, the small print
+> we continuously increased the number of animals until statistical significance was reached to support our conclusions. ---p. 12, the small print
 
 # Peeping Tom
 
@@ -65,7 +65,7 @@ For example, the Cardiac Arrhythmia Suppression Trial (CAST) was a four-arm tria
 
 In the present mouse study, however, the authors stopped the experiment because the p-value fell below the magical level of $p \le 0.05$, which apparently signaled to them that they could publish their results and didn't need to kill any more mice. If you do enough tests, you will always obtain a p-value less than the magical threshold.
 
-> "I'm looking for an interruption. Do you believe?" ---I don't sleep, I dream (song by R.E.M.)
+> I'm looking for an interruption. Do you believe? ---I don't sleep, I dream (song by R.E.M.)
 
 I don't believe in stopping this study early, and I don't trust the results. However, I believe that the authors of the study did not want to cheat. They probably didn't know any better. They thought the approach was okay, so they wrote it in the methods section. No statistician was on the list of authors, I guess, and no statistician reviewed the paper.
 
