@@ -5,8 +5,9 @@ project:
 website:
   title: "Statistics, yup!"
   site-url: https://www.statsyup.org/
-  description: "This is Simon Schwab's personal website."
+  description: "This is Simon Schwab's personal website on statistics and data science."
   search: false
+  open-graph: true
   favicon: images/logo-96.png
   navbar:
     title: false
