@@ -247,7 +247,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 
 <p>It was 2004, I was a student, and at that time, I was really in love with Linux. One day, I saw an IBM commercial, <a href="https://www.youtube.com/watch?v=x7ozaFbqg00">“The Kid”</a>. There were so many cool messages in this commercial; it kind of blew my mind. In the end, Muhammad Ali appeared and delivered the following line to the kid.</p>
 <blockquote class="blockquote">
-<p>“Speak your mind. Don’t back down.” —Muhammad Ali</p>
+<p>Speak your mind. Don’t back down. —Muhammad Ali</p>
 </blockquote>
 <p>Since IBM loved Linux, too, I wanted to work for IBM. I applied for an internship and was eventually accepted. As I already started University, I had to take a break from my studies. Before I realized it, I was an intern at the data center of IBM Switzerland.</p>
 <p>After six months, I could take a lot of stuff home. I worked on a large project for the first time. I reported to a manager and had deliverables, and I taught myself the command language <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> from reading Newham &amp; Rosenblatt <span class="citation" data-cites="Newham2005-nn">[<a href="#ref-Newham2005-nn" role="doc-biblioref">1</a>]</span>. The things I learned back then still largely influence my daily interactions with computers today, which is by using a Unix type of shell program.</p>
@@ -265,7 +265,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <figcaption>Figure 1: IBM ThinkCentre M52 with S50 front bezel and floppy drive.</figcaption>
 </figure>
 </div>
-<p>I spent a little money to upgrad the machine from 1GB memory to 4GB memory (purchased online; CHF 7.50). I also replaced the hard disk, which was an HDD, with a modern SSD that I had as a spare. Then I installed <a href="https://lubuntu.me/">Lubuntu</a> 24.04 LTS, a lightweight Linux based on Ubuntu, R 4.4.1, and the latest version of RStudio and Quarto.</p>
+<p>I spent a little money to upgrade the machine from 1GB memory to 4GB memory (purchased online; CHF 7.50). I also replaced the hard disk, which was an HDD, with a modern SSD that I had as a spare. Then I installed <a href="https://lubuntu.me/">Lubuntu</a> 24.04 LTS, a lightweight Linux based on Ubuntu, R 4.4.1, and the latest version of RStudio and Quarto.</p>
 <p>I collected some system information using the <code>system()</code> function which called <code>neofetch</code> from within this Quarto Blog post, see Table 1. Exactly, I wrote this blog post using the old IBM computer.</p>
 <div class="cell" data-tbl-cap="Table 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine.">
 <details class="code-fold">
@@ -281,7 +281,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </div>
 <p>I wondered why I only had 3GB of memory available, even though I installed 4GB. Looking at the <a href="https://support.lenovo.com/eg/en/solutions/pd006096-detailed-specifications-thinkcentre-a52-type-8155-8156-8157-8158-8159-8160-thinkcentre-m52-type-8099-8116-8215-9210-9211">technical specifications</a> of the M53, I found the following line:</p>
 <blockquote class="blockquote">
-<p>“If 4GB of physical memory is installed approximately 3GB will be useable by the operating system. This is due to limitations from the address mapping of PCI busses and other system devices.”</p>
+<p>If 4GB of physical memory is installed approximately 3GB will be useable by the operating system. This is due to limitations from the address mapping of PCI busses and other system devices.</p>
 </blockquote>
 <p>Well, that was a shame, but okay, at least there was nothing wrong on my side.</p>
 </section>
@@ -438,12 +438,12 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <table class="caption-top table table-sm table-striped small">
 <caption>Table 3: Results from a logistic regression model.</caption>
 <colgroup>
-<col style="width: 19%">
+<col style="width: 18%">
 <col style="width: 25%">
-<col style="width: 27%">
+<col style="width: 25%">
+<col style="width: 10%">
+<col style="width: 8%">
 <col style="width: 11%">
-<col style="width: 5%">
-<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -458,7 +458,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">age</td>
-<td style="text-align: left;">18.00 (21.00–39.00)</td>
+<td style="text-align: left;">18.00 (21.00&lt;U+2013&gt;39.00)</td>
 <td style="text-align: left;">0.53 (from 0.42 to 0.66)</td>
 <td style="text-align: left;">30.8</td>
 <td style="text-align: left;">2</td>
@@ -466,56 +466,56 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </tr>
 <tr class="even">
 <td style="text-align: left;">age nonlinear</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 <td style="text-align: left;">1.1</td>
 <td style="text-align: left;">1</td>
 <td style="text-align: left;">0.29</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">passengerClass</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 <td style="text-align: left;">101</td>
 <td style="text-align: left;">2</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">passengerClass 1st</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 <td style="text-align: left;">9.65 (from 6.19 to 15.04)</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">passengerClass 2nd</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 <td style="text-align: left;">2.77 (from 1.88 to 4.09)</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sex</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 <td style="text-align: left;">225</td>
 <td style="text-align: left;">1</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sex female</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 <td style="text-align: left;">12.13 (from 8.76 to 16.80)</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">TOTAL</td>
-<td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
+<td style="text-align: left;">&lt;U+2013&gt;</td>
 <td style="text-align: left;">277</td>
 <td style="text-align: left;">5</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>

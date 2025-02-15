@@ -44,7 +44,7 @@ I spent a little money to upgrade the machine from 1GB memory to 4GB memory (pur
 I collected some system information using the `system()` function which called `neofetch` from within this Quarto Blog post, see Table 1. Exactly, I wrote this blog post using the old IBM computer.
 
 ```{r}
-#| eval: true
+#| eval: false
 #| code-fold: true
 #| tbl-cap: "Table 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine."
 
