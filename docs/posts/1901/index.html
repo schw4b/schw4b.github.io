@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -88,10 +88,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b8d798ad51aeed766369f7220de90afb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -267,7 +267,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </div>
 <p>I spent a little money to upgrade the machine from 1GB memory to 4GB memory (purchased online; CHF 7.50). I also replaced the hard disk, which was an HDD, with a modern SSD that I had as a spare. Then I installed <a href="https://lubuntu.me/">Lubuntu</a> 24.04 LTS, a lightweight Linux based on Ubuntu, R 4.4.1, and the latest version of RStudio and Quarto.</p>
 <p>I collected some system information using the <code>system()</code> function which called <code>neofetch</code> from within this Quarto Blog post, see Table 1. Exactly, I wrote this blog post using the old IBM computer.</p>
-<div class="cell" data-tbl-cap="Table 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine.">
+<div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>info <span class="ot">=</span> <span class="fu">system</span>(<span class="st">"neofetch --stdout"</span>, <span class="at">intern =</span> <span class="cn">TRUE</span>)</span>
@@ -278,6 +278,45 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tab) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Type"</span>, <span class="st">"System Information"</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">System Information</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Host</td>
+<td style="text-align: left;">8215Y6G ThinkCentre M52</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CPU</td>
+<td style="text-align: left;">Intel Pentium 4 3.00GHz (2) @ 1.500GHz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Memory</td>
+<td style="text-align: left;">1175MiB / 3222MiB</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GPU</td>
+<td style="text-align: left;">NVIDIA GeForce GT 610</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OS</td>
+<td style="text-align: left;">Lubuntu 24.04.1 LTS x86_64</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kernel</td>
+<td style="text-align: left;">6.8.0-48-generic</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <p>I wondered why I only had 3GB of memory available, even though I installed 4GB. Looking at the <a href="https://support.lenovo.com/eg/en/solutions/pd006096-detailed-specifications-thinkcentre-a52-type-8155-8156-8157-8158-8159-8160-thinkcentre-m52-type-8099-8116-8215-9210-9211">technical specifications</a> of the M53, I found the following line:</p>
 <blockquote class="blockquote">
@@ -632,6 +671,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -749,6 +790,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
