@@ -306,8 +306,8 @@ window.Quarto = {
 <figcaption><em>Science</em> magazine front cover from 11. February 2011.</figcaption>
 </figure>
 </div>
-<section id="big-data" class="level1">
-<h1>Big data</h1>
+<section id="big-data" class="level2">
+<h2 class="anchored" data-anchor-id="big-data">Big data</h2>
 <p>Another example of the glorification of data is the term <em>Big Data</em>.</p>
 <p>What does big data even mean? Often omics data is mentioned, for example, transcriptional, epigenetic, proteomic and metabolomic data <span class="citation" data-cites="Shilo2020-mh">[<a href="#ref-Shilo2020-mh" role="doc-biblioref">2</a>]</span>.</p>
 <p>Big data may not be the latest advancement of biomedicine in tackling unsolved problems. Instead, it is our defeat against data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply “AI.” However, 4,000 biomarkers times 200 patients are not big data; the sample size is still N=200, and I consider this a small study. For a prediction model for prognosis, for example, I would instead prefer four clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example. Don’t be too impressed by the width of a data set.</p>
@@ -322,8 +322,8 @@ window.Quarto = {
 </figure>
 </div>
 </section>
-<section id="brave-new-tools" class="level1">
-<h1>Brave new tools</h1>
+<section id="brave-new-tools" class="level2">
+<h2 class="anchored" data-anchor-id="brave-new-tools">Brave new tools</h2>
 <p>Statistics summarize data into eatable bites. However, statistical data analysis is not something that can be prepared quickly and easily like a microwave-ready meal. It requires specialist work. And yes, mistakes can be made in this process <span class="citation" data-cites="Schwab2021-ui">[<a href="#ref-Schwab2021-ui" role="doc-biblioref">6</a>]</span>. Why can’t AI do all the difficult work for us?</p>
 <p>Statistical software once tried to create the illusion that a nice graphical interface could enable statistics at the push of a button. The exact opposite has happened with the <em>R programming language</em>. We moved away from pressing buttons to writing code, which, by the way, is reproducible and verifiable.</p>
 <p>I recently discovered a website with yet another doomed attempt to make statistics easy: an AI-powered statistics tool.</p>
@@ -334,15 +334,15 @@ window.Quarto = {
 <p>Ironically, the tool has the same name as an assassinated Roman emperor. This is not a very good omen for the tool. Maybe its future is already doomed, as we are all going to be very disappointed with AI doing our statistical analyses.</p>
 <p>Maybe, just maybe, AI will be terrible at being a personal statistical assistant. Maybe AI is much better at misusing statistics. It may be the perfect p-hacking machine. AI is misused in many ways to produce fake images, fake texts, fake human voices, and fake videos. Why not fake statistics? AI confuses the real with the unreal, and why can’t this also be applied to scientific data? The perfect tool for data fabrication in the future. Or, as Cathy O’Neil said, a new weapon of <em>math</em> destruction <span class="citation" data-cites="ONeil2016-ux">[<a href="#ref-ONeil2016-ux" role="doc-biblioref">7</a>]</span>. AI will do more harm than good, and in the future, we will need more people like Elisabeth Bik, who can spot fake research <span class="citation" data-cites="Shen2020-ar">[<a href="#ref-Shen2020-ar" role="doc-biblioref">8</a>]</span>.</p>
 </section>
-<section id="what-lies-ahead-of-us" class="level1">
-<h1>What lies ahead of us?</h1>
+<section id="what-lies-ahead-of-us" class="level2">
+<h2 class="anchored" data-anchor-id="what-lies-ahead-of-us">What lies ahead of us?</h2>
 <p>Nowadays, AI and machine learning are heavily promoted to “revolutionize healthcare”; this seems an overhyped claim given the notorious overfitting of data in the field <span class="citation" data-cites="Volovici2022-qn">[<a href="#ref-Volovici2022-qn" role="doc-biblioref">9</a>]</span>. To be fair, it is not just AI that baffles me. Recently, 246 biologists obtained different results from the same data <span class="citation" data-cites="Oza2023-ek">[<a href="#ref-Oza2023-ek" role="doc-biblioref">10</a>]</span> or the latest blunder in functional MRI research <span class="citation" data-cites="Prillaman2024-nu">[<a href="#ref-Prillaman2024-nu" role="doc-biblioref">11</a>]</span>. This all demonstrates that we researchers seem to learn a lot from the noise in the data.</p>
 <p>Now, are you ready for what is next? A world where the relentless rush of technology blurs the lines between what’s real and what’s not?</p>
 <p>A world of fake plastic trees?</p>
 <p><em>The title of this post is a song by Radiohead. The preview image of this post is a photo by Frames For Your Heart on Unsplash.</em></p>
 </section>
-<section id="just-one-more-thing" class="level1">
-<h1>Just one more thing</h1>
+<section id="just-one-more-thing" class="level2">
+<h2 class="anchored" data-anchor-id="just-one-more-thing">Just one more thing</h2>
 <p>I performed a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.</p>
 <p>In a second approach, I generated some high-dimensional data with many more variables than patients (wide data).</p>
 <p>But first, I needed to write a short function <code>tidy_lm()</code> to produce a tidy output from a linear regression model; this is just cosmetics.</p>
@@ -368,8 +368,8 @@ window.Quarto = {
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="long-data" class="level2">
-<h2 class="anchored" data-anchor-id="long-data">Long data</h2>
+<section id="long-data" class="level3">
+<h3 class="anchored" data-anchor-id="long-data">Long data</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -444,8 +444,8 @@ window.Quarto = {
 <p>The p-values for the first three variables were statistically significant. This basically means that the data were very incompatible with our null model that the true effects were zero (my lawyers helped me with the wording of this sentence). For <span class="math inline">\(x_4\)</span>, the p-value was statistically non-significant. But this is all not really interesting, is it? And I don’t particularly like to focus on the results in terms of statistical significance.</p>
 <p>Much more interesting than the p-values were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects, but not exactly. For the effect estimates to match the true effects even better, we would need even more data (tens of thousands of patients). But I think it was quite acceptable.</p>
 </section>
-<section id="wide-data" class="level2">
-<h2 class="anchored" data-anchor-id="wide-data">Wide data</h2>
+<section id="wide-data" class="level3">
+<h3 class="anchored" data-anchor-id="wide-data">Wide data</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -606,8 +606,8 @@ window.Quarto = {
 <p>With this step, we have left the realm of science facts and entered the realm of science fiction. The results above show voodoo statistics with statistically significant results for the variables that are pure noise (except <span class="math inline">\(x_1\)</span>). The model explained 28% of the variance (adj. <span class="math inline">\(R^2\)</span>).</p>
 <p>I think I tortured the data too much. Surely, a journal would publish such statistically significant results!</p>
 </section>
-<section id="so-what" class="level2">
-<h2 class="anchored" data-anchor-id="so-what">So what?</h2>
+<section id="so-what" class="level3">
+<h3 class="anchored" data-anchor-id="so-what">So what?</h3>
 <p>So what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant “truths” in the data when trying too many different things (the garden of forking paths).</p>
 <p>You may object that the simulations I made were too pessimistic. Yes, but we often don’t know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).</p>
 <p>The process of how the result was obtained is much more important than the result itself.</p>

@@ -255,8 +255,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </blockquote>
 <p>I would say it slightly differently. The vast majority of data analysis is performed by people who are not properly trained. Therefore, p-values are indeed used poorly as a consequence.</p>
 <p>The poor understanding and misuse of p-values caused the American Statistical Association (ASA) to release a statement in 2016 <span class="citation" data-cites="Wasserstein2016-nu">[<a href="#ref-Wasserstein2016-nu" role="doc-biblioref">1</a>]</span>. The ASA argued that the p-values are commonly misinterpreted. Many researchers believe a low p-value is some form of insurance that the result or study is credible and worth publishing. A scientific result is worth publishing when the study was well planned, designed, conducted, and reported. A study protocol with a statistical analysis plan can help with this. The p-value in itself does not matter at all. In a perfect world, we see mostly high-quality studies with both low and high p-values. The opposite is true; there are too many low-quality studies, and too many studies report exclusively low p-values.</p>
-<section id="what-does-the-p-value-actually-mean" class="level1">
-<h1>What does the p-value actually mean?</h1>
+<section id="what-does-the-p-value-actually-mean" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-the-p-value-actually-mean">What does the p-value actually mean?</h2>
 <p>The p-value is a measure of how compatible the data are with a specified model. This model is under the null hypothesis, which often says that there is no difference between two groups or there is an absence of a relationship between a variable and an outcome. The smaller the p-value, the greater this incompatibility of the data with the null hypothesis. Thus, a small p-value may then provide evidence against the null hypothesis.</p>
 <p>Here is how the ASA explained the p-value:</p>
 <blockquote class="blockquote">
@@ -264,8 +264,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </blockquote>
 <p>In other words, it is a probability statement about the data and not about the truth of a hypothesis. The most common misunderstanding is that a p-value of 0.012 reflects a 1.2% probability that the null hypothesis is true or that the data were produced by coincidence. These interpretations are not correct. Most researchers may not be aware that the commonly used alpha level of 5% is absolutely no guarantee that the result is not a fluke. In fact, p-values, the alleged gold standard of statistical validity, are not as reliable as many researchers believe <span class="citation" data-cites="Nuzzo2014-wf">[<a href="#ref-Nuzzo2014-wf" role="doc-biblioref">2</a>]</span>.</p>
 </section>
-<section id="a-lot-of-science-may-be-wrong" class="level1">
-<h1>A lot of science may be wrong</h1>
+<section id="a-lot-of-science-may-be-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="a-lot-of-science-may-be-wrong">A lot of science may be wrong</h2>
 <p>When looking at the body of, for example, medical research, I wonder, how many results are really true? How many results are not? Unfortunately, the answer may not be very amusing <span class="citation" data-cites="Altman1994-vw Ioannidis2005-pn Colquhoun2014-hb">[<a href="#ref-Altman1994-vw" role="doc-biblioref">3</a>–<a href="#ref-Colquhoun2014-hb" role="doc-biblioref">5</a>]</span>.</p>
 <p>To get an approximate answer for a specific situation, I considered 1,000 studies; each was well-designed and conducted. I assumed the widely used alpha level was 5%, meaning that in 5 of 100 studies where there was no effect, I found a positive result. This is known as the type I error. Furthermore, I assumed all the studies had a statistical power of 80%. Thus, among the studies where there really was a true effect, I would find it in 80 of 100 studies. Consequently, in 20 out of 100 studies, however, I would miss the true result. These were the false negatives, also known as the type II error. My last assumption was about the question, how many hypotheses were really true? I assumed a study area where a good number of hypotheses turned out to be true, say, 3 in 10.</p>
 <p>Imagine 1,000 hypotheses under investigation, where 3 in 10 were true. Thus, 300 were true, and 700 were false. Of the 700 false hypotheses, I found 5% to be falsely positive, which was 35. From the 300 true hypotheses, I found a positive result in 80% of the cases, which were 240. Altogether, I saw 35 and 240 results as positive results; however, 35 were false, which was 13%.</p>
@@ -277,8 +277,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <p>A brain tumor may be possible but very unlikely. So are the results of many scientific discoveries.</p>
 <p><em>The title of this post is a song by Cindy Lauper. The preview image of this post is a photo by Drew Beamer on Unsplash.</em></p>
 </section>
-<section id="just-one-more-thing" class="level1">
-<h1>Just one more thing</h1>
+<section id="just-one-more-thing" class="level2">
+<h2 class="anchored" data-anchor-id="just-one-more-thing">Just one more thing</h2>
 <p>Below, I used some plots to illustrate that p-values are not as reliable as many researchers believe. In these plots, each square was a hypothesis that was either true or false. Each hypothesis was tested by a study. Based on some assumptions about the proportions of true hypotheses, the alpha level, and the statistical power, I determined how likely a scientific result may be. This approach was strongly inspired by an article and video by the Economist <span class="citation" data-cites="P-T-W2013-za">[<a href="#ref-P-T-W2013-za" role="doc-biblioref">7</a>]</span>.</p>
 <div class="cell">
 <details class="code-fold">
@@ -404,8 +404,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </div>
 </div>
 <p>In such a scenario, there were 50 positive results (green) and 90 false positive results (light green). Thus, 64% of all positive results were wrong. That was more than half of all the studies.</p>
-<section id="so-what" class="level2">
-<h2 class="anchored" data-anchor-id="so-what">So what?</h2>
+<section id="so-what" class="level3">
+<h3 class="anchored" data-anchor-id="so-what">So what?</h3>
 <p>Many research results may be wrong. Only trust studies that were well designed, conducted, analyzed, and reported. Don’t take the p-value as a measure of credibility or importance of a result. By the way, the reader can use the function <code>true_colors()</code> to try out different scenarios.</p>
 
 

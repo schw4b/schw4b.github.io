@@ -31,7 +31,7 @@ Well, I do.
 
 > we continuously increased the number of animals until statistical significance was reached to support our conclusions. ---p. 12, the small print
 
-# Peeping Tom
+## Peeping Tom
 
 During my time at the University of Warwick in Coventry, I learned about the [legend of "Peeping Tom."](https://en.wikipedia.org/wiki/Lady_Godiva#Peeping_Tom) In my version, however, Peeping Tom was a scientist obsessed with observing the p-value. The scientist would always take a glimpse at that darn p-value and how it changed over the course of the experiment as more data was added. In the end, the scientist was struck blind---end of the story.
 
@@ -43,7 +43,7 @@ In the *Seven Sins* in statistical significance testing [@Held2020-yx], the prac
 
 The solution to this problem is simple. It can be avoided by not analyzing the data until the study is completed and the planned sample size is reached. But I'm not sure that sample size is often planned in animal research.
 
-# Seven mice
+## Seven mice
 
 In 2017, I applied for a grant for a neuroscience project that would analyze a large dataset of thousands of magnetic resonance imaging (MRI) scans. I was shortlisted for the second round, and after my presentation, a member of the committee asked me why I would not do my own MRI experiment to collect my own data. I replied that I did not want to do another N = 30 MRI study. The person replied that there were studies published in the journal *Nature* with only 7 mice. I had to laugh because I thought it was a joke, but nobody else was laughing.
 
@@ -57,7 +57,7 @@ If a result cannot be repeated, what is it worth?
 
 Reproducible animal studies require transparent reporting. The ARRIVE (Animal Research: Reporting of In Vivo Experiments) guidelines were initially developed in 2010 to improve the reporting of animal research, and version 2.0 was published in 2020 [@Percie_du_Sert2020-le].
 
-# An exception to the rule
+## An exception to the rule
 
 There are some exceptions where stopping a study early may be justified. But that's a whole different ballgame. Such situations need to be predefined, and adequate statistical methods need to be used in the analysis. In clinical trials there is the term "interim analysis", where an analysis is conducted before the end of the study and data collection. This can be very useful when a treatment is clearly beneficial or harmful compared to the control arm [@Cook2022-dc]. Then, the investigator can stop the study early. However, as I said, this is all very well planned and defined *a priori* in a study protocol and statistical analysis plan.
 
@@ -75,7 +75,7 @@ Then all those mice would have been wasted.
 
 *The title of this post is a song by R.E.M.; the preview image of this post is a photo by Karsten Winegeart on Unsplash.*
 
-# Just one more thing
+## Just one more thing
 
 ```{r}
 #| code-fold: true
@@ -202,6 +202,6 @@ Two case studies from the `r FP` positive findings that were statistically signi
 
 The truth was that there was nothing there.
 
-## So what?
+### So what?
 
 First, a p-value from repeated inspection of data is nothing more than a fluke of the universe. Don't trust it. Second,  *Nature Communications* might consider involving expert statisticians in the evaluation of a study. After all, their article processing fee is 6790 US dollars.

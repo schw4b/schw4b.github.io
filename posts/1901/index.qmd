@@ -25,7 +25,7 @@ After six months, I could take a lot of stuff home. I worked on a large project 
 
 During my internship, I bought an IBM ThinkCentre S50. On this machine, I learned programming, completed my software engineering classes, and wrote my first computer program in Java.
 
-# Computer age
+## Computer age
 
 It was 2024, a rainy day in October. I went to the basement to get rid of old stuff. I found my old IBM ThinkCentre S50 from 2004. It was still there.
 
@@ -63,7 +63,7 @@ I wondered why I only had 3GB of memory available, even though I installed 4GB. 
 
 Well, that was a shame, but okay, at least there was nothing wrong on my side.
 
-# Tweaks and software installation
+## Tweaks and software installation
 
 I made two tweaks to the Lubunu installation. First, I wanted to see the boot messages during startup instead of the Lubuntu logo. 
 
@@ -112,7 +112,7 @@ Finally, I installed Quarto.
 sudo dpkg -i quarto-1.5.57-linux-amd64.deb
 ```
 
-# A phoenix?
+## A phoenix?
 
 I logged into my new system and started RStudio (Figure 2). The computer took 1 minute and 2 seconds to boot, and RStudio took about 22 seconds to load. Since I rendered the documents from the command line using `quarto preview`, I could have just used a lightweight editor.
 
@@ -127,7 +127,7 @@ The machine obtained a new life, and that was because Linux is awesome. Did I al
 
 *The title of this post is a song by Phoneix; the preview image of this post is a photo by Denny Müller on Unsplash.*
 
-# Just one more thing
+## Just one more thing
 
 I performed a statistical analysis of the Titanic data with the 20-year-old IBM computer. I used the `TitanicSurvival` data set from the `carData` package. I also used `rms` and my package `swt` because I wrote my own tidy functions to display regression results.
 
@@ -181,7 +181,7 @@ swt::tidy_rmsfit(fit)
 
 The most relevant factors were sex and passenger class. The odds for a female to survive were about 12.1 times higher compared to a male. The odds for a 1st class passenger to survive were about 9.7 times higher, and for a 2nd class passenger, about 2.8 times higher compared to a 3rd class passenger. Age also had an effect; the older the person, the less likely they survived. For example, the odds for a 39-year-old person to survive were only about 0.5 times compared to a younger 21-year-old.
 
-## So what?
+### So what?
 
 If you were male, 3rd class, or old, you were more likely to die in the Titanic incident. However, this was only a quick showcase rather than an in-depth analysis of the Titanic data, and the large amount of missing data was not ideal. But I wanted to say something else.
 

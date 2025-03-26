@@ -31,7 +31,7 @@ It sounds absurd, but data is largely overvalued these days, and statistics is l
 
 ![*Science* magazine front cover from 11. February 2011.](science.2011.331.issue-6018.largecover.jpg){width=55%}
 
-# Big data
+## Big data
 
 Another example of the glorification of data is the term *Big Data*.
 
@@ -49,7 +49,7 @@ Excessive analytic attempts generate phantom degrees of freedom [@Harrell2015-pf
 
 ![Garden of Forking Paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)](victor-_qXjdWm8YEo-unsplash.jpg){width=50%}
 
-# Brave new tools
+## Brave new tools
 
 Statistics summarize data into eatable bites. However, statistical data analysis is not something that can be prepared quickly and easily like a microwave-ready meal. It requires specialist work. And yes, mistakes can be made in this process [@Schwab2021-ui]. Why can't AI do all the difficult work for us?
 
@@ -65,7 +65,7 @@ Ironically, the tool has the same name as an assassinated Roman emperor. This is
 
 Maybe, just maybe, AI will be terrible at being a personal statistical assistant. Maybe AI is much better at misusing statistics. It may be the perfect p-hacking machine. AI is misused in many ways to produce fake images, fake texts, fake human voices, and fake videos. Why not fake statistics? AI confuses the real with the unreal, and why can't this also be applied to scientific data? The perfect tool for data fabrication in the future. Or, as Cathy O'Neil said, a new weapon of *math* destruction [@ONeil2016-ux]. AI will do more harm than good, and in the future, we will need more people like Elisabeth Bik, who can spot fake research [@Shen2020-ar].
 
-# What lies ahead of us?
+## What lies ahead of us?
 
 Nowadays, AI and machine learning are heavily promoted to "revolutionize healthcare"; this seems an overhyped claim given the notorious overfitting of data in the field [@Volovici2022-qn]. To be fair, it is not just AI that baffles me. Recently, 246 biologists obtained different results from the same data [@Oza2023-ek] or the latest blunder in functional MRI research [@Prillaman2024-nu]. This all demonstrates that we researchers seem to learn a lot from the noise in the data.
 
@@ -75,7 +75,7 @@ A world of fake plastic trees?
 
 *The title of this post is a song by Radiohead. The preview image of this post is a photo by Frames For Your Heart on Unsplash.*
 
-# Just one more thing
+## Just one more thing
 
 I performed a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.
 
@@ -106,7 +106,7 @@ tidy_lm <- function(fit) {
 }
 ```
 
-## Long data
+### Long data
 
 ```{r}
 #| eval: true
@@ -140,7 +140,7 @@ The p-values for the first three variables were statistically significant. This 
 
 Much more interesting than the p-values were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects, but not exactly. For the effect estimates to match the true effects even better, we would need even more data (tens of thousands of patients). But I think it was quite acceptable.
 
-## Wide data
+### Wide data
 
 ```{r}
 #| eval: true
@@ -215,7 +215,7 @@ With this step, we have left the realm of science facts and entered the realm of
 
 I think I tortured the data too much. Surely, a journal would publish such statistically significant results!
 
-## So what?
+### So what?
 
 So what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant "truths" in the data when trying too many different things (the garden of forking paths).
 

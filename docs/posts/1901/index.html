@@ -252,8 +252,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <p>Since IBM loved Linux, too, I wanted to work for IBM. I applied for an internship and was eventually accepted. As I already started University, I had to take a break from my studies. Before I realized it, I was an intern at the data center of IBM Switzerland.</p>
 <p>After six months, I could take a lot of stuff home. I worked on a large project for the first time. I reported to a manager and had deliverables, and I taught myself the command language <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> from reading Newham &amp; Rosenblatt <span class="citation" data-cites="Newham2005-nn">[<a href="#ref-Newham2005-nn" role="doc-biblioref">1</a>]</span>. The things I learned back then still largely influence my daily interactions with computers today, which is by using a Unix type of shell program.</p>
 <p>During my internship, I bought an IBM ThinkCentre S50. On this machine, I learned programming, completed my software engineering classes, and wrote my first computer program in Java.</p>
-<section id="computer-age" class="level1">
-<h1>Computer age</h1>
+<section id="computer-age" class="level2">
+<h2 class="anchored" data-anchor-id="computer-age">Computer age</h2>
 <p>It was 2024, a rainy day in October. I went to the basement to get rid of old stuff. I found my old IBM ThinkCentre S50 from 2004. It was still there.</p>
 <p>What could you do with a 20-year-old computer in 2024? Not much, I guessed. The plan was to install a lightweight Linux distribution and the latest R, RStudio, and Quarto.</p>
 <p>I also found a M52 in my basement, which was a slightly newer model from 2005. The two models, the S50 and the M52, were very similar; in fact, both had a Pentium 4 3.0 GHz processor and 1GB of memory. However, the S50 was the Intel Northwood architecture (32-bit), while the M52 was the Prescott architecture (64-bit). I didn’t want to install a 32-bit (i386) operating system. Major Linux distributions have dropped i386 support, for example, Ubuntu in 2019.</p>
@@ -324,8 +324,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </blockquote>
 <p>Well, that was a shame, but okay, at least there was nothing wrong on my side.</p>
 </section>
-<section id="tweaks-and-software-installation" class="level1">
-<h1>Tweaks and software installation</h1>
+<section id="tweaks-and-software-installation" class="level2">
+<h2 class="anchored" data-anchor-id="tweaks-and-software-installation">Tweaks and software installation</h2>
 <p>I made two tweaks to the Lubunu installation. First, I wanted to see the boot messages during startup instead of the Lubuntu logo.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vim /etc/default/grub</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># GRUB_CMDLINE_LINUX_DEFAULT='quiet splash'</span></span>
@@ -349,8 +349,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <p>Finally, I installed Quarto.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode .bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> quarto-1.5.57-linux-amd64.deb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="a-phoenix" class="level1">
-<h1>A phoenix?</h1>
+<section id="a-phoenix" class="level2">
+<h2 class="anchored" data-anchor-id="a-phoenix">A phoenix?</h2>
 <p>I logged into my new system and started RStudio (Figure 2). The computer took 1 minute and 2 seconds to boot, and RStudio took about 22 seconds to load. Since I rendered the documents from the command line using <code>quarto preview</code>, I could have just used a lightweight editor.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -365,8 +365,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <p>The machine obtained a new life, and that was because Linux is awesome. Did I already mention that I wrote this blog post, including all the computations and statistical analyses, on this old IBM computer described here?</p>
 <p><em>The title of this post is a song by Phoneix; the preview image of this post is a photo by Denny Müller on Unsplash.</em></p>
 </section>
-<section id="just-one-more-thing" class="level1">
-<h1>Just one more thing</h1>
+<section id="just-one-more-thing" class="level2">
+<h2 class="anchored" data-anchor-id="just-one-more-thing">Just one more thing</h2>
 <p>I performed a statistical analysis of the Titanic data with the 20-year-old IBM computer. I used the <code>TitanicSurvival</code> data set from the <code>carData</code> package. I also used <code>rms</code> and my package <code>swt</code> because I wrote my own tidy functions to display regression results.</p>
 <div class="cell">
 <details class="code-fold">
@@ -565,8 +565,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </div>
 </div>
 <p>The most relevant factors were sex and passenger class. The odds for a female to survive were about 12.1 times higher compared to a male. The odds for a 1st class passenger to survive were about 9.7 times higher, and for a 2nd class passenger, about 2.8 times higher compared to a 3rd class passenger. Age also had an effect; the older the person, the less likely they survived. For example, the odds for a 39-year-old person to survive were only about 0.5 times compared to a younger 21-year-old.</p>
-<section id="so-what" class="level2">
-<h2 class="anchored" data-anchor-id="so-what">So what?</h2>
+<section id="so-what" class="level3">
+<h3 class="anchored" data-anchor-id="so-what">So what?</h3>
 <p>If you were male, 3rd class, or old, you were more likely to die in the Titanic incident. However, this was only a quick showcase rather than an in-depth analysis of the Titanic data, and the large amount of missing data was not ideal. But I wanted to say something else.</p>
 <p>I wanted to say, don’t throw away old computers. They can still be fun.</p>
 

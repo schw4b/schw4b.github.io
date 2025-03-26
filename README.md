@@ -9,3 +9,11 @@ January 2023, Simon Schwab.
 ```
 make build
 ```
+
+### Bugs
+
+Use Windows command line `cmd` to render emdashes in Tables of post 1901 correctly.
+
+```
+quarto preview posts/1901/index.qmd
+```

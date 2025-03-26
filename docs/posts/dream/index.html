@@ -295,16 +295,16 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>we continuously increased the number of animals until statistical significance was reached to support our conclusions. —p.&nbsp;12, the small print</p>
 </blockquote>
-<section id="peeping-tom" class="level1">
-<h1>Peeping Tom</h1>
+<section id="peeping-tom" class="level2">
+<h2 class="anchored" data-anchor-id="peeping-tom">Peeping Tom</h2>
 <p>During my time at the University of Warwick in Coventry, I learned about the <a href="https://en.wikipedia.org/wiki/Lady_Godiva#Peeping_Tom">legend of “Peeping Tom.”</a> In my version, however, Peeping Tom was a scientist obsessed with observing the p-value. The scientist would always take a glimpse at that darn p-value and how it changed over the course of the experiment as more data was added. In the end, the scientist was struck blind—end of the story.</p>
 <p>Looking at the data again and again (and again) as more data are added and a statistical test is run each time, it is essentially a multiple-testing situation that would require some form of adjustment of the p-value. The reason is that this (bad) research practice considerably increases the chance that a statistically significant finding is a fluke.</p>
 <p>Moreover, the study authors failed to report the non-significant results from all the statistical tests they conducted. They continued testing until they found a significant result, which they then reported. This selective reporting, based on the significance of the test, skews the interpretation of their findings. Despite the ongoing debate about when to adjust p-values, the situation here clearly calls for a “haircut” to their p-values <span class="citation" data-cites="Boulesteix2024-kg">[<a href="#ref-Boulesteix2024-kg" role="doc-biblioref">3</a>]</span>.</p>
 <p>In the <em>Seven Sins</em> in statistical significance testing <span class="citation" data-cites="Held2020-yx">[<a href="#ref-Held2020-yx" role="doc-biblioref">4</a>]</span>, the practice of repeatedly looking at the p-value is described as the sin number three, the <em>repeated inspection of data</em>.</p>
 <p>The solution to this problem is simple. It can be avoided by not analyzing the data until the study is completed and the planned sample size is reached. But I’m not sure that sample size is often planned in animal research.</p>
 </section>
-<section id="seven-mice" class="level1">
-<h1>Seven mice</h1>
+<section id="seven-mice" class="level2">
+<h2 class="anchored" data-anchor-id="seven-mice">Seven mice</h2>
 <p>In 2017, I applied for a grant for a neuroscience project that would analyze a large dataset of thousands of magnetic resonance imaging (MRI) scans. I was shortlisted for the second round, and after my presentation, a member of the committee asked me why I would not do my own MRI experiment to collect my own data. I replied that I did not want to do another N = 30 MRI study. The person replied that there were studies published in the journal <em>Nature</em> with only 7 mice. I had to laugh because I thought it was a joke, but nobody else was laughing.</p>
 <p>Well, here we are, years later, thinking more deeply about this. In the present study, the sample size was not 7 mice. It was 12 mice, to be fair.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -317,8 +317,8 @@ window.Quarto = {
 <p>If a result cannot be repeated, what is it worth?</p>
 <p>Reproducible animal studies require transparent reporting. The ARRIVE (Animal Research: Reporting of In Vivo Experiments) guidelines were initially developed in 2010 to improve the reporting of animal research, and version 2.0 was published in 2020 <span class="citation" data-cites="Percie_du_Sert2020-le">[<a href="#ref-Percie_du_Sert2020-le" role="doc-biblioref">9</a>]</span>.</p>
 </section>
-<section id="an-exception-to-the-rule" class="level1">
-<h1>An exception to the rule</h1>
+<section id="an-exception-to-the-rule" class="level2">
+<h2 class="anchored" data-anchor-id="an-exception-to-the-rule">An exception to the rule</h2>
 <p>There are some exceptions where stopping a study early may be justified. But that’s a whole different ballgame. Such situations need to be predefined, and adequate statistical methods need to be used in the analysis. In clinical trials there is the term “interim analysis”, where an analysis is conducted before the end of the study and data collection. This can be very useful when a treatment is clearly beneficial or harmful compared to the control arm <span class="citation" data-cites="Cook2022-dc">[<a href="#ref-Cook2022-dc" role="doc-biblioref">10</a>]</span>. Then, the investigator can stop the study early. However, as I said, this is all very well planned and defined <em>a priori</em> in a study protocol and statistical analysis plan.</p>
 <p>For example, the Cardiac Arrhythmia Suppression Trial (CAST) was a four-arm trial of three antiarrhythmic drugs versus placebo on the risk of sudden cardiac death <span class="citation" data-cites="Echt1991-mh">[<a href="#ref-Echt1991-mh" role="doc-biblioref">11</a>]</span>. Early in the CAST study, two arms (encainide and flecainide) were stopped because of excess mortality compared with the placebo arm.</p>
 <p>In the present mouse study, however, the authors stopped the experiment because the p-value fell below the magical level of <span class="math inline">\(p \le 0.05\)</span>, which apparently signaled to them that they could publish their results and didn’t need to kill any more mice. If you do enough tests, you will always obtain a p-value less than the magical threshold.</p>
@@ -330,8 +330,8 @@ window.Quarto = {
 <p>Then all those mice would have been wasted.</p>
 <p><em>The title of this post is a song by R.E.M.; the preview image of this post is a photo by Karsten Winegeart on Unsplash.</em></p>
 </section>
-<section id="just-one-more-thing" class="level1">
-<h1>Just one more thing</h1>
+<section id="just-one-more-thing" class="level2">
+<h2 class="anchored" data-anchor-id="just-one-more-thing">Just one more thing</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -454,8 +454,8 @@ window.Quarto = {
 </div>
 <p>Two case studies from the 1637 positive findings that were statistically significant by peeping are shown in Figure 1. Study 1 was statistically significant at the first glimpse, so we could already go home after 10 mice. Brilliant. Study 2 was statistically significant after 25 mice. Looking only at the last p-value, after the 30 mice, then both Study 1 and Study 2 were not statistically significant. This result would be correct since I was the creator of the data and knew the truth behind the data.</p>
 <p>The truth was that there was nothing there.</p>
-<section id="so-what" class="level2">
-<h2 class="anchored" data-anchor-id="so-what">So what?</h2>
+<section id="so-what" class="level3">
+<h3 class="anchored" data-anchor-id="so-what">So what?</h3>
 <p>First, a p-value from repeated inspection of data is nothing more than a fluke of the universe. Don’t trust it. Second, <em>Nature Communications</em> might consider involving expert statisticians in the evaluation of a study. After all, their article processing fee is 6790 US dollars.</p>
 
 
