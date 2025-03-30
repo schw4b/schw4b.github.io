@@ -1,0 +1,250 @@
+---
+title: "Land of confusion"
+draft: false
+description: "Confounding leads to wrong conclusions in medical research. Model-based approaches, like multivariable regression models, offer a more accurate way to account for multiple confounders and estimate true effects. Ultimately, models provide the most reliable framework for understanding complex data and making informed clinical decisions."
+author: "Simon Schwab"
+date: "2025-03-30"
+categories: [Confounding, Statistical modeling, Multivariable models]
+image: "katie-moum-5FHv5nS7yGg-unsplash.jpg"
+citation:
+  issued: 2025
+  type: post-weblog
+  url: https://www.statsyup.org/posts/confusion/
+bibliography: references.bib
+google-scholar: true
+csl: plos.csl 
+---
+
+Have you ever been confused about data and evidence? Frankly, I find myself confused in data many times. The real goal isn't to eliminate confusion entirely but to reduce it and gain some sense of certainty. One such thing that can be truly confusing in medical research is confounding.
+
+But what is confounding? Confounding bias occurs when a third variable is associated with a risk factor (or treatment) and also influences the health outcome, leading to a wrong result. This can either create a false relationship or hide a real one.
+
+I make up an example. Say, doctors have higher cancer rates. The confounding factor may be smoking if doctors tend to smoke more, and smoking causes cancer. So, no, being a doctor per se does not cause cancer at all.
+
+After a literature search, I found two excellent examples from published medical studies where confounding occurred.
+
+In the 1990s, observational studies suggested that hormone replacement therapy (HRT) reduced the risk of cardiovascular disease (CVD) in women [@Dubey2004-dm]. However, this association was most likely false. Subsequent randomized controlled trials and a meta-analysis from 2002 found no evidence that HRT reduced the risk of CVD [@Humphrey2002-oz]. The apparent benefits were likely influenced by confounders such as socioeconomic status and education. Lower socioeconomic status is a strong risk factor for CVD, coronary artery disease, and many other adverse health outcomes. Additionally, women using HRT tend to have higher socioeconomic status, which may partially explain their better outcomes in earlier studies.
+
+A 2016 observational study compared tracheal intubation to bag-valve-mask ventilation during pediatric cardiac arrest [@Andersen2016-pe]. The study found that survival was lower in those children intubated compared with those not intubated. The authors concluded that the study does not support early tracheal intubation for pediatric in-hospital cardiac arrest. However, the study suffered from confounding by indication [@Kyriacou2016-ma]. It was likely that children with a more severe condition and worse overall prognosis had a greater probability of being intubated. Consequently, the treatment group showed a higher risk of death.
+
+The two examples show that confounding can confuse doctors in making the right choice based on solid evidence. Needless to say, this can potentially harm patients.
+
+> Can't you see this is a land of confusion?
+> This is the world we live in. ---Land of confusion (song by Genesis)
+
+![Waterfall by M. C. Escher](wasserfall.jpg){width=50%}
+
+## How can we reduce confounding?
+
+There are several ways to address confounding in medical research. One is study design, including randomized controlled trials (RCTs), which are highly effective and provide strong evidence.
+
+Say, we are interested in the therapeutic effect of hypothermic machine perfusion (HMP) in kidney transplantation. We could perform an RCT and randomize the kidneys into a control group (standard cold storage) and an intervention group (HMP).
+
+However, an RCT is not always possible. For example, if we want to assess the risk of donation after brain death (DBD) versus donation after circulatory death (DCD) kidney transplants, it is not possible to randomly assign kidneys to either group. Similarly, just as we cannot randomly assign individuals to be smokers or non-smokers, certain real-world conditions make randomization impossible.
+
+There are also other approaches to tackle confounding, including matching and propensity score methods, which pair participants with similar clinical characteristics to reduce confounding [@Thomas2020-uq; @Haukoos2015-bg]. It is important to carefully select the matching variables, choose an appropriate matching method, and perform a diagnostic assessment of the matching process. Additionally, stratified analysis helps control for confounding by analyzing data within specific subgroups.
+
+In the remainder of this post, I will focus on another key approach: multivariable regression modeling. This method allows researchers to account for multiple confounders simultaneously by including them as covariates in a regression model, helping to isolate the true relationship between the exposure and outcome of interest.
+
+## Everything will mislead you except a model
+
+> A model is a lie that helps you see the truth. ---Howard E. Skipper
+
+I'm a big fan of model-based approaches [@Harrell2015-pf; @Gelman2006-tp]. Models provide the most comprehensive description of data. Unlike traditional statistical hypothesis tests, which focus primarily on detecting differences, models emphasize estimation, making results more meaningful for patients and clinicians.
+
+One major advantage of models is their ability to adjust for multiple factors simultaneously, providing more accurate effect estimates. While researchers often focus on multiplicity adjustments for p-values, they rarely apply similar adjustments to effect estimates. Models, however, allow for these adjustments because the effect of interest is fully conditional on covariate values. In other words, model-based methods are much more powerful and reliable than analyzing variables in isolation.
+
+For instance, consider a scenario in kidney transplantation, where we want to assess the impact of the deceased donor's age increasing from 50 to 65 while holding other risk factors constant. A simple subgroup comparison—such as analyzing younger versus older donors doesn't provide a reasonable estimate of this specific effect. A model, however, allows us to quantify the risk associated with this change while controlling for other variables as well.
+
+Models also generalize statistical tests. For example, a *t*-test and ANOVA can be performed using multiple linear regression. Similarly, the Wilcoxon test and Kruskal-Wallis test correspond to a proportional odds model, while the log-rank test is a special case of the Cox proportional hazards model.
+
+Ultimately, a model-based approach is the most accurate description of your data. However, it cannot definitively establish causality without careful attention to the research question, causal estimand, study design, and underlying assumptions [@Dahabreh2024-dw].
+
+In the end, you have the choice: get confused by analyzing variables individually or let a statistical model confuse you all at once. 
+
+*The title of this post is a song by Genesis; the preview image of this post is a photo by Katie Moum on Unsplash.*
+
+## Just one more thing
+
+I performed a simulation study with an example from the heart transplant waiting list. Again, this is not real data; I made this up. All data were generated from the following assumptions.
+
+* I generated data for 2,000 patients
+* 25% were female (500 patients) and 75% were male (1500 patients)
+* Females had an average weight of 65 kg with a standard deviation of 10 kg
+* Males had an average weight of 80 kg with a standard deviation of 10 kg
+
+```{r}
+#| eval: true
+#| code-fold: true
+#| message: false
+
+set.seed(2025)
+
+# Install the swt package
+# remotes::install_github("Swisstransplant/swt")
+library(swt)
+library(rms)
+library(ggplot2)
+
+N = 2000
+n1 = 0.25*N # female 
+n2 = 0.75*N # male
+
+heart = data.frame(weight = rep(NA, N),
+                   sex = c(rep("female", n1), rep("male", n2))
+)
+
+heart$weight[heart$sex == "female"] = rnorm(n1, mean = 65, sd = 10)
+heart$weight[heart$sex == "male"] = rnorm(n2, mean = 80, sd = 10)
+```
+
+Next, I generated the probabilities for a heart transplant as an inverse function of body weight. As body weight increases, the likelihood of receiving a matching heart transplant decreases. Research supports this inverse relationship between body weight and transplant probability: larger individuals require greater cardiac output, and a smaller donor heart may struggle to meet these demands, potentially leading to poor circulation and organ failure [@Chouairi2021-bk].
+
+I sampled from a binomial distribution to determine whether each patient received a transplant or not based on their individual probability. In my simulation, the probability of a transplant depended solely on body weight and not on sex. Precisely, the probability was constant at 0.80 until 65 kg; then it decreased as a quadratic function.
+
+```{r}
+#| eval: true
+#| code-fold: true
+
+# function with constant prob until 65, then declines
+prob_fun <- function(x) {
+  prob = ifelse(x <= 65, 0.8, 0.8 - (x - 65)^2 / 2200)
+  return(pmax(prob, 0))  
+}
+
+heart$P = sapply(heart$weight, FUN = prob_fun)
+heart$P = heart$P + rnorm(N, 0, sd = 0.1) # add some noise
+heart$P[heart$P > 1] = 1 # truncate probabilities
+heart$P[heart$P < 0] = 0
+
+heart$event = rbinom(N, size = 1, prob = heart$P)
+heart$event = heart$event == 1 # binary conversion
+```
+
+The simulated data for 10 randomly picked patients are shown in Table 1. Figure 1 and Table 2 display descriptives of the data.
+
+```{r}
+#| eval: true
+#| code-fold: true
+#| tbl-cap: "Table 1: Data from seven randomly picked patients. P is the probability of a heart transplant as a function of body weight; the event is a binary variable indicating whether a patient received a heart transplant."
+
+set.seed(1986)
+idx = sample(nrow(heart), 7)
+heart[idx,]
+```
+
+```{r}
+#| fig-height: 2.8
+#| fig-width: 7
+#| code-fold: true
+#| fig-cap: "Figure 1: Distribution of body weight, transplant probabilities, and their relationship."
+
+par(mfrow = c(1, 3))
+
+hist(heart$weight, ylab = "Count", xlab = "Body weight (kg)", col = "#818C70", main=NULL, 
+     cex.lab = 1.3, cex.axis = 1.3)
+hist(heart$P, ylab = "Count", xlab = "Transplant probability", col = "#BF505A", main=NULL,
+     cex.lab = 1.3, cex.axis = 1.3)
+#plot(heart$weight, sapply(heart$weight, FUN = prob_fun))
+plot(heart$weight, heart$P,
+     xlab = "Body weight (kg)", ylab = "Transplant probability", col = "#6F87A6",
+     cex.lab = 1.3, cex.axis = 1.3)
+```
+
+```{r}
+#| eval: true
+#| code-fold: true
+#| tbl-cap: "Table 2: Descriptives."
+
+tab = data.frame(N = nrow(heart),
+                 weight = swt::mean_sd(heart$weight),
+                 transplant = swt::freq_perc(heart$event)
+)
+
+heart.males   = subset(heart, subset = sex == "male")
+heart.females = subset(heart, subset = sex == "female")
+
+tab.m = data.frame(N = nrow(heart.males),
+                   weight = swt::mean_sd(heart.males$weight),
+                   transplant = swt::freq_perc(heart.males$event)
+)
+
+tab.f = data.frame(N = nrow(heart.females),
+                   weight = swt::mean_sd(heart.females$weight),
+                   transplant = swt::freq_perc(heart.females$event)
+)
+
+tab = rbind(tab, tab.f, tab.m)
+
+tab = as.data.frame(t(tab))
+colnames(tab) = c("Overall", "Female", "Male")
+rownames(tab) = c("Sample size N", "Body weight in kg, mean (SD)",
+                  "Transplant, count (%)")
+tab
+```
+
+As expected, females had an average weight of approximately 65 kg; males around 80 kg. Among females, about 77% received a transplant, compared to 66% of males.
+
+### Testing is futile
+
+I tested whether sex was independent of a heart transplant using Pearson's $\chi^2$-test for count data. I knew this was a bad idea, but since it is common in medical research, doing it one more time didn't hurt.
+
+```{r}
+#| eval: true
+#| code-fold: true
+#| tbl-cap: "Table 3: Contingency table with counts (%) showing the relationship between sex and heart transplant status."
+
+M = table(heart$event, heart$sex)
+nontpx.fmt = sprintf("%d (%.1f)", M[1,], M[1,]/marginSums(M, margin = 2)*100)
+tpx.fmt    = sprintf("%d (%.1f)", M[2,], M[2,]/marginSums(M, margin = 2)*100)
+tab.fmt = rbind(nontpx.fmt, tpx.fmt)
+tab = as.data.frame(tab.fmt)
+rownames(tab) = c("no transplant", "transplant")
+colnames(tab) = c("female", "male")
+tab
+```
+```{r}
+#| eval: true
+#| code-fold: true
+#| output: false
+
+stats = chisq.test(M, correct = FALSE)
+```
+
+I found that more females received a transplant than expected (`r stats$observed[2,1]` versus `r round(stats$expected[2,1], digits = 1)`), while fewer males received a transplant than expected (`r stats$observed[2,2]` versus `r round(stats$expected[2,2], digits = 1)`). This provided strong evidence that sex was related to receiving a heart transplant (*p* `r swt::tidy_pvalues(stats$p.value, compact = TRUE)`).
+
+But what was the issue? This simple analysis failed to capture the whole picture. Weight was related to both sex and the likelihood of receiving a heart transplant. Females typically have lower body weight, and heavier individuals are less likely to receive a heart transplant. Therefore, the weight acts as a confounder. If I were unaware of weight, I might incorrectly conclude that being female increases the likelihood of receiving a heart transplant. However, this was not the case and would only mislead us, as a heavy female would have a low chance of a transplant, while a lightweight male would have a higher chance.
+
+### It's a bird, it's a plane, it's a model!
+
+Next, I analyzed the data all at once using a logistic regression model. The results are shown in Table 4. Figure 2 shows the relationship between weight and the chance of a heart transplant.
+
+```{r}
+#| eval: true
+#| code-fold: true
+#| tbl-cap: "Table 4: Results from a logistic regression model."
+
+dd = datadist(heart)
+options(datadist='dd')
+
+fit = lrm(event ~ sex + rcs(weight, 3), data = heart)
+swt::tidy_rmsfit(fit)
+```
+
+```{r}
+#| fig-height: 2.5
+#| fig-width: 2.5
+#| code-fold: true
+#| fig-cap: "Figure 2: Partial effect of body weight and the chance of a heart transplant."
+
+av = anova(fit)
+ggplot(Predict(fit, weight), anova = av, colfill = "#6F87A6", adj.subtitle = FALSE) +
+  xlab("Body weight (kg)") +
+  theme_minimal() 
+```
+
+In conclusion, I found that body weight had a strong relationship with the chance of a heart transplant. Increasing weight from 69 kg to 84 kg was associated with roughly a 50% reduction in the chance of a heart transplant. No evidence was found for sex.
+
+###  So what?
+
+A model is often the best description of the data. Regression models are part of university-level statistics courses across life sciences. Thus, there is really no excuse for testing variables individually instead of using a statistical model.

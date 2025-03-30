@@ -12,7 +12,7 @@ make build
 
 ### Bugs
 
-Use Windows command line `cmd` to render emdashes in Tables of post 1901 correctly.
+Use Windows command line `cmd` to render en dashes in Tables of post 1901 correctly.
 
 ```
 quarto preview posts/1901/index.qmd
