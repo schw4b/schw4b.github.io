@@ -2,7 +2,7 @@ Palette 1
 #241C26 (dark)
 #6F87A6 (blue)
 #818C70 (green)
-#F2F1E9 (white)
+#F2F1E9 (beige)
 #D9A282 (tan)
 
 Palette 2

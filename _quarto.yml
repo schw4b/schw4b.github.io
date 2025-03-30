@@ -11,8 +11,8 @@ website:
   favicon: images/logo-96.png
   navbar:
     title: false
-    logo: "images/logo.png"
-    logo-alt: "A statistics chart as logo."
+    logo: "images/statsyup-beige.png"
+    logo-alt: "A donut chart as logo."
     left:
       - href: index.qmd
         text: Bio

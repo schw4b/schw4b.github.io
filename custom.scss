@@ -1,6 +1,7 @@
 /*-- scss:defaults --*/
+
 $navbar-bg: #6F87A6;
-$navbar-fg: white;
+$navbar-fg: #F2F1E9;
 $navbar-hl: #241C26;
 
 $link-color: #818C70;
@@ -8,10 +9,18 @@ $link-color: #818C70;
 $footer-bg: #6F87A6;
 
 /*-- scss:rules --*/
+
 h1, h2, h3, h4, h5, h6 {
   color: #241C26;
 }
 
 body {
   font-size: 18px;
+}
+
+/* logo size and padding */
+.navbar-logo { 
+  max-height: 45px;
+  width: auto;
+  padding-right: 24px;
 }
