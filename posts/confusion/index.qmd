@@ -187,7 +187,7 @@ As expected, females had an average weight of approximately 65 kg; males around 
 
 ### Testing is futile
 
-I tested whether sex was independent of a heart transplant using Pearson's $\chi^2$-test for count data. I knew this was a bad idea, but since it is common in medical research, doing it one more time didn't hurt.
+I tested whether sex was independent of a heart transplant using Pearson's $\chi^2$-test for count data. I knew this was a bad idea, but since looking at variables individually is common in medical research, doing it one more time didn't hurt.
 
 ```{r}
 #| eval: true
