@@ -12,7 +12,7 @@ website:
   navbar:
     title: false
     logo: "images/statsyup-beige.png"
-    logo-alt: "A donut chart as logo."
+    logo-alt: "A donut chart with Statistics, yup! positioned to its right."
     left:
       - href: index.qmd
         text: Bio
