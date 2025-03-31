@@ -15,7 +15,12 @@ google-scholar: true
 csl: plos.csl 
 ---
 
-Have you ever been confused about data and evidence? Frankly, I find myself confused in data many times. The real goal isn't to eliminate confusion entirely but to reduce it and gain some sense of certainty. One such thing that can be truly confusing in medical research is confounding.
+Have you ever been confused about data and evidence? Frankly, I find myself confused in data many times. The real goal isn't to eliminate confusion entirely but to reduce it and gain some sense of certainty.
+
+> Can't you see this is a land of confusion?
+> This is the world we live in. ---Land of confusion (song by Genesis)
+
+One such thing that can be truly confusing in medical research is confounding.
 
 But what is confounding? Confounding bias occurs when a third variable is associated with a risk factor (or treatment) and also influences the health outcome, leading to a wrong result. This can either create a false relationship or hide a real one.
 
@@ -28,9 +33,6 @@ In the 1990s, observational studies suggested that hormone replacement therapy (
 A 2016 observational study compared tracheal intubation to bag-valve-mask ventilation during pediatric cardiac arrest [@Andersen2016-pe]. The study found that survival was lower in those children intubated compared with those not intubated. The authors concluded that the study does not support early tracheal intubation for pediatric in-hospital cardiac arrest. However, the study suffered from confounding by indication [@Kyriacou2016-ma]. It was likely that children with a more severe condition and worse overall prognosis had a greater probability of being intubated. Consequently, the treatment group showed a higher risk of death.
 
 The two examples show that confounding can confuse doctors in making the right choice based on solid evidence. Needless to say, this can potentially harm patients.
-
-> Can't you see this is a land of confusion?
-> This is the world we live in. ---Land of confusion (song by Genesis)
 
 ![Waterfall by M. C. Escher](wasserfall.jpg){width=50%}
 
