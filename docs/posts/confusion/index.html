@@ -116,6 +116,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -589,11 +592,26 @@ window.Quarto = {
 </details>
 </div>
 <p>I found that more females received a transplant than expected (384 versus 343.5), while fewer males received a transplant than expected (990 versus 1030.5). This provided strong evidence that sex was related to receiving a heart transplant (<em>p</em> &lt; 0.001).</p>
-<p>But what was the issue? This simple analysis failed to capture the whole picture. Weight was related to both sex and the likelihood of receiving a heart transplant. Females typically have lower body weight, and heavier individuals are less likely to receive a heart transplant. Therefore, the weight acts as a confounder. If I were unaware of weight, I might incorrectly conclude that being female increases the likelihood of receiving a heart transplant. However, this was not the case and would only mislead us, as a heavy female would have a low chance of a transplant, while a lightweight male would have a higher chance.</p>
+<p>But what was the issue? This simple analysis failed to capture the whole picture. Weight was related to both sex and the likelihood of receiving a heart transplant (Figure 2). Females typically have lower body weight, and heavier individuals are less likely to receive a heart transplant. Therefore, the body weight acts as a confounder. If I were unaware of body weight, I might incorrectly conclude that being female increases the likelihood of receiving a heart transplant. However, this was not the case and would only mislead us, as a heavy female would have a low chance of a transplant, while a lightweight male would have a higher chance.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A(Sex) --&gt; B(Likelihood of a heart transplant)
+  A &lt;--&gt; C(Body weight)
+  C --&gt; B
+</pre>
+</div>
+<p></p><figcaption> Figure 2: Body weight is a confounder variable as it is associated with sex and also impacts the outcome of a heart transplant.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
 </section>
 <section id="its-a-bird-its-a-plane-its-a-model" class="level3">
 <h3 class="anchored" data-anchor-id="its-a-bird-its-a-plane-its-a-model">It’s a bird, it’s a plane, it’s a model!</h3>
-<p>Next, I analyzed the data all at once using a logistic regression model. The results are shown in Table 4. Figure 2 shows the relationship between weight and the chance of a heart transplant.</p>
+<p>Next, I analyzed the data all at once using a logistic regression model. The results are shown in Table 4. Figure 3 shows the relationship between weight and the chance of a heart transplant.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -682,8 +700,8 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="240"></p>
-<figcaption>Figure 2: Partial effect of body weight and the chance of a heart transplant.</figcaption>
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="240"></p>
+<figcaption>Figure 3: Partial effect of body weight and the chance of a heart transplant.</figcaption>
 </figure>
 </div>
 </div>

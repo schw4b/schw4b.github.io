@@ -215,11 +215,20 @@ stats = chisq.test(M, correct = FALSE)
 
 I found that more females received a transplant than expected (`r stats$observed[2,1]` versus `r round(stats$expected[2,1], digits = 1)`), while fewer males received a transplant than expected (`r stats$observed[2,2]` versus `r round(stats$expected[2,2], digits = 1)`). This provided strong evidence that sex was related to receiving a heart transplant (*p* `r swt::tidy_pvalues(stats$p.value, compact = TRUE)`).
 
-But what was the issue? This simple analysis failed to capture the whole picture. Weight was related to both sex and the likelihood of receiving a heart transplant. Females typically have lower body weight, and heavier individuals are less likely to receive a heart transplant. Therefore, the weight acts as a confounder. If I were unaware of weight, I might incorrectly conclude that being female increases the likelihood of receiving a heart transplant. However, this was not the case and would only mislead us, as a heavy female would have a low chance of a transplant, while a lightweight male would have a higher chance.
+But what was the issue? This simple analysis failed to capture the whole picture. Weight was related to both sex and the likelihood of receiving a heart transplant (Figure 2). Females typically have lower body weight, and heavier individuals are less likely to receive a heart transplant. Therefore, the body weight acts as a confounder. If I were unaware of body weight, I might incorrectly conclude that being female increases the likelihood of receiving a heart transplant. However, this was not the case and would only mislead us, as a heavy female would have a low chance of a transplant, while a lightweight male would have a higher chance.
+
+```{mermaid}
+%%| fig-cap: "Figure 2: Body weight is a confounder variable as it is associated with sex and also impacts the outcome of a heart transplant."
+
+flowchart LR
+  A(Sex) --> B(Likelihood of a heart transplant)
+  A <--> C(Body weight)
+  C --> B
+```
 
 ### It's a bird, it's a plane, it's a model!
 
-Next, I analyzed the data all at once using a logistic regression model. The results are shown in Table 4. Figure 2 shows the relationship between weight and the chance of a heart transplant.
+Next, I analyzed the data all at once using a logistic regression model. The results are shown in Table 4. Figure 3 shows the relationship between weight and the chance of a heart transplant.
 
 ```{r}
 #| eval: true
@@ -237,7 +246,7 @@ swt::tidy_rmsfit(fit)
 #| fig-height: 2.5
 #| fig-width: 2.5
 #| code-fold: true
-#| fig-cap: "Figure 2: Partial effect of body weight and the chance of a heart transplant."
+#| fig-cap: "Figure 3: Partial effect of body weight and the chance of a heart transplant."
 
 av = anova(fit)
 ggplot(Predict(fit, weight), anova = av, colfill = "#6F87A6", adj.subtitle = FALSE) +
