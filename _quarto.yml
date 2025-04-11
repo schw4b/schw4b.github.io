@@ -11,7 +11,7 @@ website:
   favicon: images/logo-96.png
   navbar:
     title: false
-    logo: "images/statsyup-beige.png"
+    logo: "images/statsyup.png"
     logo-alt: "A donut chart with Statistics, yup! positioned to its right."
     left:
       - href: index.qmd

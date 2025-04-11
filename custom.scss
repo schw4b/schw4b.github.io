@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
 $navbar-bg: #6F87A6;
-$navbar-fg: #F2F1E9;
+$navbar-fg: #241C26;
 $navbar-hl: #241C26;
 
 $link-color: #818C70;
@@ -16,6 +16,21 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-size: 18px;
+}
+
+/* table font size */
+.table {
+  font-size: 85%;
+}
+
+/* table caption left alignment */
+caption, .table-caption {
+  text-align: left;
+}
+
+/* table caption left alignment for tables using {#tbl-1 .striped .hover} */
+figure.quarto-float-tbl figcaption.quarto-float-caption-top {
+  text-align: left;
 }
 
 /* logo size and padding */

@@ -116,7 +116,7 @@
     "href": "posts/1901/index.html#computer-age",
     "title": "1901",
     "section": "Computer age",
-    "text": "Computer age\nIt was 2024, a rainy day in October. I went to the basement to get rid of old stuff. I found my old IBM ThinkCentre S50 from 2004. It was still there.\nWhat could you do with a 20-year-old computer in 2024? Not much, I guessed. The plan was to install a lightweight Linux distribution and the latest R, RStudio, and Quarto.\nI also found a M52 in my basement, which was a slightly newer model from 2005. The two models, the S50 and the M52, were very similar; in fact, both had a Pentium 4 3.0 GHz processor and 1GB of memory. However, the S50 was the Intel Northwood architecture (32-bit), while the M52 was the Prescott architecture (64-bit). I didn’t want to install a 32-bit (i386) operating system. Major Linux distributions have dropped i386 support, for example, Ubuntu in 2019.\nThus, I decided to go for the M52; however, the S50 had a floppy drive. It would be a real shame to make a compromise here. Fortunately, the M52 had a tray for the floppy drive and a connector on the main board. I just had to install the floppy drive and replace the M52 front bezel with the one from the S50 because of the opening for the floppy drive.\nThe result was an M52 with the look of an S50, brilliant; see a photo in Figure 1.\n\n\n\nFigure 1: IBM ThinkCentre M52 with S50 front bezel and floppy drive.\n\n\nI spent a little money to upgrade the machine from 1GB memory to 4GB memory (purchased online; CHF 7.50). I also replaced the hard disk, which was an HDD, with a modern SSD that I had as a spare. Then I installed Lubuntu 24.04 LTS, a lightweight Linux based on Ubuntu, R 4.4.1, and the latest version of RStudio and Quarto.\nI collected some system information using the system() function which called neofetch from within this Quarto Blog post, see Table 1. Exactly, I wrote this blog post using the old IBM computer.\n\n\nCode\ninfo = system(\"neofetch --stdout\", intern = TRUE)\nidx = c(4, 15, 17, 16, 3, 5) # select items to show\ninfo = strsplit(info, \": \")\ntab = do.call(\"rbind\", info[idx])\ntab = as.data.frame(tab)\ncolnames(tab) = c(\"Type\", \"System Information\")\ntab\n\n\nI wondered why I only had 3GB of memory available, even though I installed 4GB. Looking at the technical specifications of the M53, I found the following line:\n\nIf 4GB of physical memory is installed approximately 3GB will be useable by the operating system. This is due to limitations from the address mapping of PCI busses and other system devices.\n\nWell, that was a shame, but okay, at least there was nothing wrong on my side."
+    "text": "Computer age\nIt was 2024, a rainy day in October. I went to the basement to get rid of old stuff. I found my old IBM ThinkCentre S50 from 2004. It was still there.\nWhat could you do with a 20-year-old computer in 2024? Not much, I guessed. The plan was to install a lightweight Linux distribution and the latest R, RStudio, and Quarto.\nI also found a M52 in my basement, which was a slightly newer model from 2005. The two models, the S50 and the M52, were very similar; in fact, both had a Pentium 4 3.0 GHz processor and 1GB of memory. However, the S50 was the Intel Northwood architecture (32-bit), while the M52 was the Prescott architecture (64-bit). I didn’t want to install a 32-bit (i386) operating system. Major Linux distributions have dropped i386 support, for example, Ubuntu in 2019.\nThus, I decided to go for the M52; however, the S50 had a floppy drive. It would be a real shame to make a compromise here. Fortunately, the M52 had a tray for the floppy drive and a connector on the main board. I just had to install the floppy drive and replace the M52 front bezel with the one from the S50 because of the opening for the floppy drive.\nThe result was an M52 with the look of an S50, brilliant; see a photo in Figure 1.\n\n\n\nFigure 1: IBM ThinkCentre M52 with S50 front bezel and floppy drive.\n\n\nI spent a little money to upgrade the machine from 1GB memory to 4GB memory (purchased online; CHF 7.50). I also replaced the hard disk, which was an HDD, with a modern SSD that I had as a spare. Then I installed Lubuntu 24.04 LTS, a lightweight Linux based on Ubuntu, R 4.4.1, and the latest version of RStudio and Quarto.\nI collected some system information using the system() function which called neofetch from within this Quarto Blog post, see Table 1. Exactly, I wrote this blog post using the old IBM computer.\n\n\nCode\ninfo = system(\"neofetch --stdout\", intern = TRUE)\nidx = c(4, 15, 17, 16, 3, 5) # select items to show\ninfo = strsplit(info, \": \")\ntab = do.call(\"rbind\", info[idx])\ntab = as.data.frame(tab)\ncolnames(tab) = c(\"Type\", \"System Information\")\ntab\n\n\n\n\n\nTable 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine.\n\n\n\n\n\nType\nSystem Information\n\n\n\n\nHost\n8215Y6G ThinkCentre M52\n\n\nCPU\nIntel Pentium 4 3.00GHz (2) @ 1.500GHz\n\n\nMemory\n1540MiB / 3222MiB\n\n\nGPU\nNVIDIA GeForce GT 610\n\n\nOS\nLubuntu 24.04.1 LTS x86_64\n\n\nKernel\n6.8.0-48-generic\n\n\n\n\n\n\nI wondered why I only had 3GB of memory available, even though I installed 4GB. Looking at the technical specifications of the M53, I found the following line:\n\nIf 4GB of physical memory is installed approximately 3GB will be useable by the operating system. This is due to limitations from the address mapping of PCI busses and other system devices.\n\nWell, that was a shame, but okay, at least there was nothing wrong on my side."
   },
   {
     "objectID": "posts/1901/index.html#tweaks-and-software-installation",
@@ -144,42 +144,49 @@
     "href": "library.html",
     "title": "Library of medical statistics",
     "section": "",
-    "text": "Below is a curated list of essential books, research papers, guidelines, collections, and online resources that have proven to be highly valuable."
+    "text": "Below is a curated list of essential books, compiliations, guidelines, journal collections, and other online resources that have proven to be highly valuable."
   },
   {
-    "objectID": "library.html#medical-statistics-books",
-    "href": "library.html#medical-statistics-books",
+    "objectID": "library.html#books",
+    "href": "library.html#books",
     "title": "Library of medical statistics",
-    "section": "Medical statistics books",
-    "text": "Medical statistics books\n\nBland M. An Introduction to Medical Statistics. 4th ed. Oxford University Press; 2015.\nChan BKC. Biostatistics for Epidemiology and Public Health Using R. Springer Publishing; 2015.\nDevore J, Peck R. Statistics: The Exploration & Analysis of Data. 7th ed. Cengage Learning; 2010.\nField A, Miles J, Field Z. Discovering Statistics Using R. SAGE Publications; 2012.\nHeld L, Rufibach K, Seifert B. Medizinische Statistik: Konzepte, Methoden, Anwendungen. 1st ed. Pearson; 2013.\nKirkwood BR, Sterne JAC. Essential Medical Statistics. 2nd ed. Blackwell Science; 2003.\nRosner B. Fundamentals of Biostatistics. 7th ed. Cengage Learning; 2010."
-  },
-  {
-    "objectID": "library.html#journal-statistics-collections",
-    "href": "library.html#journal-statistics-collections",
-    "title": "Library of medical statistics",
-    "section": "Journal statistics collections",
-    "text": "Journal statistics collections\n\nBland & Altman Statistics Notes. BMJ. https://www-users.york.ac.uk/~mb55/pubs/pbstnote.htm\nCRS Reproducibilty Notes. Significance. https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html\nEndgames by Philip Sedgwick. BMJ. Pubmed link\nGuide to Statistics and Methods. JAMA. https://jamanetwork.com/collections/44042/jama-guide-to-statistics-and-methods\nStatistics at Square One. BMJ. https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one\nStatistics for Biologists. Nature. https://www.nature.com/collections/qghhqm"
-  },
-  {
-    "objectID": "library.html#software",
-    "href": "library.html#software",
-    "title": "Library of medical statistics",
-    "section": "Software",
-    "text": "Software\n\nThe R Project for Statistical Computing https://stat.ethz.ch/CRAN/\nRStudio Desktop https://posit.co/download/rstudio-desktop/\nQuarto https://quarto.org/docs/download/\nGit version control system https://git-scm.com/downloads\nRTools https://cran.r-project.org/bin/windows/Rtools/"
+    "section": "Books",
+    "text": "Books\n\nGeneral\n\nBland M. An Introduction to Medical Statistics. 4th ed. Oxford University Press; 2015.\nChan BKC. Biostatistics for Epidemiology and Public Health Using R. Springer Publishing; 2015.\nDevore J, Peck R. Statistics: The Exploration & Analysis of Data. 7th ed. Cengage Learning; 2010.\nField A, Miles J, Field Z. Discovering Statistics Using R. SAGE Publications; 2012.\nHeld L, Rufibach K, Seifert B. Medizinische Statistik: Konzepte, Methoden, Anwendungen. 1st ed. Pearson; 2013.\nKirkwood BR, Sterne JAC. Essential Medical Statistics. 2nd ed. Blackwell Science; 2003.\nRosner B. Fundamentals of Biostatistics. 7th ed. Cengage Learning; 2010."
   },
   {
     "objectID": "library.html#compilations",
     "href": "library.html#compilations",
     "title": "Library of medical statistics",
     "section": "Compilations",
-    "text": "Compilations\n\nCatalogue of Bias https://catalogofbias.org/\nEQUATOR Network and reporting guidelines https://www.equator-network.org/"
+    "text": "Compilations\n\nCatalogue of Bias\nEQUATOR Network and reporting guidelines"
   },
   {
     "objectID": "library.html#guidelines",
     "href": "library.html#guidelines",
     "title": "Library of medical statistics",
     "section": "Guidelines",
-    "text": "Guidelines\n\nICMJE Recommendations https://www.icmje.org/recommendations/browse/"
+    "text": "Guidelines\n\nICMJE Recommendations"
+  },
+  {
+    "objectID": "library.html#journal-collections",
+    "href": "library.html#journal-collections",
+    "title": "Library of medical statistics",
+    "section": "Journal collections",
+    "text": "Journal collections\n\nBland & Altman. Statistics Notes. BMJ.\nSchwab & Held. Reproducibilty Notes. Significance.\nSedgwick P. Endgames. BMJ.\nGuide to Statistics and Methods. JAMA.\nStatistics at Square One. BMJ.\nStatistics for Biologists. Nature."
+  },
+  {
+    "objectID": "library.html#podcasts",
+    "href": "library.html#podcasts",
+    "title": "Library of medical statistics",
+    "section": "Podcasts",
+    "text": "Podcasts\n\nThe Effective Statistician\nJAMA Guide to Statistics and Methods"
+  },
+  {
+    "objectID": "library.html#software",
+    "href": "library.html#software",
+    "title": "Library of medical statistics",
+    "section": "Software",
+    "text": "Software\n\nThe R Project for Statistical Computing\nRStudio Desktop\nQuarto\nGit version control system\nRTools"
   },
   {
     "objectID": "about.html",

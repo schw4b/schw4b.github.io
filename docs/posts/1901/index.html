@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
@@ -91,7 +91,7 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5ee13f421439a497b6cf31c59d77bef9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f1cd8af3f1761f80680c86629e25ae88.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -141,7 +141,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../images/statsyup-beige.png" alt="A donut chart with Statistics, yup! positioned to its right." class="navbar-logo">
+    <img src="../../images/statsyup.png" alt="A donut chart with Statistics, yup! positioned to its right." class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -150,31 +150,31 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Bio</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html">
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../output.html">
+    <a class="nav-link" href="../../output.html"> 
 <span class="menu-text">Output</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html">
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Posts</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../library.html">
+    <a class="nav-link" href="../../library.html"> 
 <span class="menu-text">Library</span></a>
-  </li>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
-  </li>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -198,8 +198,8 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
               </div>
                   </div>
   </div>
-
-
+    
+  
   <div class="quarto-title-meta">
 
       <div>
@@ -208,25 +208,25 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
                <p>Simon Schwab </p>
             </div>
     </div>
-
+      
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
         <p class="date">October 20, 2024</p>
       </div>
     </div>
-
-
+    
+      
     </div>
-
-
+    
+  
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
-
+   
   <ul>
   <li><a href="#computer-age" id="toc-computer-age" class="nav-link active" data-scroll-target="#computer-age">Computer age</a></li>
   <li><a href="#tweaks-and-software-installation" id="toc-tweaks-and-software-installation" class="nav-link" data-scroll-target="#tweaks-and-software-installation">Tweaks and software installation</a></li>
@@ -267,7 +267,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 </div>
 <p>I spent a little money to upgrade the machine from 1GB memory to 4GB memory (purchased online; CHF 7.50). I also replaced the hard disk, which was an HDD, with a modern SSD that I had as a spare. Then I installed <a href="https://lubuntu.me/">Lubuntu</a> 24.04 LTS, a lightweight Linux based on Ubuntu, R 4.4.1, and the latest version of RStudio and Quarto.</p>
 <p>I collected some system information using the <code>system()</code> function which called <code>neofetch</code> from within this Quarto Blog post, see Table 1. Exactly, I wrote this blog post using the old IBM computer.</p>
-<div class="cell">
+<div class="cell" data-tbl-cap="Table 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine.">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>info <span class="ot">=</span> <span class="fu">system</span>(<span class="st">"neofetch --stdout"</span>, <span class="at">intern =</span> <span class="cn">TRUE</span>)</span>
@@ -278,45 +278,49 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tab) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Type"</span>, <span class="st">"System Information"</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top table table-sm table-striped small">
-<caption>Table 1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine.</caption>
+</div>
+<div id="tbl-1" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine.
+</figcaption>
+<div aria-describedby="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-hover caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Type</th>
+<th style="text-align: right;">Type</th>
 <th style="text-align: left;">System Information</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Host</td>
+<td style="text-align: right;">Host</td>
 <td style="text-align: left;">8215Y6G ThinkCentre M52</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">CPU</td>
+<td style="text-align: right;">CPU</td>
 <td style="text-align: left;">Intel Pentium 4 3.00GHz (2) @ 1.500GHz</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Memory</td>
+<td style="text-align: right;">Memory</td>
 <td style="text-align: left;">1540MiB / 3222MiB</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">GPU</td>
+<td style="text-align: right;">GPU</td>
 <td style="text-align: left;">NVIDIA GeForce GT 610</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">OS</td>
+<td style="text-align: right;">OS</td>
 <td style="text-align: left;">Lubuntu 24.04.1 LTS x86_64</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Kernel</td>
+<td style="text-align: right;">Kernel</td>
 <td style="text-align: left;">6.8.0-48-generic</td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
+</figure>
 </div>
 <p>I wondered why I only had 3GB of memory available, even though I installed 4GB. Looking at the <a href="https://support.lenovo.com/eg/en/solutions/pd006096-detailed-specifications-thinkcentre-a52-type-8155-8156-8157-8158-8159-8160-thinkcentre-m52-type-8099-8116-8215-9210-9211">technical specifications</a> of the M53, I found the following line:</p>
 <blockquote class="blockquote">
@@ -608,7 +612,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       toggleBodyColorMode(bsSheetEl);
     }
   }
-  toggleBodyColorPrimary();
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -618,7 +622,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {
+      if (clz.startsWith('code-annotation-')) {                     
         return true;
       }
     }
@@ -638,11 +642,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
       button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button,
-        { trigger: "manual",
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
           offset: [0, -8]});
-      tooltip.show();
+      tooltip.show();    
     }
     setTimeout(function() {
       if (tooltip) {
@@ -725,7 +729,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     if (onUntriggerFn) {
       config.onUntrigger = onUntriggerFn;
     }
-    window.tippy(el, config);
+    window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
@@ -800,7 +804,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     tippyHover(xref, undefined, function(instance) {
       instance.disable();
       let url = xref.getAttribute('href');
-      let hash = undefined;
+      let hash = undefined; 
       if (url.startsWith('#')) {
         hash = url;
       } else {
@@ -828,7 +832,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             if (note !== null) {
               const html = processXRef(id, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -852,7 +856,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             const html = processXRef(null, note);
             instance.setContent(html);
-          }
+          } 
         }).finally(() => {
           instance.enable();
           instance.show();
@@ -892,7 +896,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             height = bottom - top;
           }
           if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it
+            // cook up a div (if necessary) and position it 
             let div = window.document.getElementById("code-annotation-line-highlight");
             if (div === null) {
               div = window.document.createElement("div");
@@ -1018,7 +1022,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© 2024, 2025 Simon Schwab</p>
-</div>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>

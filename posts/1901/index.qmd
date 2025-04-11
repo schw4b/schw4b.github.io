@@ -57,6 +57,17 @@ colnames(tab) = c("Type", "System Information")
 tab
 ```
 
+| Type   | System Information                     |
+|-------:|:---------------------------------------|
+| Host   | 8215Y6G ThinkCentre M52                |
+| CPU    | Intel Pentium 4 3.00GHz (2) @ 1.500GHz |
+| Memory | 1540MiB / 3222MiB                      |
+| GPU    | NVIDIA GeForce GT 610                  |
+| OS     | Lubuntu 24.04.1 LTS x86_64             |
+| Kernel | 6.8.0-48-generic                       |
+
+: System information that was directly collected while this Quarto blog post was rendered on my almost 20-year-old IBM machine. {#tbl-1 .striped}
+
 I wondered why I only had 3GB of memory available, even though I installed 4GB. Looking at the [technical specifications](https://support.lenovo.com/eg/en/solutions/pd006096-detailed-specifications-thinkcentre-a52-type-8155-8156-8157-8158-8159-8160-thinkcentre-m52-type-8099-8116-8215-9210-9211) of the M53, I found the following line:
 
 > If 4GB of physical memory is installed approximately 3GB will be useable by the operating system. This is due to limitations from the address mapping of PCI busses and other system devices.
