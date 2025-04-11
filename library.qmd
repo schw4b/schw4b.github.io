@@ -4,9 +4,11 @@ include-in-header:
   - text: <meta name="description" content="Simon Schwab's library of medical statistics.">
 ---
 
-Below is a curated list of essential books, research papers, guidelines, collections, and online resources that have proven to be highly valuable.
+Below is a curated list of essential books, compiliations, guidelines, journal collections, and other online resources that have proven to be highly valuable.
 
-## Medical statistics books
+## Books
+
+### General
 
 (@) Bland M. *An Introduction to Medical Statistics.* 4th ed. Oxford University Press; 2015.
 (@) Chan BKC. *Biostatistics for Epidemiology and Public Health Using R.* Springer Publishing; 2015.
@@ -16,28 +18,33 @@ Below is a curated list of essential books, research papers, guidelines, collect
 (@) Kirkwood BR, Sterne JAC. *Essential Medical Statistics.* 2nd ed. Blackwell Science; 2003.
 (@) Rosner B. *Fundamentals of Biostatistics.* 7th ed. Cengage Learning; 2010.
 
-## Journal statistics collections
-
-(@) Bland & Altman Statistics Notes. *BMJ.* <https://www-users.york.ac.uk/~mb55/pubs/pbstnote.htm>
-(@) CRS Reproducibilty Notes. *Significance.* <https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html>
-(@) Endgames by Philip Sedgwick. *BMJ.* [Pubmed link](https://pubmed.ncbi.nlm.nih.gov/?term=Sedgwick+P%5Bau%5D+AND+BMJ%5Bjournal%5D&filter=years.2000-2025&sort=date&size=100)
-(@) Guide to Statistics and Methods. *JAMA.* <https://jamanetwork.com/collections/44042/jama-guide-to-statistics-and-methods>
-(@) Statistics at Square One. *BMJ.* <https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one>
-(@) Statistics for Biologists. *Nature.* <https://www.nature.com/collections/qghhqm>
-
-## Software
-
-(@) The R Project for Statistical Computing <https://stat.ethz.ch/CRAN/>
-(@) RStudio Desktop <https://posit.co/download/rstudio-desktop/>
-(@) Quarto <https://quarto.org/docs/download/>
-(@) Git version control system <https://git-scm.com/downloads>
-(@) RTools <https://cran.r-project.org/bin/windows/Rtools/>
-
 ## Compilations
 
-(@) Catalogue of Bias <https://catalogofbias.org/>
-(@) EQUATOR Network and reporting guidelines <https://www.equator-network.org/>
+(@) [Catalogue of Bias](https://catalogofbias.org/)
+(@) [EQUATOR Network and reporting guidelines](https://www.equator-network.org/)
 
 ## Guidelines
 
-(@) ICMJE Recommendations <https://www.icmje.org/recommendations/browse/>
+(@) [ICMJE Recommendations](https://www.icmje.org/recommendations/browse/)
+
+## Journal collections
+
+(@) Bland & Altman. [Statistics Notes.](https://www-users.york.ac.uk/~mb55/pubs/pbstnote.htm) *BMJ.*
+(@) Schwab & Held. [Reproducibilty Notes.](https://www.crs.uzh.ch/en/resources/CRS-Reproducibility-Notes.html) *Significance.*
+(@) Sedgwick P. [Endgames.](https://pubmed.ncbi.nlm.nih.gov/?term=Sedgwick+P%5Bau%5D+AND+BMJ%5Bjournal%5D&filter=years.2000-2025&sort=date&size=100) *BMJ.*
+(@) [Guide to Statistics and Methods.](https://jamanetwork.com/collections/44042/jama-guide-to-statistics-and-methods) *JAMA.*
+(@) [Statistics at Square One.](https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one) *BMJ.*
+(@) [Statistics for Biologists.](https://www.nature.com/collections/qghhqm) *Nature.*
+
+## Podcasts
+
+(@) [The Effective Statistician](https://theeffectivestatistician.com/podcast/)
+(@) [JAMA Guide to Statistics and Methods](https://jamanetwork.com/journals/jama/pages/jamaevidence-jama-guide-to-statistics-and-methods)
+
+## Software
+
+(@) [The R Project for Statistical Computing](https://stat.ethz.ch/CRAN/)
+(@) [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
+(@) [Quarto](https://quarto.org/docs/download/)
+(@) [Git version control system](https://git-scm.com/downloads)
+(@) [RTools](https://cran.r-project.org/bin/windows/Rtools/)
