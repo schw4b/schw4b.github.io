@@ -6,14 +6,8 @@ January 2023, Simon Schwab.
 
 ## Build website
 
-```
-make build
-```
-
-### Bugs
-
-Use Windows command line `cmd` to render en dashes in Tables of post 1901 correctly.
+Use Windows command line `cmd` to render en dashes in Tables correctly.
 
 ```
-quarto preview posts/1901/index.qmd
+quarto render
 ```
