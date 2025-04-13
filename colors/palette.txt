@@ -3,6 +3,7 @@ Palette 1
 #C8C6C8 (dark, 25%)
 #6F87A6 (blue)
 #818C70 (green)
+#DFE2DB (green, 25%)
 #F2F1E9 (beige)
 #D9A282 (tan)
 
