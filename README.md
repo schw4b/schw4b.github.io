@@ -10,4 +10,5 @@ Use Windows command line `cmd` to render en dashes in Tables correctly.
 
 ```
 quarto render
+# manually copy folder pdf to doc/
 ```
