@@ -1,10 +1,10 @@
 ---
 title: "True colors"
 draft: false
-description: "Science is often viewed as a reliable machinery for producing facts. However, a surprising number of scientific findings may be incorrect. Even when a low p-value is obtained, it does not guarantee the result is true; in fact, it may still be wrong. This claim can be effectively illustrated with an example using a few colors, revealing how many studies were really true and how many were false. Without skepticism and blindly focusing on the magnitude of a p-value while ignoring other factors, I might just as well believe in Santa Claus."
+description: "Statistical significance is often misunderstood. Even when a low p-value is obtained, it does not guarantee the result is true; in fact, it may still be wrong. This claim can be effectively illustrated using colors, revealing how many studies were really true and how many were false. Without skepticism and blindly focusing on the p-value while ignoring other factors, I might just as well believe in Santa Claus."
 author: "Simon Schwab"
 date: "2024-12-15"
-categories: [p-values]
+categories: [p-values, research credibility, research waste]
 image: "drew-beamer-Hk6E4UxjmGo-unsplash.jpg"
 citation:
   issued: 2024

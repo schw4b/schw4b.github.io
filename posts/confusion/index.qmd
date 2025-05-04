@@ -1,7 +1,7 @@
 ---
 title: "Land of confusion"
 draft: false
-description: "Confounding leads to wrong conclusions in medical research. Model-based approaches, like multivariable regression models, offer a more accurate way to account for multiple confounders and estimate true effects. Ultimately, models provide the most reliable framework for understanding complex data and making informed clinical decisions."
+description: "Confounding can mislead medical research, obscuring true relationships between variables. This post explores how confounding biases arise, illustrating with real-world examples. Model-based approaches, like multivariable regression models, adjust for multiple confounders and offer a more accurate framework for interpreting complex data and making informed clinical decisions."
 author: "Simon Schwab"
 date: "2025-03-30"
 categories: [Confounding, Statistical modeling, Multivariable models]
