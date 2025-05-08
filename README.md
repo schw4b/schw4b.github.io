@@ -8,7 +8,16 @@ January 2023, Simon Schwab.
 
 Use Windows command line `cmd` to render en dashes in Tables correctly.
 
+1. Render
+
 ```
 quarto render
-# manually copy folder pdf to doc/
+```
+
+2. Copy folder pdf to doc/
+3. Edit index.html to change margin-top
+
+```
+    <img src="images/simon_2025-400.jpg" alt="Simon Schwab's profile image" class="about-image
+  round " style="height: 10em; width: 10em; margin-top: 1.5em">
 ```
