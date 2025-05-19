@@ -4,21 +4,25 @@ include-in-header:
   - text: <meta name="description" content="Simon Schwab's research output.">
 ---
 
-## Selected publications
+## Publications
 
+### 2025
+**Schwab S**, Banz V, Held U, Hoessly L, Magini G. Does the UK DCD Risk Score have statistical flaws? *J Hepatol.* 2025;0(0). [doi:10.1016/j.jhep.2025.04.030](https://doi.org/10.1016/j.jhep.2025.04.030)
 
-* **Schwab S**, Steck H, Binet I, Elmer A, Ender W, Franscini N, Haidar F, Kuhn C, Sidler D, Storni F, Krügel N, Immer F. EXAM: Ex-vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. *PLOS Digit Health.* 2024;3(12):e0000691. [doi:10.1371/journal.pdig.0000691](http://dx.doi.org/10.1371/journal.pdig.0000691)
+### 2024
+**Schwab S**, Steck H, Binet I, Elmer A, Ender W, Franscini N, Haidar F, Kuhn C, Sidler D, Storni F, Krügel N, Immer F. EXAM: Ex-vivo allograft monitoring dashboard for the analysis of hypothermic machine perfusion data in deceased-donor kidney transplantation. *PLOS Digit Health.* 2024;3(12):e0000691. [doi:10.1371/journal.pdig.0000691](http://dx.doi.org/10.1371/journal.pdig.0000691)
 
-* **Schwab S**, Elmer A, Sidler D, Straumann L, Stürzinger U, Immer F. Selection Bias in Reporting of Median Waiting Times in Organ Transplantation. *JAMA Netw Open.* 2024;7(9):e2432415-e2432415. [doi:10.1001/jamanetworkopen.2024.32415](https://doi.org/10.1001/jamanetworkopen.2024.32415)
+**Schwab S**, Elmer A, Sidler D, Straumann L, Stürzinger U, Immer F. Selection Bias in Reporting of Median Waiting Times in Organ Transplantation. *JAMA Netw Open.* 2024;7(9):e2432415-e2432415. [doi:10.1001/jamanetworkopen.2024.32415](https://doi.org/10.1001/jamanetworkopen.2024.32415)
 
-* van Zwet E, Gelman A, Greenland S, Imbens G, **Schwab S**, Goodman SN. A New Look at P Values for Randomized Clinical Trials. *NEJM Evid.* 2024;3(1):EVIDoa2300003. [doi:10.1056/EVIDoa2300003](https://doi.org/10.1056/EVIDoa2300003)
+van Zwet E, Gelman A, Greenland S, Imbens G, **Schwab S**, Goodman SN. A New Look at P Values for Randomized Clinical Trials. *NEJM Evid.* 2024;3(1):EVIDoa2300003. [doi:10.1056/EVIDoa2300003](https://doi.org/10.1056/EVIDoa2300003)
 
-* **Schwab S**, Immer F. Prognosemodelle und künstliche Intelligenz. *Schweiz Arzteztg.* Published online December 6, 2023. [doi:10.4414/saez.2023.1266894718](https://doi.org/10.4414/saez.2023.1266894718)
+### 2023
+**Schwab S**, Immer F. Prognosemodelle und künstliche Intelligenz. *Schweiz Arzteztg.* Published online December 6, 2023. [doi:10.4414/saez.2023.1266894718](https://doi.org/10.4414/saez.2023.1266894718)
 
-* **Schwab S**, Sidler D, Haidar F, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagn Progn Res.* 2023;7(1):6. [doi:10.1186/s41512-022-00139-5](https://doi.org/10.1186/s41512-022-00139-5)
+**Schwab S**, Sidler D, Haidar F, et al. Clinical prediction model for prognosis in kidney transplant recipients (KIDMO): study protocol. *Diagn Progn Res.* 2023;7(1):6. [doi:10.1186/s41512-022-00139-5](https://doi.org/10.1186/s41512-022-00139-5)
 
-
-* **Schwab S**, Janiaud P, Dayan M, Amrhein V, Panczak R, Palagi PM, Hemkens LG, Ramon M, Rothen N, Senn S, Furrer E, Held L. Ten simple rules for good research practice. *PLoS Comput Biol.* 2022;18(6):e1010139. [doi:10.1371/journal.pcbi.1010139](http://dx.doi.org/10.1371/journal.pcbi.1010139)
+### 2022
+**Schwab S**, Janiaud P, Dayan M, Amrhein V, Panczak R, Palagi PM, Hemkens LG, Ramon M, Rothen N, Senn S, Furrer E, Held L. Ten simple rules for good research practice. *PLoS Comput Biol.* 2022;18(6):e1010139. [doi:10.1371/journal.pcbi.1010139](http://dx.doi.org/10.1371/journal.pcbi.1010139)
 
 For more publications, see [Google Scholar](https://scholar.google.ch/citations?user=uR1_O0UAAAAJ) and [Pubmed](https://pubmed.ncbi.nlm.nih.gov/?term=Schwab+Simon%5BAuthor%5D+AND+%28+Zurich%5BAffiliation%5D+OR+Bern%5BAffiliation%5D+OR+Warwick%5BAffiliation%5D+OR+Oxford%5BAffiliation%5D+%29&sort=date).
 

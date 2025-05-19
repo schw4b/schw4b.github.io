@@ -55,6 +55,9 @@ Clinical prediction models for prognosis can predict outcomes and support decisi
 ### Resources
 * [Study registration](https://doi.org/10.17605/OSF.IO/FTXK8) from 6. April 2024
 
+### Publications
+Schwab S, Banz V, Held U, Hoessly L, Magini G. Does the UK DCD Risk Score have statistical flaws? *J Hepatol.* 2025;0(0). [doi:10.1016/j.jhep.2025.04.030](https://doi.org/10.1016/j.jhep.2025.04.030)
+
 ## Projects as a statistical consultant
 
 -   *Hôpitaux Universitaires Genève (HUG)*\
