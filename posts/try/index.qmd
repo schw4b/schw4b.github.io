@@ -29,7 +29,7 @@ When a study cannot be confirmed by independent researchers, some questions may 
 
 Interestingly, two years after the publication of the original study, our findings were independently confirmed by a prominent research group through a reanalysis of our data. The results were published in the *British Medical Journal (BMJ)* [@Naudet2018-we].
 
-Of course, one could always argue about alternative statistical approaches, as I had to make several analytical decisions at the time---some of which I might choose differently today, given what I've learned since. I have definitely become much more conservative throughout the years, and if I made a comprehensive reanalysis of the data, I would end up with a hazard ratio of 0.22 (95%-CI 0.08--0.59). This estimate is still an approximately 80% reduction of the suicide reattempt rate.
+Of course, one could always argue about alternative statistical approaches, as I had to make several analytical decisions at the time---some of which I might choose differently today, given what I've learned since. I have definitely become much more conservative throughout the years, and if I made a comprehensive reanalysis of the data, I would perhaps end up with a hazard ratio of 0.22 (95%-CI 0.08--0.59). The uncertainty is wider, but the point estimate is still an approximately 80% reduction of the suicide reattempt rate.
 
 No matter how you slice it, it's still the same pie.
 
@@ -105,7 +105,7 @@ Finally, I plotted the replication power dependent on different relative sample 
 #| fig-height: 3
 #| fig-width: 3
 #| code-fold: true
-#| fig-cap: "Replication power against the relative sample size of the replication study. The dashed line shows a power of 80%, and the dotted line for 90%."
+#| fig-cap: "Relative sample sizes of the replication study against replication power. The dashed line shows a power of 80%, and the dotted line for 90%."
 
 library(ReplicationSuccess)
 
