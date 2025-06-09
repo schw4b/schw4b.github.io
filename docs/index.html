@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -85,31 +85,31 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="./index.html" aria-current="page">
 <span class="menu-text">Bio</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="./projects.html">
 <span class="menu-text">Projects</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./output.html"> 
+    <a class="nav-link" href="./output.html">
 <span class="menu-text">Output</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="./posts.html">
 <span class="menu-text">Posts</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./library.html"> 
+    <a class="nav-link" href="./library.html">
 <span class="menu-text">Library</span></a>
-  </li>  
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="./about.html">
 <span class="menu-text">About</span></a>
-  </li>  
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -135,7 +135,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
 <div class="quarto-about-trestles">
   <div class="about-entity">
     <img src="images/simon_2025-400.jpg" alt="Simon Schwab's profile image" class="about-image
-  round " style="height: 10em; width: 10em;">
+      round " style="height: 10em; width: 10em; margin-top: 1.5em">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Simon Schwab</h1>
@@ -213,7 +213,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -233,11 +233,11 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -320,7 +320,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -395,7 +395,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -423,7 +423,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -447,7 +447,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -487,7 +487,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -613,7 +613,7 @@ gtag('config', 'G-GPR2YZSX56', { 'anonymize_ip': true});
   <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© 2024, 2025 Simon Schwab</p>
-</div>   
+</div>
     <div class="nav-footer-center">
       &nbsp;
     </div>
