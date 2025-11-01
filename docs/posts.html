@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,14 +31,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ca8f7f036505862a0681970234c843b8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-440cdadb42e81f7d1d701c36f51bb4ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -107,7 +108,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -137,7 +138,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/statsyup.png" alt="A donut chart with Statistics, yup! positioned to its right." class="navbar-logo">
+    <img src="./images/statsyup.png" alt="A donut chart with Statistics, yup! positioned to its right." class="navbar-logo light-content">
+    <img src="./images/statsyup.png" alt="A donut chart with Statistics, yup! positioned to its right." class="navbar-logo dark-content">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -214,7 +216,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UmFuZG9taXplZCUyMGNvbnRyb2xsZWQlMjB0cmlhbCUyQ1JlcGxpY2F0aW9u" data-listing-date-sort="1747605600000" data-listing-file-modified-sort="1747722175611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1917">
+<div class="quarto-post image-right" data-index="0" data-categories="UmFuZG9taXplZCUyMGNvbnRyb2xsZWQlMjB0cmlhbCUyQ1JlcGxpY2F0aW9u" data-listing-date-sort="1747605600000" data-listing-file-modified-sort="1747722175000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1917">
 <div class="thumbnail"><a href="./posts/try/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/try/brokenpill.jpg" class="thumbnail-image">
@@ -246,7 +248,7 @@ Simon Schwab
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Q29uZm91bmRpbmclMkNTdGF0aXN0aWNhbCUyMG1vZGVsaW5nJTJDTXVsdGl2YXJpYWJsZSUyMG1vZGVscw==" data-listing-date-sort="1743289200000" data-listing-file-modified-sort="1746336225406" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2167">
+<div class="quarto-post image-right" data-index="1" data-categories="Q29uZm91bmRpbmclMkNTdGF0aXN0aWNhbCUyMG1vZGVsaW5nJTJDTXVsdGl2YXJpYWJsZSUyMG1vZGVscw==" data-listing-date-sort="1743289200000" data-listing-file-modified-sort="1746336225000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2167">
 <div class="thumbnail"><a href="./posts/confusion/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/confusion/katie-moum-5FHv5nS7yGg-unsplash.jpg" class="thumbnail-image">
@@ -280,7 +282,7 @@ Simon Schwab
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="cC12YWx1ZXMlMkNSZXNlYXJjaCUyMGNyZWRpYmlsaXR5JTJDUmVzZWFyY2glMjB3YXN0ZQ==" data-listing-date-sort="1734217200000" data-listing-file-modified-sort="1746343502038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1843">
+<div class="quarto-post image-right" data-index="2" data-categories="cC12YWx1ZXMlMkNSZXNlYXJjaCUyMGNyZWRpYmlsaXR5JTJDUmVzZWFyY2glMjB3YXN0ZQ==" data-listing-date-sort="1734217200000" data-listing-file-modified-sort="1746343502000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1843">
 <div class="thumbnail"><a href="./posts/colors/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/colors/drew-beamer-Hk6E4UxjmGo-unsplash.jpg" class="thumbnail-image">
@@ -314,7 +316,7 @@ Simon Schwab
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="U3RhdGlzdGljYWwlMjBjb21wdXRpbmclMkNMaW51eA==" data-listing-date-sort="1729375200000" data-listing-file-modified-sort="1746340446878" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1637">
+<div class="quarto-post image-right" data-index="3" data-categories="U3RhdGlzdGljYWwlMjBjb21wdXRpbmclMkNMaW51eA==" data-listing-date-sort="1729375200000" data-listing-file-modified-sort="1746340446000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1637">
 <div class="thumbnail"><a href="./posts/1901/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/1901/denny-muller-hqktsr9Bhww-unsplash.jpg" class="thumbnail-image">
@@ -346,7 +348,7 @@ Simon Schwab
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="QW5pbWFsJTIwc3R1ZGllcyUyQ1JlcGVhdGVkJTIwaW5zcGVjdGlvbiUyMG9mJTIwZGF0YSUyQ3AtdmFsdWVz" data-listing-date-sort="1723932000000" data-listing-file-modified-sort="1753595900539" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2242">
+<div class="quarto-post image-right" data-index="4" data-categories="QW5pbWFsJTIwc3R1ZGllcyUyQ1JlcGVhdGVkJTIwaW5zcGVjdGlvbiUyMG9mJTIwZGF0YSUyQ3AtdmFsdWVz" data-listing-date-sort="1723932000000" data-listing-file-modified-sort="1753595900000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2242">
 <div class="thumbnail"><a href="./posts/dream/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/dream/karsten-winegeart-4PWkY4HILj0-unsplash.jpg" class="thumbnail-image">
@@ -380,7 +382,7 @@ Simon Schwab
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="QUklMkNCaWclMjBkYXRhJTJDQmlvbWFya2VycyUyQ3AtdmFsdWVzJTJDVW5pdmFyaWFibGUlMjBzY3JlZW5pbmc=" data-listing-date-sort="1720476000000" data-listing-file-modified-sort="1753596524069" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2512">
+<div class="quarto-post image-right" data-index="5" data-categories="QUklMkNCaWclMjBkYXRhJTJDQmlvbWFya2VycyUyQ3AtdmFsdWVzJTJDVW5pdmFyaWFibGUlMjBzY3JlZW5pbmc=" data-listing-date-sort="1720476000000" data-listing-file-modified-sort="1753596524000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2512">
 <div class="thumbnail"><a href="./posts/fake/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/fake/frames-for-your-heart-mALJ-AAR13c-unsplash.jpg" class="thumbnail-image">
@@ -472,13 +474,14 @@ Simon Schwab
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
