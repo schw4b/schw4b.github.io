@@ -15,7 +15,12 @@ quarto render
 ```
 
 2. Copy folder pdf to doc/
-3. Edit index.html to change margin-top
+
+```
+cp -a pdf docs/
+```
+
+4. Edit index.html to change margin-top
 
 ```
     <img src="images/simon_2025-400.jpg" alt="Simon Schwab's profile image" class="about-image
