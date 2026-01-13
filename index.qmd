@@ -2,7 +2,7 @@
 title: "Simon Schwab"
 about:
   template: trestles
-  image: images/simon_2025-400.jpg
+  image: images/Simon_2024_400_bg_white.jpg
   image-alt: "Simon Schwab's profile image"
   image-shape: round
   image-width: 10em

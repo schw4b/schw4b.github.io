@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -91,10 +91,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-440cdadb42e81f7d1d701c36f51bb4ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-40bde992088cb167bf939e5fa1932bed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -486,7 +486,7 @@ window.Quarto = {
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">N =</span> <span class="fu">nrow</span>(heart),</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">weight =</span> swt<span class="sc">::</span><span class="fu">mean_sd</span>(heart<span class="sc">$</span>weight),</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">transplant =</span> swt<span class="sc">::</span><span class="fu">freq_perc</span>(heart<span class="sc">$</span>event)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">transplant =</span> swt<span class="sc">::</span><span class="fu">count_perc</span>(heart<span class="sc">$</span>event)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>heart.males   <span class="ot">=</span> <span class="fu">subset</span>(heart, <span class="at">subset =</span> sex <span class="sc">==</span> <span class="st">"male"</span>)</span>
@@ -494,12 +494,12 @@ window.Quarto = {
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>tab.m <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">N =</span> <span class="fu">nrow</span>(heart.males),</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                   <span class="at">weight =</span> swt<span class="sc">::</span><span class="fu">mean_sd</span>(heart.males<span class="sc">$</span>weight),</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                   <span class="at">transplant =</span> swt<span class="sc">::</span><span class="fu">freq_perc</span>(heart.males<span class="sc">$</span>event)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                   <span class="at">transplant =</span> swt<span class="sc">::</span><span class="fu">count_perc</span>(heart.males<span class="sc">$</span>event)</span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>tab.f <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">N =</span> <span class="fu">nrow</span>(heart.females),</span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                   <span class="at">weight =</span> swt<span class="sc">::</span><span class="fu">mean_sd</span>(heart.females<span class="sc">$</span>weight),</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>                   <span class="at">transplant =</span> swt<span class="sc">::</span><span class="fu">freq_perc</span>(heart.females<span class="sc">$</span>event)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>                   <span class="at">transplant =</span> swt<span class="sc">::</span><span class="fu">count_perc</span>(heart.females<span class="sc">$</span>event)</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">=</span> <span class="fu">rbind</span>(tab, tab.f, tab.m)</span>

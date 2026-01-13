@@ -160,7 +160,7 @@ plot(heart$weight, heart$P,
 
 tab = data.frame(N = nrow(heart),
                  weight = swt::mean_sd(heart$weight),
-                 transplant = swt::freq_perc(heart$event)
+                 transplant = swt::count_perc(heart$event)
 )
 
 heart.males   = subset(heart, subset = sex == "male")
@@ -168,12 +168,12 @@ heart.females = subset(heart, subset = sex == "female")
 
 tab.m = data.frame(N = nrow(heart.males),
                    weight = swt::mean_sd(heart.males$weight),
-                   transplant = swt::freq_perc(heart.males$event)
+                   transplant = swt::count_perc(heart.males$event)
 )
 
 tab.f = data.frame(N = nrow(heart.females),
                    weight = swt::mean_sd(heart.females$weight),
-                   transplant = swt::freq_perc(heart.females$event)
+                   transplant = swt::count_perc(heart.females$event)
 )
 
 tab = rbind(tab, tab.f, tab.m)

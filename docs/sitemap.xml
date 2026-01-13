@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.statsyup.org/projects.html</loc>
-    <lastmod>2025-05-15T19:12:32.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.statsyup.org/posts/try/index.html</loc>
-    <lastmod>2025-05-20T06:22:55.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.statsyup.org/posts/dream/index.html</loc>
-    <lastmod>2025-07-27T05:58:20.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.statsyup.org/posts/colors/index.html</loc>
-    <lastmod>2025-05-04T07:25:02.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.statsyup.org/output.html</loc>
-    <lastmod>2025-11-01T23:24:56.840Z</lastmod>
-  </url>
-  <url>
     <loc>https://www.statsyup.org/index.html</loc>
-    <lastmod>2025-03-31T19:38:58.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.statsyup.org/about.html</loc>
-    <lastmod>2025-03-31T19:38:55.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.statsyup.org/library.html</loc>
-    <lastmod>2025-04-11T13:49:04.000Z</lastmod>
+    <lastmod>2026-01-13T12:30:51.121Z</lastmod>
   </url>
   <url>
     <loc>https://www.statsyup.org/posts/1901/index.html</loc>
-    <lastmod>2025-05-04T06:34:06.000Z</lastmod>
+    <lastmod>2026-01-13T12:27:39.274Z</lastmod>
   </url>
   <url>
     <loc>https://www.statsyup.org/posts/confusion/index.html</loc>
-    <lastmod>2025-05-04T05:23:45.000Z</lastmod>
+    <lastmod>2026-01-13T12:28:52.836Z</lastmod>
   </url>
   <url>
     <loc>https://www.statsyup.org/posts/fake/index.html</loc>
-    <lastmod>2025-07-27T06:08:44.000Z</lastmod>
+    <lastmod>2026-01-13T12:27:39.277Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/projects.html</loc>
+    <lastmod>2026-01-13T12:27:39.278Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/output.html</loc>
+    <lastmod>2026-01-13T12:27:39.272Z</lastmod>
   </url>
   <url>
     <loc>https://www.statsyup.org/posts.html</loc>
-    <lastmod>2025-03-31T19:38:58.000Z</lastmod>
+    <lastmod>2026-01-13T12:27:39.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/about.html</loc>
+    <lastmod>2026-01-13T12:27:39.243Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/posts/try/index.html</loc>
+    <lastmod>2026-01-13T12:27:39.278Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/posts/colors/index.html</loc>
+    <lastmod>2026-01-13T12:27:39.275Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/posts/dream/index.html</loc>
+    <lastmod>2026-01-13T12:27:39.276Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.statsyup.org/library.html</loc>
+    <lastmod>2026-01-13T12:27:39.272Z</lastmod>
   </url>
 </urlset>
