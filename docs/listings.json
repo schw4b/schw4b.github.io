@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/days/index.html",
       "/posts/immortality/index.html",
       "/posts/try/index.html",
       "/posts/confusion/index.html",

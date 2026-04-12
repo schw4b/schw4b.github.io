@@ -1,0 +1,161 @@
+---
+title: "Between days"
+draft: false
+description: "Kaplan–Meier curves are widely used in medical research, including in a recent *NEJM* report in kidney transplantation, where death was treated as censored. This does not address competing risks adequately: graft loss cannot occur after death, producing a mis-specified risk set. I discuss why this is problematic and illustrate the Aalen–Johansen estimator with examples in R, which provides a better solution."
+author: "Simon Schwab"
+date: "2026-04-12"
+categories: [Kaplan-Meier curves, Competing risks, Aalen-Johansen estimator]
+image: "jesper-giortz-behrens-RpzaftQSNKU-unsplash.jpg"
+citation:
+  issued: 2026
+  type: post-weblog
+  url: https://www.statsyup.org/posts/days/
+bibliography: references.bib
+google-scholar: true
+csl: plos.csl
+---
+
+> Well, what if there is no tomorrow? There wasn't one today.  
+> ---Protagonist in Groundhog Day
+
+Have you seen *Groundhog Day*, where Bill Murray's character relives the same day over and over until he learns to confront his flaws and find meaning in life? Because he is trapped in a time loop, nothing ever changes, and he cannot escape.
+
+He is stuck between days.
+
+> Morning slips to evening, falls through holes in between days.  
+> ---Between days (song by Red House Painters)
+
+At one point, he even tries to kill himself multiple times—but death does not "stick." He wakes up again at 6:00 AM, regardless of what he does. For the protagonist, the small town has become an artificial world where death cannot occur.
+
+Interestingly, the same happened in a recent *NEJM* report on 10-year outcomes in kidney transplant recipients after hypothermic machine perfusion [@Schutter2025-lh]. In this study, graft loss was the primary outcome. However, recipients may die over this long period (with a perfectly functioning kidney), and thus, cannot experience graft loss anymore. This situation in medical statistics is called competing risks. When a kidney transplant recipient dies, we cannot observe the event of interest, graft loss, anymore. Thus, death is a competing event.
+
+Yet in this study, nobody was "allowed" to die. Death was simply censored. This approach created a very artificial, hypothetical world in which death could not occur.
+
+> All graft survival analyses were performed with data censored at death in patients with a functional graft. (see Figure 1 caption, p. 1860 in @[@Schutter2025-lh])
+
+## What is censoring?
+
+A censored observation means that the event of interest has not been observed during the follow-up period, but it may still occur in the future. However, if a recipient dies and is then treated as censored, this assumption breaks down completely: after death, graft loss cannot occur, and its probability is quite frankly zero.
+
+This issue is closely tied to a key assumption in survival analysis: non-informative censoring, meaning that the reason for censoring should not be related to the future risk of the event of interest. Censoring death violates this assumption because recipients who are censored due to death can no longer experience graft loss and therefore do not have the same risk structure as those who remain under observation.
+
+## Why is death often censored?
+
+The Kaplan–Meier estimator is designed for a single event type only. In practice, researchers and clinicians often define graft loss as the event of interest and treat death as censored. In principle, it is just another example of dichotomy, a black-and-white world that does not exist in reality. 
+
+However, this simplification has consequences. When death is censored, this effectively means that graft loss is still considered possible after death. The result is that graft loss is overestimated and survival curves become overly pessimistic.
+
+## Are there better solutions?
+
+Methods for competing risks have existed for decades. The Aalen–Johansen estimator [@Aalen1978-vh] extends the Kaplan–Meier estimator to properly account for competing events and produces unbiased cumulative incidence curves for the event of interest and the competing events. By the way, the latter may also be worth looking at.
+
+A substantial proportion of Kaplan–Meier curves in the medical literature are problematic in settings with competing risks. Whenever you see such a plot, it is worth asking whether competing events are present. This issue arises in many medical settings, not just in kidney transplantation.
+
+Ironically, one of the most well-known papers on competing risks, which explicitly advises against censoring the competing event, uses kidney transplantation as its main example [@Coemans2022-yp].
+
+Anyway, coming back to the beginning of my post, using Kaplan–Meier and censoring death is somewhat like a "Groundhog Day" scenario: an artificial world in which death never truly occurs.
+
+In general, ignoring death in medical data analysis is rarely a good idea.
+
+Oh, one last question about the *NEJM* report. When the machine perfusion arm is biased, and the cold storage arm is biased, does the bias cancel out? Do two wrongs make a right?
+
+*The title of this post is a song by the Red House Painters. The preview image of this post is a photo by Jesper Giortz-Behrens on Unsplash.*
+
+## Just one more thing
+
+The Aalen–Johansen estimator is a statistical method that extends the more familiar Kaplan–Meier estimator, which considers only a single type of event (such as time to death).
+
+In simple terms, while Kaplan–Meier answers "what’s the probability someone survives past a certain time?", the Aalen–Johansen estimator answers "what’s the probability someone ends up in each possible state over time?" It accounts for situations where different outcomes compete with each other (like dying from different causes), giving a more complete picture of what can happen, not just whether a single event occurs.
+
+I performed a simulation of a cohort study with 13 years of follow-up, including 2,000 patients, to evaluate graft failure and death in kidney transplantation.
+
+Event times were generated from exponential distributions. At the end of follow-up, 247 patients experienced graft loss (event indicator 1), 530 died (event 2), and 1,223 were censored.
+
+```{r}
+#| code-fold: true
+
+library(survival)
+library(cmprsk)
+library(ggplot2)
+
+set.seed(2026)
+
+n = 2000
+t_max = 13
+
+# Hazards
+lambda1 = -log(1 - 300/2000)/t_max   # graft loss
+lambda2 = -log(1 - 600/2000)/t_max   # death
+
+# Simulate event times
+T1 <- rexp(n, rate = lambda1)
+T2 <- rexp(n, rate = lambda2)
+
+# Observed time and event type
+time = pmin(T1, T2, t_max)
+event = ifelse(time == T1 & T1 < T2, 1,
+               ifelse(time == T2 & T2 < T1, 2, 0))
+
+event.2 = event
+event.2[event.2 == 2] = 0 # censoring death
+event = as.factor(event)
+
+as.data.frame(table(event))
+```
+
+I then fitted two estimators: the Kaplan–Meier estimator and the Aalen–Johansen estimator.
+
+```{r}
+#| code-fold: true
+
+fit.aj = survfit(Surv(time, event) ~ 1, stype = 1)
+fit.km = survfit(Surv(time, event.2) ~ 1, stype = 1)
+```
+
+I used one minus the Kaplan–Meier estimator to estimate the probability of graft loss and compared this with the Aalen–Johansen estimator. The results are shown in the figure below.
+
+```{r}
+#| fig-height: 4
+#| fig-width: 4
+#| code-fold: true
+#| fig-cap: "Using the Kaplan–Meier estimator (dark line with 95% confidence band indicated by dashed lines) shows an overly pessimistic estimate of graft survival and is biased in the presence of competing risks. This occurs because recipients who have died are treated as if they remain at risk for graft loss, even though the probability of graft loss after death is zero. The Aalen–Johansen estimator (red line) properly accounts for competing risks and provides an unbiased estimate of the cumulative incidence function, and is therefore the appropriate method in this setting."
+
+# KM
+plot(fit.km$time, 1-fit.km$surv,
+     type = "s",
+     col = "#241C26",
+     lwd = 2,
+     xlab = "Time (in years)",
+     ylab = "Cumulative incidence",
+     ylim = c(0, 0.2), 
+     bty = "n")
+
+lines(fit.km$time, 1-fit.km$lower,
+      type = "s",
+      col = "#241C26",
+      lty = 2)
+
+lines(fit.km$time, 1-fit.km$upper,
+      type = "s",
+      col = "#241C26",
+      lty = 2)
+
+# AJ
+lines(fit.aj$time, fit.aj$pstate[, 2],
+      type = "s",
+      col = "#BF505A",
+      lwd = 2)
+
+lines(fit.aj$time, fit.aj$lower[, 2],
+      type = "s",
+      col = "#BF505A",
+      lty = 2)
+
+lines(fit.aj$time, fit.aj$upper[, 2],
+      type = "s",
+      col = "#BF505A",
+      lty = 2)
+```
+### So what?
+
+This example illustrates the systematic bias that arises in kidney transplantation studies when Kaplan–Meier curves are used in the presence of competing events.
