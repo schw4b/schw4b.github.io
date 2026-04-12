@@ -31,7 +31,7 @@ Interestingly, the same happened in a recent *NEJM* report on 10-year outcomes i
 
 Yet in this study, nobody was "allowed" to die. Death was simply censored. This approach created a very artificial, hypothetical world in which death could not occur.
 
-> All graft survival analyses were performed with data censored at death in patients with a functional graft. (see Figure 1 caption, p. 1860 in @[@Schutter2025-lh])
+> All graft survival analyses were performed with data censored at death in patients with a functional graft. (see Figure 1 caption, p. 1860 in [@Schutter2025-lh])
 
 ## What is censoring?
 
