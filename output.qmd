@@ -4,7 +4,11 @@ include-in-header:
   - text: <meta name="description" content="Simon Schwab's research output.">
 ---
 
-## Publications
+## Selected publications
+
+### 2026
+
+Näf S, **Schwab S**, Binet I, et al. Single-kidney transplantation with discarded partner kidney vs. Dual kidney transplantation: results from a national cohort study. *BMC Nephrol.* 2026;27(1):1-12. [doi:10.1186/s12882-026-04945-7](https://doi.org/10.1186/s12882-026-04945-7)
 
 ### 2025
 **Schwab S**, Iten F. Against all odds: Why a lung donor score does not add up. *Transpl Int.* 2025;38(14937):14937. [doi:10.3389/ti.2025.14937](https://doi.org/10.3389/ti.2025.14937)
@@ -41,21 +45,13 @@ For more publications, see [Google Scholar](https://scholar.google.ch/citations?
 
 A series of commentaries highlight topics related to the production of robust, effective, and reproducible science; see [the notes featured on the CRS website](https://www.crs.uzh.ch/en/materials/CRS-Reproducibility-Notes.html).
 
-## Presentations
+## Presentations (videos)
 
-A complete list of slides from [my presentations](https://osf.io/a3g5c/) is available at OSF.
+* [Ten simple rules for good research practice](https://www.youtube.com/watch?v=IFIq0EMl3eM))---16/05/2024\
+Talk at the Computational Reproducibility Seminar, ETH Zurich\
 
-* [Ten simple rules for good research practice](https://osf.io/zrqta/) ([link to video](https://www.youtube.com/watch?v=IFIq0EMl3eM))---16/05/2024\
-Talk at the Computational Reproducibility Seminar---NEXUS Personalized Health Technologies, ETH Zurich\
+* [EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh))---21/06/2023\
+Talk at R/Basel 2023, Roche Switzerland\
 
-* [Understanding and managing bias in medical research](https://osf.io/yh76a/)---28/03/2024\
-Talk for the Swiss Society for Pneumology---University Hospital of Zurich
-
-* [EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://osf.io/8kbt2/) ([link to video](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh))---21/06/2023\
-Talk at R/Basel 2023---Roche Switzerland\
-
-* [An introduction to R with the Stanford Heart Transplant Data](https://osf.io/6mcah/)---09/12/2021\
-Talk at BernR---Bern R user group
-
-* [From regression to machine learning in R](https://osf.io/rua6x/) ([link to video](https://www.youtube.com/watch?v=h5A1v678Djk))---15/04/2021\
-Talk in the seminar Applied Machine Learning in Diagnostic Imaging---University Hospital of Zurich\
+* [From regression to machine learning in R](https://www.youtube.com/watch?v=h5A1v678Djk))---15/04/2021\
+Talk in the seminar Applied Machine Learning in Diagnostic Imaging, University Hospital of Zurich\

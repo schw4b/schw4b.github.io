@@ -31,7 +31,7 @@ website:
     right: ""
     left: '© 2024--2026 Simon Schwab'
   plausible-analytics:
-    path: _plausible.html
+    path: _header.html
       
 format:
   html:
