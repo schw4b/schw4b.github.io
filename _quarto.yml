@@ -30,9 +30,8 @@ website:
   page-footer:
     right: ""
     left: '© 2024--2026 Simon Schwab'
-  google-analytics:
-    tracking-id: "G-GPR2YZSX56"
-    anonymize-ip: true
+  plausible-analytics:
+    path: _plausible.html
       
 format:
   html:
