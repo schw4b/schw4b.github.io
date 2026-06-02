@@ -33,13 +33,16 @@ For more publications, see [Google Scholar](https://scholar.google.ch/citations?
 
 ## R software
 
-![](images/hex-stickers.png){width="4in" alt="Hex stickers for R packages."}
+### Cochrane
+Import Data from the Cochrane Database of Systematic Reviews (CDSR), see <https://github.com/schw4b/cochrane>.
 
-* [cochrane](https://github.com/schw4b/cochrane)---Import Data from the Cochrane Database of Systematic Reviews (CDSR).
+### EXAM
+Ex-vivo allograft monitoring dashboard, see <https://github.com/Swisstransplant/EXAM>.
 
-* [EXAM](https://github.com/Swisstransplant/EXAM)---Ex vivo allograft monitoring dashboard.
+### swt
+Swisstransplant R package, see <https://github.com/Swisstransplant/swt>.
 
-* [swt](https://github.com/Swisstransplant/swt)---Swisstransplant R package.
+![Hex stickers of my software packages.](images/hex-stickers.png){width=60% alt="Hex stickers for R packages."}
 
 ## Reproducibility Notes
 
@@ -47,11 +50,11 @@ A series of commentaries highlight topics related to the production of robust, e
 
 ## Presentations (videos)
 
-* [Ten simple rules for good research practice](https://www.youtube.com/watch?v=IFIq0EMl3eM))---16/05/2024\
+* [Ten simple rules for good research practice](https://www.youtube.com/watch?v=IFIq0EMl3eM)---16/05/2024\
 Talk at the Computational Reproducibility Seminar, ETH Zurich\
 
-* [EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh))---21/06/2023\
+* [EXAM---Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation](https://youtu.be/0cvZDnkeKPk?si=pp9PGFDCoy0L2AWh)---21/06/2023\
 Talk at R/Basel 2023, Roche Switzerland\
 
-* [From regression to machine learning in R](https://www.youtube.com/watch?v=h5A1v678Djk))---15/04/2021\
+* [From regression to machine learning in R](https://www.youtube.com/watch?v=h5A1v678Djk)---15/04/2021\
 Talk in the seminar Applied Machine Learning in Diagnostic Imaging, University Hospital of Zurich\

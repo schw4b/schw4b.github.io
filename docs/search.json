@@ -193,7 +193,7 @@
     "href": "output.html#r-software",
     "title": "Research output",
     "section": "R software",
-    "text": "R software\n\n\ncochrane—Import Data from the Cochrane Database of Systematic Reviews (CDSR).\nEXAM—Ex vivo allograft monitoring dashboard.\nswt—Swisstransplant R package."
+    "text": "R software\n\nCochrane\nImport Data from the Cochrane Database of Systematic Reviews (CDSR), see https://github.com/schw4b/cochrane.\n\n\nEXAM\nEx-vivo allograft monitoring dashboard, see https://github.com/Swisstransplant/EXAM.\n\n\nswt\nSwisstransplant R package, see https://github.com/Swisstransplant/swt.\n\n\n\nHex stickers of my software packages."
   },
   {
     "objectID": "output.html#reproducibility-notes",
@@ -207,7 +207,7 @@
     "href": "output.html#presentations-videos",
     "title": "Research output",
     "section": "Presentations (videos)",
-    "text": "Presentations (videos)\n\nTen simple rules for good research practice)—16/05/2024\nTalk at the Computational Reproducibility Seminar, ETH Zurich\n\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation)—21/06/2023\nTalk at R/Basel 2023, Roche Switzerland\n\nFrom regression to machine learning in R)—15/04/2021\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging, University Hospital of Zurich"
+    "text": "Presentations (videos)\n\nTen simple rules for good research practice—16/05/2024\nTalk at the Computational Reproducibility Seminar, ETH Zurich\n\nEXAM—Ex-vivo allograft monitoring dashboard for deceased-donor kidney transplantation—21/06/2023\nTalk at R/Basel 2023, Roche Switzerland\n\nFrom regression to machine learning in R—15/04/2021\nTalk in the seminar Applied Machine Learning in Diagnostic Imaging, University Hospital of Zurich"
   },
   {
     "objectID": "index.html",
