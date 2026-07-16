@@ -118,7 +118,7 @@ I used one minus the Kaplan–Meier estimator to estimate the probability of gra
 #| fig-height: 4
 #| fig-width: 4
 #| code-fold: true
-#| fig-cap: "Comparison of the Aalen–Johansen estimator (red) and the Kaplan–Meier estimator (black). Dashed lines indicate the 95% confidence band."
+#| fig-cap: "Figure 1: Comparison of the Aalen–Johansen estimator (red) and the Kaplan–Meier estimator (black). Dashed lines indicate the 95% confidence band."
 
 # KM
 plot(fit.km$time, 1-fit.km$surv,
@@ -157,7 +157,7 @@ lines(fit.aj$time, fit.aj$upper[, 2],
       lty = 2)
 ```
 
-Using the Kaplan–Meier estimator (dark line with 95% confidence band indicated by dashed lines) shows an overly pessimistic estimate of graft survival and is biased in the presence of competing risks. This occurs because recipients who have died are treated as if they remain at risk for graft loss, even though the probability of graft loss after death is zero. The Aalen–Johansen estimator (red line) properly accounts for competing risks and provides an unbiased estimate of the cumulative incidence function, and is therefore the appropriate method in this setting.
+The Kaplan–Meier estimator is an overly pessimistic estimate of graft survival and is biased upwards in the presence of competing risks, see Figure 1. This occurs because recipients who have died are treated as if they remain at risk for graft loss, even though the probability of graft loss after death is zero. The Aalen–Johansen estimator (red line) properly accounts for competing risks and provides an unbiased estimate of the cumulative incidence function, and is therefore the appropriate method in this setting.
 
 ### So what?
 
