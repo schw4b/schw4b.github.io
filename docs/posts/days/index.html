@@ -409,11 +409,12 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="384"></p>
-<figcaption>Using the Kaplan–Meier estimator (dark line with 95% confidence band indicated by dashed lines) shows an overly pessimistic estimate of graft survival and is biased in the presence of competing risks. This occurs because recipients who have died are treated as if they remain at risk for graft loss, even though the probability of graft loss after death is zero. The Aalen–Johansen estimator (red line) properly accounts for competing risks and provides an unbiased estimate of the cumulative incidence function, and is therefore the appropriate method in this setting.</figcaption>
+<figcaption>Comparison of the Aalen–Johansen estimator (red) and the Kaplan–Meier estimator (black). Dashed lines indicate the 95% confidence band.</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>Using the Kaplan–Meier estimator (dark line with 95% confidence band indicated by dashed lines) shows an overly pessimistic estimate of graft survival and is biased in the presence of competing risks. This occurs because recipients who have died are treated as if they remain at risk for graft loss, even though the probability of graft loss after death is zero. The Aalen–Johansen estimator (red line) properly accounts for competing risks and provides an unbiased estimate of the cumulative incidence function, and is therefore the appropriate method in this setting.</p>
 <section id="so-what" class="level3">
 <h3 class="anchored" data-anchor-id="so-what">So what?</h3>
 <p>This example illustrates the systematic bias that arises in kidney transplantation studies when Kaplan–Meier curves are used in the presence of competing events.</p>
