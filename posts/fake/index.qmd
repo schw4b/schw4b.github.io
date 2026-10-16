@@ -1,7 +1,7 @@
 ---
 title: "Fake plastic trees"
 draft: false
-description: "In today's data-driven world, more data doesn't always mean better decisions. We often overvalue data and undervalue statistics. Excessive, poorly guided analyses, especially with high-dimensional data, risk overfitting and false discoveries. The post warns that data is meaningless without solid statistical methods and expert oversight, and cautions against trusting AI-driven analyses."
+description: "In today's data-driven world, more data doesn't always mean better decisions. We often overvalue data and undervalue statistics. Excessive, poorly guided analyses, especially with high-dimensional data, risk overfitting and false discoveries. The post explains that data is meaningless without solid statistical methods and expert oversight, and cautions against trusting AI-driven statistical analyses."
 author: "Simon Schwab"
 date: "2024-07-09"
 categories: [AI, Big data, Biomarkers, p-values, Univariable screening]
@@ -15,55 +15,53 @@ google-scholar: true
 csl: plos.csl
 ---
 
-Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.
+Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add value to the data, creating information and meaning. Without statistics, data have only minimal meaning.
 
 > You can be rich in data but poor in information. ---Stephen Senn
 
 My view is that all data are rubbish without proper statistics. Nevertheless, the glorification of data has evolved  over the last decades and continues to do so. An example is the front cover of the magazine *Science* from 2011. It is a collage of words, but only one stands out in large letters: "data."
 
-We are indeed very hungry for data. However, I don't believe data should take center stage. What is more important is *how* we perform statistics on the data.
+![*Science* magazine front cover from 11. February 2011.](science.2011.331.issue-6018.largecover.jpg){width=55%}
+
+We are indeed very hungry for data. However, I don't believe data should take center stage. What is more important is how we handle data, and how we perform statistics on the data that lead to valuable insights.
 
 I tried to find the word "statistics" on the *Science* front cover but could not find it. Can you see it? Maybe the word "data" should be a bit smaller to leave more room for the word "statistics," the discipline that concerns the collection, organization, analysis, interpretation, and presentation of *data*.
 
-Nevertheless, many medical studies are conducted with little or no involvement of adequately trained statisticians, and the same is true for scientific peer review [@Van_Calster2021-hs]. Many researchers don't use statistics properly. They might not know enough about it, or they might ignore expert advice. Statisticians are often only involved at the end of a study to analyze the data despite being specialists in helping researchers clarify the question and designing the study from scratch. Often, research projects do not include enough funding for statistical work.
+Nevertheless, many medical studies are conducted with little or no involvement of adequately trained statisticians, and the same is true for scientific peer review [@Van_Calster2021-hs]. Many researchers don't use statistics properly because they don't know enough about it. Statisticians are often only involved at the end of a study to analyze the data despite being specialists in helping researchers clarify the question and designing the study from scratch. Often, research projects do not include enough funding for statistical work.
 
-It sounds absurd, but data is largely overvalued these days, and statistics is largely undervalued.
-
-![*Science* magazine front cover from 11. February 2011.](science.2011.331.issue-6018.largecover.jpg){width=55%}
+It feels like data is largely overvalued these days, and statistics is largely undervalued.
 
 ## Big data
 
-Another example of the glorification of data is the term *Big Data*.
+Another example of the glorification of data is the term *Big Data*. Often this refers to omics data, for example, transcriptional, epigenetic, proteomic and metabolomic data [@Shilo2020-mh].
 
-What does big data even mean? Often omics data is mentioned, for example, transcriptional, epigenetic, proteomic and metabolomic data [@Shilo2020-mh].
+Big data is not better than smaller data. Big data may be the price we pay for increasingly data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply "AI." However, 4,000 biomarkers times 200 patients are not big data; the sample size is still N=200, and I consider this a small study. For a prediction model, for example, I would instead prefer four clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example. I'm more impressed by the length of a data set (number of patients) than its width (number of variables).
 
-Big data may not be the latest advancement of biomedicine in tackling unsolved problems. Instead, it is our defeat against data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply "AI." However, 4,000 biomarkers times 200 patients are not big data; the sample size is still N=200, and I consider this a small study. For a prediction model for prognosis, for example, I would instead prefer four clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example. Don't be too impressed by the width of a data set.
+Too much data can make data analysis harder, but this is often unrecognized. The unsystematic collection of high-dimensional data, when data sets are wider than they are long, can lead to more questions than answers [@Harrell2022-gi]. For example, the failure of protein cancer biomarker research [@Diamandis2012-ih] or the failure of the *Human Brain Project* [@Yong2019-jl]. Learning from the past, the combination of big data and overhyped promises is a reason for concern.
 
-Too much data can make data analysis harder, but this is often unrecognized. The unsystematic collection of high-dimensional data, when data sets are more "wide" than "long," can lead to more questions than answers. For example, the failure of protein cancer biomarker research [@Diamandis2012-ih] or the failure of the *Human Brain Project* [@Yong2019-jl]. Learning from the past, the combination of big data and overhyped promises is a reason for concern.
+There is this catchphrase "let the data speak for itself", and I think it is misleading because data rarely have meaning without context. To extract valuable insights, you need a good question and the appropriate method to answer it.
 
-The catchphrase "let the data speak for itself" is misleading because data rarely have meaning without context. To extract valuable insights, you need a good question and the appropriate method to answer it. Think about your favorite restaurant and dish: imagine being served only unprepared raw food. That's what data are basically without a statistical analysis; it's just the ingredients, the uncooked parts. Data on their own are inedible food. In fact, data on their own is pretty dumb.
+Think about your favorite restaurant and dish: imagine being served only unprepared raw food. That's what data are basically without a statistical analysis. Data on their own are unusable, uninterpretable, and meaningless. Data on their own are pretty dumb.
 
-While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, though, I can see lots of different ways that large data sets could be explored, analyzed, and reanalyzed until we get the result we want or until the model fits the data. Then, this process only *appears* to reduce the uncertainty when looking at the p-values and standard errors. More likely, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.
-
-Excessive analytic attempts generate phantom degrees of freedom [@Harrell2015-pf], which is one of the many ways *dark statistics* can deceive us. We can only trust our statistical results if we don't torture the data too much.
+While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, though, I can see lots of different ways that a large data set could be explored, analyzed, and reanalyzed until we get the result we want or until the model fits the data. Then, this process only *appears* to reduce the uncertainty when looking at the standard errors. More likely, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.
 
 ![Garden of Forking Paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)](victor-_qXjdWm8YEo-unsplash.jpg){width=50%}
 
+Excessive analytic attempts generate phantom degrees of freedom [@Harrell2015-pf], which is one of the many ways *dark statistics* can deceive us. We can only trust our statistical results if we don't torture the data too much.
+
 ## Brave new tools
 
-Statistics summarize data into eatable bites. However, statistical data analysis is not something that can be prepared quickly and easily like a microwave-ready meal. It requires specialist work. And yes, mistakes can be made in this process [@Schwab2021-ui]. Why can't AI do all the difficult work for us?
+Statistics cooks raw data into something we can consume. However, statistical data analysis is not something that can be prepared quickly and easily like a microwave-ready meal. It requires specialist work. And yes, mistakes can be made in this process [@Schwab2021-ui]. Why can't AI do all the difficult work for us?
 
-Statistical software once tried to create the illusion that a nice graphical interface could enable statistics at the push of a button. The exact opposite has happened with the *R programming language*. We moved away from pressing buttons to writing code, which, by the way, is reproducible and verifiable.
+Researchers have always dreamed that a nice graphical interface could enable statistics at the push of a button. Instead, the opposite happened with the *R programming language*. We moved away from pressing buttons to writing code, which, by the way, is reproducible and verifiable. An analysis by an AI agent is not reproducible, unless the AI writes analytic R code for you. But those who will understand this code probably enjoy writing it themselves, and those who do not understand such code are unable to verify what is being served to them.
 
-I recently discovered a website with yet another doomed attempt to make statistics easy: an AI-powered statistics tool.
+I recently discovered a website with yet another attempt to make statistics easy: an AI-powered statistics tool.
 
 > It makes complex data analytics accessible to anyone, eliminating the need for advanced technical knowledge or expertise. ---from a website about an AI-based statistics tool
 
-How does it work? I don't know. Perhaps you can simply chat with your data files? For me, it sounds more like the production of flawed conclusions by untrained people via dangerous tools. That will be the gloomy future, it seems.
+How does it work? I don't know. Perhaps you can simply chat with your data files? For me, it sounds more like the production of flawed conclusions by untrained people via dangerous tools. That seems to be the gloomy future ahead of us.
 
-Ironically, the tool has the same name as an assassinated Roman emperor. This is not a very good omen for the tool. Maybe its future is already doomed, as we are all going to be very disappointed with AI doing our statistical analyses.
-
-Maybe, just maybe, AI will be terrible at being a personal statistical assistant. Maybe AI is much better at misusing statistics. It may be the perfect p-hacking machine. AI is misused in many ways to produce fake images, fake texts, fake human voices, and fake videos. Why not fake statistics? AI confuses the real with the unreal, and why can't this also be applied to scientific data? The perfect tool for data fabrication in the future. Or, as Cathy O'Neil said, a new weapon of *math* destruction [@ONeil2016-ux]. AI will do more harm than good, and in the future, we will need more people like Elisabeth Bik, who can spot fake research [@Shen2020-ar].
+Maybe AI will be terrible at being a personal statistical assistant. Maybe AI is much better at misusing statistics. It may be the perfect *p*-hacking machine. AI is misused in many ways to produce fake images, fake texts, fake human voices, and fake videos. Why not fake statistics? AI may become the perfect tool for data fabrication in the future. Or, as Cathy O'Neil said, a new weapon of *math* destruction [@ONeil2016-ux]. In the future, we will need more people like Elisabeth Bik, who can spot fake research [@Shen2020-ar].
 
 ## What lies ahead of us?
 
@@ -79,7 +77,7 @@ A world of fake plastic trees?
 
 I performed a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.
 
-In a second approach, I generated some high-dimensional data with many more variables than patients (wide data).
+In a second step, I generated some high-dimensional data with many more variables than patients (wide data).
 
 But first, I needed to write a short function `tidy_lm()` to produce a tidy output from a linear regression model; this is just cosmetics.
 
@@ -95,7 +93,7 @@ tidy_lm <- function(fit) {
   upper  = confint(fit)[,2]
   betas  = coef(fit)
   effect = sprintf("%.2f", betas)
-  ci     = sprintf("from %.2f to %.2f", lower, upper)
+  ci     = sprintf("%.2f to %.2f", lower, upper)
   
   tab = data.frame(effect = effect,
                    ci     = ci,
@@ -124,21 +122,21 @@ noise = rnorm(N) # generate standard normal errors
 y = 0.5*data[,1] + 0.3*data[,2] + 0.2*data[,3] + 1/sqrt(SNR)*noise
 ```
 
-I simulated data for $N = `r N`$ patients and $q = `r q`$ variables. I assumed the three prognostic variables ($x_1$, $x_2$, and $x_3$) were uncorrelated and related to the outcome using an additive model. The true effects were $\beta_1 = 0.5$, $\beta_2 = 0.3$, and $\beta_3 = 0.2$. For the unrelated variable $x_4$, we had $\beta_4 = 0$. I added some noise so that the explained variance was about 20% ($R^2$). Below are the results, see Table 1.
+I simulated data for $N = `r N`$ patients and $q = `r q`$ variables. I assumed the three prognostic variables ($x_1$, $x_2$, and $x_3$) were uncorrelated and related to the outcome using an additive model. The true effects were $\beta_1 = 0.5$, $\beta_2 = 0.3$, and $\beta_3 = 0.2$. For the unrelated variable $x_4$, we had $\beta_4 = 0$. I added some noise so that the explained variance was about 20% ($R^2$). The results are shown in Table 1.
 
 ```{r}
 #| eval: true
 #| code-fold: true
-#| tbl-cap: "Table 1: Results from a regression model fitted with long data using simulated data from N=2000 patients."
+#| tbl-cap: "Table 1: Results from a regression model fitted with long data using simulated data from 2000 patients."
 
 d = data.frame(y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3], x4 = data[,4])
 fit = lm(y ~ ., data = d)
 tidy_lm(fit)
 ```
 
-The p-values for the first three variables were statistically significant. This basically means that the data were very incompatible with our null model that the true effects were zero (my lawyers helped me with the wording of this sentence). For $x_4$, the p-value was statistically non-significant. But this is all not really interesting, is it? And I don't particularly like to focus on the results in terms of statistical significance.
+The *p*-values for the first three variables were statistically significant. This basically means that the data were very incompatible with our null model that the true effects were zero (my lawyers helped me with the wording of this sentence). For $x_4$, the *p*-value was statistically non-significant. But there was something more interesting to see than $p$-values and statistical significance.
 
-Much more interesting than the p-values were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects, but not exactly. For the effect estimates to match the true effects even better, we would need even more data (tens of thousands of patients). But I think it was quite acceptable.
+More interesting were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects. For example, $\beta_1$ was 0.5, and the estimate was 0.49. Not too bad.
 
 ### Wide data
 
@@ -179,7 +177,7 @@ d = data.frame (y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3], x4 = data[,4
 fit = lm(y ~ x1 + x2 + x3 + x4, data = d)
 tidy_lm(fit)
 ```
-The effect estimates were more off from the truth, particularly $x_2$, and the confidence intervals were much wider. This was not surprising as the sample size was only $N = `r N`$. All in all, we are much more uncertain; though, the p-values for $x_1$ to $x_3$ were still statistically significant. However, the larger uncertainty was not the main problem.
+The effect estimates were more off from the truth, particularly $x_2$, and the confidence intervals were much wider. This was not surprising as the sample size was only $N = `r N`$. All in all, we are much more uncertain; though, the *p*-values for $x_1$ to $x_3$ were still statistically significant. However, the larger uncertainty was not the main problem.
 
 ```{r}
 #| eval: true
@@ -190,9 +188,9 @@ pvalues.adj = p.adjust(pvalues, method = "fdr")
 k.adj = sum(pvalues.adj  <= 0.05)
 ```
 
-The main problem was we didn't know that $x_1$, $x_2$, and $x_3$ were the relevant biomarkers. Using univariable screening, with $p \le 0.05$ for variable selection, a striking `r k` out of a total of `r q` variables were statistically significant; this matches up with the alpha level of 5%.
+The main problem was we didn't know that $x_1$, $x_2$, and $x_3$ were the relevant biomarkers in the first place. Using univariable screening, with $p \le 0.05$ for variable selection, a striking `r k` out of `r q` variables were statistically significant, which is close to what we would expect under a 5% alpha level.
 
-I tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini & Hochberg procedure; however, only $x_1$ remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It's like looking for a needle in a haystack.
+I tried to adjust the *p*-values to control the false discovery rate (FDR) at 5% using the Benjamini & Hochberg procedure; however, only $x_1$ remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It's like looking for a needle in a haystack.
 
 In the final step, perhaps out of desperation, I opted for a middle way: instead of using an unadjusted threshold of 5% or an FDR of 5%, I applied an unadjusted threshold of $p \le 0.001$. The results are shown in Table 3.
 
@@ -213,14 +211,12 @@ tab
 
 With this step, we have left the realm of science facts and entered the realm of science fiction. The results above show voodoo statistics with statistically significant results for the variables that are pure noise (except $x_1$). The model explained `r sprintf("%.0f%%", summary(fit)$r.squared*100)` of the variance (adj. $R^2$).
 
-I think I tortured the data too much. Surely, a journal would publish such statistically significant results!
+I think I tortured the data too much.
 
 ### So what?
 
-So what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant "truths" in the data when trying too many different things (the garden of forking paths).
+So what does this mean? I find the analysis of high-dimensional data extremely difficult; although some excellent training materials exist [@Stadler2024-if]. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant "truths" in the data when trying too many different things (the garden of forking paths).
 
-You may object that the simulations I made were too pessimistic. Yes, but we often don't know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).
+You may object that the simulations I made were too pessimistic. Yes, but we often don't know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use variable selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say). 
 
-The process of how the result was obtained is much more important than the result itself.
-
-For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell [@Harrell2022-gi]. For training, see the course materials "Analysis of High-Dimensional Data" by Nicolas Städler [@Stadler2024-if].
+The process of how the result was obtained is much more important than the result itself. Sadly, journals and reviewers often focus on the result, and not on the process of how a result was obtained.

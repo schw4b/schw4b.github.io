@@ -2,23 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Simon Schwab">
 <meta name="dcterms.date" content="2024-07-09">
-<meta name="description" content="In today’s data-driven world, more data doesn’t always mean better decisions. We often overvalue data and undervalue statistics. Excessive, poorly guided analyses, especially with high-dimensional data, risk overfitting and false discoveries. The post warns that data is meaningless without solid statistical methods and expert oversight, and cautions against trusting AI-driven analyses.">
+<meta name="description" content="In today’s data-driven world, more data doesn’t always mean better decisions. We often overvalue data and undervalue statistics. Excessive, poorly guided analyses, especially with high-dimensional data, risk overfitting and false discoveries. The post explains that data is meaningless without solid statistical methods and expert oversight, and cautions against trusting AI-driven statistical analyses.">
 
 <title>Fake plastic trees – Statistics, yup!</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -93,10 +96,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d99cd21c7288e025c47f67eff96808fe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-18e62693b62383ff33127ede1f229502.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -113,20 +116,14 @@ div.csl-indent {
   }
 }</script>
 <!-- Privacy-friendly analytics by Plausible -->
-
 <script async="" src="https://plausible.io/js/pa-VKQYd_JzAZywTYy91K5sD.js"></script>
-
 <script>
-
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-
   plausible.init()
-
 </script>
 
-
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -156,7 +153,7 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Fake plastic trees – Statistics, yup!">
-<meta property="og:description" content="In today’s data-driven world, more data doesn’t always mean better decisions. We often overvalue data and undervalue statistics. Excessive, poorly guided analyses, especially with high-dimensional data, risk overfitting and false discoveries. The post warns that data is meaningless without solid statistical methods and expert oversight, and cautions against trusting AI-driven analyses.">
+<meta property="og:description" content="In today’s data-driven world, more data doesn’t always mean better decisions. We often overvalue data and undervalue statistics. Excessive, poorly guided analyses, especially with high-dimensional data, risk overfitting and false discoveries. The post explains that data is meaningless without solid statistical methods and expert oversight, and cautions against trusting AI-driven statistical analyses.">
 <meta property="og:image" content="https://www.statsyup.org/posts/fake/frames-for-your-heart-mALJ-AAR13c-unsplash.jpg">
 <meta property="og:site_name" content="Statistics, yup!">
 <meta name="citation_title" content="Fake plastic trees">
@@ -239,7 +236,7 @@ window.Quarto = {
       <h1 class="title">Fake plastic trees</h1>
                   <div>
         <div class="description">
-          In today’s data-driven world, more data doesn’t always mean better decisions. We often overvalue data and undervalue statistics. Excessive, poorly guided analyses, especially with high-dimensional data, risk overfitting and false discoveries. The post warns that data is meaningless without solid statistical methods and expert oversight, and cautions against trusting AI-driven analyses.
+          In today’s data-driven world, more data doesn’t always mean better decisions. We often overvalue data and undervalue statistics. Excessive, poorly guided analyses, especially with high-dimensional data, risk overfitting and false discoveries. The post explains that data is meaningless without solid statistical methods and expert oversight, and cautions against trusting AI-driven statistical analyses.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -300,52 +297,51 @@ window.Quarto = {
 
 
 
-<p>Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add meaning to the data, creating information and value. Without statistics, data have only minimal meaning.</p>
+<p>Where, oh, where would we researchers be without statistics? It enables us to analyze and report our study findings. Statistics add value to the data, creating information and meaning. Without statistics, data have only minimal meaning.</p>
 <blockquote class="blockquote">
 <p>You can be rich in data but poor in information. —Stephen Senn</p>
 </blockquote>
 <p>My view is that all data are rubbish without proper statistics. Nevertheless, the glorification of data has evolved over the last decades and continues to do so. An example is the front cover of the magazine <em>Science</em> from 2011. It is a collage of words, but only one stands out in large letters: “data.”</p>
-<p>We are indeed very hungry for data. However, I don’t believe data should take center stage. What is more important is <em>how</em> we perform statistics on the data.</p>
-<p>I tried to find the word “statistics” on the <em>Science</em> front cover but could not find it. Can you see it? Maybe the word “data” should be a bit smaller to leave more room for the word “statistics,” the discipline that concerns the collection, organization, analysis, interpretation, and presentation of <em>data</em>.</p>
-<p>Nevertheless, many medical studies are conducted with little or no involvement of adequately trained statisticians, and the same is true for scientific peer review <span class="citation" data-cites="Van_Calster2021-hs">[<a href="#ref-Van_Calster2021-hs" role="doc-biblioref">1</a>]</span>. Many researchers don’t use statistics properly. They might not know enough about it, or they might ignore expert advice. Statisticians are often only involved at the end of a study to analyze the data despite being specialists in helping researchers clarify the question and designing the study from scratch. Often, research projects do not include enough funding for statistical work.</p>
-<p>It sounds absurd, but data is largely overvalued these days, and statistics is largely undervalued.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="science.2011.331.issue-6018.largecover.jpg" class="img-fluid figure-img" style="width:55.0%"></p>
 <figcaption><em>Science</em> magazine front cover from 11. February 2011.</figcaption>
 </figure>
 </div>
+<p>We are indeed very hungry for data. However, I don’t believe data should take center stage. What is more important is how we handle data, and how we perform statistics on the data that lead to valuable insights.</p>
+<p>I tried to find the word “statistics” on the <em>Science</em> front cover but could not find it. Can you see it? Maybe the word “data” should be a bit smaller to leave more room for the word “statistics,” the discipline that concerns the collection, organization, analysis, interpretation, and presentation of <em>data</em>.</p>
+<p>Nevertheless, many medical studies are conducted with little or no involvement of adequately trained statisticians, and the same is true for scientific peer review <span class="citation" data-cites="Van_Calster2021-hs">[<a href="#ref-Van_Calster2021-hs" role="doc-biblioref">1</a>]</span>. Many researchers don’t use statistics properly because they don’t know enough about it. Statisticians are often only involved at the end of a study to analyze the data despite being specialists in helping researchers clarify the question and designing the study from scratch. Often, research projects do not include enough funding for statistical work.</p>
+<p>It feels like data is largely overvalued these days, and statistics is largely undervalued.</p>
 <section id="big-data" class="level2">
 <h2 class="anchored" data-anchor-id="big-data">Big data</h2>
-<p>Another example of the glorification of data is the term <em>Big Data</em>.</p>
-<p>What does big data even mean? Often omics data is mentioned, for example, transcriptional, epigenetic, proteomic and metabolomic data <span class="citation" data-cites="Shilo2020-mh">[<a href="#ref-Shilo2020-mh" role="doc-biblioref">2</a>]</span>.</p>
-<p>Big data may not be the latest advancement of biomedicine in tackling unsolved problems. Instead, it is our defeat against data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply “AI.” However, 4,000 biomarkers times 200 patients are not big data; the sample size is still N=200, and I consider this a small study. For a prediction model for prognosis, for example, I would instead prefer four clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example. Don’t be too impressed by the width of a data set.</p>
-<p>Too much data can make data analysis harder, but this is often unrecognized. The unsystematic collection of high-dimensional data, when data sets are more “wide” than “long,” can lead to more questions than answers. For example, the failure of protein cancer biomarker research <span class="citation" data-cites="Diamandis2012-ih">[<a href="#ref-Diamandis2012-ih" role="doc-biblioref">3</a>]</span> or the failure of the <em>Human Brain Project</em> <span class="citation" data-cites="Yong2019-jl">[<a href="#ref-Yong2019-jl" role="doc-biblioref">4</a>]</span>. Learning from the past, the combination of big data and overhyped promises is a reason for concern.</p>
-<p>The catchphrase “let the data speak for itself” is misleading because data rarely have meaning without context. To extract valuable insights, you need a good question and the appropriate method to answer it. Think about your favorite restaurant and dish: imagine being served only unprepared raw food. That’s what data are basically without a statistical analysis; it’s just the ingredients, the uncooked parts. Data on their own are inedible food. In fact, data on their own is pretty dumb.</p>
-<p>While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, though, I can see lots of different ways that large data sets could be explored, analyzed, and reanalyzed until we get the result we want or until the model fits the data. Then, this process only <em>appears</em> to reduce the uncertainty when looking at the p-values and standard errors. More likely, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.</p>
-<p>Excessive analytic attempts generate phantom degrees of freedom <span class="citation" data-cites="Harrell2015-pf">[<a href="#ref-Harrell2015-pf" role="doc-biblioref">5</a>]</span>, which is one of the many ways <em>dark statistics</em> can deceive us. We can only trust our statistical results if we don’t torture the data too much.</p>
+<p>Another example of the glorification of data is the term <em>Big Data</em>. Often this refers to omics data, for example, transcriptional, epigenetic, proteomic and metabolomic data <span class="citation" data-cites="Shilo2020-mh">[<a href="#ref-Shilo2020-mh" role="doc-biblioref">2</a>]</span>.</p>
+<p>Big data is not better than smaller data. Big data may be the price we pay for increasingly data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply “AI.” However, 4,000 biomarkers times 200 patients are not big data; the sample size is still N=200, and I consider this a small study. For a prediction model, for example, I would instead prefer four clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example. I’m more impressed by the length of a data set (number of patients) than its width (number of variables).</p>
+<p>Too much data can make data analysis harder, but this is often unrecognized. The unsystematic collection of high-dimensional data, when data sets are wider than they are long, can lead to more questions than answers <span class="citation" data-cites="Harrell2022-gi">[<a href="#ref-Harrell2022-gi" role="doc-biblioref">3</a>]</span>. For example, the failure of protein cancer biomarker research <span class="citation" data-cites="Diamandis2012-ih">[<a href="#ref-Diamandis2012-ih" role="doc-biblioref">4</a>]</span> or the failure of the <em>Human Brain Project</em> <span class="citation" data-cites="Yong2019-jl">[<a href="#ref-Yong2019-jl" role="doc-biblioref">5</a>]</span>. Learning from the past, the combination of big data and overhyped promises is a reason for concern.</p>
+<p>There is this catchphrase “let the data speak for itself”, and I think it is misleading because data rarely have meaning without context. To extract valuable insights, you need a good question and the appropriate method to answer it.</p>
+<p>Think about your favorite restaurant and dish: imagine being served only unprepared raw food. That’s what data are basically without a statistical analysis. Data on their own are unusable, uninterpretable, and meaningless. Data on their own are pretty dumb.</p>
+<p>While data are dumb, more data can be even dumber. Let me explain this. You may object that more data will always lead to less uncertainty. This is, in principle, true. In reality, though, I can see lots of different ways that a large data set could be explored, analyzed, and reanalyzed until we get the result we want or until the model fits the data. Then, this process only <em>appears</em> to reduce the uncertainty when looking at the standard errors. More likely, the process by which the data were analyzed has increased our uncertainty, but this is often unrecognized. It is a fallacy called the garden of forking paths.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="victor-_qXjdWm8YEo-unsplash.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
 <figcaption>Garden of Forking Paths, Parque Juan Carlos I, Madrid, Spain. (Photo by Victor on Unsplash)</figcaption>
 </figure>
 </div>
+<p>Excessive analytic attempts generate phantom degrees of freedom <span class="citation" data-cites="Harrell2015-pf">[<a href="#ref-Harrell2015-pf" role="doc-biblioref">6</a>]</span>, which is one of the many ways <em>dark statistics</em> can deceive us. We can only trust our statistical results if we don’t torture the data too much.</p>
 </section>
 <section id="brave-new-tools" class="level2">
 <h2 class="anchored" data-anchor-id="brave-new-tools">Brave new tools</h2>
-<p>Statistics summarize data into eatable bites. However, statistical data analysis is not something that can be prepared quickly and easily like a microwave-ready meal. It requires specialist work. And yes, mistakes can be made in this process <span class="citation" data-cites="Schwab2021-ui">[<a href="#ref-Schwab2021-ui" role="doc-biblioref">6</a>]</span>. Why can’t AI do all the difficult work for us?</p>
-<p>Statistical software once tried to create the illusion that a nice graphical interface could enable statistics at the push of a button. The exact opposite has happened with the <em>R programming language</em>. We moved away from pressing buttons to writing code, which, by the way, is reproducible and verifiable.</p>
-<p>I recently discovered a website with yet another doomed attempt to make statistics easy: an AI-powered statistics tool.</p>
+<p>Statistics cooks raw data into something we can consume. However, statistical data analysis is not something that can be prepared quickly and easily like a microwave-ready meal. It requires specialist work. And yes, mistakes can be made in this process <span class="citation" data-cites="Schwab2021-ui">[<a href="#ref-Schwab2021-ui" role="doc-biblioref">7</a>]</span>. Why can’t AI do all the difficult work for us?</p>
+<p>Researchers have always dreamed that a nice graphical interface could enable statistics at the push of a button. Instead, the opposite happened with the <em>R programming language</em>. We moved away from pressing buttons to writing code, which, by the way, is reproducible and verifiable. An analysis by an AI agent is not reproducible, unless the AI writes analytic R code for you. But those who will understand this code probably enjoy writing it themselves, and those who do not understand such code are unable to verify what is being served to them.</p>
+<p>I recently discovered a website with yet another attempt to make statistics easy: an AI-powered statistics tool.</p>
 <blockquote class="blockquote">
 <p>It makes complex data analytics accessible to anyone, eliminating the need for advanced technical knowledge or expertise. —from a website about an AI-based statistics tool</p>
 </blockquote>
-<p>How does it work? I don’t know. Perhaps you can simply chat with your data files? For me, it sounds more like the production of flawed conclusions by untrained people via dangerous tools. That will be the gloomy future, it seems.</p>
-<p>Ironically, the tool has the same name as an assassinated Roman emperor. This is not a very good omen for the tool. Maybe its future is already doomed, as we are all going to be very disappointed with AI doing our statistical analyses.</p>
-<p>Maybe, just maybe, AI will be terrible at being a personal statistical assistant. Maybe AI is much better at misusing statistics. It may be the perfect p-hacking machine. AI is misused in many ways to produce fake images, fake texts, fake human voices, and fake videos. Why not fake statistics? AI confuses the real with the unreal, and why can’t this also be applied to scientific data? The perfect tool for data fabrication in the future. Or, as Cathy O’Neil said, a new weapon of <em>math</em> destruction <span class="citation" data-cites="ONeil2016-ux">[<a href="#ref-ONeil2016-ux" role="doc-biblioref">7</a>]</span>. AI will do more harm than good, and in the future, we will need more people like Elisabeth Bik, who can spot fake research <span class="citation" data-cites="Shen2020-ar">[<a href="#ref-Shen2020-ar" role="doc-biblioref">8</a>]</span>.</p>
+<p>How does it work? I don’t know. Perhaps you can simply chat with your data files? For me, it sounds more like the production of flawed conclusions by untrained people via dangerous tools. That seems to be the gloomy future ahead of us.</p>
+<p>Maybe AI will be terrible at being a personal statistical assistant. Maybe AI is much better at misusing statistics. It may be the perfect <em>p</em>-hacking machine. AI is misused in many ways to produce fake images, fake texts, fake human voices, and fake videos. Why not fake statistics? AI may become the perfect tool for data fabrication in the future. Or, as Cathy O’Neil said, a new weapon of <em>math</em> destruction <span class="citation" data-cites="ONeil2016-ux">[<a href="#ref-ONeil2016-ux" role="doc-biblioref">8</a>]</span>. In the future, we will need more people like Elisabeth Bik, who can spot fake research <span class="citation" data-cites="Shen2020-ar">[<a href="#ref-Shen2020-ar" role="doc-biblioref">9</a>]</span>.</p>
 </section>
 <section id="what-lies-ahead-of-us" class="level2">
 <h2 class="anchored" data-anchor-id="what-lies-ahead-of-us">What lies ahead of us?</h2>
-<p>Nowadays, AI and machine learning are heavily promoted to “revolutionize healthcare”; this seems an overhyped claim given the notorious overfitting of data in the field <span class="citation" data-cites="Volovici2022-qn">[<a href="#ref-Volovici2022-qn" role="doc-biblioref">9</a>]</span>. To be fair, it is not just AI that baffles me. Recently, 246 biologists obtained different results from the same data <span class="citation" data-cites="Oza2023-ek">[<a href="#ref-Oza2023-ek" role="doc-biblioref">10</a>]</span> or the latest blunder in functional MRI research <span class="citation" data-cites="Prillaman2024-nu">[<a href="#ref-Prillaman2024-nu" role="doc-biblioref">11</a>]</span>. This all demonstrates that we researchers seem to learn a lot from the noise in the data.</p>
+<p>Nowadays, AI and machine learning are heavily promoted to “revolutionize healthcare”; this seems an overhyped claim given the notorious overfitting of data in the field <span class="citation" data-cites="Volovici2022-qn">[<a href="#ref-Volovici2022-qn" role="doc-biblioref">10</a>]</span>. To be fair, it is not just AI that baffles me. Recently, 246 biologists obtained different results from the same data <span class="citation" data-cites="Oza2023-ek">[<a href="#ref-Oza2023-ek" role="doc-biblioref">11</a>]</span> or the latest blunder in functional MRI research <span class="citation" data-cites="Prillaman2024-nu">[<a href="#ref-Prillaman2024-nu" role="doc-biblioref">12</a>]</span>. This all demonstrates that we researchers seem to learn a lot from the noise in the data.</p>
 <p>Now, are you ready for what is next? A world where the relentless rush of technology blurs the lines between what’s real and what’s not?</p>
 <p>A world of fake plastic trees?</p>
 <p><em>The title of this post is a song by Radiohead. The preview image of this post is a photo by Frames For Your Heart on Unsplash.</em></p>
@@ -353,7 +349,7 @@ window.Quarto = {
 <section id="just-one-more-thing" class="level2">
 <h2 class="anchored" data-anchor-id="just-one-more-thing">Just one more thing</h2>
 <p>I performed a simulation to highlight the challenges with wide data. First, I created data with many patients but only a few variables (long data). Say, the variables have been selected as the clinically most relevant prognostic variables based on the literature and expert knowledge.</p>
-<p>In a second approach, I generated some high-dimensional data with many more variables than patients (wide data).</p>
+<p>In a second step, I generated some high-dimensional data with many more variables than patients (wide data).</p>
 <p>But first, I needed to write a short function <code>tidy_lm()</code> to produce a tidy output from a linear regression model; this is just cosmetics.</p>
 <div class="cell">
 <details class="code-fold">
@@ -366,7 +362,7 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  upper  <span class="ot">=</span> <span class="fu">confint</span>(fit)[,<span class="dv">2</span>]</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  betas  <span class="ot">=</span> <span class="fu">coef</span>(fit)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  effect <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.2f"</span>, betas)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  ci     <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"from %.2f to %.2f"</span>, lower, upper)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  ci     <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.2f to %.2f"</span>, lower, upper)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  tab <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">effect =</span> effect,</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                   <span class="at">ci     =</span> ci,</span>
@@ -394,8 +390,8 @@ window.Quarto = {
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fl">0.5</span><span class="sc">*</span>data[,<span class="dv">1</span>] <span class="sc">+</span> <span class="fl">0.3</span><span class="sc">*</span>data[,<span class="dv">2</span>] <span class="sc">+</span> <span class="fl">0.2</span><span class="sc">*</span>data[,<span class="dv">3</span>] <span class="sc">+</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(SNR)<span class="sc">*</span>noise</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>I simulated data for <span class="math inline">\(N = 2000\)</span> patients and <span class="math inline">\(q = 4\)</span> variables. I assumed the three prognostic variables (<span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span>) were uncorrelated and related to the outcome using an additive model. The true effects were <span class="math inline">\(\beta_1 = 0.5\)</span>, <span class="math inline">\(\beta_2 = 0.3\)</span>, and <span class="math inline">\(\beta_3 = 0.2\)</span>. For the unrelated variable <span class="math inline">\(x_4\)</span>, we had <span class="math inline">\(\beta_4 = 0\)</span>. I added some noise so that the explained variance was about 20% (<span class="math inline">\(R^2\)</span>). Below are the results, see Table 1.</p>
-<div class="cell" data-tbl-cap="Table 1: Results from a regression model fitted with long data using simulated data from N=2000 patients.">
+<p>I simulated data for <span class="math inline">\(N = 2000\)</span> patients and <span class="math inline">\(q = 4\)</span> variables. I assumed the three prognostic variables (<span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span>) were uncorrelated and related to the outcome using an additive model. The true effects were <span class="math inline">\(\beta_1 = 0.5\)</span>, <span class="math inline">\(\beta_2 = 0.3\)</span>, and <span class="math inline">\(\beta_3 = 0.2\)</span>. For the unrelated variable <span class="math inline">\(x_4\)</span>, we had <span class="math inline">\(\beta_4 = 0\)</span>. I added some noise so that the explained variance was about 20% (<span class="math inline">\(R^2\)</span>). The results are shown in Table 1.</p>
+<div class="cell" data-tbl-cap="Table 1: Results from a regression model fitted with long data using simulated data from 2000 patients.">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">y =</span> y, <span class="at">x1 =</span> data[,<span class="dv">1</span>], <span class="at">x2 =</span> data[,<span class="dv">2</span>], <span class="at">x3 =</span> data[,<span class="dv">3</span>], <span class="at">x4 =</span> data[,<span class="dv">4</span>])</span>
@@ -405,7 +401,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
-<caption>Table 1: Results from a regression model fitted with long data using simulated data from N=2000 patients.</caption>
+<caption>Table 1: Results from a regression model fitted with long data using simulated data from 2000 patients.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -418,31 +414,31 @@ window.Quarto = {
 <tr class="odd">
 <td style="text-align: left;">(Intercept)</td>
 <td style="text-align: left;">0.00</td>
-<td style="text-align: left;">from -0.05 to 0.06</td>
+<td style="text-align: left;">-0.05 to 0.06</td>
 <td style="text-align: left;">0.96</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">x1</td>
 <td style="text-align: left;">0.49</td>
-<td style="text-align: left;">from 0.43 to 0.54</td>
+<td style="text-align: left;">0.43 to 0.54</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">x2</td>
 <td style="text-align: left;">0.31</td>
-<td style="text-align: left;">from 0.25 to 0.37</td>
+<td style="text-align: left;">0.25 to 0.37</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">x3</td>
 <td style="text-align: left;">0.23</td>
-<td style="text-align: left;">from 0.17 to 0.29</td>
+<td style="text-align: left;">0.17 to 0.29</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">x4</td>
 <td style="text-align: left;">-0.01</td>
-<td style="text-align: left;">from -0.07 to 0.04</td>
+<td style="text-align: left;">-0.07 to 0.04</td>
 <td style="text-align: left;">0.67</td>
 </tr>
 </tbody>
@@ -450,8 +446,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>The p-values for the first three variables were statistically significant. This basically means that the data were very incompatible with our null model that the true effects were zero (my lawyers helped me with the wording of this sentence). For <span class="math inline">\(x_4\)</span>, the p-value was statistically non-significant. But this is all not really interesting, is it? And I don’t particularly like to focus on the results in terms of statistical significance.</p>
-<p>Much more interesting than the p-values were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects, but not exactly. For the effect estimates to match the true effects even better, we would need even more data (tens of thousands of patients). But I think it was quite acceptable.</p>
+<p>The <em>p</em>-values for the first three variables were statistically significant. This basically means that the data were very incompatible with our null model that the true effects were zero (my lawyers helped me with the wording of this sentence). For <span class="math inline">\(x_4\)</span>, the <em>p</em>-value was statistically non-significant. But there was something more interesting to see than <span class="math inline">\(p\)</span>-values and statistical significance.</p>
+<p>More interesting were the effect estimates. Since I was the creator of the data, I could see that the estimates were close to the true effects. For example, <span class="math inline">\(\beta_1\)</span> was 0.5, and the estimate was 0.49. Not too bad.</p>
 </section>
 <section id="wide-data" class="level3">
 <h3 class="anchored" data-anchor-id="wide-data">Wide data</h3>
@@ -503,31 +499,31 @@ window.Quarto = {
 <tr class="odd">
 <td style="text-align: left;">(Intercept)</td>
 <td style="text-align: left;">-0.05</td>
-<td style="text-align: left;">from -0.21 to 0.12</td>
+<td style="text-align: left;">-0.21 to 0.12</td>
 <td style="text-align: left;">0.58</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">x1</td>
 <td style="text-align: left;">0.47</td>
-<td style="text-align: left;">from 0.31 to 0.63</td>
+<td style="text-align: left;">0.31 to 0.63</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">x2</td>
 <td style="text-align: left;">0.20</td>
-<td style="text-align: left;">from 0.02 to 0.38</td>
+<td style="text-align: left;">0.02 to 0.38</td>
 <td style="text-align: left;">0.026 *</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">x3</td>
 <td style="text-align: left;">0.24</td>
-<td style="text-align: left;">from 0.07 to 0.41</td>
+<td style="text-align: left;">0.07 to 0.41</td>
 <td style="text-align: left;">0.005 **</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">x4</td>
 <td style="text-align: left;">0.07</td>
-<td style="text-align: left;">from -0.10 to 0.24</td>
+<td style="text-align: left;">-0.10 to 0.24</td>
 <td style="text-align: left;">0.41</td>
 </tr>
 </tbody>
@@ -535,7 +531,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>The effect estimates were more off from the truth, particularly <span class="math inline">\(x_2\)</span>, and the confidence intervals were much wider. This was not surprising as the sample size was only <span class="math inline">\(N = 200\)</span>. All in all, we are much more uncertain; though, the p-values for <span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_3\)</span> were still statistically significant. However, the larger uncertainty was not the main problem.</p>
+<p>The effect estimates were more off from the truth, particularly <span class="math inline">\(x_2\)</span>, and the confidence intervals were much wider. This was not surprising as the sample size was only <span class="math inline">\(N = 200\)</span>. All in all, we are much more uncertain; though, the <em>p</em>-values for <span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_3\)</span> were still statistically significant. However, the larger uncertainty was not the main problem.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -544,8 +540,8 @@ window.Quarto = {
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>k.adj <span class="ot">=</span> <span class="fu">sum</span>(pvalues.adj  <span class="sc">&lt;=</span> <span class="fl">0.05</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>The main problem was we didn’t know that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers. Using univariable screening, with <span class="math inline">\(p \le 0.05\)</span> for variable selection, a striking 214 out of a total of 4000 variables were statistically significant; this matches up with the alpha level of 5%.</p>
-<p>I tried to adjust the p-values to control the false discovery rate (FDR) at 5% using the Benjamini &amp; Hochberg procedure; however, only <span class="math inline">\(x_1\)</span> remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It’s like looking for a needle in a haystack.</p>
+<p>The main problem was we didn’t know that <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(x_3\)</span> were the relevant biomarkers in the first place. Using univariable screening, with <span class="math inline">\(p \le 0.05\)</span> for variable selection, a striking 214 out of 4000 variables were statistically significant, which is close to what we would expect under a 5% alpha level.</p>
+<p>I tried to adjust the <em>p</em>-values to control the false discovery rate (FDR) at 5% using the Benjamini &amp; Hochberg procedure; however, only <span class="math inline">\(x_1\)</span> remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It’s like looking for a needle in a haystack.</p>
 <p>In the final step, perhaps out of desperation, I opted for a middle way: instead of using an unadjusted threshold of 5% or an FDR of 5%, I applied an unadjusted threshold of <span class="math inline">\(p \le 0.001\)</span>. The results are shown in Table 3.</p>
 <div class="cell" data-tbl-cap="Table 3: Results from a regression model fitted with wide data and using univariable screening to find relevant biomarkers.">
 <details class="code-fold">
@@ -574,37 +570,37 @@ window.Quarto = {
 <tr class="odd">
 <td style="text-align: left;">(Intercept)</td>
 <td style="text-align: left;">-0.01</td>
-<td style="text-align: left;">from -0.17 to 0.14</td>
+<td style="text-align: left;">-0.17 to 0.14</td>
 <td style="text-align: left;">0.86</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">x1</td>
 <td style="text-align: left;">0.36</td>
-<td style="text-align: left;">from 0.20 to 0.51</td>
+<td style="text-align: left;">0.20 to 0.51</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">x602</td>
 <td style="text-align: left;">-0.34</td>
-<td style="text-align: left;">from -0.50 to -0.17</td>
+<td style="text-align: left;">-0.50 to -0.17</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">x971</td>
 <td style="text-align: left;">0.19</td>
-<td style="text-align: left;">from 0.03 to 0.35</td>
+<td style="text-align: left;">0.03 to 0.35</td>
 <td style="text-align: left;">0.017 *</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">x2186</td>
 <td style="text-align: left;">0.28</td>
-<td style="text-align: left;">from 0.12 to 0.45</td>
+<td style="text-align: left;">0.12 to 0.45</td>
 <td style="text-align: left;">&lt; 0.001 ***</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">x3748</td>
 <td style="text-align: left;">0.14</td>
-<td style="text-align: left;">from -0.01 to 0.30</td>
+<td style="text-align: left;">-0.01 to 0.30</td>
 <td style="text-align: left;">0.073 .</td>
 </tr>
 </tbody>
@@ -613,14 +609,13 @@ window.Quarto = {
 </div>
 </div>
 <p>With this step, we have left the realm of science facts and entered the realm of science fiction. The results above show voodoo statistics with statistically significant results for the variables that are pure noise (except <span class="math inline">\(x_1\)</span>). The model explained 28% of the variance (adj. <span class="math inline">\(R^2\)</span>).</p>
-<p>I think I tortured the data too much. Surely, a journal would publish such statistically significant results!</p>
+<p>I think I tortured the data too much.</p>
 </section>
 <section id="so-what" class="level3">
 <h3 class="anchored" data-anchor-id="so-what">So what?</h3>
-<p>So what does this mean? I find the analysis of high-dimensional data extremely difficult. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant “truths” in the data when trying too many different things (the garden of forking paths).</p>
-<p>You may object that the simulations I made were too pessimistic. Yes, but we often don’t know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use model selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).</p>
-<p>The process of how the result was obtained is much more important than the result itself.</p>
-<p>For further reading, see “How to Do Bad Biomarker Research” by Frank Harrell <span class="citation" data-cites="Harrell2022-gi">[<a href="#ref-Harrell2022-gi" role="doc-biblioref">12</a>]</span>. For training, see the course materials “Analysis of High-Dimensional Data” by Nicolas Städler <span class="citation" data-cites="Stadler2024-if">[<a href="#ref-Stadler2024-if" role="doc-biblioref">13</a>]</span>.</p>
+<p>So what does this mean? I find the analysis of high-dimensional data extremely difficult; although some excellent training materials exist <span class="citation" data-cites="Stadler2024-if">[<a href="#ref-Stadler2024-if" role="doc-biblioref">13</a>]</span>. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant “truths” in the data when trying too many different things (the garden of forking paths).</p>
+<p>You may object that the simulations I made were too pessimistic. Yes, but we often don’t know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use variable selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say).</p>
+<p>The process of how the result was obtained is much more important than the result itself. Sadly, journals and reviewers often focus on the result, and not on the process of how a result was obtained.</p>
 
 
 
@@ -634,35 +629,35 @@ window.Quarto = {
 <div id="ref-Shilo2020-mh" class="csl-entry" role="listitem">
 <div class="csl-left-margin">2. </div><div class="csl-right-inline">Shilo S, Rossman H, Segal E. Axes of a revolution: Challenges and promises of big data in healthcare. Nat Med. 2020;26: 29–38. doi:<a href="https://doi.org/10.1038/s41591-019-0727-5">10.1038/s41591-019-0727-5</a></div>
 </div>
+<div id="ref-Harrell2022-gi" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Harrell F. Statistical thinking - how to do bad biomarker research. <a href="https://www.fharrell.com/post/badb/" class="uri">https://www.fharrell.com/post/badb/</a>; 2022. </div>
+</div>
 <div id="ref-Diamandis2012-ih" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Diamandis EP. The failure of protein cancer biomarkers to reach the clinic: Why, and what can be done to address the problem? BMC Med. 2012;10: 87. doi:<a href="https://doi.org/10.1186/1741-7015-10-87">10.1186/1741-7015-10-87</a></div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Diamandis EP. The failure of protein cancer biomarkers to reach the clinic: Why, and what can be done to address the problem? BMC Med. 2012;10: 87. doi:<a href="https://doi.org/10.1186/1741-7015-10-87">10.1186/1741-7015-10-87</a></div>
 </div>
 <div id="ref-Yong2019-jl" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Yong E. The human brain project hasn’t lived up to its promise. The Atlantic. 2019. </div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Yong E. The human brain project hasn’t lived up to its promise. The Atlantic. 2019. </div>
 </div>
 <div id="ref-Harrell2015-pf" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Harrell FE. Regression modeling strategies. Springer International Publishing; 2015. doi:<a href="https://doi.org/10.1007/978-3-319-19425-7">10.1007/978-3-319-19425-7</a></div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Harrell FE. Regression modeling strategies. Springer International Publishing; 2015. doi:<a href="https://doi.org/10.1007/978-3-319-19425-7">10.1007/978-3-319-19425-7</a></div>
 </div>
 <div id="ref-Schwab2021-ui" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Schwab S, Held L. Statistical programming: Small mistakes, big impacts. Significance. 2021;18: 6–7. doi:<a href="https://doi.org/10.1111/1740-9713.01522">10.1111/1740-9713.01522</a></div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Schwab S, Held L. Statistical programming: Small mistakes, big impacts. Significance. 2021;18: 6–7. doi:<a href="https://doi.org/10.1111/1740-9713.01522">10.1111/1740-9713.01522</a></div>
 </div>
 <div id="ref-ONeil2016-ux" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">O’Neil C. Weapons of math destruction: How big data increases inequality and threatens democracy. 1st ed. Crown; 2016. </div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">O’Neil C. Weapons of math destruction: How big data increases inequality and threatens democracy. 1st ed. Crown; 2016. </div>
 </div>
 <div id="ref-Shen2020-ar" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Shen H. Meet this super-spotter of duplicated images in science papers. Nature. 2020;581: 132–136. doi:<a href="https://doi.org/10.1038/d41586-020-01363-z">10.1038/d41586-020-01363-z</a></div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Shen H. Meet this super-spotter of duplicated images in science papers. Nature. 2020;581: 132–136. doi:<a href="https://doi.org/10.1038/d41586-020-01363-z">10.1038/d41586-020-01363-z</a></div>
 </div>
 <div id="ref-Volovici2022-qn" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Volovici V, Syn NL, Ercole A, Zhao JJ, Liu N. Steps to avoid overuse and misuse of machine learning in clinical research. Nat Med. 2022;28: 1996–1999. doi:<a href="https://doi.org/10.1038/s41591-022-01961-6">10.1038/s41591-022-01961-6</a></div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Volovici V, Syn NL, Ercole A, Zhao JJ, Liu N. Steps to avoid overuse and misuse of machine learning in clinical research. Nat Med. 2022;28: 1996–1999. doi:<a href="https://doi.org/10.1038/s41591-022-01961-6">10.1038/s41591-022-01961-6</a></div>
 </div>
 <div id="ref-Oza2023-ek" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Oza A. Reproducibility trial: 246 biologists get different results from same data sets. Nature. 2023;622: 677–678. doi:<a href="https://doi.org/10.1038/d41586-023-03177-1">10.1038/d41586-023-03177-1</a></div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Oza A. Reproducibility trial: 246 biologists get different results from same data sets. Nature. 2023;622: 677–678. doi:<a href="https://doi.org/10.1038/d41586-023-03177-1">10.1038/d41586-023-03177-1</a></div>
 </div>
 <div id="ref-Prillaman2024-nu" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Prillaman M. This <span class="nocase">fMRI</span> technique promised to transform brain research - why can no one replicate it? Nature. 2024. doi:<a href="https://doi.org/10.1038/d41586-024-00931-x">10.1038/d41586-024-00931-x</a></div>
-</div>
-<div id="ref-Harrell2022-gi" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Harrell F. Statistical thinking - how to do bad biomarker research. <a href="https://www.fharrell.com/post/badb/" class="uri">https://www.fharrell.com/post/badb/</a>; 2022. </div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Prillaman M. This <span class="nocase">fMRI</span> technique promised to transform brain research - why can no one replicate it? Nature. 2024. doi:<a href="https://doi.org/10.1038/d41586-024-00931-x">10.1038/d41586-024-00931-x</a></div>
 </div>
 <div id="ref-Stadler2024-if" class="csl-entry" role="listitem">
 <div class="csl-left-margin">13. </div><div class="csl-right-inline">Städler N. Analysis of <span>High-Dimensional</span> data. <a href="https://bookdown.org/staedler_n/highdimstats/" class="uri">https://bookdown.org/staedler_n/highdimstats/</a>; 2024. </div>
