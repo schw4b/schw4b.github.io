@@ -33,7 +33,7 @@ It feels like data is largely overvalued these days, and statistics is largely u
 
 ## Big data
 
-Another example of the glorification of data is the term *Big Data*. Often this refers to omics data, for example, transcriptional, epigenetic, proteomic and metabolomic data [@Shilo2020-mh].
+Another example of the glorification of data is the term *Big Data*. Often this refers to omics data, for example, transcriptional, epigenetic, proteomic, and metabolomic data [@Shilo2020-mh].
 
 Big data is not better than smaller data. Big data may be the price we pay for increasingly data-hungry methods from machine learning, a hyped discipline also known as artificial intelligence or simply "AI." However, 4,000 biomarkers times 200 patients are not big data; the sample size is still N=200, and I consider this a small study. For a prediction model, for example, I would instead prefer four clinically relevant variables from 2,000 patients, even though this reflects only 1% of the data in the former example. I'm more impressed by the length of a data set (number of patients) than its width (number of variables).
 
@@ -171,7 +171,7 @@ Let's now pretend we knew that $x_1$, $x_2$, and $x_3$ were the relevant biomark
 ```{r}
 #| eval: true
 #| code-fold: true
-#| tbl-cap: "Table 2: Results from a regression model fitted with wide data using simulated data form N=200 patients."
+#| tbl-cap: "Table 2: Results from a regression model fitted with wide data using simulated data from N=200 patients."
 
 d = data.frame (y = y, x1 = data[,1], x2 = data[,2], x3 = data[,3], x4 = data[,4])
 fit = lm(y ~ x1 + x2 + x3 + x4, data = d)
@@ -188,7 +188,7 @@ pvalues.adj = p.adjust(pvalues, method = "fdr")
 k.adj = sum(pvalues.adj  <= 0.05)
 ```
 
-The main problem was we didn't know that $x_1$, $x_2$, and $x_3$ were the relevant biomarkers in the first place. Using univariable screening, with $p \le 0.05$ for variable selection, a striking `r k` out of `r q` variables were statistically significant, which is close to what we would expect under a 5% alpha level.
+The main problem was that we didn't know that $x_1$, $x_2$, and $x_3$ were the relevant biomarkers in the first place. Using univariable screening, with $p \le 0.05$ for variable selection, a striking `r k` out of `r q` variables were statistically significant, which is close to what we would expect under a 5% alpha level.
 
 I tried to adjust the *p*-values to control the false discovery rate (FDR) at 5% using the Benjamini & Hochberg procedure; however, only $x_1$ remained statistically significant. So, this only partially helped. I wanted more specificity, and I had to pay with sensitivity. It seems to be really difficult to get the correct model with such a large data set. It's like looking for a needle in a haystack.
 
@@ -215,7 +215,7 @@ I think I tortured the data too much.
 
 ### So what?
 
-So what does this mean? I find the analysis of high-dimensional data extremely difficult; although some excellent training materials exist [@Stadler2024-if]. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant "truths" in the data when trying too many different things (the garden of forking paths).
+So what does this mean? I find the analysis of high-dimensional data extremely difficult, although some excellent training materials exist [@Stadler2024-if]. Certainly, there are situations where the problem is not so extreme, but there may be situations where the issue is even more extreme. It is almost impossible to find the relevant "truths" in the data when trying too many different things (the garden of forking paths).
 
 You may object that the simulations I made were too pessimistic. Yes, but we often don't know how good the signal-to-noise ratio is in clinical data. And completely in the dark, we must be very careful in the process of analyzing high-dimensional data, particularly when we use variable selection. Univariable screening is well-known for providing flawed results, but it is still widely used today (or widely misused, I should say). 
 
