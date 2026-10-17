@@ -1,7 +1,7 @@
 ---
 title: "I don't sleep, I dream"
 draft: false
-description: "A 2018 sleep study increased its sample size until achieving statistical significance---a flawed practice known as p-hacking. This post explains why such practices are problematic, how they inflate false positives, and what that means for research credibility. Using data simulations, I highlight the pitfalls of data peeking and make the case for pre-specified statistical analysis plans in preclinical animal research."
+description: "A 2018 sleep study increased its sample size until achieving statistical significance---a flawed practice known as *p*-hacking. This post explains why such practices are problematic, how they inflate false positives, and what that means for research credibility. Using data simulations, I highlight the pitfalls of data peeking and make the case for pre-specified statistical analysis plans in preclinical animal research."
 author: "Simon Schwab"
 date: "2024-08-18"
 categories: [Animal studies, Repeated inspection of data, p-values]
@@ -21,7 +21,7 @@ For some researchers, statistics is also a bit of a mystery. In 2018, a study ti
 
 The only thing I know about R.E.M. is that it is also the name of a pretty good rock band; I grew up listening to their music. The very first album I bought as a kid was *The Best of R.E.M.* from 1991. For me, rock music and statistics go hand in hand, just like in Andy Field's book *Discovering Statistics Using R* [@Field2012-hs]. But now, let's get back to our sleep study.
 
-The good news is that we don't need to understand anything about REM sleep, the brain, or the mouse. I probably don't even know the difference between a mouse, a rat, and a hamster. The subject matter would only distract us. Let's ignore everything in this paper except a tiny bit from the methods section.
+The good news is that we don't need to understand anything about REM sleep, the brain, or the mouse. I probably don't even know the difference between a mouse, a rat, and a hamster. The biological details would only distract us. Let's ignore everything in this paper except a tiny bit from the methods section.
 
 Have you ever read just one sentence from a research study? It can be enough to make a case.
 
@@ -29,29 +29,29 @@ But first, let me say something else. In some prestigious journals, the methods 
 
 Well, I do.
 
-> we continuously increased the number of animals until statistical significance was reached to support our conclusions. ---p. 12, the small print
+> We continuously increased the number of animals until statistical significance was reached to support our conclusions. ---p. 12, the small print
 
 ## Peeping Tom
 
-During my time at the University of Warwick in Coventry, I learned about the [legend of "Peeping Tom."](https://en.wikipedia.org/wiki/Lady_Godiva#Peeping_Tom) In my version, however, Peeping Tom was a scientist obsessed with observing the p-value. The scientist would always take a glimpse at that darn p-value and how it changed over the course of the experiment as more data was added. In the end, the scientist was struck blind---end of the story.
+During my time at the University of Warwick in Coventry, I learned about the [legend of "Peeping Tom."](https://en.wikipedia.org/wiki/Lady_Godiva#Peeping_Tom) In my version, however, Peeping Tom was a scientist obsessed with observing the *p*-value. The scientist would always take a glimpse at that darn *p*-value and how it changed over the course of the experiment as more data was added. In the end, the scientist was struck blind---end of the story.
 
-Looking at the data again and again (and again) as more data are added and a statistical test is run each time, it is essentially a multiple-testing situation that would require some form of adjustment of the p-value. The reason is that this (bad) research practice considerably increases the chance that a statistically significant finding is a fluke.
+Looking at the data again and again (and again) as more data are added and a statistical test is run each time, it is essentially a multiple-testing situation that would require some form of adjustment of the *p*-value. The reason is that this (bad) research practice considerably increases the chance that a statistically significant finding is a fluke.
 
-Moreover, the study authors failed to report the non-significant results from all the statistical tests they conducted. They continued testing until they found a significant result, which they then reported. This selective reporting, based on the significance of the test, skews the interpretation of their findings. Despite the ongoing debate about when to adjust p-values, the situation here clearly calls for a "haircut" to their p-values [@Boulesteix2024-kg].
+Moreover, the study authors failed to report the non-significant results from all the statistical tests they conducted. They continued testing until they found a significant result, which they then reported. This selective reporting, based on the significance of the test, skews the interpretation of their findings. Despite the ongoing debate about when to adjust *p*-values, the situation here clearly calls for a "haircut" to their *p*-values [@Boulesteix2024-kg].
 
-In the *Seven Sins* in statistical significance testing [@Held2020-yx], the practice of repeatedly looking at the p-value is described as the sin number three, the *repeated inspection of data*.
+In the *Seven Sins* in statistical significance testing [@Held2020-yx], the practice of repeatedly looking at the *p*-value is described as the sin number three, the *repeated inspection of data*.
 
-The solution to this problem is simple. It can be avoided by not analyzing the data until the study is completed and the planned sample size is reached. But I'm not sure that sample size is often planned in animal research.
+The solution to this problem is simple: do not analyze the data until the planned sample size has been reached. But I'm not sure that sample size is often planned in animal research.
 
 ## Seven mice
 
-In 2017, I applied for a grant for a neuroscience project that would analyze a large dataset of thousands of magnetic resonance imaging (MRI) scans. I was shortlisted for the second round, and after my presentation, a member of the committee asked me why I would not do my own MRI experiment to collect my own data. I replied that I did not want to do another N = 30 MRI study. The person replied that there were studies published in the journal *Nature* with only 7 mice. I had to laugh because I thought it was a joke, but nobody else was laughing.
+In 2017, I applied for a grant for a neuroscience project that would analyze a large dataset of thousands of magnetic resonance imaging (MRI) scans. I was shortlisted for the second round, and after my presentation, a member of the committee asked me why I would not do my own MRI experiment to collect my own data. I replied that I did not want to do another N = 30 MRI study. The person replied that *Nature* had published studies with only seven mice. I had to laugh because I thought it was a joke, but nobody else was laughing.
 
 Well, here we are, years later, thinking more deeply about this. In the present study, the sample size was not 7 mice. It was 12 mice, to be fair.
 
 ![Andy Warhol, Myths: Mickey Mouse from 1981 (Halcyon Gallery)](awa-spr-por-25979-4-f.jpg){width=50%}
 
-In 2011, two comments about preclinical cancer research raised eyebrows [@Prinz2011-hm; @Begley2012-zy]. Apparently, several landmark studies in high-impact journals that generated hundreds of secondary publications could not be verified by the pharmaceutical companies Bayer and Amgen. In these studies, investigators sometimes reported a single finding that supported their hypothesis, but it was often cherry-picked. This was the starting point for Tim Errington's investigation of reproducibility in preclinical cancer research [@Errington2021-gj]. Reasons for irreproducibility in preclinical animal studies can include small sample sizes and thus low statistical power, as well as over-standardization of experiments [@Voelkl2020-nt]. After reading all all this, I’m not so surprised when another lab can't confirm an exciting study finding from an animal experiment in a prestigious journal.
+In 2011, two comments about preclinical cancer research raised eyebrows [@Prinz2011-hm; @Begley2012-zy]. Apparently, several landmark studies in high-impact journals that generated hundreds of secondary publications could not be verified by the pharmaceutical companies Bayer and Amgen. In these studies, investigators sometimes reported a single finding that supported their hypothesis, but it was often cherry-picked. This was the starting point for Tim Errington's investigation of reproducibility in preclinical cancer research [@Errington2021-gj]. Reasons for irreproducibility in preclinical animal studies can include small sample sizes and thus low statistical power, as well as over-standardization of experiments [@Voelkl2020-nt]. After reading all this, I’m not so surprised when another lab can't confirm an exciting study finding from an animal experiment in a prestigious journal.
 
 If a result cannot be repeated, what is it worth?
 
@@ -63,7 +63,7 @@ There are some exceptions where stopping a study early may be justified. But tha
 
 For example, the Cardiac Arrhythmia Suppression Trial (CAST) was a four-arm trial of three antiarrhythmic drugs versus placebo on the risk of sudden cardiac death [@Echt1991-mh]. Early in the CAST study, two arms (encainide and flecainide) were stopped because of excess mortality compared with the placebo arm.
 
-In the present mouse study, however, the authors stopped the experiment because the p-value fell below the magical level of $p \le 0.05$, which apparently signaled to them that they could publish their results and didn't need to kill any more mice. If you do enough tests, you will always obtain a p-value less than the magical threshold.
+In the present mouse study, however, the authors stopped the experiment because the *p*-value fell below the magical level of $p \le 0.05$, which apparently signaled to them that they could publish their results and didn't need to perform any more experiments.
 
 > I'm looking for an interruption. Do you believe? ---I don't sleep, I dream (song by R.E.M.)
 
@@ -104,20 +104,20 @@ for (s in 1:k) {
 }
 ```
 
-I conducted a mouse study. I assumed that the planned sample size was $N = `r N`$ animals. However, I peeped at the data already after testing `r stop[1]` animals and then repeated the test after each additional animal until $p \leq 0.05$ or the total sample size was reached. Since no animals were harmed in my experiment, I performed $k = `r sprintf("%d", k)`$ of such studies.
+I conducted a mouse study. I assumed that the planned sample size was $N = `r N`$ animals. However, I peeped at the data already after testing `r stop[1]` animals and then repeated the test after each additional animal until $p \leq 0.05$ or the total sample size was reached. Since there is no harm to animals in my simulations, I performed $k = `r sprintf("%d", k)`$ of such studies.
 
-In the mouse study, two measurements were obtained for each mouse. I sampled both observations from a normal distribution with a mean of 0 and a standard deviation of 1. Thus, the model behind the simulation assumed that there was no difference between the mice before and after exposure. Thus, any result I found was a fluke.
+In the mouse study, two measurements were obtained for each mouse. I sampled both observations from a normal distribution with a mean of 0 and a standard deviation of 1. Thus, the model behind the simulation assumed that there was no difference between the mice before and after exposure. In other words, any result I found was a fluke.
 
 I performed the same test reported in the paper, a Wilcoxon signed-rank test, but that doesn't really matter for making the case. You could make the case with any statistical significance test that successfully controls the type I error at 5% (falsely rejecting the null).
 
-In total, I collected $`r length(stop)` \times `r k`$ p-values (`r length(stop)` repeated inspections and `r sprintf("%d", k)` studies).
+In total, I collected $`r length(stop)` \times `r k`$ *p*-values (`r length(stop)` repeated inspections and `r sprintf("%d", k)` studies).
 
 ```{r}
 #| code-fold: true
 
 FP = sum(ps[,ncol(ps)] <= 0.05)
 ```
-I looked at the last p-value for each study, i.e., after data from the total of $N = `r N`$ animals had been collected. I found that `r FP` out of `r sprintf("%d", k)` studies were statistically significant, which is a type I error rate of `r sprintf("%.3f", FP/k)`. Thank God, the error was under control. So far, so good.
+I looked at the last *p*-value for each study, i.e., after data from the total of $N = `r N`$ animals had been collected. I found that `r FP` out of `r sprintf("%d", k)` studies were statistically significant, which is a type I error rate of `r sprintf("%.3f", FP/k)`. Thank God, the error was under control. So far, so good.
 
 ```{r}
 #| code-fold: true
@@ -147,7 +147,7 @@ myp = as.data.frame(t(array(unlist(myp), dim = c(2, k))))
 colnames(myp) = c("t", "p")
 ```
 
-Now, the twist. I peeped at the other p-values. I picked the p-value as soon as it turned statistically significant and stopped the experiment. But when I was not lucky enough to observe a $p \leq 0.05$, I picked the p-value from the last repeated test with $N = `r N`$ animals, whatever that value looked like.
+Now, the twist. I peeped at the other *p*-values. I picked the *p*-value as soon as it turned statistically significant and stopped the experiment. But when I was not lucky enough to observe a $p \leq 0.05$, I picked the *p*-value from the last repeated test with $N = `r N`$ animals, whatever that value looked like.
 
 ```{r}
 #| code-fold: true
@@ -161,7 +161,7 @@ I found that `r FP` out of `r sprintf("%d", k)` studies were statistically signi
 #| fig-height: 2.5
 #| fig-width: 5
 #| code-fold: true
-#| fig-cap: "Figure 1: Two example studies that were stopped early due to peeping at the p-value before the study was completed. The red data point highlights the statistically significant p-value at which the study was stopped early. In (A), the study was stopped after observing 10 mice and (B) after observing 25 mice. The horizontal line shows the significance level of 0.05. As we can see, the p-value is very wiggly and can be exploited by bad research practices such as the repeated inspection of data."
+#| fig-cap: "Figure 1: Two example studies that were stopped early due to peeping at the *p*-value before the study was completed. The red data point highlights the statistically significant *p*-value at which the study was stopped early. In (A), the study was stopped after observing 10 mice and (B) after observing 25 mice. The horizontal line shows the significance level of 0.05. As we can see, the *p*-value is very wiggly and can be exploited by bad research practices such as the repeated inspection of data."
 
 library(ggplot2)
 library(gridExtra)
@@ -198,10 +198,10 @@ for (i in 1:N_plots) {
 do.call("grid.arrange", c(p, nrow = 1, ncol=2))
 ```
 
-Two case studies from the `r FP` positive findings that were statistically significant by peeping are shown in Figure 1. Study 1 was statistically significant at the first glimpse, so we could already go home after 10 mice. Brilliant. Study 2 was statistically significant after 25 mice. Looking only at the last p-value, after the `r N` mice, then both Study 1 and Study 2 were not statistically significant. This result would be correct since I was the creator of the data and knew the truth behind the data.
+Two case studies from the `r FP` positive findings that were statistically significant by peeping are shown in Figure 1. Study 1 was statistically significant at the first glimpse, so we could already go home after 10 mice. Brilliant. Study 2 was statistically significant after 25 mice. Looking only at the last *p*-value, after the `r N` mice, then both Study 1 and Study 2 were not statistically significant. This result would be correct since I was the creator of the data and knew the truth behind the data.
 
 The truth was that there was nothing there.
 
 ### So what?
 
-First, a p-value from repeated inspection of data is nothing more than a fluke of the universe. Don't trust it. Second,  *Nature Communications* might consider involving expert statisticians in the evaluation of a study. After all, their article processing fee is 6790 US dollars.
+First, a *p*-value from repeated inspection of data is nothing more than a fluke of the universe. Don't trust it. Second,  *Nature Communications* might consider involving expert statisticians in the evaluation of a study. After all, their article processing fee is 6790 US dollars.
